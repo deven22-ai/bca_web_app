@@ -1,0 +1,64 @@
+.bca-sectors-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.bca-sectors-grid .bca-sector-card-minimal {
+  flex: 1 1 320px;
+  max-width: 380px;
+}
+
+.bca-sector-card-minimal {
+  width: 100%;
+  cursor: pointer;
+  max-width: 420px;
+  background: #ffffff;
+  overflow: hidden;
+  border-bottom: 3px solid #d6dbe8;
+  box-shadow: 0 18px 45px rgba(1, 16, 57, 0.08);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.bca-sector-card-minimal:hover {
+  transform: translateY(-6px);
+  border-bottom-color: #2f63ff; /* blue on hover */
+  box-shadow: 0 24px 55px rgba(1, 16, 57, 0.12);
+}
+
+.bca-sector-card-minimal__image {
+  height: 260px;
+  overflow: hidden;
+  background: #0b1535;
+}
+
+.bca-sector-card-minimal__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s ease;
+}
+
+.bca-sector-card-minimal:hover .bca-sector-card-minimal__image img {
+  transform: scale(1.04);
+}
+
+.bca-sector-card-minimal__content {
+  padding: 24px 22px;
+  transition: border-color 0.35s ease;
+}
+
+.bca-sector-card-minimal__content h4 {
+  margin: 0;
+  line-height: 1.2;
+  color: #10214a;
+}
+
+@media (max-width: 736px) {
+    .bca-sector-card-minimal {
+        min-width: 100%;
+    }
+}
