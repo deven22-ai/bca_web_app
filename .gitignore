@@ -1,4 +1,25 @@
+# Ignore everything by default
+/*
+
+# Keep repo essentials
+!.gitignore
+!index.php
+
+# Keep only custom plugin
+!plugins/
+plugins/*
+!plugins/bca-custom-features/
+!plugins/bca-custom-features/**
+
+# Keep only custom theme
+!themes/
+themes/*
+!themes/bca-phlox-child/
+!themes/bca-phlox-child/**
+
+# Always ignore local/runtime stuff
 uploads/
 upgrade/
 upgrade-temp-backup/
 debug.log
+*.log
