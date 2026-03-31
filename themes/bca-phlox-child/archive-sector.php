@@ -1,6 +1,5 @@
 <?php
 wp_enqueue_style('sectors-style'); // Load the sectors.css
-wp_enqueue_style('sector-listing-style'); // Load the sectors.css
 get_header();
 ?>
 
@@ -30,20 +29,20 @@ get_header();
 <section class="bca-intro-grid-section">
     <div class="bca-intro-grid container">
         <div class="bca-intro-grid__left">
-            <span class="bca-intro-grid__eyebrow">Industry Expertise</span>
-            <h2 class="bca-intro-grid__title">
+            <span class="bca-section__eyebrow">Industry Expertise</span>
+            <h2 class="bca-section__title">
                 Sector knowledge that goes beyond the numbers
             </h2>
 
-            <div class="bca-intro-grid__text">
+            <div class="bca-section__text">
                 <p>
                     We understand that every sector operates differently. Our team brings deep
                     technical knowledge and real-world commercial understanding to help you
                     navigate industry regulations, manage challenges and capitalise on opportunities.
                 </p>
                 <p>
-                Whether you operate in construction, healthcare, real estate, IT, retail or
-                hospitality, we provide tailored advice and strategic support aligned with your goals.
+                    Whether you operate in construction, healthcare, real estate, IT, retail or
+                    hospitality, we provide tailored advice and strategic support aligned with your goals.
                 </p>
             </div>
         </div>
@@ -61,16 +60,16 @@ get_header();
     </div>
 </section>
 
-<main class="bca-sectors-archive">
+<main>
     <section class="bca-heading-section">
         <div class="bca-heading-container">
             <div class="bca-heading__border"></div>
             <h2 class="bca-heading__title">
-            Sectors We <span>Specialise In</span>
+                Sectors We <span>Specialise In</span>
             </h2>
             <div class="bca-heading__description">
                 <p>
-                BC&amp;A works with businesses and individuals across a broad range of industries.
+                    BC&amp;A works with businesses and individuals across a broad range of industries.
                 </p>
             </div>
         </div>
@@ -87,12 +86,11 @@ get_header();
     <section class="bca-cta-grid-section">
         <div class="bca-cta-grid container drop-shadow">
             <div class="bca-intro-grid__left">
-                <span class="bca-intro-grid__eyebrow">SPEAK TO BC&A</span>
-                <h2 class="bca-intro-grid__title">
+                <span class="bca-section__eyebrow">SPEAK TO BC&A</span>
+                <h2 class="bca-section__title">
                     Need Advice From A Team That Understands Your Sector?
                 </h2>
-
-                <div class="bca-intro-grid__text">
+                <div class="bca-section__text">
                     <p>
                     Whether you need support with compliance, tax planning, financial reporting, 
                     growth strategy or day-to-day business advice, our team is here to help.

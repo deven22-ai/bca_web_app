@@ -18,6 +18,7 @@ define('BCA_CUSTOM_PLUGIN_URL', plugin_dir_url(__FILE__));
 require_once BCA_CUSTOM_PLUGIN_PATH . 'includes/shortcode-team.php';
 require_once BCA_CUSTOM_PLUGIN_PATH . 'includes/shortcode-file-upload.php';
 require_once BCA_CUSTOM_PLUGIN_PATH . 'includes/shortcode-news.php';
+require_once BCA_CUSTOM_PLUGIN_PATH . 'includes/shortcode-cta.php';
 require_once BCA_CUSTOM_PLUGIN_PATH . 'includes/shortcode-sectors.php';
 require_once BCA_CUSTOM_PLUGIN_PATH . 'includes/ajax-handlers.php';
 /* require_once BCA_CUSTOM_PLUGIN_PATH . 'includes/dropbox-upload-handler.php'; */

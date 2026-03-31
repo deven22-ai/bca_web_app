@@ -6,6 +6,108 @@ Text Domain: bca-phlox-child
 Author: Deven Warang
 */
 
+:root {
+  --bca-primary: #1A5AFF;
+  --bca-secondary: #F4B236;
+  --bca-navy: #0C349B;
+  --bca-dark-navy: #011039;
+  --bca-card-border: #E6EBF2;
+  --bca-card-bg: #F7F9FC;
+  --bca-dark-blue: #0838B4;
+  --bca-header-bg: rgb(1 16 57 / 95%);
+  --bca-button-border: #E8E8E8;
+  --bca-ghost: #6C757D5E;
+  --bca-title: #242F65;
+  --bca-text-desc: #5f6983;
+}
+
+.container {
+  width: min(1200px, 92%);
+  margin: 0 auto;
+}
+
+/* Global styles for Buttons */
+.bca-btn-primary {
+  animation-duration: 0.2s;
+  background-image: linear-gradient(115deg, var(--e-global-color-primary) 0%, var(--e-global-color-fc3d4c5) 100%);
+  border-color: var(--bca-button-border);
+  box-shadow: 3px 4px 10px 0px rgba(0, 0, 0, 0.5) !important;
+  border-style: none;
+  max-width: 200px;
+  text-align: center;
+  padding: 10px 25px 10px 25px;
+  border-radius: 2px;
+  justify-content: center;
+  color: #ffffff;
+  margin-bottom: 0px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.bca-btn-primary:hover {
+  color: white;
+  background-image: linear-gradient(115deg, #0533a7 0%, #082f93 100%);
+}
+
+.bca-btn-accent {
+  background-color: var(--bca-ghost);
+  transition-duration: 0.2s;
+  -webkit-animation-duration: 0.2s;
+  animation-duration: 0.2s;
+  border-color: var(--bca-button-border);
+  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.5) !important;
+  border-style: none;
+  border-radius: 2px;
+  margin-bottom: 0px;
+  text-align: center;
+  padding: 10px 25px 10px 25px;
+  background-image: none !important;
+  justify-content: center;
+  color: var(--e-global-color-7013882);
+}
+
+.bca-btn-accent:hover {
+  color: white;
+  background-color: var(--bca-dark-navy) !important;
+}
+
+.bca-section__eyebrow {
+  display: inline-block;
+  margin: 0 0 14px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--bca-navy);
+}
+
+.bca-section__title {
+  color: var(--bca-title);
+  font-size: clamp(30px, 4vw, 45px);
+  line-height: 1.15;
+  font-style: normal;
+  letter-spacing: 0;
+  font-weight: 700;
+  margin-top: .2em;
+  margin-bottom: .5em;
+  text-rendering: optimizeSpeed;
+}
+
+.bca-section__text {
+  padding-top: 10px;
+}
+
+.bca-section__text p {
+  margin: 0 0 18px;
+  color: var(--bca-text-desc);
+  font-size: 18px;
+  line-height: 1.50;
+}
+
+.bca-section__text p:last-child {
+    margin-bottom: 0;
+}
+
 /* Add Uniform box-shadow */
 .drop-shadow {
   box-shadow: 0 18px 45px rgba(1, 16, 57, 0.08);
@@ -23,7 +125,7 @@ Author: Deven Warang
    ========================= */
 body:has(.transparent-header) header.aux-overlay-header.aux-sticky {
 	top: 0;
-	background-color: rgb(1 16 57 / 95%);
+	background-color: var(--bca-header-bg);
 }
 /* Animate */
 body:has(.transparent-header) header.aux-overlay-header{
@@ -39,7 +141,7 @@ body:has(.transparent-header) header.aux-overlay-header{
    ALL OTHER PAGES
    ========================= */
 body:not(:has(.transparent-header)) header.aux-overlay-header {
-	background-color: rgb(1 16 57 / 95%) !important;
+	background-color: var(--bca-header-bg) !important;
 	box-shadow: 0 6px 20px rgba(0,0,0,0.18);
 }
 
@@ -60,14 +162,14 @@ body:not(:has(.transparent-header)) header.aux-overlay-header {
 }
 
 /* =========================
-   POST search box
+   POST search box 
    ========================= */
 .news-search-bar label {
   display: block;
   margin-bottom: 12px;
   font-size: 14px;
   font-weight: 700;
-  color: #011039;
+  color: var(--bca-dark-navy);
   letter-spacing: 0.2px;
 }
 
@@ -77,7 +179,7 @@ body:not(:has(.transparent-header)) header.aux-overlay-header {
   width: 100%;
 	box-shadow: 0 18px 45px rgba(1, 16, 57, 0.08);
   background: #ffffff;
-  border: 1px solid #E6EBF2;
+  border: 1px solid var(--bca-card-border);
   overflow: hidden;
   transition: border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
 }
@@ -92,7 +194,7 @@ body:not(:has(.transparent-header)) header.aux-overlay-header {
   background: transparent;
   font-size: 15px;
   font-weight: 500;
-  color: #011039;
+  color: var(--bca-dark-navy);
   box-shadow: none !important;
 }
 
@@ -106,8 +208,8 @@ body:not(:has(.transparent-header)) header.aux-overlay-header {
   min-width: 58px;
   border: none;
 	margin-bottom: 0px;
-  border-left: 1px solid #E6EBF2;
-  background: linear-gradient(135deg, #011039 0%, #0b2a73 100%);
+  border-left: 1px solid var(--bca-card-border);
+  background: linear-gradient(135deg, var(--bca-dark-navy) 0%, #0b2a73 100%);
   color: #ffffff;
   display: inline-flex;
   align-items: center;
@@ -151,47 +253,93 @@ body:not(:has(.transparent-header)) header.aux-overlay-header {
   }
 }
 
-/* Global styles for Buttons */
-.bca-btn-primary {
-  animation-duration: 0.2s;
-  background-image: linear-gradient(115deg, var(--e-global-color-primary) 0%, var(--e-global-color-fc3d4c5) 100%);
-  border-color: #E8E8E8;
-  box-shadow: 3px 4px 10px 0px rgba(0, 0, 0, 0.5);
-  border-style: none;
-  max-width: 200px;
-  text-align: center;
-  padding: 10px 25px 10px 25px;
-  border-radius: 2px;
+/*=========================
+  CTA - Contact Section 
+  =========================*/
+
+.bca-cta-contact {
+  background-color: var(--bca-card-bg);
+  border-top: 1px solid var(--bca-card-border);
+  padding: 70px 0;
+  overflow: hidden;
+}
+
+.bca-cta-contact .container {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.bca-cta-contact__left {
+  flex: 0 0 50%;
+  max-width: 590px;
+  position: relative;
+}
+
+.bca-cta-contact__eyebrow {
+  text-transform: uppercase;
+  white-space: nowrap;
+  font-weight: 600;
+  color: var(--bca-dark-navy);
+  z-index: 0;
+}
+
+.bca-cta-contact-content {
+  position: relative;
+  z-index: 1;
+}
+
+.bca-cta-contact__btn {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  margin-top: 35px;
+  flex-wrap: wrap;
+}
+
+.bca-cta-contact__right {
+  flex: 1;
+  position: relative;
+  display: flex;
   justify-content: center;
-  color: #ffffff;
-  margin-bottom: 0px;
-  font-size: 15px;
-  font-weight: 500;
+  align-items: center;
+  min-height: 380px;
 }
 
-.bca-btn-primary:hover {
-  color: white;
-  background-image: linear-gradient(115deg, #0533a7 0%, #082f93 100%);
+.bca-cta-contact__image {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(36, 47, 101, 0.14);
+  animation: pulse 3.5s ease-in-out infinite;
 }
 
-.bca-btn-accent {
-  background-color: #6C757D5E;
-  transition-duration: 0.2s;
-  -webkit-animation-duration: 0.2s;
-  animation-duration: 0.2s;
-  border-color: #E8E8E8;
-  box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.5);
-  border-style: none;
-  border-radius: 2px;
-  margin-bottom: 0px;
-  text-align: center;
-  padding: 10px 25px 10px 25px;
-  background-image: none !important;
-  justify-content: center;
-  color: var(--e-global-color-7013882);
+ .bca-cta-contact__image img {
+  width: 100%;
+  height: auto;
+  display: block;
+ }
+
+ @media (max-width: 900px) {
+  .bca-cta-contact .container {
+    flex-direction: column;
+    gap: 40px;
+  }
+  .bca-cta-contact__left {
+    flex: 1 1 auto;
+    max-width: 100%;
+  }
+  .bca-cta-contact__right {
+    width: 100%;
+  }
 }
 
-.bca-btn-accent:hover {
-  color: white;
-  background-color: var(--e-global-color-primary) !important;
+@media (max-width: 540px) {
+  .bca-cta-contact__btn {
+    flex-direction: column;
+  }
+  .bca-cta-contact__btn a {
+    width: 100%;
+  }
 }

@@ -33,6 +33,7 @@
 .bca-news-card-image-wrap {
     position: relative;
     overflow: hidden;
+    max-height: 240px;
 }
 
 .bca-news-card-badge {
