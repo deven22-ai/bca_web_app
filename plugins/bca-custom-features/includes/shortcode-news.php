@@ -8,22 +8,6 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-/* Enqueue assets early, BEFORE <head> is printed */
-function bca_news_enqueue_assets() {
-    // Only load on pages that actually use these shortcodes
-    global $post;
-    if (is_a($post, 'WP_Post') &&
-        (has_shortcode($post->post_content, 'news_grid') ||
-            has_shortcode($post->post_content, 'mini_news_grid'))
-        ) {
-        wp_enqueue_style('bca-global-style');
-        wp_enqueue_style('news-style');
-        wp_enqueue_script('news-ajax');
-    }
-}
-
-add_action('wp_enqueue_scripts', 'bca_news_enqueue_assets');
-
 function bca_news_renderer($news_query) {
     ob_start(); // turns on the output buffering
 
@@ -78,6 +62,8 @@ function bca_news_renderer($news_query) {
 }
 
 function getNews() {
+    wp_enqueue_style('news-style');
+    wp_enqueue_script('news-ajax');
 
     /* Get all the news categories */
     $news_query = [];
@@ -133,6 +119,9 @@ function getNews() {
 }
 
 function getMiniGrid() {
+    wp_enqueue_style('news-style');
+    wp_enqueue_script('news-ajax');
+
     /* Fetch only 3 news posts under News category */
     $news_parent = get_category_by_slug('news');
     $news_query = new WP_Query(array(
@@ -148,12 +137,12 @@ function getMiniGrid() {
     ?>
     <div class="bca-mini-news-grid">
         <?php echo bca_news_renderer($news_query); ?>
-        <button type="button" onclick="window.location.href='about-us/news/'">Our Latest News</button>
+        <a class="bca-btn-primary" href="/about-us/news/">Our Latest News</a>
     </div>
     <?php 
     return ob_get_clean();
 }
 
-add_shortcode('news_grid', 'getNews');
-add_shortcode('mini_news_grid', 'getMiniGrid');
+add_shortcode('bca_news_grid', 'getNews');
+add_shortcode('bca_mini_news_grid', 'getMiniGrid');
 ?>

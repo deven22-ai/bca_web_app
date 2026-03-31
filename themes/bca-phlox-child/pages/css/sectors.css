@@ -6,7 +6,222 @@
   src: url('https://fonts.gstatic.com/s/playfairdisplay/v40/nuFkD-vYSZviVYUb_rj3ij__anPXDTnogkk7.woff2') format('woff2');
 }
 
-/* BCA Hero Section */
+/*=========================
+  BCA SECTOR SERVICES
+  ========================= */
+.bca-sector-services {
+    padding: 80px 0;
+    background: var(--bg-soft);
+    position: relative;
+    overflow: hidden;
+    background: var(--bca-card-bg);
+}
+
+.bca-sector-services__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.bca-sector-services__image-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.bca-sector-services__image-wrap img {
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+    display: block;
+}
+
+.bca-sector-services__image-overlay {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    background: linear-gradient(to top, rgba(13,27,62,0.88) 0%, transparent 100%);
+    padding: 32px 28px 28px;
+    color: var(--white);
+}
+
+.bca-sector-services__image-overlay p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.82);
+    font-style: italic;
+}
+ /* Checklist */
+.services-checklist {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    padding-left: 0;
+    margin: 0;
+}
+
+.services-checklist li {
+    display: flex;
+    color: var(--bca-text-desc);
+    position: relative;
+    padding-left: 35px;
+}
+
+.services-checklist li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 18px;
+    height: 18px;
+    background: rgb(37 99 235);
+    border-radius: 50%;
+}
+
+.services-checklist li::after {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 6px;
+    width: 3px;
+    height: 7px;
+    border-right: 2px solid #ffffff;
+    border-bottom: 2px solid #ffffff;
+    transform: rotate(45deg);
+}
+
+.tick-icon {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    background: var(--bca-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+}
+
+.tick-icon svg {
+    width: 14px;
+    height: 14px;
+    stroke: white;
+    stroke-width: 2;
+    fill: none;
+}
+
+@media (max-width: 1024px) {
+    .bca-sector-services__inner { grid-template-columns: 1fr; gap: 44px; }
+}
+
+@media (max-width: 640px) {
+    .bca-sector-services { padding: 56px 0; }
+}
+
+
+/*=========================
+  BCA FAQ
+  ========================= */
+.bca-faq {
+    padding: 80px 0;
+    background: var(--bca-card-bg);
+    border-top: 1px solid var(--bca-card-border);
+}
+
+.bca-faq__inner {
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 70px;
+    align-items: start;
+}
+
+/* Accordion */
+.bca-faq__item {
+    border-bottom: 1px solid var(--bca-card-border);
+    background: #FFFFFF;
+}
+
+.bca-faq__item:first-child {
+    border-top: 1px solid var(--bca-card-border);
+}
+
+.bca-faq__question {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 22px 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    font-weight: 600;
+    color: black;
+    transition: color var(--transition);
+}
+
+.bca-faq__question:hover { color: var(--bca-primary); }
+
+.bca-faq__chevron {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1.5px solid var(--bca-card-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background var(--transition), border-color var(--transition);
+}
+
+.bca-faq__chevron svg {
+    width: 12px; 
+    height: 12px;
+    stroke: var(--bca-navy); 
+    fill: none; 
+    stroke-width: 2.5;
+    transition: transform var(--transition), stroke var(--transition);
+}
+
+.bca-faq__item.open .bca-faq__chevron {
+    background: var(--bca-primary);
+    border-color: var(--bca-primary);
+}
+
+.bca-faq__item.open .bca-faq__chevron svg {
+    stroke: white;
+    transform: rotate(180deg);
+}
+
+.bca-faq__answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.36s ease, padding 0.28s ease;
+}
+
+.bca-faq__item.open .bca-faq__answer {
+    max-height: 400px;
+}
+
+.bca-faq__answer-inner {
+    padding: 0 24px 22px;
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--bca-text-desc);
+}
+
+@media (max-width: 1024px) {
+    .bca-faq__inner { 
+        grid-template-columns: 1fr; 
+        gap: 40px; 
+    }
+}
+  
+  
+/*=========================
+  BCA HERO SECTION
+  ========================= */
 .bca-hero-section {
     display: flex;
     position: relative;
@@ -151,95 +366,6 @@
 }
 
 /* BCA Heading template CSS */
-h2 {
-    font-size: 2.375em;
-    line-height: 1.5;
-}
-.bca-heading-section {
-    padding: 60px 15px;
-}
-
-.bca-heading-container {
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    gap: 10px;
-    text-align: center;
-    width: min(1200px, 100%);
-    margin-bottom: 30px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.bca-heading__border {
-    height: 4px;
-    width: 100px;
-    background: var(--e-global-color-primary);
-    border-radius: 2px;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.bca-heading__border::before {
-    content: "";
-    position: absolute;
-    color: var(--e-global-color-primary);
-    left: -27px;
-    top: 0;
-    display: inline-block;
-    height: 4px;
-    width: 4px;
-    border-radius: 50%;
-    background-color: var(--e-global-color-primary);
-    -webkit-box-shadow: 9px 0 0 0 currentColor, 18px 0 0 0 currentColor;
-    box-shadow: 9px 0 0 0 currentColor, 18px 0 0 0 currentColor;
-}
-
-.bca-heading__title {
-    color: #020101;
-    margin: 25px 0px 25px 0px;
-    font-family: "Outfit", Sans-serif;
-    font-weight: 500;
-}
-
-.bca-heading__title span {
-    font-family: "BCA Playfair Display";
-    font-weight: 700;
-    font-style: italic;
-    color: var(--e-global-color-primary);
-    transition: all .3s ease;
-    display: inline-block;
-}
-
-.bca-heading__title:hover > span {
-    color: var(--e-global-color-5dfd9b1);
-}
-
-.bca-heading__description {
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    clear: both;
-    -webkit-tap-highlight-color: transparent;
-    outline: 0;
-}
-
-.bca-heading__description p {
-    color: var(--e-global-color-9ed511d);
-    margin-bottom: 10px;
-}
-
-@media (max-width: 767px) {
-  .bca-sectors-heading-section {
-    padding: 50px 15px;
-  }
-
-  .bca-sectors-heading-title {
-    margin: 18px 0;
-  }
-}
-
 .sector-listing__wrapper {
     margin-bottom: 60px;
 }

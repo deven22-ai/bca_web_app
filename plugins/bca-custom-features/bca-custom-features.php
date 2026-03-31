@@ -26,13 +26,6 @@ require_once BCA_CUSTOM_PLUGIN_PATH . 'includes/ajax-handlers.php';
 function register_assets() {
 
     wp_register_style(
-        'bca-global-style',
-        BCA_CUSTOM_PLUGIN_URL . 'assets/css/global.css',
-        array(),
-        '1.0.0'
-    );
-
-    wp_register_style(
         'team-style',
         BCA_CUSTOM_PLUGIN_URL . 'assets/css/team.css',
         array(),

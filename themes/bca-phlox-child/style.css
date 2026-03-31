@@ -19,11 +19,17 @@ Author: Deven Warang
   --bca-ghost: #6C757D5E;
   --bca-title: #242F65;
   --bca-text-desc: #5f6983;
+  --transition:  0.28s ease;
 }
 
 .container {
   width: min(1200px, 92%);
   margin: 0 auto;
+}
+
+h2 {
+  font-size: 2.375em;
+  line-height: 1.5;
 }
 
 /* Global styles for Buttons */
@@ -71,6 +77,100 @@ Author: Deven Warang
   background-color: var(--bca-dark-navy) !important;
 }
 
+/*=========================
+  BCA - HEADING SECTION
+  ========================= */
+.bca-heading-section {
+  padding: 50px 15px;
+}
+
+.bca-heading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+  text-align: center;
+  width: min(1200px, 100%);
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bca-heading__title {
+  color: #101010;
+  margin: 25px 0px 25px 0px;
+  font-family: "Outfit", Sans-serif;
+  font-weight: 600;
+  text-transform: capitalize;
+  line-height: 1em;
+  letter-spacing: -1px;
+}
+
+.bca-heading__border {
+  height: 4px;
+  width: 100px;
+  background: var(--e-global-color-primary);
+  border-radius: 2px;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bca-heading__border::before {
+  content: "";
+  position: absolute;
+  color: var(--e-global-color-primary);
+  left: -27px;
+  top: 0;
+  display: inline-block;
+  height: 4px;
+  width: 4px;
+  border-radius: 50%;
+  background-color: var(--e-global-color-primary);
+  -webkit-box-shadow: 9px 0 0 0 currentColor, 18px 0 0 0 currentColor;
+  box-shadow: 9px 0 0 0 currentColor, 18px 0 0 0 currentColor;
+}
+
+.bca-heading__title span {
+  font-family: "BCA Playfair Display";
+  font-weight: 700;
+  font-style: italic;
+  color: var(--e-global-color-primary);
+  transition: all .3s ease;
+  display: inline-block;
+}
+
+.bca-heading__title:hover > span {
+  color: var(--e-global-color-5dfd9b1);
+}
+
+.bca-heading__description {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  clear: both;
+  -webkit-tap-highlight-color: transparent;
+  outline: 0;
+}
+
+.bca-heading__description p {
+  color: var(--e-global-color-9ed511d);
+  margin-bottom: 10px;
+}
+
+@media (max-width: 767px) {
+  .bca-sectors-heading-section {
+    padding: 50px 15px;
+  }
+
+  .bca-sectors-heading-title {
+    margin: 18px 0;
+  }
+}
+
+/*=========================
+  BCA SECTION
+  ========================= */
 .bca-section__eyebrow {
   display: inline-block;
   margin: 0 0 14px;
@@ -118,11 +218,11 @@ Author: Deven Warang
 	overflow: hidden;
 }
 
-/* =========================
-   HOME PAGE MENU
-   transparent at top
-   dark blue when sticky
-   ========================= */
+/*=========================
+  HOME PAGE MENU
+  transparent at top
+  dark blue when sticky
+  ========================= */
 body:has(.transparent-header) header.aux-overlay-header.aux-sticky {
 	top: 0;
 	background-color: var(--bca-header-bg);
@@ -137,9 +237,9 @@ body:has(.transparent-header) header.aux-overlay-header{
 	.hide { display: none; }
 }
 
-/* =========================
-   ALL OTHER PAGES
-   ========================= */
+/*=========================
+  ALL OTHER PAGES
+  ========================= */
 body:not(:has(.transparent-header)) header.aux-overlay-header {
 	background-color: var(--bca-header-bg) !important;
 	box-shadow: 0 6px 20px rgba(0,0,0,0.18);

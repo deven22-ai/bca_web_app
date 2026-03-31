@@ -64,13 +64,9 @@ get_header();
     <section class="bca-heading-section">
         <div class="bca-heading-container">
             <div class="bca-heading__border"></div>
-            <h2 class="bca-heading__title">
-                Sectors We <span>Specialise In</span>
-            </h2>
+            <h2 class="bca-heading__title">Sectors We <span>Specialise In</span></h2>
             <div class="bca-heading__description">
-                <p>
-                    BC&amp;A works with businesses and individuals across a broad range of industries.
-                </p>
+                <p>BC&amp;A works with businesses and individuals across a broad range of industries.</p>
             </div>
         </div>
     </section>
