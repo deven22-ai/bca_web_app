@@ -39,7 +39,7 @@ h2 {
   border-color: var(--bca-button-border);
   box-shadow: 3px 4px 10px 0px rgba(0, 0, 0, 0.5) !important;
   border-style: none;
-  max-width: 200px;
+  min-width: 150px;
   text-align: center;
   padding: 10px 25px 10px 25px;
   border-radius: 2px;
@@ -354,42 +354,36 @@ body:not(:has(.transparent-header)) header.aux-overlay-header {
 }
 
 /*=========================
-  CTA - Contact Section 
+  BCA - CTA Section 
   =========================*/
-
-.bca-cta-contact {
+.bca-cta.contact {
   background-color: var(--bca-card-bg);
-  border-top: 1px solid var(--bca-card-border);
-  padding: 70px 0;
-  overflow: hidden;
 }
 
-.bca-cta-contact .container {
+.bca-cta {
+  padding: 70px 0;
+  overflow: hidden;
+  border-top: 1px solid var(--bca-card-border);
+}
+
+.bca-cta .container {
   display: flex;
   align-items: center;
   gap: 60px;
 }
 
-.bca-cta-contact__left {
+.bca-cta__left {
   flex: 0 0 50%;
   max-width: 590px;
   position: relative;
 }
 
-.bca-cta-contact__eyebrow {
-  text-transform: uppercase;
-  white-space: nowrap;
-  font-weight: 600;
-  color: var(--bca-dark-navy);
-  z-index: 0;
-}
-
-.bca-cta-contact-content {
+.bca-cta__content {
   position: relative;
   z-index: 1;
 }
 
-.bca-cta-contact__btn {
+.bca-cta__btn {
   display: flex;
   flex-direction: row;
   gap: 25px;
@@ -397,7 +391,7 @@ body:not(:has(.transparent-header)) header.aux-overlay-header {
   flex-wrap: wrap;
 }
 
-.bca-cta-contact__right {
+.bca-cta__right {
   flex: 1;
   position: relative;
   display: flex;
@@ -406,7 +400,7 @@ body:not(:has(.transparent-header)) header.aux-overlay-header {
   min-height: 380px;
 }
 
-.bca-cta-contact__image {
+.bca-cta__image {
   position: relative;
   z-index: 1;
   width: 100%;
@@ -415,31 +409,31 @@ body:not(:has(.transparent-header)) header.aux-overlay-header {
   animation: pulse 3.5s ease-in-out infinite;
 }
 
- .bca-cta-contact__image img {
+.bca-cta__image img {
   width: 100%;
   height: auto;
   display: block;
- }
+}
 
- @media (max-width: 900px) {
-  .bca-cta-contact .container {
+@media (max-width: 900px) {
+  .bca-cta .container {
     flex-direction: column;
     gap: 40px;
   }
-  .bca-cta-contact__left {
+  .bca-cta__left {
     flex: 1 1 auto;
     max-width: 100%;
   }
-  .bca-cta-contact__right {
+  .bca-cta__right {
     width: 100%;
   }
 }
 
 @media (max-width: 540px) {
-  .bca-cta-contact__btn {
+  .bca-cta__btn {
     flex-direction: column;
   }
-  .bca-cta-contact__btn a {
+  .bca-cta__btn a {
     width: 100%;
   }
 }

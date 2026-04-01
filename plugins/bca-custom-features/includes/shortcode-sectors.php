@@ -63,11 +63,53 @@ function getAllSectors() {
         ?>
         <p>No sectors found.</p>
         <?php 
-        }
+    }
+
+    return ob_get_clean();
+}
+
+function getSectorRow() {
+    wp_enqueue_style('sectors-style');
+    ob_start();
+
+    /* Query Sector */
+    $query = new WP_Query(array(
+        'post_type'      => 'sector',
+        'posts_per_page' => -1,
+        'post_status'    => 'publish',
+        'orderby'        => 'title',
+        'order'          => 'ASC'
+    ));
+
+    if ($query->have_posts()): ?>
+    <section class="bca-explore">
+        <div class="bca-explore__header">
+            <div>
+                <span class="bca-section__eyebrow" style="color: var(--bca-text-desc);">Sectors We Support</span>
+                <h2 class="bca-explore__title">Specialist insight across a range of sectors</h2>
+            </div>
+        </div>    
+ 
+        <!------ Sector Row ---------->
+        <div class="bca-explore__row">
+            <div class="bca-explore__track" id="row1">
+                <?php while($query->have_posts()) :  $query->the_post(); ?>
+                <a href="<?php the_permalink(); ?>" class="bca-sector-card">
+                    <img class="bca-sector-card__img" 
+                        src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>"/>
+                    <div class="bca-sector-card__overlay"></div>
+                    <span class="bca-sector-card__name"><?php the_title(); ?></span>
+                </a>
+                <?php endwhile; ?>
+            </div>
+        </div>
+    </section>
+    <?php endif;
 
     return ob_get_clean();
 }
 
 
 add_shortcode('bca_sectors', 'getAllSectors');
+add_shortcode('bca_sector_row', 'getSectorRow');
 ?>

@@ -1,11 +1,21 @@
 <?php 
 get_header(); 
 wp_enqueue_style('sectors-style');
-?>
 
-<?php if (have_posts()) {
+/* Get all the sectors query */
+$query = new WP_Query(array(
+    'post_type'      => 'sector',
+    'posts_per_page' => -1,
+    'post_status'    => 'publish',
+    'orderby'        => 'title',
+    'order'          => 'ASC'
+));
+
+if (have_posts()) {
     while (have_posts()) {
-        the_post(); ?>
+        the_post(); 
+        $img_url = get_field('services_image');
+        ?>
 
         <!-- HERO -->
         <div class="bca-hero-section" style="background-image: url('<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large')?>');">
@@ -44,10 +54,12 @@ wp_enqueue_style('sectors-style');
             <!-- ══ WHAT WE CAN PROVIDE ═════════════════ -->
             <section class="bca-sector-services">
                 <div class="container">
-                    <div class="bca-sector-services__inner">
+                    <div class="<?php echo $img_url != '' ? 'bca-sector-services__inner' : '' ?>">
+                        <?php if ($img_url != '') : ?>
                         <div class="bca-sector-services__image-wrap drop-shadow">
-                            <img src="<?php echo get_field('services_image') ?>" alt=""/>
+                            <img src="<?php echo $img_url ?>" alt=""/>
                         </div>
+                        <?php endif; ?>
                         <div class="bca-sector-services__right">
                             <span class="bca-section__eyebrow">What we can provide</span>
                             <h2 class="bca-section__title"><?php echo get_field('services_heading'); ?></h2>
@@ -66,19 +78,19 @@ wp_enqueue_style('sectors-style');
                 <div class="container">
                     <div class="bca-faq__inner">
                         <div class="bca-faq__inner-left reveal">
-                        <span class="bca-section__eyebrow">FAQs</span>
-                        <h2 class="bca-section__title">Common questions about our agricultural services</h2>
-                        <p>Can't find what you're looking for? Our team is always happy to have a no-obligation conversation.</p>
-                        <a href="/contact/" class="bca-btn-primary">Speak to an adviser</a>
+                            <span class="bca-section__eyebrow">FAQs</span>
+                            <h2 class="bca-section__title">Common questions about our agricultural services</h2>
+                            <p>Can't find what you're looking for? Our team is always happy to have a 
+                                no-obligation conversation.
+                            </p>
+                            <div class="btn-wrapper"><a href="/contact/" class="bca-btn-primary">Speak To An Adviser</a></div>
                         </div>
-                        <div class="bca-faq-list">
+                        <div class="bca-faq-list drop-shadow">
                             <?php 
                             $raw_faqs = get_field('faq');
-                            if( $raw_faqs ) {
-                                // Split into individual Q&A blocks by blank line
-                                error_log($raw_faqs); 
+                            if($raw_faqs) {
+                                // Split into individual Q&A blocks by '===' 
                                 $blocks = array_filter(array_map('trim', explode("===", $raw_faqs)));
-                                error_log(count($blocks));
                                 $i = 0;
                                 foreach($blocks as $block) {
                                     $lines    = explode("\n", $block);
@@ -110,11 +122,36 @@ wp_enqueue_style('sectors-style');
                 </div>
             </section>
         </main>
-
         <?php
     } 
 } 
 ?>
+
+<!-- Explore more sectors -->
+<?php if ($query->have_posts()): ?>
+<section class="bca-explore">
+    <div class="bca-explore__header">
+        <div>
+            <span class="bca-section__eyebrow" style="color: var(--bca-text-desc);">Our sectors</span>
+            <h2 class="bca-explore__title">Also explore these sectors</h2>
+        </div>
+    </div>    
+ 
+    <!------ Sector Row ---------->
+    <div class="bca-explore__row">
+        <div class="bca-explore__track" id="row1">
+            <?php while($query->have_posts()) :  $query->the_post(); ?>
+            <a href="<?php the_permalink(); ?>" class="bca-sector-card">
+                <img class="bca-sector-card__img" 
+                    src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>"/>
+                <div class="bca-sector-card__overlay"></div>
+                <span class="bca-sector-card__name"><?php the_title(); ?></span>
+            </a>
+            <?php endwhile; ?>
+        </div>
+    </div>
+</section>
+<?php endif; ?>
 
 <section class="bca-heading-section">
     <div class="bca-heading-container">
@@ -133,7 +170,6 @@ wp_enqueue_style('sectors-style');
 
 <!-- ══ JAVASCRIPT ══════════════════════════════════ -->
 <script>
-
     // ── FAQ ───
     document.querySelectorAll('.bca-faq__question').forEach(btn => {
         btn.addEventListener('click', () => {
@@ -152,5 +188,10 @@ wp_enqueue_style('sectors-style');
                 btn.setAttribute('aria-expanded', 'true');
             }
         });
+    });
+    
+    // ── Explore more sectors ─── 
+    document.querySelectorAll('.bca-explore__track').forEach(track => {
+        track.innerHTML += track.innerHTML; //Duplicate each track's cards for a seamless infinite loop
     });
 </script>

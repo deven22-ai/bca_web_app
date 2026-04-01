@@ -20,7 +20,7 @@
 .bca-sector-services__inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    gap: 60px;
     align-items: start;
 }
 
@@ -58,6 +58,7 @@
     gap: 0;
     padding-left: 0;
     margin: 0;
+    padding-top: 15px;
 }
 
 .services-checklist li {
@@ -65,6 +66,12 @@
     color: var(--bca-text-desc);
     position: relative;
     padding-left: 35px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--bca-card-border);
+}
+
+.services-checklist li:last-child {
+    border-bottom: none;
 }
 
 .services-checklist li::before {
@@ -124,7 +131,6 @@
   ========================= */
 .bca-faq {
     padding: 80px 0;
-    background: var(--bca-card-bg);
     border-top: 1px solid var(--bca-card-border);
 }
 
@@ -139,10 +145,6 @@
 .bca-faq__item {
     border-bottom: 1px solid var(--bca-card-border);
     background: #FFFFFF;
-}
-
-.bca-faq__item:first-child {
-    border-top: 1px solid var(--bca-card-border);
 }
 
 .bca-faq__question {
@@ -211,14 +213,168 @@
     color: var(--bca-text-desc);
 }
 
+.btn-wrapper {
+    padding-top: 20px; 
+}
+
 @media (max-width: 1024px) {
     .bca-faq__inner { 
         grid-template-columns: 1fr; 
         gap: 40px; 
     }
 }
-  
-  
+
+/*=========================
+  BCA EXPLORE MORE SECTORS
+  ========================= */
+.bca-explore {
+    padding: 80px 0 88px;
+    background: var(--bca-dark-navy);
+    position: relative;
+    overflow: hidden;
+}
+
+.bca-explore::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1) 30%, rgba(255,255,255,0.1) 70%, transparent);
+}
+
+.bca-explore__header {
+    max-width: 1160px;
+    margin: 0 auto 40px;
+    padding: 0 28px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+ 
+.bca-explore__title {
+    font-size: clamp(26px, 3vw, 36px);
+    color: #ffffff;
+    line-height: 1.2;
+}
+.bca-explore__row {
+    position: relative;
+    overflow: hidden;
+}
+ 
+/* Fade left & right edges */
+.bca-explore__row::before,
+.bca-explore__row::after {
+    content: '';
+    position: absolute;
+    top: 0; bottom: 0;
+    width: 140px;
+    z-index: 3;
+    pointer-events: none;
+}
+ 
+.bca-explore__row::before {
+    left: 0;
+    background: linear-gradient(to right, #0D1B3E 0%, transparent 100%);
+}
+
+.bca-explore__row::after {
+    right: 0;
+    background: linear-gradient(to left, #0D1B3E 0%, transparent 100%);
+}
+ 
+.bca-explore__track {
+    display: flex;
+    gap: 14px;
+    width: max-content;
+    padding: 4px 0;
+    animation: marquee-ltr 52s linear infinite;
+}
+
+/* Pause both rows on hover over EITHER row */
+.bca-explore__row:hover .bca-explore__track {
+    animation-play-state: paused;
+}
+ 
+@keyframes marquee-ltr {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+.bca-sector-card {
+    flex-shrink: 0;
+    width: 240px;
+    height: 160px;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.bca-sector-card__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.45s ease;
+}
+
+.bca-sector-card:hover .bca-sector-card__img {
+    transform: scale(1.06);
+}
+
+/* Gradient overlay — always present, darkens on hover */
+.bca-sector-card__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+    to top,
+    rgba(4, 10, 30, 0.82) 0%,
+    rgba(4, 10, 30, 0.25) 55%,
+    transparent 100%
+    );
+    transition: background 0.35s ease;
+}
+
+.bca-sector-card:hover .bca-sector-card__overlay {
+    background: linear-gradient(
+    to top,
+    rgba(4, 10, 30, 0.92) 0%,
+    rgba(4, 10, 30, 0.45) 60%,
+    rgba(4, 10, 30, 0.1) 100%
+    );
+}
+
+/* Sector name */
+.bca-sector-card__name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 14px 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    line-height: 1.3;
+    z-index: 2;
+}
+
+/* Subtle animated underline on hover */
+.bca-sector-card__name::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--bca-primary);
+    margin-top: 5px;
+    transition: width 0.3s ease;
+}
+
+.bca-sector-card:hover .bca-sector-card__name::after {
+    width: 28px;
+}
+
 /*=========================
   BCA HERO SECTION
   ========================= */
