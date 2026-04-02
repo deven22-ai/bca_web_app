@@ -1,0 +1,572 @@
+:root {
+    --navy-mid:    #162347;
+    --navy-light:  #1e3060;
+    --blue-hover:  #1446BB;
+    --blue-light:  #3B82F6;
+    --gold:        #E8A020;
+    --text:        #1e293b;
+    --muted:       #64748b;
+}
+
+/* Hero section quicked for Home page */
+.bca-hero-section {
+    min-height: 96vh;
+}
+
+.bca-hero-section.home {
+    background-position: top;
+    background-image: url('/wp-content/uploads/2026/03/Spinnaker_Tower_Portsmouth.png');
+}
+
+.bca-hero {
+    justify-content: center;
+}
+
+.bca-hero__overlay {
+    background: linear-gradient(90deg, rgb(13 27 62) 0%, rgb(13 27 62 / 30%) 45%, rgb(13 27 62 / 0%) 100%)
+}
+
+.bca-hero__eyebrow span {
+    color: rgba(255, 255, 255, 0.55);
+}
+
+.bca-hero__title {
+    font-size: clamp(38px, 5.5vw, 66px);
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.08;
+    letter-spacing: -1.5px;
+    margin-bottom: 10px;
+}
+
+.bca-hero__text {
+    line-height: 1.75;
+    color: var(--white);
+}
+
+/* ════════════════════════════════════════
+    FOR BUSINESSES & INDIVIDUALS
+   ════════════════════════════════════════ */
+.bca-audience {
+    padding: 88px 0;
+    background: var(--bca-card-bg);
+}
+
+.bca-audience__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.bca-audience-card {
+    background: white;
+    border: 1px solid var(--bca-dark-border);
+    padding: 44px 40px;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.bca-audience-card:hover {
+    box-shadow: 0 20px 60px rgba(13,27,62,0.1);
+    transform: translateY(-4px);
+}
+
+.bca-audience-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--bca-primary);
+}
+
+.bca-audience-card--individuals::before {
+    background: linear-gradient(90deg, var(--bca-primary), var(--gold));
+}
+
+.bca-audience-card__icon {
+    width: 52px; height: 52px;
+    background: rgba(26,86,219,0.08);
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 22px;
+}
+
+.bca-audience-card__icon svg { 
+    width:24px; 
+    height:24px; 
+    stroke:var(--bca-primary); 
+    fill:none; 
+    stroke-width:1.7; 
+}
+
+.bca-audience-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--bca-dark-navy);
+    margin-bottom: 12px;
+}
+
+.bca-audience-card p {
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--bca-text-desc);
+    margin-bottom: 28px;
+}
+
+.bca-audience-card__list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 32px;
+}
+
+.bca-audience-card__list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: var(--text);
+}
+
+.bca-audience-card__list li svg { 
+    width:16px; 
+    height:16px; 
+    stroke:var(--bca-primary); 
+    fill:none; 
+    stroke-width:2.5; 
+    flex-shrink:0; 
+}
+
+/* ════════════════════════════════════════
+   EXPANDABLE SECTORS
+   ════════════════════════════════════════ */
+.bca-expand-card {
+    padding: 70px 0;
+}
+
+.bca-expand-card__accordion {
+    display: flex;
+    gap: 8px;
+    width: 100%;
+    height: 460px;
+}
+
+.bca-expand-card .accordion-card {
+    position: relative;
+    flex: 1;
+    min-width: 90px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: flex 0.55s ease;
+    box-shadow: 0 18px 45px rgba(1, 16, 57, 0.08);
+}
+
+.accordion-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transform: scale(1);
+    transition: transform 0.45s ease;
+}
+
+.accordion-card:hover img {
+    transform: scale(1.02);
+}
+
+.accordion-card__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(1, 16, 57, 0.00) 0%,
+        rgba(1, 16, 57, 0.00) 45%,
+        rgba(1, 16, 57, 0.00) 100%
+    );
+    transition: background 0.4s ease;
+}
+
+.accordion-content {
+    position: absolute;
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
+    z-index: 2;
+    color: var(--white);
+}
+
+.accordion-content h3 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--white);
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.35s ease, transform 0.45s ease;
+}
+
+.accordion-content p {
+    margin: 14px 0 18px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: rgba(255,255,255,0.88);
+    max-width: 400px;
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.35s ease, transform 0.45s ease;
+    pointer-events: none;
+}
+
+.accordion-content a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+    padding: 0 20px;
+    background: var(--bca-primary);
+    color: var(--white);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity 0.35s ease, transform 0.45s ease;
+    pointer-events: none;
+}
+
+/* accordion expansion */
+.bca-expand-card__accordion:hover .accordion-card {
+    flex: 0.9;
+}
+
+.bca-expand-card__accordion .accordion-card:hover {
+    flex: 3.2;
+}
+
+/* overlay on hover */
+.bca-expand-card__accordion .accordion-card:hover .accordion-card__overlay {
+    background: linear-gradient(
+        180deg,
+        rgba(1, 16, 57, 0.06) 0%,
+        rgba(1, 16, 57, 0.18) 38%,
+        rgba(1, 16, 57, 0.92) 100%
+    );
+}
+
+/* content reveal */
+.bca-expand-card__accordion .accordion-card:hover .accordion-content h3 {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.bca-expand-card__accordion .accordion-card:hover .accordion-content p {
+    opacity: 1;
+    transform: translateY(0);
+    transition-delay: 0.08s;
+}
+
+.bca-expand-card__accordion .accordion-card:hover .accordion-content a {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    transition-delay: 0.14s;
+}
+
+/* responsive */
+@media (max-width: 991px) {
+    .bca-expand-card__accordion {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .bca-expand-card .accordion-card,
+    .bca-expand-card__accordion:hover .accordion-card,
+    .bca-expand-card__accordion .accordion-card:hover {
+        flex: unset;
+        height: 320px;
+    }
+
+    .accordion-card__overlay {
+        background: linear-gradient(
+            180deg,
+            rgba(1, 16, 57, 0.06) 0%,
+            rgba(1, 16, 57, 0.18) 38%,
+            rgba(1, 16, 57, 0.92) 100%
+        );
+    }
+
+    .accordion-content h3,
+    .accordion-content p,
+    .accordion-content a {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+}
+
+
+/* ════════════════════════════════════════
+    WHY CHOOSE BC&A
+   ════════════════════════════════════════ */
+.bca-why {
+    padding: 88px 0;
+    background: var(--bca-card-bg);
+}
+
+.bca-why__header {
+    text-align: center;
+    max-width: 580px;
+    margin: 0 auto 56px;
+}
+
+.bca-why__header .eyebrow { display: block; text-align: center; }
+.bca-why__header .eyebrow::before { display: none; }
+
+.bca-why__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.bca-why-card {
+    background: var(--white);
+    border: 1px solid var(--bca-dark-border);
+    padding: 36px 32px;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition);
+}
+
+.bca-why-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--bca-primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition);
+}
+
+.bca-why-card:hover {
+    box-shadow: 0 16px 48px rgba(13,27,62,0.09);
+    transform: translateY(-4px);
+    border-color: transparent;
+}
+
+.bca-why-card:hover::after { transform: scaleX(1); }
+
+.bca-why-card__num {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: rgba(26,86,219,0.3);
+    margin-bottom: 20px;
+}
+
+.bca-why-card__icon {
+    width: 48px; height: 48px;
+    background: rgba(26,86,219,0.07);
+    border-radius: 2px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 18px;
+}
+
+.bca-why-card__icon svg { 
+    width:22px; 
+    height:22px; 
+    stroke:var(--bca-primary); 
+    fill:none; 
+    stroke-width:1.7; 
+}
+
+.bca-why-card h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--bca-dark-navy);
+    margin-bottom: 10px;
+}
+
+.bca-why-card p { 
+    font-size: 14px; 
+    line-height: 1.75; 
+    color: var(--muted); 
+}
+
+/* ════════════════════════════════════════
+    SOFTWARE PARTNERS
+   ════════════════════════════════════════ */
+.bca-software {
+    padding: 52px 0;
+    background: var(--white);
+    border-top: 1px solid var(--bca-dark-border);
+    border-bottom: 1px solid var(--bca-dark-border);
+}
+
+.bca-software__inner {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.bca-software__label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    white-space: nowrap;
+}
+
+.bca-software__logos {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.bca-software-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.45;
+    transition: opacity var(--transition);
+   filter: grayscale(100%);
+}
+
+.bca-software-logo:hover { opacity: 0.85; filter: grayscale(0); }
+
+.bca-software-logo img {
+    height: 40px;
+    padding: 0 16px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    letter-spacing: -0.3px;
+}
+
+/* Individual partner brand colours */
+.partner-logo--xero .partner-logo__badge { background: #1AB4D7; color: white; }
+.partner-logo--qb .partner-logo__badge { background: #2CA01C; color: white; }
+.partner-logo--sage .partner-logo__badge { background: #00D639; color: #00371A; }
+.partner-logo--dext .partner-logo__badge { background: #FF5C00; color: white; }
+.partner-logo--freeagent .partner-logo__badge { background: #1E4D2B; color: white; font-size:12px; }
+
+.bca-cta.office {
+    background: var(--bca-card-bg);
+}
+
+/* ════════════════════════════════════════
+    TESTIMONIALS
+   ════════════════════════════════════════ */
+.bca-testimonials {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.bca-testimonials__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.bca-testimonial-card {
+    background: var(--bca-card-bg);
+    border: 1px solid var(--bca-dark-border);
+    border-radius: 8px;
+    padding: 36px 32px;
+    position: relative;
+    transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.bca-testimonial-card:hover {
+    box-shadow: 0 16px 48px rgba(13,27,62,0.09);
+    transform: translateY(-3px);
+}
+
+.bca-testimonial-card__quote {
+    font-size: 48px;
+    line-height: 0.8;
+    color: var(--bca-primary);
+    font-weight: 800;
+    opacity: 0.2;
+    margin-bottom: 16px;
+}
+
+.bca-testimonial-card__stars {
+    display: flex;
+    gap: 3px;
+    margin-bottom: 16px;
+}
+
+.bca-testimonial-card__stars svg { width:15px; height:15px; fill:#F59E0B; stroke:none; }
+
+.bca-testimonial-card p {
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--text);
+    margin-bottom: 24px;
+    font-style: italic;
+}
+
+.bca-testimonial-card__author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding-top: 20px;
+    border-top: 1px solid var(--bca-dark-border);
+}
+
+.bca-testimonial-card__avatar {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: var(--bca-primary);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--white);
+    flex-shrink: 0;
+}
+
+.bca-testimonial-card__name {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--bca-dark-navy);
+}
+
+.bca-testimonial-card__role { font-size: 12px; color: var(--muted); }
+
+/* ════════════════════════════════════════
+    NEWS GRID
+   ════════════════════════════════════════ */
+.bca-news-shortcode {
+    padding: 70px 0;
+    background: var(--bca-card-bg);
+}
+
+/* ════════════════════════════════════════
+    RESPONSIVE
+   ════════════════════════════════════════ */
+@media (max-width: 1024px) {
+    .bca-audience__grid { grid-template-columns: 1fr; gap: 20px; }
+    .bca-why__grid { grid-template-columns: repeat(2, 1fr); }
+    .bca-testimonials__grid { grid-template-columns: repeat(2, 1fr); }
+    .bca-news__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 640px) {
+    .sectors__grid { grid-template-columns: repeat(2, 1fr); }
+    .bca-why__grid { grid-template-columns: 1fr; }
+    .bca-testimonials__grid { grid-template-columns: 1fr; }
+    .bca-news__grid { grid-template-columns: 1fr; }
+    .bca-hero__btns { flex-direction: column; }
+    .bca-hero__bottom { display: none; }
+}

@@ -1,8 +1,9 @@
 <?php
-wp_enqueue_style('sectors-style'); // Load the sectors.css
+wp_enqueue_style('sector-style'); // Load the sectors.css
 get_header();
 ?>
 
+<!-- HERO SECTION -->
 <div class="bca-hero-section" style="background-image: url(/wp-content/uploads/2026/03/team_construction_site.png);">
     <div class="bca-hero__overlay"></div>
     <section class="bca-hero transparent-header">
@@ -26,9 +27,10 @@ get_header();
     </section>
 </div>
 
+<!-- INTRO GRID -->
 <section class="bca-intro-grid-section">
     <div class="bca-intro-grid container">
-        <div class="bca-intro-grid__left">
+        <div class="bca-intro-grid__left reveal">
             <span class="bca-section__eyebrow">Industry Expertise</span>
             <h2 class="bca-section__title">
                 Sector knowledge that goes beyond the numbers
@@ -46,7 +48,7 @@ get_header();
                 </p>
             </div>
         </div>
-        <div class="bca-intro-grid__right drop-shadow">
+        <div class="bca-intro-grid__right drop-shadow reveal reveal-delay-1">
             <div class="bca-intro-card">
                 <h3 class="bca-intro-card__title">Why sector expertise matters</h3>
                 <ul class="bca-intro-card__list">
@@ -61,27 +63,28 @@ get_header();
 </section>
 
 <main>
-    <section class="bca-heading-section">
-        <div class="bca-heading-container">
-            <div class="bca-heading__border"></div>
-            <h2 class="bca-heading__title">Sectors We <span>Specialise In</span></h2>
-            <div class="bca-heading__description">
-                <p>BC&amp;A works with businesses and individuals across a broad range of industries.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="bca-sectors-listing">
+    <section class="bca-sector">
         <div class="container">
-            <div class="sector-listing__wrapper">
-                <?php echo do_shortcode('[bca_sectors]'); ?>
+            <div class="bca-heading-section reveal">
+                <div class="bca-heading-container">
+                    <div class="bca-heading__eyebrow">Expertise tailored to your industry</div>
+                    <h2 class="bca-heading__title">Sectors We <span>Specialise In</span></span></h2>
+                    <div class="bca-heading__description">
+                        <p>BC&amp;A works with businesses and individuals across a broad range of industries.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bca-sectors-listing reveal reveal-delay-1">        
+                <div class="sector-listing__wrapper">
+                    <?php echo do_shortcode('[bca_sectors]'); ?>
+                </div>
             </div>
         </div>
     </section>
 
     <section class="bca-cta-grid-section">
         <div class="bca-cta-grid container drop-shadow">
-            <div class="bca-intro-grid__left">
+            <div class="bca-intro-grid__left reveal">
                 <span class="bca-section__eyebrow">SPEAK TO BC&A</span>
                 <h2 class="bca-section__title">
                     Need Advice From A Team That Understands Your Sector?
@@ -93,7 +96,7 @@ get_header();
                     </p>
                 </div>
             </div>
-            <div class="bca-cta-grid__right">
+            <div class="bca-cta-grid__right reveal reveal-delay-1">
                 <div class="btns">
                     <a href="/our-offices" class="bca-btn-primary">Find the team</a>
                     <a href="/contact-us" class="bca-btn-accent">Contact us</a>

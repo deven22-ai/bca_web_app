@@ -116,6 +116,6 @@ function generateTeam($office_terms, $query) {
     return ob_get_clean();
 }
 
-add_shortcode('team_grid', 'team_grid_shortcode');
+add_shortcode('bca_team_grid', 'team_grid_shortcode');
 add_shortcode('team_grid_portsmouth', 'team_grid_portsmouth_shortcode');
 ?>

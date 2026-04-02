@@ -1,6 +1,6 @@
 <?php 
 get_header(); 
-wp_enqueue_style('sectors-style');
+wp_enqueue_style('sector-style');
 
 /* Get all the sectors query */
 $query = new WP_Query(array(

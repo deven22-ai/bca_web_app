@@ -1,3 +1,21 @@
+.bca-cta.contact {
+    background-color: var(--white);
+}
+
+.bca-team-shortcode {
+    padding: 70px 0;
+}
+
+.bca-hero-section.team {
+    background-position: center;
+    background-image: url('/wp-content/uploads/2026/03/team.avif');
+}
+
+.bca-news-shortcode {
+    padding: 70px 0;
+    background-color: var(--bca-card-bg);
+}
+
 .bca-team-filter-bar {
     margin-bottom: 28px;
     display: flex;

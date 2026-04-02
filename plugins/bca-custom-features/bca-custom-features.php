@@ -19,7 +19,8 @@ require_once BCA_CUSTOM_PLUGIN_PATH . 'includes/shortcode-team.php';
 require_once BCA_CUSTOM_PLUGIN_PATH . 'includes/shortcode-file-upload.php';
 require_once BCA_CUSTOM_PLUGIN_PATH . 'includes/shortcode-news.php';
 require_once BCA_CUSTOM_PLUGIN_PATH . 'includes/shortcode-cta.php';
-require_once BCA_CUSTOM_PLUGIN_PATH . 'includes/shortcode-sectors.php';
+require_once BCA_CUSTOM_PLUGIN_PATH . 'includes/shortcode-sector.php';
+require_once BCA_CUSTOM_PLUGIN_PATH . 'includes/shortcode-section.php';
 require_once BCA_CUSTOM_PLUGIN_PATH . 'includes/ajax-handlers.php';
 /* require_once BCA_CUSTOM_PLUGIN_PATH . 'includes/dropbox-upload-handler.php'; */
 

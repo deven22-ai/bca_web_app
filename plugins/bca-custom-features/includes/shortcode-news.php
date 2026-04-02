@@ -32,7 +32,7 @@ function bca_news_renderer($news_query) {
             }
 
             ?>
-            <article class="bca-news-card drop-shadow">
+            <article class="bca-news-card">
                 <div class="bca-news-card-image-wrap">
                     <img src="<?php echo $image_url ?>" alt="">
                     <span class="bca-news-card-badge">
@@ -93,7 +93,7 @@ function getNews() {
     if(!empty($news_subcat)) {
         ?>
         <div class="bca-news-filter-wrap">
-            <div class="bca-news-filter-slider drop-shadow">
+            <div class="bca-news-filter-slider">
                 <a href="#" class="bca-news-filter-item active" data-cat="all">All News</a>
                 <?php 
                 foreach($news_subcat as $category) {
@@ -137,7 +137,7 @@ function getMiniGrid() {
     ?>
     <div class="bca-mini-news-grid">
         <?php echo bca_news_renderer($news_query); ?>
-        <a class="bca-btn-primary" href="/about-us/news/">Our Latest News</a>
+        <!-- <a class="bca-btn-primary" href="/about-us/news/">Our Latest News</a> -->
     </div>
     <?php 
     return ob_get_clean();

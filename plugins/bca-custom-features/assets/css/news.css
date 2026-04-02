@@ -17,47 +17,52 @@
 }
 
 .bca-news-card {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    background: #fff;
-    overflow: hidden;
-    border: 1px solid #E6EBF2;
-    transition: 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #fff;
+  overflow: hidden;
+  border: 1px solid var(--bca-card-border);
+  transition: 0.25s ease;
 }
 
 .bca-news-card:hover {
-    transform: translateY(-4px);
+  transform: translateY(-4px);
+  box-shadow: var(--box-shadow);
 }
 
 .bca-news-card-image-wrap {
-    position: relative;
-    overflow: hidden;
-    max-height: 240px;
+  position: relative;
+  overflow: hidden;
+  max-height: 240px;
 }
 
 .bca-news-card-badge {
-    position: absolute;
-    top: 16px;
-    left: 16px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 8px 14px;
-    background: rgba(255, 255, 255, 0.95);
-    color: #011039;
-    font-size: 13px;
-    font-weight: 700;
-    line-height: 1;
-    box-shadow: 0 8px 18px rgba(1, 16, 57, 0.10);
-    z-index: 2;
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #011039;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 1;
+  z-index: 2;
 }
 
 .bca-news-card img {
-    width: 100%;
-    height: 240px;
-    object-fit: cover;
-    display: block;
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s ease;
+}
+
+.bca-news-card:hover .bca-news-card-image-wrap img {
+  transform: scale(1.05);
 }
 
 .bca-news-card-body {
@@ -80,8 +85,13 @@
 }
 
 .bca-news-card-body .title {
-    padding-bottom: 15px;
-    border-bottom: 1px solid #E6EBF2;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--bca-dark-navy);
+    line-height: 1.4;
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--bca-dark-border);
 }
 
 .bca-news-card-body .footer .date {
