@@ -14,27 +14,49 @@ wp_enqueue_style('home-style');
     <section class="bca-hero transparent-header">
         <div class="bca-hero__container">
             <div class="bca-hero__content">
-                <div class="bca-hero__eyebrow">
+                <div class="bca-hero__eyebrow reveal">
                     <p><strong><span style="color: rgba(255, 255, 255, 0.55);">BC&A Chartered Accountants</span></strong></p>
                 </div>
-                <div class="bca-hero__head-wrapper">
+                <div class="bca-hero__head-wrapper reveal reveal-delay-1">
                     <h1 class="bca-hero__title">Big Firm Expertise.<br>Personal Service.<br>Real Results.</h1>
                     <p class="bca-hero__text">
-                        We are one of the largest independent chartered accountancy firms in the South of England, 
-                        with over 25 years of experience supporting businesses, individuals and charities across 
-                        Hampshire and beyond.
+                        One of the South of England's largest independent chartered accountancy firms,
+                        supporting businesses, individuals and charities across Hampshire for over 25 years.
                     </p>
-                    <div class="bca-hero__btns">
-                        <a href="/request-quote/" class="bca-btn-primary">Get Free Quote</a>
-                        <a href="tel:02392833300" class="bca-btn-ghost">
-                            <svg viewBox="0 0 16 16"><path d="M14 10.67v2a1.33 1.33 0 01-1.45 1.33 13.2 13.2 0 01-5.75-2.05 13 13 0 01-4-4 13.2 13.2 0 01-2.05-5.78A1.33 1.33 0 012.07 1h2a1.33 1.33 0 011.33 1.15c.085.64.24 1.27.467 1.87a1.33 1.33 0 01-.3 1.4L4.6 6.4a10.67 10.67 0 004 4l.98-.98a1.33 1.33 0 011.4-.3c.6.228 1.23.382 1.87.467A1.33 1.33 0 0114 10.67z"></path></svg>
-                            Call Us Now
-                        </a>
-                    </div>
+                </div>
+                <div class="bca-hero__services-label reveal reveal-delay-2"><span>Services other firms don't offer</span></div>
+                <div class="bca-hero__services reveal reveal-delay-3">
+                    <a href="/services/medical-specialist/" class="bca-hero__service-item">
+                        <span class="bca-hero__service-dot"></span>
+                        <span class="bca-hero__service-name">Medical Specialist Accounting</span>
+                        <span class="bca-hero__service-arrow"><svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></span>
+                    </a>
+                    <a href="/services/city-parish-councils/" class="bca-hero__service-item">
+                        <span class="bca-hero__service-dot"></span>
+                        <span class="bca-hero__service-name">City &amp; Parish Council Accounts</span>
+                        <span class="bca-hero__service-arrow"><svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></span>
+                    </a>
+                    <a href="/services/rd-tax-credit/" class="bca-hero__service-item">
+                        <span class="bca-hero__service-dot"></span>
+                        <span class="bca-hero__service-name">R&amp;D Tax Credit Claims</span>
+                        <span class="bca-hero__service-arrow"><svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></span>
+                    </a>
+                    <a href="/services/audit/" class="bca-hero__service-item">
+                        <span class="bca-hero__service-dot"></span>
+                        <span class="bca-hero__service-name">Audit Services</span>
+                        <span class="bca-hero__service-arrow"><svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></span>
+                    </a>
+                </div>
+                <div class="bca-hero__btns reveal reveal-delay-4">
+                    <a href="/request-quote/" class="bca-btn-primary">Get Free Quote</a>
+                    <a href="tel:02392833300" class="bca-btn-ghost">
+                        <svg viewBox="0 0 16 16"><path d="M14 10.67v2a1.33 1.33 0 01-1.45 1.33 13.2 13.2 0 01-5.75-2.05 13 13 0 01-4-4 13.2 13.2 0 01-2.05-5.78A1.33 1.33 0 012.07 1h2a1.33 1.33 0 011.33 1.15c.085.64.24 1.27.467 1.87a1.33 1.33 0 01-.3 1.4L4.6 6.4a10.67 10.67 0 004 4l.98-.98a1.33 1.33 0 011.4-.3c.6.228 1.23.382 1.87.467A1.33 1.33 0 0114 10.67z"></path></svg>
+                        Call Us Now
+                    </a>
                 </div>
             </div>
         </div>
-        <div class="bca-hero__bottom">
+        <div class="bca-hero__bottom reveal reveal-delay-4">
             <div class="bca-hero__bottom-inner">
                 <span class="bca-hero__bottom-item">
                     <svg viewBox="0 0 16 16"><path d="M8 1l1.7 3.5 3.8.55-2.75 2.68.65 3.78L8 9.75l-3.4 1.78.65-3.78L2.5 5.05l3.8-.55z"></path></svg>
@@ -56,6 +78,80 @@ wp_enqueue_style('home-style');
         </div>
     </section>
 </div>
+
+<!-- SPECIALIST SERVICES SECTION -->
+<section class="bca-specialist">
+    <div class="container">
+        <div class="bca-heading-section left-align reveal">
+            <div class="bca-heading-container">
+                <div class="bca-heading__eyebrow">Specialist Services</div>
+                <h2 class="bca-heading__title">Expertise Other Firms <span>Simply Don't Offer</span></h2>
+                <div class="bca-heading__description">
+                    <p>Four highly specialist services where BC&A has built deep, dedicated expertise that 
+                        sets us apart from general accountancy practices.</p>
+                </div>
+            </div>
+            <a href="/sectors/" class="bca-heading__link">View all services<svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></a>
+        </div>
+    </div>
+
+    <!-- 4 Cards -->
+    <div class="bca-specialist__grid">
+        <a href="/services/general-compliance/" class="bca-specialist-card reveal reveal-delay-1">
+            <div class="bca-specialist-card__icon">
+                <svg viewBox="0 0 24 24">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                    <path d="M9 12l2 2 4-4"/>
+                </svg>
+            </div>
+            <span class="bca-specialist-card__pill">Core Services</span>
+            <div class="bca-specialist-card__title">General Compliance</div>
+            <div class="bca-specialist-card__desc">Annual accounts, self-assessment, VAT returns and company secretarial — the essential compliance services every business and individual needs, done properly.</div>
+            <div class="bca-specialist-card__cta">
+                Find out more
+                <svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg>
+            </div>
+        </a>
+        <a href="/services/medical-specialist/" class="bca-specialist-card reveal reveal-delay-2">
+            <span class="bca-unique-badge">✦ BC&A Specialist</span>
+            <div class="bca-specialist-card__icon"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+            <span class="bca-specialist-card__pill">Healthcare</span>
+            <div class="bca-specialist-card__title">Medical Specialist Accounting</div>
+            <div class="bca-specialist-card__desc">
+                Tailored accountancy for GPs, hospital consultants, dentists and healthcare professionals 
+                navigating complex NHS and private income structures.
+            </div>
+            <div class="bca-specialist-card__cta">Find out more<svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg></div>
+        </a>
+
+        <a href="/services/city-parish-councils/" class="bca-specialist-card reveal reveal-delay-3">
+            <span class="bca-unique-badge">✦ BC&A Specialist</span>
+            <div class="bca-specialist-card__icon"><svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21V11h6v10"/></svg></div>
+            <span class="bca-specialist-card__pill">Public Sector</span>
+            <div class="bca-specialist-card__title">City &amp; Parish Council Accounts</div>
+            <div class="bca-specialist-card__desc">Specialist audit, annual returns and accountancy services designed specifically for town, city and parish councils across England and Wales.</div>
+            <div class="bca-specialist-card__cta">Find out more<svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg></div>
+        </a>
+
+        <a href="/services/rd-tax-credit/" class="bca-specialist-card reveal reveal-delay-4">
+            <span class="bca-unique-badge">✦ BC&A Specialist</span>
+            <div class="bca-specialist-card__icon"><svg viewBox="0 0 24 24"><path d="M9 3h6v10l3.5 6a1 1 0 01-.87 1.5H6.37a1 1 0 01-.87-1.5L9 13V3z"/><path d="M6.5 17h11"/></svg></div>
+            <span class="bca-specialist-card__pill">Tax Relief</span>
+            <div class="bca-specialist-card__title">R&amp;D Tax Credit Claims</div>
+            <div class="bca-specialist-card__desc">Maximise your Research &amp; Development tax relief. We identify qualifying activity, prepare robust claims and manage HMRC enquiries on your behalf.</div>
+            <div class="bca-specialist-card__cta">Find out more<svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg></div>
+        </a>
+
+        <a href="/services/audit/" class="bca-specialist-card reveal reveal-delay-5">
+            <span class="bca-unique-badge">✦ BC&A Specialist</span>
+            <div class="bca-specialist-card__icon"><svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12h6M9 16h4"/></svg></div>
+            <span class="bca-specialist-card__pill">Compliance</span>
+            <div class="bca-specialist-card__title">Audit Services</div>
+            <div class="bca-specialist-card__desc">Statutory and voluntary audits conducted by ICAEW-registered audit practitioners — thorough, efficient, and completed with minimal disruption to your team.</div>
+            <div class="bca-specialist-card__cta">Find out more<svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg></div>
+        </a>
+    </div>
+</section>
 
 <!-- FOR BUSINESSES/INDIVIDUALS -->
 <section class="bca-audience">

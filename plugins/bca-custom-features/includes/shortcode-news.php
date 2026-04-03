@@ -44,7 +44,10 @@ function bca_news_renderer($news_query) {
 
                     <div class="footer">
                         <span class="date"><?php echo get_the_date('F j, Y') ?></span>
-                        <a class="read-more" href="<?php echo esc_url(get_permalink()); ?>">Read more</a>
+                        <a class="read-more" href="<?php echo esc_url(get_permalink()); ?>">
+                            Read more
+                            <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"></path></svg>
+                        </a>
                     </div>
                 </div>
             </article>

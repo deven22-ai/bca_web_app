@@ -38,14 +38,11 @@ get_header();
 
             <div class="bca-section__text">
                 <p>
-                    We understand that every sector operates differently. Our team brings deep
-                    technical knowledge and real-world commercial understanding to help you
-                    navigate industry regulations, manage challenges and capitalise on opportunities.
+                    We understand that every sector operates differently. Whether you operate in construction, 
+                    healthcare, real estate, IT, retail or hospitality, our team provide tailored advice and 
+                    strategic support aligned with your goals.
                 </p>
-                <p>
-                    Whether you operate in construction, healthcare, real estate, IT, retail or
-                    hospitality, we provide tailored advice and strategic support aligned with your goals.
-                </p>
+                <p>We ensure that you are able to make informed decisions when it comes to your business and personal needs and goals.</p>
             </div>
         </div>
         <div class="bca-intro-grid__right drop-shadow reveal reveal-delay-1">
@@ -55,7 +52,7 @@ get_header();
                     <li><i aria-hidden="true" class="aux-icon-list-icon auxicon auxicon-primitive-dot"></i><span>Advice shaped by real commercial challenges</span></li>
                     <li><i aria-hidden="true" class="aux-icon-list-icon auxicon auxicon-primitive-dot"></i><span>Sector-aware tax, compliance and planning support</span></li>
                     <li><i aria-hidden="true" class="aux-icon-list-icon auxicon auxicon-primitive-dot"></i><span>Practical guidance that reflects your market</span></li>
-                    <li><i aria-hidden="true" class="aux-icon-list-icon auxicon auxicon-primitive-dot"></i><span>Stronger long-term strategic decision-making</span></li>
+                    <!-- <li><i aria-hidden="true" class="aux-icon-list-icon auxicon auxicon-primitive-dot"></i><span>Stronger long-term strategic decision-making</span></li> -->
                 </ul>
             </div>
         </div>

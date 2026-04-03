@@ -37,12 +37,11 @@ if (have_posts()) {
 
         <!-- Main Content -->
         <main>
-
             <?php if((int) get_field('show_intro_section') === 1) : ?>
             <!-- ══ OVERVIEW ═════════════════════════ -->
             <section class="bca-intro-grid-section" style="background: none;">
                 <div class="container">
-                    <div class="bca-intro-grid__left">
+                    <div class="bca-intro-grid__left reveal">
                         <span class="bca-section__eyebrow">Our Expertise</span>
                         <h2 class="bca-section__title"><?php echo get_field('intro_heading'); ?></h2>
                         <div class="bca-section__text"><?php echo get_field('intro_description'); ?></div>
@@ -54,14 +53,14 @@ if (have_posts()) {
             <!-- ══ WHAT WE CAN PROVIDE ═════════════════ -->
             <section class="bca-sector-services">
                 <div class="container">
-                    <div class="<?php echo $img_url != '' ? 'bca-sector-services__inner' : '' ?>">
+                    <div class="<?php echo $img_url != '' ? 'bca-sector-services__inner reveal' : '' ?>">
                         <?php if ($img_url != '') : ?>
                         <div class="bca-sector-services__image-wrap drop-shadow">
                             <img src="<?php echo $img_url ?>" alt=""/>
                         </div>
                         <?php endif; ?>
-                        <div class="bca-sector-services__right">
-                            <span class="bca-section__eyebrow">What we can provide</span>
+                        <div class="bca-sector-services__right reveal reveal-delay-1">
+                            <span class="bca-section__eyebrow"><?php echo get_field('services_title'); ?></span>
                             <h2 class="bca-section__title"><?php echo get_field('services_heading'); ?></h2>
 
                             <div class="bca-section__text">
@@ -74,18 +73,19 @@ if (have_posts()) {
             </section>
             
             <!-- ══ FAQ ═════════════════ -->
+            <?php if((int) get_field('show_faq') === 1) : ?>
             <section class="bca-faq">
                 <div class="container">
                     <div class="bca-faq__inner">
                         <div class="bca-faq__inner-left reveal">
                             <span class="bca-section__eyebrow">FAQs</span>
-                            <h2 class="bca-section__title">Common questions about our agricultural services</h2>
+                            <h2 class="bca-section__title"><?php echo get_field('faq_heading') ?></h2>
                             <p>Can't find what you're looking for? Our team is always happy to have a 
                                 no-obligation conversation.
                             </p>
                             <div class="btn-wrapper"><a href="/contact/" class="bca-btn-primary">Speak To An Adviser</a></div>
                         </div>
-                        <div class="bca-faq-list drop-shadow">
+                        <div class="bca-faq-list drop-shadow reveal reveal-delay-1">
                             <?php 
                             $raw_faqs = get_field('faq');
                             if($raw_faqs) {
@@ -121,6 +121,7 @@ if (have_posts()) {
                     </div>
                 </div>
             </section>
+            <?php endif; ?>
         </main>
         <?php
     } 
@@ -130,7 +131,7 @@ if (have_posts()) {
 <!-- Explore more sectors -->
 <?php if ($query->have_posts()): ?>
 <section class="bca-explore">
-    <div class="bca-explore__header">
+    <div class="bca-explore__header reveal">
         <div>
             <span class="bca-section__eyebrow" style="color: var(--bca-text-desc);">Our sectors</span>
             <h2 class="bca-explore__title">Also explore these sectors</h2>
@@ -138,7 +139,7 @@ if (have_posts()) {
     </div>    
  
     <!------ Sector Row ---------->
-    <div class="bca-explore__row">
+    <div class="bca-explore__row reveal reveal-delay-1">
         <div class="bca-explore__track" id="row1">
             <?php while($query->have_posts()) :  $query->the_post(); ?>
             <a href="<?php the_permalink(); ?>" class="bca-sector-card">
@@ -153,20 +154,23 @@ if (have_posts()) {
 </section>
 <?php endif; ?>
 
-<section class="bca-heading-section">
-    <div class="bca-heading-container">
-        <div class="bca-heading__border"></div>
-        <h2 class="bca-heading__title">See Our &nbsp;<span>Latest News</span></h2>
-    </div>
-</section>
-<section style="margin-bottom: 40px;">
+<!-- NEWS SHORTCODE -->
+<section class="bca-news-shortcode">
     <div class="container">
-        <?php echo do_shortcode('[bca_mini_news_grid]'); ?>
+        <div class="bca-heading-section left-align reveal">
+            <div class="bca-heading-container left-align">
+                <h2 class="bca-heading__title">See Our <span>Latest News</span></h2>
+            </div>
+            <a href="/about-us/news/" class="bca-heading__link">View all news<svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></a>
+        </div>
+        <div class="reveal reveal-delay-1"><?php echo do_shortcode('[bca_mini_news_grid]') ?></div>
     </div>
 </section>
-<?php echo do_shortcode('[bca_cta_contact]'); ?>
 
-<?php get_footer(); ?>
+<?php 
+/* CONTACT SHORTCODE */
+echo do_shortcode('[bca_cta_contact]');
+get_footer(); ?>
 
 <!-- ══ JAVASCRIPT ══════════════════════════════════ -->
 <script>

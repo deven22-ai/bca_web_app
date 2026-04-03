@@ -171,19 +171,30 @@
 .read-more {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  color: #0d5bff;
-  text-decoration: none;
-  font-weight: 700;
+  align-self: center;
+  justify-self: center;
+  gap: 7px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--bca-navy);
+  /*border-bottom: 1px solid rgba(26, 86, 219, 0.3);*/
+  padding-bottom: 2px;
+  white-space: nowrap;
+  transition: border-color var(--transition);
+  flex-shrink: 0;
 }
 
-.read-more::after {
-  content: "→";
-  transition: transform 0.25s ease;
+.read-more svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  fill: none;
+  stroke-width: 2;
+  transition: transform var(--transition);
 }
 
-.read-more:hover::after {
-  transform: translateX(4px);
+.read-more:hover svg {
+  transform: translateX(3px);
 }
 
 .bca-mini-news-grid {

@@ -11,6 +11,10 @@
   background-color: var(--bca-card-bg);
 }
 
+.bca-news-shortcode {
+  padding: 70px 0;
+}
+
 /*=========================
   BCA SECTOR SERVICES
   ========================= */
@@ -292,7 +296,7 @@
   gap: 14px;
   width: max-content;
   padding: 4px 0;
-  animation: marquee-ltr 52s linear infinite;
+  animation: marquee-ltr 40s linear infinite;
 }
 
 /* Pause both rows on hover over EITHER row */

@@ -69,7 +69,7 @@ function getAllSectors() {
 }
 
 function getSectorRow() {
-    wp_enqueue_style('sectors-style');
+    wp_enqueue_style('sector-style');
     ob_start();
 
     /* Query Sector */

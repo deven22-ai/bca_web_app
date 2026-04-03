@@ -1,11 +1,15 @@
 :root {
-    --navy-mid:    #162347;
-    --navy-light:  #1e3060;
+    --grey:        #64748b;
     --blue-hover:  #1446BB;
     --blue-light:  #3B82F6;
     --gold:        #E8A020;
     --text:        #1e293b;
     --muted:       #64748b;
+    --general:     #64748b;
+    --medical:     #1A56DB;
+    --parish:      #0891B2;
+    --r-d-tax:     #059669;
+    --audit:       #7C3AED;
 }
 
 /* Hero section quicked for Home page */
@@ -18,12 +22,22 @@
     background-image: url('/wp-content/uploads/2026/03/Spinnaker_Tower_Portsmouth.png');
 }
 
+.bca-hero-section::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background:radial-gradient(circle at 20% 50%, rgb(1 13 43) 0%, rgba(1, 13, 43, 0.75) 25%, rgba(13, 27, 62, 0.4) 45%, rgb(13 27 62 / 0%) 60%, rgba(13, 27, 62, 0) 75%), linear-gradient(90deg, rgb(1 13 43) 0%, rgb(13 27 62 / 10%) 40%, rgba(13, 27, 62, 0) 65%);
+}
+
 .bca-hero {
     justify-content: center;
 }
 
 .bca-hero__overlay {
-    background: linear-gradient(90deg, rgb(13 27 62) 0%, rgb(13 27 62 / 30%) 45%, rgb(13 27 62 / 0%) 100%)
+    /* background: linear-gradient(90deg, rgb(13 27 62) 0%, rgb(13 27 62 / 30%) 45%, rgb(13 27 62 / 0%) 100%)*/
+    background: none;
 }
 
 .bca-hero__eyebrow span {
@@ -31,7 +45,7 @@
 }
 
 .bca-hero__title {
-    font-size: clamp(38px, 5.5vw, 66px);
+    font-size: clamp(38px, 5.0vw, 60px);
     font-weight: 800;
     color: var(--white);
     line-height: 1.08;
@@ -42,7 +56,93 @@
 .bca-hero__text {
     line-height: 1.75;
     color: var(--white);
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 36px;
+    max-width: 560px;
 }
+
+.bca-hero__services-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.bca-hero__services-label::before {
+    content: "";
+    background: var(--muted);
+    width: 10px;
+    height: 1px;
+}
+
+.bca-hero__services-label span {
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--gold);
+    white-space: nowrap;
+}
+
+.bca-hero__services {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 44px;
+}
+
+.bca-hero__service-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 16px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    text-decoration: none;
+    transition: background var(--transition), border-color var(--transition), transform var(--transition);
+}
+
+.bca-hero__service-item:hover {
+    background: rgba(26, 86, 219, 0.12);
+    border-color: rgba(26, 86, 219, 0.3);
+    transform: translateX(3px);
+}
+
+.bca-hero__service-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+}
+
+.bca-hero__service-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.75);
+    /* line-height: 1.3; */
+    flex: 1;
+}
+
+.bca-hero__service-arrow svg {
+    height: 1.5em;
+    padding-left: 5px;
+    stroke: white;
+    fill: white;
+    transition: transform var(--transition);
+}
+
+.bca-hero__service-item:hover .bca-hero__service-name {
+    color: var(--gold);
+}
+
+.bca-hero__service-item:hover > .bca-hero__service-arrow svg {
+    stroke: var(--gold);
+    fill: var(--gold);
+    transform: translateX(4px);
+}
+
 
 /* ════════════════════════════════════════
     FOR BUSINESSES & INDIVIDUALS
@@ -545,6 +645,179 @@
 .bca-testimonial-card__role { font-size: 12px; color: var(--muted); }
 
 /* ════════════════════════════════════════
+    SPECIALIST SERVICES
+   ════════════════════════════════════════ */
+.bca-specialist {
+    background: var(--white);
+    position: relative;
+    padding: 80px 0;
+    border-bottom: 1px solid var(--bca-card-bg);
+}
+
+.bca-specialist__grid {
+    margin: 0 auto;
+    padding: 0 32px 64px; 
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.bca-specialist-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    background: var(--white);
+    border: 1px solid var(--bca-dark-border);
+    border-left: 4px solid var(--bca-primary);
+    padding: 28px 26px 24px;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow var(--transition), transform var(--transition), border-left-color var(--transition);
+}
+
+.bca-specialist-card:hover {
+    box-shadow: 0 16px 48px rgba(13,27,62,0.11);
+    transform: translateY(-4px);
+    border-left-color: var(--bca-dark-navy);
+}
+
+/* Unique left border accent colour per card */
+.bca-specialist-card:nth-child(1) { border-left-color: var(--general); }
+.bca-specialist-card:nth-child(2) { border-left-color: #1A56DB; }
+.bca-specialist-card:nth-child(3) { border-left-color: #0891B2; }
+.bca-specialist-card:nth-child(4) { border-left-color: #059669; }
+.bca-specialist-card:nth-child(5) { border-left-color: #7C3AED; }
+
+.bca-specialist-card:nth-child(1):hover { border-left-color: var(--general); }
+.bca-specialist-card:nth-child(2):hover { border-left-color: #1446BB; }
+.bca-specialist-card:nth-child(3):hover { border-left-color: #0E7490; }
+.bca-specialist-card:nth-child(4):hover { border-left-color: #047857; }
+.bca-specialist-card:nth-child(5):hover { border-left-color: #6D28D9; }
+
+/* Icon colours match border per card */
+.bca-specialist-card:nth-child(1) .bca-specialist-card__icon { background: rgba(100,116,139,0.08); }
+.bca-specialist-card:nth-child(1) .bca-specialist-card__icon svg { stroke: var(--general); }
+
+.bca-specialist-card:nth-child(2) .bca-specialist-card__icon { background: rgba(26,86,219,0.07); }
+.bca-specialist-card:nth-child(2) .bca-specialist-card__icon svg { stroke: #1A56DB; }
+
+.bca-specialist-card:nth-child(3) .bca-specialist-card__icon { background: rgba(8,145,178,0.07); }
+.bca-specialist-card:nth-child(3) .bca-specialist-card__icon svg { stroke: #0891B2; }
+
+.bca-specialist-card:nth-child(4) .bca-specialist-card__icon { background: rgba(5,150,105,0.07); }
+.bca-specialist-card:nth-child(4) .bca-specialist-card__icon svg { stroke: #059669; }
+
+.bca-specialist-card:nth-child(5) .bca-specialist-card__icon { background: rgba(124,58,237,0.07); }
+.bca-specialist-card:nth-child(5) .bca-specialist-card__icon svg { stroke: #7C3AED; }
+
+/* Icon */
+.bca-specialist-card__icon {
+    width: 46px; height: 46px;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 18px;
+    transition: transform 0.28s ease;
+}
+
+.bca-specialist-card:hover .bca-specialist-card__icon {
+    transform: scale(1.08);
+}
+
+.bca-specialist-card__icon svg {
+    width: 21px; height: 21px;
+    fill: none; stroke-width: 1.7;
+}
+
+/* Label pill */
+.bca-specialist-card__pill {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 3px 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    width: fit-content;
+}
+
+.bca-specialist-card:nth-child(1) .bca-specialist-card__pill { background: rgba(26,86,219,0.08); color: var(--general); }
+.bca-specialist-card:nth-child(2) .bca-specialist-card__pill { background: rgba(26,86,219,0.08); color: #1A56DB; }
+.bca-specialist-card:nth-child(3) .bca-specialist-card__pill { background: rgba(8,145,178,0.08); color: #0891B2; }
+.bca-specialist-card:nth-child(4) .bca-specialist-card__pill { background: rgba(5,150,105,0.08); color: #059669; }
+.bca-specialist-card:nth-child(5) .bca-specialist-card__pill { background: rgba(124,58,237,0.08); color: #7C3AED; }
+
+.bca-specialist-card__title {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--bca-dark-navy);
+    line-height: 1.3;
+    margin-bottom: 10px;
+}
+
+.bca-specialist-card__desc {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--muted);
+    flex: 1;
+    margin-bottom: 22px;
+}
+
+.bca-specialist-card__cta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    transition: gap 0.25s ease;
+    padding-top: 16px;
+    border-top: 1px solid var(--bca-dark-border);
+    margin-top: auto;
+}
+
+.bca-specialist-card:nth-child(1) .bca-specialist-card__cta { color: var(--general); }
+.bca-specialist-card:nth-child(2) .bca-specialist-card__cta { color: #1A56DB; }
+.bca-specialist-card:nth-child(3) .bca-specialist-card__cta { color: #0891B2; }
+.bca-specialist-card:nth-child(4) .bca-specialist-card__cta { color: #059669; }
+.bca-specialist-card:nth-child(5) .bca-specialist-card__cta { color: #7C3AED; }
+
+.bca-specialist-card:hover .bca-specialist-card__cta { gap: 10px; }
+
+.bca-specialist-card__cta svg {
+    width: 13px; height: 13px;
+    stroke: currentColor; fill: none; stroke-width: 2.5;
+    transition: transform 0.25s ease;
+}
+
+.bca-specialist-card:hover .bca-specialist-card__cta svg {
+    transform: translateX(3px);
+}
+
+.bca-unique-badge {
+    position: absolute;
+    top: 14px; right: 14px;
+    background: #0D1B3E;
+    color: var(--white);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 3px 8px 01px 8px;
+    border-radius: 1px;
+    opacity: 0;
+    transform: translateY(-4px);
+    transition: opacity 0.28s ease, transform 0.28s ease;
+}
+
+.bca-specialist-card:hover .bca-unique-badge {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ════════════════════════════════════════
     NEWS GRID
    ════════════════════════════════════════ */
 .bca-news-shortcode {
@@ -555,11 +828,25 @@
 /* ════════════════════════════════════════
     RESPONSIVE
    ════════════════════════════════════════ */
+@media (max-width: 1208px) {
+    .bca-specialist__grid { grid-template-columns: repeat(3, 1fr); }
+}
+
 @media (max-width: 1024px) {
+    .bca-hero__title { letter-spacing: 1px; }
     .bca-audience__grid { grid-template-columns: 1fr; gap: 20px; }
     .bca-why__grid { grid-template-columns: repeat(2, 1fr); }
     .bca-testimonials__grid { grid-template-columns: repeat(2, 1fr); }
     .bca-news__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 878px) {
+    .bca-specialist__grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 768px) {
+    .bca-hero__services { grid-template-columns: 1fr; }
+    .bca-hero__bottom { display: none; }
 }
 
 @media (max-width: 640px) {
@@ -568,5 +855,11 @@
     .bca-testimonials__grid { grid-template-columns: 1fr; }
     .bca-news__grid { grid-template-columns: 1fr; }
     .bca-hero__btns { flex-direction: column; }
-    .bca-hero__bottom { display: none; }
+}
+
+@media (max-width: 580px) {
+    .bca-specialist__grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px 48px;
+    }
 }
