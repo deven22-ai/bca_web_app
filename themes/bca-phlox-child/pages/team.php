@@ -14,12 +14,12 @@ wp_enqueue_style('team-style');
     <div class="bca-hero transparent-header">
         <div class="bca-hero__container">
             <div class="bca-hero__content">
-                <div class="bca-hero__eyebrow">
+                <div class="bca-hero__eyebrow reveal">
                     <p><strong><span>Our Team</span></strong></p>
                 </div>
                 <div class="bca-hero__head-wrapper">
-                    <h1 class="bca-hero__title">The People Behind BC&A</h1>
-                    <p class="bca-hero__text">
+                    <h1 class="bca-hero__title reveal reveal-delay-1">The People Behind BC&A</h1>
+                    <p class="bca-hero__text reveal reveal-delay-2">
                         Our team combines professional expertise, technical knowledge and a 
                         personal approach to deliver trusted support for businesses and individuals 
                         across Portsmouth and beyond.
@@ -33,17 +33,17 @@ wp_enqueue_style('team-style');
 <!-- TEAM GRID -->
 <section class="bca-team-shortcode">
     <div class="container">
-        <div class="bca-heading-section reveal">
+        <div class="bca-heading-section">
             <div class="bca-heading-container">
-                <div class="bca-heading__eyebrow">Trusted experts</div>
-                <h2 class="bca-heading__title">Our BC&A Team</span></h2>
-                <div class="bca-heading__description">
+                <div class="bca-heading__eyebrow reveal">Trusted experts</div>
+                <h2 class="bca-heading__title reveal reveal-delay-1">Our BC&A Team</span></h2>
+                <div class="bca-heading__description reveal reveal-delay-1">
                     <p>Say hello to the professionals who make BC&A a trusted partner to 
                         businesses and individuals.</p>
                 </div>
             </div>
         </div>
-        <div class="reveal reveal-delay-1"><?php echo do_shortcode('[bca_team_grid]') ?></div>
+        <?php echo do_shortcode('[bca_team_grid]') ?>
     </div>
 </section>
 

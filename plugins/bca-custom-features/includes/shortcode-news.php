@@ -32,7 +32,7 @@ function bca_news_renderer($news_query) {
             }
 
             ?>
-            <article class="bca-news-card">
+            <article class="bca-news-card reveal">
                 <div class="bca-news-card-image-wrap">
                     <img src="<?php echo $image_url ?>" alt="">
                     <span class="bca-news-card-badge">

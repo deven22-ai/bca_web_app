@@ -9,14 +9,14 @@ get_header();
     <section class="bca-hero transparent-header">
         <div class="bca-hero__container">
             <div class="bca-hero__content">
-                <div class="bca-hero__eyebrow">
+                <div class="bca-hero__eyebrow reveal">
                     <p><strong><span>our sectors</span></strong></p>
                 </div>
                 <div class="bca-hero__head-wrapper">
-                    <h1 class="bca-hero__title">
+                    <h1 class="bca-hero__title reveal reveal-delay-1">
                         Industry Expertise You Can Rely On
                     </h1>
-                    <p class="bca-hero__text">
+                    <p class="bca-hero__text reveal reveal-delay-2">
                         Every industry works differently. At BC&A, we combine technical accountancy, tax and 
                         advisory expertise with practical commercial understanding to support businesses and 
                         individuals across a wide range of sectors.
@@ -30,13 +30,13 @@ get_header();
 <!-- INTRO GRID -->
 <section class="bca-intro-grid-section">
     <div class="bca-intro-grid container">
-        <div class="bca-intro-grid__left reveal">
-            <span class="bca-section__eyebrow">Industry Expertise</span>
-            <h2 class="bca-section__title">
+        <div class="bca-intro-grid__left">
+            <span class="bca-section__eyebrow reveal">Industry Expertise</span>
+            <h2 class="bca-section__title reveal reveal-delay-1">
                 Sector knowledge that goes beyond the numbers
             </h2>
 
-            <div class="bca-section__text">
+            <div class="bca-section__text reveal reveal-delay-2">
                 <p>
                     We understand that every sector operates differently. Whether you operate in construction, 
                     healthcare, real estate, IT, retail or hospitality, our team provide tailored advice and 
@@ -45,7 +45,7 @@ get_header();
                 <p>We ensure that you are able to make informed decisions when it comes to your business and personal needs and goals.</p>
             </div>
         </div>
-        <div class="bca-intro-grid__right drop-shadow reveal reveal-delay-1">
+        <div class="bca-intro-grid__right drop-shadow reveal reveal-delay-3">
             <div class="bca-intro-card">
                 <h3 class="bca-intro-card__title">Why sector expertise matters</h3>
                 <ul class="bca-intro-card__list">
@@ -71,7 +71,7 @@ get_header();
                     </div>
                 </div>
             </div>
-            <div class="bca-sectors-listing reveal reveal-delay-1">        
+            <div class="bca-sectors-listing">        
                 <div class="sector-listing__wrapper">
                     <?php echo do_shortcode('[bca_sectors]'); ?>
                 </div>
@@ -81,19 +81,19 @@ get_header();
 
     <section class="bca-cta-grid-section">
         <div class="bca-cta-grid container drop-shadow">
-            <div class="bca-intro-grid__left reveal">
-                <span class="bca-section__eyebrow">SPEAK TO BC&A</span>
-                <h2 class="bca-section__title">
+            <div class="bca-intro-grid__left">
+                <span class="bca-section__eyebrow reveal">SPEAK TO BC&A</span>
+                <h2 class="bca-section__title reveal reveal-delay-1">
                     Need Advice From A Team That Understands Your Sector?
                 </h2>
-                <div class="bca-section__text">
+                <div class="bca-section__text reveal reveal-delay-2">
                     <p>
                     Whether you need support with compliance, tax planning, financial reporting, 
                     growth strategy or day-to-day business advice, our team is here to help.
                     </p>
                 </div>
             </div>
-            <div class="bca-cta-grid__right reveal reveal-delay-1">
+            <div class="bca-cta-grid__right reveal reveal-delay-3">
                 <div class="btns">
                     <a href="/our-offices" class="bca-btn-primary">Find the team</a>
                     <a href="/contact-us" class="bca-btn-accent">Contact us</a>

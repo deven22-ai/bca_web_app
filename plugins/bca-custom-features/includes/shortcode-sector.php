@@ -45,7 +45,7 @@ function getAllSectors() {
         while ($query->have_posts()) {
             $query->the_post();
             ?>
-            <a class="bca-sector-card-minimal" href="<?php the_permalink(); ?>">
+            <a class="bca-sector-card-minimal reveal" href="<?php the_permalink(); ?>">
                 <div class="bca-sector-card-minimal__image">
                     <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>">
                 </div>

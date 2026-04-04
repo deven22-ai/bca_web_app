@@ -56,7 +56,7 @@ function generateTeam($office_terms, $query) {
     /*-- Custom Team grid HTML -- */
     if($office_terms !== null && !empty($office_terms) && count($office_terms) > 1) {
         ?>
-        <div class="bca-team-filter-bar">
+        <div class="bca-team-filter-bar reveal">
             <select id="bca-office-filter" class="bca-dropdown">
                 <option value="all">All Offices</option>
                 <?php 
@@ -88,7 +88,7 @@ function generateTeam($office_terms, $query) {
             $office_data = implode(' ', $office_slug);
             ?>
             <div class="bca-team-card" data-office="<?php echo esc_attr($office_data); ?>">
-                <div class="bca-profile-card">
+                <div class="bca-profile-card reveal">
                     <div class="bca-team-image">
                         <?php 
                         if(has_post_thumbnail()) {

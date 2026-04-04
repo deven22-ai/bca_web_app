@@ -96,7 +96,7 @@ wp_enqueue_style('home-style');
     </div>
 
     <!-- 4 Cards -->
-    <div class="bca-specialist__grid">
+    <div class="bca-specialist__grid reveal">
         <a href="/services/general-compliance/" class="bca-specialist-card reveal reveal-delay-1">
             <div class="bca-specialist-card__icon">
                 <svg viewBox="0 0 24 24">
@@ -443,7 +443,7 @@ wp_enqueue_style('home-style');
             </div>
         </div>
 
-        <div class="bca-testimonials__grid">
+        <div class="bca-testimonials__grid reveal">
             <div class="bca-testimonial-card reveal reveal-delay-1">
                 <div class="bca-testimonial-card__quote">"</div>
                 <div class="bca-testimonial-card__stars">

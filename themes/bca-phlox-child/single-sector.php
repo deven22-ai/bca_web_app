@@ -23,12 +23,12 @@ if (have_posts()) {
             <section class="bca-hero transparent-header">
                 <div class="bca-hero__container">
                     <div class="bca-hero__content">
-                        <div class="bca-hero__eyebrow">
+                        <div class="bca-hero__eyebrow reveal">
                             <p><strong><span><?php the_title(); ?></span></strong></p>
                         </div>
                         <div class="bca-hero__head-wrapper">
-                            <h1 class="bca-hero__title"><?php echo get_field('hero_title'); ?></h1>
-                            <p class="bca-hero__text"><?php echo get_field('hero_description'); ?></p>
+                            <h1 class="bca-hero__title reveal reveal-delay-1"><?php echo get_field('hero_title'); ?></h1>
+                            <p class="bca-hero__text reveal reveal-delay-1"><?php echo get_field('hero_description'); ?></p>
                         </div>
                     </div>
                 </div>
@@ -41,10 +41,10 @@ if (have_posts()) {
             <!-- ══ OVERVIEW ═════════════════════════ -->
             <section class="bca-intro-grid-section" style="background: none;">
                 <div class="container">
-                    <div class="bca-intro-grid__left reveal">
-                        <span class="bca-section__eyebrow">Our Expertise</span>
-                        <h2 class="bca-section__title"><?php echo get_field('intro_heading'); ?></h2>
-                        <div class="bca-section__text"><?php echo get_field('intro_description'); ?></div>
+                    <div class="bca-intro-grid__left">
+                        <span class="bca-section__eyebrow reveal">Our Expertise</span>
+                        <h2 class="bca-section__title reveal reveal-delay-1"><?php echo get_field('intro_heading'); ?></h2>
+                        <div class="bca-section__text reveal reveal-delay-2"><?php echo get_field('intro_description'); ?></div>
                     </div>
                 </div>
             </section>

@@ -430,20 +430,22 @@
 .bca-intro-grid__right {
   display: flex;
   align-items: center;
-  border: 1px solid var(--bca-card-border);
+  border-left: 4px solid var(--e-global-color-primary);
+  border-right: 1px solid var(--bca-card-border);
+  border-top: 1px solid var(--bca-card-border);
+  border-bottom: 1px solid var(--bca-card-border);
   justify-content: flex-start;
 }
 
 .bca-intro-card {
   width: 100%;
-  background: #ffffff;
-  border-left: 4px solid var(--e-global-color-primary);
+  background: var(--white);
   padding: 30px;
 }
 
 .bca-intro-card__title {
   margin: 0 0 20px;
-  color: #132042;
+  color: var(--bca-title);
   font-size: 28px;
   line-height: 1.2;
   font-weight: 700;
@@ -466,7 +468,7 @@
 }
 
 .bca-intro-card__list li i {
-  color: var(--e-global-color-primary);
+  color: var(--bca-primary);
   padding: 4px 0px 0px 0px;
   line-height: 0;
 }

@@ -16,6 +16,7 @@ async function loadNews(cat = 'all') {
     if(data.success) {
         const newsContainer = document.getElementById('bca-news-results');
         newsContainer.innerHTML = data.data;
+        scrollReveal(); // reveal the found news articles
     }
     else alert(data.data);
 }

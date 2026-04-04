@@ -13,12 +13,12 @@ get_header();
     <div class="bca-hero transparent-header">
         <div class="bca-hero__container">
             <div class="bca-hero__content">
-                <div class="bca-hero__eyebrow">
+                <div class="bca-hero__eyebrow reveal">
                     <p><strong><span>BC&A NEWS</span></strong></p>
                 </div>
                 <div class="bca-hero__head-wrapper">
-                    <h1 class="bca-hero__title">Insights, Updates & News From BC&A</h1>
-                    <p class="bca-hero__text">
+                    <h1 class="bca-hero__title reveal reveal-delay-1">Insights, Updates & News From BC&A</h1>
+                    <p class="bca-hero__text reveal reveal-delay-2">
                         Stay up to date with the latest business insights, tax updates, industry developments, 
                         and firm news from BC&A Chartered Accountants.
                     </p>
@@ -31,13 +31,13 @@ get_header();
 <!-- NEWS GRID -->
 <section style="padding: 70px 0;">
     <div class="container">
-        <div class="bca-heading-section reveal">
+        <div class="bca-heading-section">
             <div class="bca-heading-container">
-                <div class="bca-heading__eyebrow">BC&A News</div>
-                <h2 class="bca-heading__title">Latest News & Updates</span></h2>
+                <div class="bca-heading__eyebrow reveal">BC&A News</div>
+                <h2 class="bca-heading__title reveal reveal-delay-1">Latest News & Updates</span></h2>
             </div>
         </div>
-        <div class="reveal reveal-delay-1"><?php echo do_shortcode('[bca_news_grid]') ?></div>
+        <?php echo do_shortcode('[bca_news_grid]') ?>
     </div>
 </section>
 
