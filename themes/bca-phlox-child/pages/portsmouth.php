@@ -25,8 +25,8 @@ wp_enqueue_style('single-office-style');
                     </p>
                 </div>
                 <div class="bca-hero__btns reveal reveal-delay-2">
-                    <a href="#" class="bca-btn-primary">Speak to Our Team<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
-                    <a href="#" class="bca-btn-ghost">Our Services</a>
+                    <a href="#contact" class="bca-btn-primary">Speak to Our Team<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
+                    <a href="#services" class="bca-btn-ghost">Our Services</a>
                 </div>
             </div>
             <div class="bca-hero__card reveal reveal-delay-1">
@@ -143,7 +143,7 @@ wp_enqueue_style('single-office-style');
 </section>
  
 <!--- SERVICES --->
-<section class="bca-services">
+<section class="bca-services" id="services">
     <div class="container">
         <div class="bca-heading-section reveal">
             <div class="bca-heading-container">
@@ -203,6 +203,96 @@ wp_enqueue_style('single-office-style');
                     <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Commercial support and strategic input</li>
                     <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Reliable proactive client service</li>
                 </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MEET THE TEAM -->
+<section class="bca-team">
+    <div class="container">
+        <div class="bca-heading-section left-align reveal">
+            <div class="bca-heading-container left-align">
+                <div class="bca-heading__eyebrow">The Portsmouth Team</div>
+                <h2 class="bca-heading__title">Meet the people behind <span>your advice</span></h2>
+            </div>
+            <a href="/sectors/" class="bca-heading__link">View full team<svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></a>
+        </div>
+    </div>
+</section>
+
+<!-- SPEAK TO THE TEAM -->
+<section class="bca-contact" id="contact">
+    <div class="container">
+        <div class="bca-heading-section reveal">
+            <div class="bca-heading-container">
+                <div class="bca-heading__eyebrow">Speak To The Team</div>
+                <h2 class="bca-heading__title">Get in touch with our Portsmouth office</h2>
+                <div class="bca-heading__description">
+                    <p>
+                        Send us your enquiry and the most relevant member of the team will get back to you. 
+                        We typically respond within one business day.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="bca-contact__inner">
+            <div class="bca-contact__left reveal reveal-delay-1">
+                <?php echo do_shortcode('[contact-form-7 id="e7e2d8b"]');?>
+            </div>
+            <div class="bca-contact__right reveal reveal-delay-2">
+                <div class="bca-details-card">
+                    <div class="bca-details-card__head"><h4>Portsmouth Office Details</h4></div>
+                    <div class="bca-details-card__body">
+                        <div class="bca-details-item">
+                            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <div>
+                                <div class="bca-details-item__label">Address</div>
+                                <div class="bca-details-item__value">24 Landport Terrace, Southsea, Portsmouth, PO1 2RG</div>
+                            </div>
+                        </div>
+                        <div class="bca-details-divider"></div>
+                        <div class="bca-details-item">
+                            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
+                            <div>
+                                <div class="bca-details-item__label">Phone</div>
+                                <div class="bca-details-item__value"><a href="tel:02392833300">02392 833 300</a></div>
+                            </div>
+                        </div>
+                        <div class="bca-details-divider"></div>
+                        <div class="bca-details-item">
+                            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            <div>
+                                <div class="bca-details-item__label">Email</div>
+                                <div class="bca-details-item__value"><a href="mailto:info@bcaaccountants.com">info@bcaaccountants.com</a></div>
+                            </div>
+                        </div>
+                        <div class="bca-details-divider"></div>
+                        <div class="bca-details-item">
+                            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
+                            <div>
+                                <div class="bca-details-item__label">Office Hours</div>
+                                <div class="bca-details-item__value">Monday – Friday: 9:00am – 5:30pm</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bca-details-foot">
+                        <a href="https://maps.google.com/?q=24+Landport+Terrace+Portsmouth" target="_blank" rel="noopener" class="bca-btn-primary">
+                            Get Directions<svg width="16" height="16" viewBox="0 0 2048 2048"><path fill="currentColor" d="M1536 256h384v384h-128V475l-456 456l-91-91l456-456h-165zm0 768l128-128v768H0V512h1280l-128 128H128v896h1408z"></path></svg>
+                        </a>
+                        <a href="/contact/" class="bca-btn-ghost">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Google Maps -->
+        <div class="bca-contact__map-full reveal reveal-delay-3"">
+            <div class="bca-map-frame">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2522.1310783962817!2d-1.095745188689895!3d50.79167931624496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48745d9ba62bff7b%3A0x32ab2de9bbab22e0!2s24%20Landport%20Terrace%2C%20Southsea%2C%20Portsmouth%20PO1%202RG!5e0!3m2!1sen!2suk!4v1775492566222!5m2!1sen!2suk" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                
+            </div>
+            <div class="bca-map-directions">
+                24 Landport Terrace, Southsea <span>Portsmouth, PO1 2RG</span>
             </div>
         </div>
     </div>

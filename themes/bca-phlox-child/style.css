@@ -517,6 +517,14 @@ body:not(:has(.transparent-header)) header.aux-overlay-header {
   justify-items: center;
 }
 
+.bca-hero__bottom.big-text {
+  padding: 0;
+}
+
+.bca-hero__bottom.big-text .bca-hero__bottom-stat {
+    padding: 15px 32px;
+}
+
 .bca-hero__bottom-inner {
   margin: 0 auto;
   display: flex;
@@ -524,6 +532,10 @@ body:not(:has(.transparent-header)) header.aux-overlay-header {
   justify-content: center;
   gap: 32px;
   flex-wrap: wrap;
+}
+
+.bca-hero__bottom.big-text .bca-hero__bottom-inner {
+  gap: 0;
 }
 
 .bca-hero__bottom-item {
@@ -617,6 +629,10 @@ color: var(--bca-primary);
     margin-top: 14px;
     font-size: 17px;
     line-height: 28px;
+  }
+
+  .bca-hero__bottom.big-text {
+    display: none;
   }
 }
 

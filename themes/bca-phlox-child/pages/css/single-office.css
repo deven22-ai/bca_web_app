@@ -1,3 +1,8 @@
+.bca-team {
+    padding: 80px 0;
+    background: var(--white);
+}
+
 .bca-hero-section.portsmouth {
     background-image: url(/wp-content/uploads/2026/04/office_building.jpg);
 }
@@ -325,6 +330,230 @@
 .bca-service-card:nth-child(3) .bca-service-card__list li svg { stroke: var(--audit); }
 
 /* ════════════════════════════════════════
+   CONTACT - SPEACK TO THE TEAM
+   ════════════════════════════════════════ */
+.bca-contact {
+    padding: 80px 0;
+    background: var(--bca-card-bg);
+    border-top: 1px solid var(--bca-dark-border);
+}
+
+.bca-contact__inner {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 32px;
+    align-items: start;
+}
+
+.bca-contact__left {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.bca-contact__right {
+    height: 100%;
+}
+
+.bca-form-card {
+    background: var(--white);
+    border: 1px solid var(--bca-dark-border);
+    padding: 32px;
+}
+
+.bca-form-title {
+    font-size: 18px;
+    height: 100%;
+    font-weight: 700;
+    color: var(--bca-dark-navy);
+    margin-bottom: 20px;
+}
+
+.bca-details-card {
+    background: var(--bca-dark-navy);
+    overflow: hidden;
+}
+
+.bca-details-card__head {
+    background: var(--bca-primary);
+    padding: 20px 24px;
+}
+
+.bca-details-card__head h4 {
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    font-weight: 700;
+    margin: 0;
+    color: var(--white);
+}
+
+.bca-details-card__body {
+    padding: 22px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.bca-details-foot {
+    display: flex;
+    flex-flow: column;
+    gap: 12px;
+    padding: 16px 24px;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.bca-details-foot a {
+    width: 100%;
+}
+
+.bca-details-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+
+.bca-details-item svg {
+    width: 18px;
+    height: 18px;
+    stroke: var(--bca-primary);
+    fill: none;
+    stroke-width: 2;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.bca-details-item__label {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.35);
+    margin-bottom: 4px;
+}
+
+.bca-details-item__value {
+    font-size: 15px;
+    color: var(--white);
+    line-height: 1.5;
+}
+
+.bca-details-item__value a { color: var(--white); }
+
+.bca-details-divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.07);
+}
+
+.bca-contact__map-full {
+    margin-top: 32px;
+}
+
+.bca-map-frame {
+    overflow: hidden;
+    border: 1px solid var(--bca-dark-border);
+    box-shadow: 0 4px 24px rgba(13, 27, 62, 0.08);
+}
+
+.bca-contact__map-full .bca-map-frame iframe {
+    height: 360px;
+    width: 100%;
+    display: block;
+    border: none;
+}
+
+.bca-map-directions {
+    align-items: center;
+    background: var(--white);
+    border: 1px solid var(--bca-dark-border);
+    padding: 16px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--bca-dark-navy);
+}
+
+.bca-map-directions span {
+    display: block;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--muted);
+    margin-top: 2px;
+}
+
+
+/* ════════════════════════════════════════
+   CONTACT FORM 7
+   ════════════════════════════════════════ */
+.bca-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-bottom: 14px;
+}
+
+.bca-form-row--full {
+    grid-template-columns: 1fr;
+}
+
+.bca-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.bca-form-card p, .bca-form-card input { margin: 0; }
+
+.bca-field label {
+    font-size: 14px;
+    font-weight: 800;
+    margin-bottom: 6px;
+    color: var(--text);
+    letter-spacing: 0.3px;
+}
+
+.bca-field input, .bca-field select, .bca-field textarea {
+    padding: 11px 14px;
+    resize: vertical;
+    border: 1px solid var(--bca-dark-border);
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    color: var(--text);
+    background: var(--white);
+    margin: 0 !important;
+    outline: none;
+    transition: border-color var(--transition), box-shadow var(--transition);
+    appearance: none;
+    -webkit-appearance: none;
+    width: 100%;
+}
+
+.bca-field input:focus, .bca-field select:focus, .bca-field textarea:focus {
+    border-color: var(--bca-primary) !important;
+    box-shadow: 0 0 0 3px rgba(26, 86, 219, 0.08);
+}
+
+.bca-field textarea {
+    min-height: 100px;
+    height: 100px;
+}
+
+.bca-form-submit {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--bca-dark-border);
+    flex-wrap: wrap;
+}
+
+.bca-form-submit p {
+    font-size: 12px;
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+/* ════════════════════════════════════════
    DARK CTA
    ════════════════════════════════════════ */
 .bca-cta.offices {
@@ -380,6 +609,7 @@
 }
 
 .bca-cta__btns { display: flex; gap: 12px; flex-wrap: wrap; flex-shrink: 0; }
+
 
 /* ════════════════════════════════════════
    RESPONSIVE

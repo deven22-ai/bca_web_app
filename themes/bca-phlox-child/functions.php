@@ -37,6 +37,13 @@ function bca_phlox_child_enqueue_assets() {
         array(),
         filemtime(get_stylesheet_directory() . '/pages/css/request-quote.css')
     );
+
+    wp_register_style(
+        'about-us-style',
+        get_stylesheet_directory_uri() . '/pages/css/about-us.css',
+        array(),
+        filemtime(get_stylesheet_directory() . '/pages/css/about-us.css')
+    );
 }
 
 /**

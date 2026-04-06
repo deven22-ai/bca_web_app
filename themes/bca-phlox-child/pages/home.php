@@ -17,7 +17,7 @@ wp_enqueue_style('home-style');
                 <p><strong><span>BC&A Chartered Accountants</span></strong></p>
             </div>
             <div class="bca-hero__head-wrapper reveal reveal-delay-1">
-                <h1 class="bca-hero__title">Big Firm Expertise.<br>Personal Service.<br>Real Results.</h1>
+                <h1 class="bca-hero__title">Big Firm Expertise.<br>Personal Service.<br><em>Real Results.</em></h1>
                 <p class="bca-hero__text">
                     One of the South of England's largest independent chartered accountancy firms,
                     supporting businesses, individuals and charities across Hampshire for over 25 years.
