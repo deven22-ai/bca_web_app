@@ -20,16 +20,14 @@ if (have_posts()) {
         <!-- HERO -->
         <div class="bca-hero-section" style="background-image: url('<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large')?>');">
             <div class="bca-hero__overlay"></div>
-            <section class="bca-hero transparent-header">
-                <div class="bca-hero__container">
-                    <div class="bca-hero__content">
-                        <div class="bca-hero__eyebrow reveal">
-                            <p><strong><span><?php the_title(); ?></span></strong></p>
-                        </div>
-                        <div class="bca-hero__head-wrapper">
-                            <h1 class="bca-hero__title reveal reveal-delay-1"><?php echo get_field('hero_title'); ?></h1>
-                            <p class="bca-hero__text reveal reveal-delay-1"><?php echo get_field('hero_description'); ?></p>
-                        </div>
+            <section class="bca-hero container transparent-header">
+                <div class="bca-hero__content">
+                    <div class="bca-hero__eyebrow reveal">
+                        <p><strong><span><?php the_title(); ?></span></strong></p>
+                    </div>
+                    <div class="bca-hero__head-wrapper">
+                        <h1 class="bca-hero__title reveal reveal-delay-1"><?php echo get_field('hero_title'); ?></h1>
+                        <p class="bca-hero__text reveal reveal-delay-1"><?php echo get_field('hero_description'); ?></p>
                     </div>
                 </div>
             </section>

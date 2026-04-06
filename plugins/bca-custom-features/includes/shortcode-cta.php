@@ -8,33 +8,33 @@ function cta_contact() {
     ob_start(); 
     ?>
     <section class="bca-cta contact">
-        <div class="container">
-            <div class="bca-cta__left reveal">
-                <div class="bca-section__eyebrow" aria-hidden="true">Contact us</div>
-                <div class="bca-cta__content">
-                    <h2 class="bca-section__title">Discover How BC&amp;A Can Support You</h2>
-                    <div class="bca-section__text">
-                        <p>
-                            At BC&amp;A, we go beyond conventional professional services, working 
-                            closely with businesses, charities and individuals as a trusted long-term partner.
-                        </p>
-                        <p>
-                            Our approach is tailored, not generic — focused on understanding your 
-                            objectives and helping you improve resilience, efficiency and decision-making 
-                            with confidence.
-                        </p>
-                    </div>
-                    <div class="bca-cta__btn">
-                        <a href="/our-offices/" class="bca-btn-primary">Find a Local Office</a>
-                        <a href="/contact/" class="bca-btn-accent">Contact Us</a>
-                    </div>
+        <div class="bca-cta__inner container">
+            <div class="bca-cta__text reveal">
+                <div class="bca-heading__eyebrow" aria-hidden="true">Contact us</div>
+                <h2 class="bca-heading__title">Discover How BC&amp;A Can <span>Support You</span></h2>
+                <div class="bca-cta__body">
+                    <p>
+                        At BC&amp;A, we go beyond conventional professional services, working 
+                        closely with businesses, charities and individuals as a trusted long-term partner.
+                    </p>
+                    <p>
+                        Our approach is tailored, not generic — focused on understanding your 
+                        objectives and helping you improve resilience, efficiency and decision-making 
+                        with confidence.
+                    </p>
+                </div>
+                <div class="bca-cta__btns">
+                    <a href="/our-offices/" class="bca-btn-primary">Find a Local Office<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
+                    <a href="/contact/" class="bca-btn-outline">Contact Us</a>
                 </div>
             </div> 
-            <div class="bca-cta__right reveal reveal-delay-1">
-                <!-- Dot-grid decoration (replaces dots-1.png)
-                <div class="bca-dots" aria-hidden="true"></div>  -->
-                <div class="bca-cta__image">
-                    <img src="http://bca-new2.local/wp-content/uploads/2026/03/15628.jpg" alt="BC&A team supporting clients" />
+            <div class="bca-cta__image reveal reveal-delay-1">
+                <img src="http://bca-new2.local/wp-content/uploads/2026/03/15628.jpg" 
+                    alt="BC&A team supporting clients" />
+                <!-- Floating badge -->
+                <div class="bca-cta__image-badge">
+                    <div class="bca-cta__image-badge-dot"></div>
+                    <span>Trusted long-term partner</span>
                 </div>
             </div>
         </div>
@@ -61,41 +61,26 @@ function cta_sectors($atts) {
 
     ob_start(); 
     ?>
-    <section class="bca-cta">
-        <div class="container">
-            <?php if($direction == 'ltr') : ?>
-            <div class="bca-cta__left reveal">
-                <div class="bca-section__eyebrow" aria-hidden="true">Our Sectors</div>
-                <div class="bca-cta__content">
-                    <h2 class="bca-section__title">Specialist Knowledge For Every Sector</h2>
-                    <div class="bca-section__text"><?php echo $desc ?></div>
-                    <div class="bca-cta__btn">
-                        <a href="/sectors" class="bca-btn-primary"><?php echo $buttonTxt ?></a>
-                    </div>
+    <section class="bca-cta sector">
+        <div class="bca-cta__inner container">
+            <div class="bca-cta__text reveal">
+                <div class="bca-heading__eyebrow" aria-hidden="true">Our Sectors</div>
+                <h2 class="bca-heading__title">Specialist Knowledge For Every Sector</h2>
+                <div class="bca-cta__body">
+                    <?php echo $desc ?>
+                </div>
+                <div class="bca-cta__btns">
+                    <a href="/sectors" class="bca-btn-primary">Explore Our Sector Expertise<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
                 </div>
             </div> 
-            <div class="bca-cta__right reveal reveal-delay-1">
-                <div class="bca-cta__image">
-                    <img src="http://bca-new2.local/wp-content/uploads/2026/03/sectors.png" alt="BC&A Sectors" />
+            <div class="bca-cta__image reveal reveal-delay-1">
+                <img src="http://bca-new2.local/wp-content/uploads/2026/03/sectors.png" alt="BC&A Sectors" />
+                <!-- Floating badge -->
+                <div class="bca-cta__image-badge">
+                    <div class="bca-cta__image-badge-dot"></div>
+                    <span>20+ Sectors, we specialise in</span>
                 </div>
             </div>
-            <?php else : ?>
-            <div class="bca-cta__right reveal-delay-1">
-                <div class="bca-cta__image">
-                    <img src="http://bca-new2.local/wp-content/uploads/2026/03/sectors.png" alt="BC&A Sectors" />
-                </div>
-            </div>                   
-            <div class="bca-cta__left reveal">
-                <div class="bca-section__eyebrow" aria-hidden="true">Our Sectors</div>
-                <div class="bca-cta__content">
-                    <h2 class="bca-section__title">Specialist Knowledge For Every Sector</h2>
-                    <div class="bca-section__text"><?php echo $desc ?></div>
-                    <div class="bca-cta__btn">
-                        <a href="/sectors" class="bca-btn-primary"><?php echo $buttonTxt ?></a>
-                    </div>
-                </div>
-            </div> 
-            <?php endif; ?>
         </div>
     </section>
     <?php
@@ -103,6 +88,7 @@ function cta_sectors($atts) {
     return ob_get_clean();    
 }
 
+/*
 function cta_office() {
     ob_start();    
     ?>
@@ -145,8 +131,8 @@ function cta_office() {
 
     return ob_get_clean();
 }
+*/
 
 add_shortcode('bca_cta_contact', 'cta_contact');
 add_shortcode('bca_cta_sector', 'cta_sectors');
-add_shortcode('bca_cta_office', 'cta_office');
 ?>

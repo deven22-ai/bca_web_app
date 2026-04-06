@@ -18,6 +18,20 @@ function bca_phlox_child_enqueue_assets() {
     );
 
     wp_register_style(
+        'offices-style',
+        get_stylesheet_directory_uri() . '/pages/css/offices.css',
+        array(),
+        filemtime(get_stylesheet_directory() . '/pages/css/offices.css')
+    );
+
+    wp_register_style(
+        'single-office-style',
+        get_stylesheet_directory_uri() . '/pages/css/single-office.css',
+        array(),
+        filemtime(get_stylesheet_directory() . '/pages/css/single-office.css')
+    );
+
+    wp_register_style(
         'request-quote-style',
         get_stylesheet_directory_uri() . '/pages/css/request-quote.css',
         array(),

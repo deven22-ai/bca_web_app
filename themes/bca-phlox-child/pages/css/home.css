@@ -3,16 +3,9 @@
     --blue-hover:  #1446BB;
     --blue-light:  #3B82F6;
     --gold:        #E8A020;
-    --text:        #1e293b;
-    --muted:       #64748b;
-    --general:     #64748b;
-    --medical:     #1A56DB;
-    --parish:      #0891B2;
-    --r-d-tax:     #059669;
-    --audit:       #7C3AED;
 }
 
-/* Hero section quicked for Home page */
+/* Hero section twicked for Home page */
 .bca-hero-section {
     min-height: 96vh;
 }
@@ -46,20 +39,17 @@
 
 .bca-hero__title {
     font-size: clamp(38px, 5.0vw, 60px);
-    font-weight: 800;
-    color: var(--white);
     line-height: 1.08;
     letter-spacing: -1.5px;
     margin-bottom: 10px;
 }
 
 .bca-hero__text {
-    line-height: 1.75;
-    color: var(--white);
     font-size: 16px;
     line-height: 1.8;
     margin-bottom: 36px;
     max-width: 560px;
+    color: rgb(255 255 255 / 80%);
 }
 
 .bca-hero__services-label {
@@ -82,7 +72,6 @@
     letter-spacing: 2.5px;
     text-transform: uppercase;
     color: var(--gold);
-    white-space: nowrap;
 }
 
 .bca-hero__services {
@@ -141,6 +130,12 @@
     stroke: var(--gold);
     fill: var(--gold);
     transform: translateX(4px);
+}
+
+/* CTA - OFFICE */
+.bca-cta.office .bca-cta__image img{
+    object-position: top;
+    height: 450px;
 }
 
 
@@ -228,6 +223,7 @@
     gap: 10px;
     font-size: 14px;
     color: var(--text);
+    margin: 0;
 }
 
 .bca-audience-card__list li svg { 
@@ -561,6 +557,7 @@
 .partner-logo--freeagent .partner-logo__badge { background: #1E4D2B; color: white; font-size:12px; }
 
 .bca-cta.office {
+    border-top: none;
     background: var(--bca-card-bg);
 }
 
@@ -686,8 +683,8 @@
 .bca-specialist-card:nth-child(1) { border-left-color: var(--general); }
 .bca-specialist-card:nth-child(2) { border-left-color: #1A56DB; }
 .bca-specialist-card:nth-child(3) { border-left-color: #0891B2; }
-.bca-specialist-card:nth-child(4) { border-left-color: #059669; }
-.bca-specialist-card:nth-child(5) { border-left-color: #7C3AED; }
+.bca-specialist-card:nth-child(4) { border-left-color: var(--tax-relief); }
+.bca-specialist-card:nth-child(5) { border-left-color: var(--audit); }
 
 .bca-specialist-card:nth-child(1):hover { border-left-color: var(--general); }
 .bca-specialist-card:nth-child(2):hover { border-left-color: #1446BB; }
@@ -706,10 +703,10 @@
 .bca-specialist-card:nth-child(3) .bca-specialist-card__icon svg { stroke: #0891B2; }
 
 .bca-specialist-card:nth-child(4) .bca-specialist-card__icon { background: rgba(5,150,105,0.07); }
-.bca-specialist-card:nth-child(4) .bca-specialist-card__icon svg { stroke: #059669; }
+.bca-specialist-card:nth-child(4) .bca-specialist-card__icon svg { stroke: var(--tax-relief); }
 
 .bca-specialist-card:nth-child(5) .bca-specialist-card__icon { background: rgba(124,58,237,0.07); }
-.bca-specialist-card:nth-child(5) .bca-specialist-card__icon svg { stroke: #7C3AED; }
+.bca-specialist-card:nth-child(5) .bca-specialist-card__icon svg { stroke: var(--audit); }
 
 /* Icon */
 .bca-specialist-card__icon {
@@ -745,8 +742,8 @@
 .bca-specialist-card:nth-child(1) .bca-specialist-card__pill { background: rgba(26,86,219,0.08); color: var(--general); }
 .bca-specialist-card:nth-child(2) .bca-specialist-card__pill { background: rgba(26,86,219,0.08); color: #1A56DB; }
 .bca-specialist-card:nth-child(3) .bca-specialist-card__pill { background: rgba(8,145,178,0.08); color: #0891B2; }
-.bca-specialist-card:nth-child(4) .bca-specialist-card__pill { background: rgba(5,150,105,0.08); color: #059669; }
-.bca-specialist-card:nth-child(5) .bca-specialist-card__pill { background: rgba(124,58,237,0.08); color: #7C3AED; }
+.bca-specialist-card:nth-child(4) .bca-specialist-card__pill { background: rgba(5,150,105,0.08); color: var(--tax-relief); }
+.bca-specialist-card:nth-child(5) .bca-specialist-card__pill { background: rgba(124,58,237,0.08); color: var(--audit); }
 
 .bca-specialist-card__title {
     font-size: 17px;
@@ -781,8 +778,8 @@
 .bca-specialist-card:nth-child(1) .bca-specialist-card__cta { color: var(--general); }
 .bca-specialist-card:nth-child(2) .bca-specialist-card__cta { color: #1A56DB; }
 .bca-specialist-card:nth-child(3) .bca-specialist-card__cta { color: #0891B2; }
-.bca-specialist-card:nth-child(4) .bca-specialist-card__cta { color: #059669; }
-.bca-specialist-card:nth-child(5) .bca-specialist-card__cta { color: #7C3AED; }
+.bca-specialist-card:nth-child(4) .bca-specialist-card__cta { color: var(--tax-relief); }
+.bca-specialist-card:nth-child(5) .bca-specialist-card__cta { color: var(--audit); }
 
 .bca-specialist-card:hover .bca-specialist-card__cta { gap: 10px; }
 
@@ -861,5 +858,11 @@
     .bca-specialist__grid {
         grid-template-columns: 1fr;
         padding: 0 20px 48px;
+    }
+}
+
+@media (max-width: 438px) {
+    .bca-hero__services-label::before {
+        content: none;
     }
 }

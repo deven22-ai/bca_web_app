@@ -46,17 +46,24 @@ function getAllSectors() {
             $query->the_post();
             ?>
             <a class="bca-sector-card-minimal reveal" href="<?php the_permalink(); ?>">
-                <div class="bca-sector-card-minimal__image">
-                    <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>">
-                </div>
-                <div class="bca-sector-card-minimal__content">
-                    <h4><?php the_title(); ?></h4>
+                <img alt="<?php the_title(); ?>" src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'large'); ?>">
+                <div class="bca-sector-card-minimal__overlay"></div>
+                <div class="bca-sector-card-minimal__body">
+                    <div class="bca-sector-card-minimal__name"><?php the_title(); ?></div>
+                    <span class="bca-sector-card-minimal__arrow">Find out more →</span>
                 </div>
             </a>
             <?php
         }
         wp_reset_postdata();
         ?>
+            <a href="/sectors/" class="bca-sector-card-minimal reveal" style="background:var(--bca-dark-navy);">
+                <div class="bca-sector-card-minimal__overlay" style="background:linear-gradient(to top, rgba(13,27,62,0.95) 0%, rgba(13,27,62,0.7) 100%);"></div>
+                <div class="bca-sector-card-minimal__body" style="top:50%;transform:translateY(-50%);bottom:auto;text-align:center;">
+                    <div class="bca-sector-card-minimal__name">Don't see your sector?</div>
+                    <span class="bca-sector-card-minimal__arrow" style="opacity:1;transform:none;color:var(--bca-primary);">Get in touch</span>
+                </div>
+            </a>
         </div>
     <?php
     } else  {

@@ -11,49 +11,47 @@ wp_enqueue_style('home-style');
 <!-- HERO SECTION -->
 <div class="bca-hero-section home">
     <div class="bca-hero__overlay"></div>
-    <section class="bca-hero transparent-header">
-        <div class="bca-hero__container">
-            <div class="bca-hero__content">
-                <div class="bca-hero__eyebrow reveal">
-                    <p><strong><span style="color: rgba(255, 255, 255, 0.55);">BC&A Chartered Accountants</span></strong></p>
-                </div>
-                <div class="bca-hero__head-wrapper reveal reveal-delay-1">
-                    <h1 class="bca-hero__title">Big Firm Expertise.<br>Personal Service.<br>Real Results.</h1>
-                    <p class="bca-hero__text">
-                        One of the South of England's largest independent chartered accountancy firms,
-                        supporting businesses, individuals and charities across Hampshire for over 25 years.
-                    </p>
-                </div>
-                <div class="bca-hero__services-label reveal reveal-delay-2"><span>Services other firms don't offer</span></div>
-                <div class="bca-hero__services reveal reveal-delay-3">
-                    <a href="/services/medical-specialist/" class="bca-hero__service-item">
-                        <span class="bca-hero__service-dot"></span>
-                        <span class="bca-hero__service-name">Medical Specialist Accounting</span>
-                        <span class="bca-hero__service-arrow"><svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></span>
-                    </a>
-                    <a href="/services/city-parish-councils/" class="bca-hero__service-item">
-                        <span class="bca-hero__service-dot"></span>
-                        <span class="bca-hero__service-name">City &amp; Parish Council Accounts</span>
-                        <span class="bca-hero__service-arrow"><svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></span>
-                    </a>
-                    <a href="/services/rd-tax-credit/" class="bca-hero__service-item">
-                        <span class="bca-hero__service-dot"></span>
-                        <span class="bca-hero__service-name">R&amp;D Tax Credit Claims</span>
-                        <span class="bca-hero__service-arrow"><svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></span>
-                    </a>
-                    <a href="/services/audit/" class="bca-hero__service-item">
-                        <span class="bca-hero__service-dot"></span>
-                        <span class="bca-hero__service-name">Audit Services</span>
-                        <span class="bca-hero__service-arrow"><svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></span>
-                    </a>
-                </div>
-                <div class="bca-hero__btns reveal reveal-delay-4">
-                    <a href="/request-quote/" class="bca-btn-primary">Get Free Quote</a>
-                    <a href="tel:02392833300" class="bca-btn-ghost">
-                        <svg viewBox="0 0 16 16"><path d="M14 10.67v2a1.33 1.33 0 01-1.45 1.33 13.2 13.2 0 01-5.75-2.05 13 13 0 01-4-4 13.2 13.2 0 01-2.05-5.78A1.33 1.33 0 012.07 1h2a1.33 1.33 0 011.33 1.15c.085.64.24 1.27.467 1.87a1.33 1.33 0 01-.3 1.4L4.6 6.4a10.67 10.67 0 004 4l.98-.98a1.33 1.33 0 011.4-.3c.6.228 1.23.382 1.87.467A1.33 1.33 0 0114 10.67z"></path></svg>
-                        Call Us Now
-                    </a>
-                </div>
+    <div class="bca-hero container transparent-header">
+        <div class="bca-hero__content">
+            <div class="bca-hero__eyebrow reveal">
+                <p><strong><span>BC&A Chartered Accountants</span></strong></p>
+            </div>
+            <div class="bca-hero__head-wrapper reveal reveal-delay-1">
+                <h1 class="bca-hero__title">Big Firm Expertise.<br>Personal Service.<br>Real Results.</h1>
+                <p class="bca-hero__text">
+                    One of the South of England's largest independent chartered accountancy firms,
+                    supporting businesses, individuals and charities across Hampshire for over 25 years.
+                </p>
+            </div>
+            <div class="bca-hero__services-label reveal reveal-delay-2"><span>Services other firms don't offer</span></div>
+            <div class="bca-hero__services reveal reveal-delay-3">
+                <a href="/services/medical-specialist/" class="bca-hero__service-item">
+                    <span class="bca-hero__service-dot"></span>
+                    <span class="bca-hero__service-name">Medical Specialist Accounting</span>
+                    <span class="bca-hero__service-arrow"><svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></span>
+                </a>
+                <a href="/services/city-parish-councils/" class="bca-hero__service-item">
+                    <span class="bca-hero__service-dot"></span>
+                    <span class="bca-hero__service-name">City &amp; Parish Council Accounts</span>
+                    <span class="bca-hero__service-arrow"><svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></span>
+                </a>
+                <a href="/services/rd-tax-credit/" class="bca-hero__service-item">
+                    <span class="bca-hero__service-dot"></span>
+                    <span class="bca-hero__service-name">R&amp;D Tax Credit Claims</span>
+                    <span class="bca-hero__service-arrow"><svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></span>
+                </a>
+                <a href="/services/audit/" class="bca-hero__service-item">
+                    <span class="bca-hero__service-dot"></span>
+                    <span class="bca-hero__service-name">Audit Services</span>
+                    <span class="bca-hero__service-arrow"><svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></span>
+                </a>
+            </div>
+            <div class="bca-hero__btns reveal reveal-delay-4">
+                <a href="/request-quote/" class="bca-btn-primary">Get Free Quote</a>
+                <a href="tel:02392833300" class="bca-btn-ghost">
+                    <svg viewBox="0 0 16 16"><path d="M14 10.67v2a1.33 1.33 0 01-1.45 1.33 13.2 13.2 0 01-5.75-2.05 13 13 0 01-4-4 13.2 13.2 0 01-2.05-5.78A1.33 1.33 0 012.07 1h2a1.33 1.33 0 011.33 1.15c.085.64.24 1.27.467 1.87a1.33 1.33 0 01-.3 1.4L4.6 6.4a10.67 10.67 0 004 4l.98-.98a1.33 1.33 0 011.4-.3c.6.228 1.23.382 1.87.467A1.33 1.33 0 0114 10.67z"></path></svg>
+                    Call Us Now
+                </a>
             </div>
         </div>
         <div class="bca-hero__bottom reveal reveal-delay-4">
@@ -76,7 +74,7 @@ wp_enqueue_style('home-style');
                 </span>
             </div>
         </div>
-    </section>
+    </div>
 </div>
 
 <!-- SPECIALIST SERVICES SECTION -->
@@ -369,35 +367,32 @@ wp_enqueue_style('home-style');
 </section>
 
 <!-- EXTENSION OF YOUR TEAM -->
-<section class="bca-cta office" style="border-top: none;">
-    <div class="container">
-        <div class="bca-cta__left reveal">
-            <div class="bca-section__eyebrow" aria-hidden="true">Our Offices</div>
-            <div class="bca-cta__content">
-                <h2 class="bca-section__title">Acting As An Extension Of Your Team</h2>
-                <div class="bca-section__text">
-                    <p>
-                        We work closely with you to understand your business, priorities and long-term goals. 
-                        We provide clear communication, practical insight and dependable support that helps you move forward with confidence.
-                    </p>
-                    <p>
-                        From our offices in <b>Portsmouth, Romsey and Swindon</b>, we support businesses and individuals 
-                        with advice that is personal, responsive and built around lasting relationships.
-                    </p>
-                </div>
-                <div class="bca-cta__btn">
-                    <a href="/our-offices/" class="bca-btn-primary">Find Your Local Office</a>
-                    <a href="/contact/" class="bca-btn-accent">Contact Us</a>
-                </div>
+<section class="bca-cta office">
+    <div class="bca-cta__inner container">
+        <div class="bca-cta__text reveal">
+            <div class="bca-heading__eyebrow" aria-hidden="true">Our Offices</div>
+            <h2 class="bca-heading__title">Acting As An Extension Of <span>Your Team</span></h2>        
+            <div class="bca-cta__body">
+                <p>
+                    We work closely with you to understand your business, priorities and long-term goals. 
+                    We provide clear communication, practical insight and dependable support that helps you move forward with confidence.
+                </p>
+                <p>
+                    From our offices in <b>Portsmouth, Romsey and Swindon</b>, we support businesses and individuals 
+                    with advice that is personal, responsive and built around lasting relationships.
+                </p>
+            </div>
+            <div class="bca-cta__btns">
+                <a href="/our-offices/" class="bca-btn-primary">Find Your Local Office<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
+                <a href="/contact/" class="bca-btn-outline">Contact Us</a>
             </div>
         </div> 
-        <div class="bca-cta__right reveal reveal-delay-1">
-            <div class="bca-cta__image extension">
-                <img src="http://bca-new2.local/wp-content/uploads/2026/03/BCA_building.png" alt="BC&A Office Building" />
-                <div class="bca-cta__ex-stat-card">
-                    <span class="stat-number">35+ Years</span>
-                    <span class="stat-text">Supporting Businesses & Individuals</span>
-                </div>
+        <div class="bca-cta__image reveal reveal-delay-1">
+            <img src="http://bca-new2.local/wp-content/uploads/2026/03/BCA_building.png" alt="BC&A Office Building" />
+            <!-- Floating badge -->
+            <div class="bca-cta__image-badge">
+                <div class="bca-cta__image-badge-dot"></div>
+                <span>35+ Years of Supporting Businesses & Individuals</span>
             </div>
         </div>
     </div>
@@ -405,23 +400,23 @@ wp_enqueue_style('home-style');
 
 <!-- SEE HOW BCA WE WORK -->
 <section class="bca-cta dark">
-    <div class="container">
-        <div class="bca-cta__right reveal reveal-delay-1">
-            <div class="dark-cta__video-frame">
-                <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=800&amp;q=80" alt="BC&amp;A team at work">
-            </div>
+    <div class="bca-cta__inner container">
+        <div class="bca-cta__image reveal reveal-delay-1">
+            <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=800&amp;q=80" 
+                alt="BC&A team at work">
         </div>
-        <div class="bca-cta__left reveal">
-            <span class="bca-section__eyebrow white" aria-hidden="true">See How We Work</span>
-            <div class="bca-cta__content">
-                <h2 class="bca-section__title white">See How BC&amp;A Can Help Your Business <em>Thrive</em></h2>
-                <div class="bca-section__text">
-                    <p>Our proactive accountancy and business advisory services are designed to give you complete confidence in your finances — so you can focus on what you do best.</p>
-                </div>
-                <div class="bca-cta__btn">
-                    <a href="/about-us/" class="bca-btn-primary">Our Story<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
-                    <a href="/contact/" class="bca-btn-ghost">Get in Touch</a>
-                </div>
+        <div class="bca-cta__text reveal">
+            <span class="bca-heading__eyebrow white" aria-hidden="true">See How We Work</span>
+            <h2 class="bca-heading__title white">See How BC&amp;A Can Help Your Business <em>Thrive</em></h2>
+            <div class="bca-cta__body">
+                <p>
+                    Our proactive accountancy and business advisory services are designed to give you 
+                    complete confidence in your finances — so you can focus on what you do best.
+                </p>
+            </div>
+            <div class="bca-cta__btns">
+                <a href="/about-us/" class="bca-btn-primary">Our Story<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
+                <a href="/contact/" class="bca-btn-ghost">Get in Touch</a>
             </div>
         </div>
 
