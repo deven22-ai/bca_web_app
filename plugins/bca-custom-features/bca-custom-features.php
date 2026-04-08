@@ -41,6 +41,13 @@ function register_assets() {
         true
     );
 
+    // pass the $office variable
+    $selectedOffice = isset($_GET['office']) ? sanitize_text_field($_GET['office']) : '';
+
+    wp_localize_script('team-script', 'selectedOffice', array(
+        'office' => $selectedOffice
+    ));
+
     wp_register_style(
         'file-upload-style',
         BCA_CUSTOM_PLUGIN_URL . 'assets/css/file-upload.css',

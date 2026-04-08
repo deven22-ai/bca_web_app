@@ -148,7 +148,7 @@ h2 {
 /* ── SCROLL REVEAL ── */
 .reveal {
   opacity: 0;
-  transform: translateY(24px);
+  transform: translateY(25px);
   transition: opacity 0.65s ease, transform 0.65s ease;
 }
 .reveal.visible { opacity: 1; transform: translateY(0); }
@@ -500,7 +500,7 @@ body:not(:has(.transparent-header)) header.aux-overlay-header {
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .bca-hero__bottom {
@@ -630,9 +630,9 @@ color: var(--bca-primary);
     font-size: 17px;
     line-height: 28px;
   }
-
-  .bca-hero__bottom.big-text {
-    display: none;
+  
+  .bca-hero__bottom {
+      display: none;
   }
 }
 

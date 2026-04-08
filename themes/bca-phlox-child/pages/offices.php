@@ -25,7 +25,7 @@ wp_enqueue_style('offices-style');
                 </p>
             </div>
         </div>
-        <div class="bca-hero__bottom big-text reveal reveal-delay-2">
+        <div class="bca-hero__bottom reveal reveal-delay-2">
             <div class="bca-hero__bottom-inner">
                 <div class="bca-hero__bottom-stat">
                     <div class="bca-hero__bottom-num">3</div>

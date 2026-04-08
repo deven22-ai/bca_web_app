@@ -216,8 +216,10 @@ wp_enqueue_style('single-office-style');
                 <div class="bca-heading__eyebrow">The Portsmouth Team</div>
                 <h2 class="bca-heading__title">Meet the people behind <span>your advice</span></h2>
             </div>
-            <a href="/sectors/" class="bca-heading__link">View full team<svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></a>
+            <a href="/about-us/our-team?office=portsmouth" class="bca-heading__link">View full Portsmouth team<svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></a>
         </div>
+
+        <?php echo do_shortcode('[bca_portsmouth_team]') ?>
     </div>
 </section>
 

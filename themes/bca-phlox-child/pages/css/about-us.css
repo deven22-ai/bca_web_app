@@ -1,3 +1,7 @@
+:root {
+    --notch-bottom : -152px;
+}
+
 .bca-hero-section.about-us {
     background-image: url(/wp-content/uploads/2026/04/people_hi_fi.jpg);
 }
@@ -6,7 +10,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px);
+   /* background-image: linear-gradient(rgba(255, 255, 255, 0.018) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.018) 1px, transparent 1px); */
     background-size: 52px 52px;
     pointer-events: none;
 }
@@ -63,7 +67,7 @@
 }
 
 /* ════════════════════════════════════════
-    PILLARS — OUR VALUES
+   PILLARS — OUR VALUES
    ════════════════════════════════════════ */
 .bca-pillars {
     padding: 0;
@@ -115,4 +119,302 @@
     font-size: 13px;
     line-height: 1.72;
     color: rgba(255,255,255,0.42);
+}
+
+/* ════════════════════════════════════════
+   BCA STORY
+   ════════════════════════════════════════ */
+
+.bca-story {
+    padding: 80px 0;
+    background: var(--bca-card-bg);
+}
+
+.bca-timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin: 0 auto;
+}
+
+.bca-timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    background: var(--bca-dark-border);
+}
+
+.bca-timeline__item {
+    display: grid;
+    grid-template-columns: 1fr 54px 1fr;
+    gap: 30px;
+    align-items: center;
+    padding: 25px 0;
+}
+
+.bca-timeline__item.left .bca-timeline__right { display: none; }
+
+.bca-timeline__left , .bca-timeline__right {
+    width: 380px;
+    padding: 24px 26px;
+    background: var(--white);
+    border: 1px solid var(--bca-dark-border);
+    border-radius: 2px;
+    visibility: hidden;
+    opacity: 0; 
+    transition: all 0.55s ease-in-out;
+    box-shadow: 0 4px 20px rgba(13, 27, 62, 0.05);
+}
+
+.bca-timeline__item:nth-child(odd) .bca-timeline__right {
+    border-left: 3px solid var(--bca-primary);
+    transform: translate3d(160px, 0, 0);
+}
+
+.bca-timeline__item:nth-child(even) .bca-timeline__left ,
+.bca-timeline__item:nth-child(even) .bca-timeline__right {
+    justify-self: end;
+    border-right: 3px solid var(--bca-secondary);
+    transform: translate3d(-160px, 0, 0);
+}
+
+.bca-timeline .notch {
+    position: absolute;
+}
+
+.bca-timeline__right .notch::after {
+    content: "";
+    position: absolute;
+    bottom: var(--notch-bottom);
+    left: -37px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-right: 10px solid var(--bca-primary);
+}
+
+.bca-timeline__left .notch::after {
+    content: "";
+    position: absolute;
+    bottom: var(--notch-bottom);
+    left: 351px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 10px solid var(--bca-secondary);
+}
+
+.bca-timeline__left .bca-tl__tag {
+    color: var(--bca-secondary);
+}
+
+.bca-timeline__item.in-view .bca-timeline__left , 
+.bca-timeline__item.in-view .bca-timeline__right {
+    transform: none;
+    visibility: visible;
+    opacity: 1;
+}
+
+.bca-timeline__dot {
+    width: 54px;
+    height: 54px;
+    align-self: end;
+    border-radius: 50%;
+    background: var(--white);
+    border: 2px solid var(--bca-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    position: relative;
+    flex-shrink: 0;
+    margin: 0 auto;
+    box-shadow: 0 0 0 6px rgba(26, 86, 219, 0.06);
+}
+
+.bca-timeline__year {
+    align-self: center;
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--bca-primary);
+    line-height: 1;
+}
+
+.bca-timeline__title {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--bca-primary);
+    margin-bottom: 4px;
+}
+
+.bca-timeline__text {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.72;
+}
+
+.bca-tl__year {
+    display: block;
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--bca-dark-navy);
+    letter-spacing: -0.5px;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.bca-t1-card__description {
+    display: flex;
+    flex-flow: column;
+}
+
+.bca-tl__tag {
+    display: block;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--bca-primary);
+    margin-bottom: 10px;
+}
+
+/* Title & text */
+.bca-tl__title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--bca-dark-navy);
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.bca-tl__text {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.72;
+}
+
+/* ════════════════════════════════════════
+   OUR APPROACH
+   ════════════════════════════════════════ */
+.bca-approach {
+    padding: 96px 0;
+    background: var(--white);
+}
+
+.bca-approach__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+    align-items: start;
+}
+
+.bca-approach__text p {
+    font-size: 15px;
+    line-height: 1.85;
+    color: var(--muted);
+    margin-bottom: 16px;
+}
+
+.bca-approach .bca-heading-section.left-align { margin-bottom: 10px; }
+
+.bca-approach__cards {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+}
+
+.bca-approach-card {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    padding: 22px 24px;
+    background: var(--bca-card-bg);
+    border: 1px solid var(--bca-dark-border);
+    border-left: 3px solid var(--bca-primary);
+    transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.bca-approach-card:hover {
+    box-shadow: 0 8px 28px rgba(13, 27, 62, 0.08);
+    transform: translateX(4px);
+}
+
+.bca-approach-card:nth-child(2) { border-left-color: var(--tax-relief); }
+.bca-approach-card:nth-child(3) { border-left-color: var(--bca-secondary); }
+
+.bca-approach-card__icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border-radius: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bca-approach-card__icon svg {
+    width: 19px;
+    height: 19px;
+    fill: none;
+    stroke-width: 1.8;
+}
+
+.bca-approach-card:nth-child(1) .bca-approach-card__icon svg { stroke: var(--bca-primary);}
+.bca-approach-card:nth-child(2) .bca-approach-card__icon svg { stroke: var(--tax-relief); }
+.bca-approach-card:nth-child(3) .bca-approach-card__icon svg { stroke: var(--bca-secondary); }
+
+.bca-approach-card h4 {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--bca-dark-navy);
+    margin-bottom: 6px;
+}
+
+.bca-approach-card p {
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--muted);
+}
+
+.bca-approach-card:nth-child(1) .bca-approach-card__icon { background: rgba(26, 86, 219, 0.08); }
+.bca-approach-card:nth-child(2) .bca-approach-card__icon { background: rgba(5, 150, 105, 0.08); }
+.bca-approach-card:nth-child(3) .bca-approach-card__icon { background: rgba(201, 168, 76, 0.1); }
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .bca-story__stats { flex-wrap: wrap; }
+  .bca-story__stat { flex: 1 1 50%; border-bottom: 1px solid var(--bca-dark-border); }
+}
+
+@media (max-width: 1024px) {
+    .bca-timeline__item { grid-template-columns: 54px 1fr;gap: 20px; }
+    .bca-timeline__left , .bca-timeline__empty { display: none;}
+    .bca-timeline::before { left: 28px; }
+    .bca-timeline__item:nth-child(even) .bca-timeline__right .notch::after { border-right: 10px solid var(--bca-secondary); }
+    .bca-timeline__right .notch::after { bottom: -105px; }
+    /* Reset card width to fill available space */
+    .bca-timeline__left, .bca-timeline__right { width: 100%; }
+    .bca-timeline__item.left .bca-timeline__right {
+        display: block;
+    }
+    /* Reset the even/left transforms so all cards animate from the right */
+    .bca-timeline__item:nth-child(even) .bca-timeline__right {
+        justify-self: start;
+        border-right: none;
+        border-left: 3px solid var(--bca-secondary);
+    }
+
+    .bca-approach__inner { grid-template-columns: 1fr; gap: 44px; }
 }

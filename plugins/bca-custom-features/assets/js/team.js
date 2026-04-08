@@ -1,40 +1,34 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const filter = document.getElementById('bca-office-filter');
-    const cards = document.querySelectorAll('.bca-team-card');
+    const pills = document.querySelectorAll('.bca-team__pill');
+    const members = document.querySelectorAll('.bca-member');
+    const countEl = document.getElementById('visibleCount');
+    
+    pills.forEach(pill => {
+        pill.addEventListener('click', () => {
+            const office = pill.dataset.office;
 
-    if (!filter || !cards.length) return;
+            pills.forEach(p => p.classList.remove('active'));
+            pill.classList.add('active');
 
-    filter.addEventListener('change', function () {
-        const selectedOffice = this.value;
-
-        cards.forEach(function (card) {
-            const officeData = card.getAttribute('data-office') || '';
-            const officeList = officeData.split(' ');
-            const shouldShow = selectedOffice === 'all' || officeList.includes(selectedOffice);
-
-            if (shouldShow) {
-                if (card.classList.contains('is-hidden')) {
-                    card.classList.remove('is-hidden');
-                    card.classList.add('is-showing');
-
-                    requestAnimationFrame(function () {
-                        requestAnimationFrame(function () {
-                            card.classList.remove('is-showing');
-                        });
-                    });
-                } else {
-                    card.classList.remove('is-hiding');
-                }
+            let visible = 0;
+            members.forEach(m => {
+            const offices = m.dataset.office.split(',');
+            if (office === 'all' || offices.includes(office)) {
+                m.classList.remove('hidden');
+                visible++;
             } else {
-                if (!card.classList.contains('is-hidden')) {
-                    card.classList.add('is-hiding');
-
-                    setTimeout(function () {
-                        card.classList.add('is-hidden');
-                        card.classList.remove('is-hiding');
-                    }, 350);
-                }
+                m.classList.add('hidden');
             }
+            });
+
+            if (countEl) countEl.textContent = visible;
         });
     });
+    
+    console.log(selectedOffice.office);
+    if(selectedOffice != '') {
+        document.querySelector('.bca-team__pill[data-office="' + selectedOffice.office + '"]').click(); 
+        const section = document.querySelector('#teamSection');
+        section.scrollIntoView({ behavior: 'smooth' });
+    } else document.querySelector('.bca-team__pill[data-office="all"]').click(); 
 });

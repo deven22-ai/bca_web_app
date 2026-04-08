@@ -6,6 +6,9 @@ Author: Deven Warang
 
 get_header();
 wp_enqueue_style('team-style');
+
+// Get URL header values
+$SelectedOffice = isset($_GET['office']) ? sanitize_text_field($_GET['office']) : 'all';
 ?>
 
 <!-- HERO SECTION -->
@@ -29,7 +32,7 @@ wp_enqueue_style('team-style');
 </section>
 
 <!-- TEAM GRID -->
-<section class="bca-team-shortcode">
+<section class="bca-team-shortcode" id="teamSection">
     <div class="container">
         <div class="bca-heading-section">
             <div class="bca-heading-container">
@@ -59,11 +62,15 @@ wp_enqueue_style('team-style');
     </div>
 </section>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function () { 
+        document.querySelector('.bca-team__pill[data-office="<?php echo $SelectedOffice ?>"]').click();
+    });
+</script>
+
 <?php 
-
-/* CTA (CONTACT US) */
+/* CTA (CONTACT US) SHORTCODE */
 echo do_shortcode('[bca_cta_contact]'); 
-
 get_footer();
 ?>
 
