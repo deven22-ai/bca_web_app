@@ -218,7 +218,6 @@ wp_enqueue_style('single-office-style');
             </div>
             <a href="/about-us/our-team?office=portsmouth" class="bca-heading__link">View full Portsmouth team<svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></a>
         </div>
-
         <?php echo do_shortcode('[bca_portsmouth_team]') ?>
     </div>
 </section>
@@ -301,22 +300,22 @@ wp_enqueue_style('single-office-style');
 </section>
 
 <!--- DARK CTA -->
-<section class="bca-cta offices">
+<section class="bca-cta-dark">
     <div class="container">
-        <div class="bca-cta__inner bca-reveal">
-        <div class="bca-cta__text">
-            <span class="bca-heading__eyebrow">Other Offices</span>
-            <h2>Also serving <em>Romsey &amp; Swindon</em></h2>
-            <p>
-                BC&A operates three offices across the South of England. If Romsey or Swindon is 
-                more convenient for you, our teams there offer the same high standard of service 
-                and expertise.
-            </p>
-        </div>
-        <div class="bca-cta__btns">
-            <a href="/offices/" class="bca-btn-primary">View All Offices<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
-            <a href="/request-quote/" class="bca-btn-ghost">Get a Free Quote</a>
-        </div>
+        <div class="bca-cta-dark__inner reveal">
+            <div class="bca-cta-dark__text">
+                <span class="bca-heading__eyebrow">Other Offices</span>
+                <h2>Also serving <em>Romsey &amp; Swindon</em></h2>
+                <p>
+                    BC&A operates three offices across the South of England. If Romsey or Swindon is 
+                    more convenient for you, our teams there offer the same high standard of service 
+                    and expertise.
+                </p>
+            </div>
+            <div class="bca-cta__btns">
+                <a href="/offices/" class="bca-btn-primary">View All Offices<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
+                <a href="/request-quote/" class="bca-btn-ghost">Get a Free Quote</a>
+            </div>
         </div>
     </div>
 </section>

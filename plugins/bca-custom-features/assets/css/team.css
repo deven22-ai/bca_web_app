@@ -17,6 +17,52 @@
     background-color: var(--bca-card-bg);
 }
 
+.bca-join {
+    padding: 80px 0;
+    background: var(--bca-dark-navy);
+    position: relative;
+    overflow: hidden;
+}
+
+.bca-join__inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    flex-wrap: wrap;
+}
+
+.bca-join .bca-heading__title em {
+    font-style: italic;
+    color: var(--bca-secondary);
+}
+
+.bca-join .bca-heading__title { color: var(--white); }
+.bca-join .bca-heading-container p {
+    font-size: 15px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.52);
+    max-width: 520px;
+}
+
+.bca-join__btns {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+}
+
+.bca-btn svg {
+    width: 14px;
+    height: 14px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2.5;
+    transition: transform 0.25s ease;
+}
+
 /* Shortcode styles */
 /* ── Filter pills ── */
 .bca-team__filter-wrap {

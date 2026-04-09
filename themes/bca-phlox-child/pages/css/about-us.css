@@ -392,6 +392,16 @@
 .bca-approach-card:nth-child(2) .bca-approach-card__icon { background: rgba(5, 150, 105, 0.08); }
 .bca-approach-card:nth-child(3) .bca-approach-card__icon { background: rgba(201, 168, 76, 0.1); }
 
+
+/* ════════════════════════════════════════
+   SENIOR LEADERSHIP
+   ════════════════════════════════════════ */
+.bca-senior {
+    padding: 80px 0;
+    background: var(--bca-card-bg);
+}
+
+
 /* ── Responsive ── */
 @media (max-width: 900px) {
   .bca-story__stats { flex-wrap: wrap; }

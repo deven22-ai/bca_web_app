@@ -89,7 +89,7 @@ function generateTeam($offTerm, $query) {
         endforeach; ?>
 
         <div class="bca-member <?php echo $office_member ?> reveal reveal-delay-3" data-office="<?php echo $offices ?>">
-            <div class="bca-member__photo <?php echo !$isFullTeam ? 'soft-bg' : '' ?>">
+            <div class="bca-member__photo <?php /* Adds soft-bg under images --> echo !$isFullTeam ? 'soft-bg' : '' */ ?>">
                 <?php if(has_post_thumbnail()): ?>
                 <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full') ?>" alt="<?php the_title(); ?>"/>
                 <?php else : ?>

@@ -26,7 +26,7 @@ wp_enqueue_style('about-us-style');
             </div>
             <div class="bca-hero__btns reveal reveal-delay-2">
                 <a href="#BCAStory" class="bca-btn-primary">Discover Our Story<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
-                <a href="#" class="bca-btn-ghost">Meet the Team</a>
+                <a href="#senLderShip" class="bca-btn-ghost">Meet the Team</a>
             </div>
         </div>
         <div class="bca-hero__bottom big-text reveal reveal-delay-2">
@@ -271,15 +271,17 @@ wp_enqueue_style('about-us-style');
 </section>
 
 <!-- SENIOR LEADERSHIP -->
-<section class="bca">
+<section class="bca-senior" id="senLderShip">
     <div class="container">
         <div class="bca-heading-section left-align reveal">
             <div class="bca-heading-container left-align">
                 <div class="bca-heading__eyebrow">Our Senior Leadership</div>
                 <h2 class="bca-heading__title">The people behind <span>your advice</span></h2>
             </div>
-            <a href="/about-us/our-team" class="bca-heading__link">View full team<svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></a>
+            <a href="/about-us/our-team?office=all" class="bca-heading__link">View full team<svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></a>
         </div>
+
+        <?php echo do_shortcode('[bca_portsmouth_team]') ?>
     </div>
 </section>
 

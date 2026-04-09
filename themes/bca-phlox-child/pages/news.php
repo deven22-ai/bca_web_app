@@ -6,18 +6,21 @@ Author: Deven Warang
 
 get_header();
 ?>
+<style>
+    .bca-hero-section { background-image: url('/wp-content/uploads/2026/03/news.jpg'); }
+</style>
 
 <!-- HERO SECTION -->
-<section class="bca-hero-section" style="background-image: url('/wp-content/uploads/2026/03/news.jpg');">
+<section class="bca-hero-section">
     <div class="bca-hero__overlay"></div>
     <div class="bca-hero container transparent-header">
         <div class="bca-hero__content">
             <div class="bca-hero__eyebrow reveal">
                 <p><strong><span>BC&A NEWS</span></strong></p>
             </div>
-            <div class="bca-hero__head-wrapper">
-                <h1 class="bca-hero__title reveal reveal-delay-1">Insights, Updates & News From BC&A</h1>
-                <p class="bca-hero__text reveal reveal-delay-2">
+            <div class="bca-hero__head-wrapper reveal reveal-delay-1">
+                <h1 class="bca-hero__title">Insights, Updates & News <em>From BC&A</em></h1>
+                <p class="bca-hero__text">
                     Stay up to date with the latest business insights, tax updates, industry developments, 
                     and firm news from BC&A Chartered Accountants.
                 </p>

@@ -27,6 +27,10 @@ $SelectedOffice = isset($_GET['office']) ? sanitize_text_field($_GET['office']) 
                     across Portsmouth and beyond.
                 </p>
             </div>
+            <div class="bca-hero__btns reveal reveal-delay-3">
+                <a href="#teamSection" class="bca-btn-primary">Meet the Team</a>
+                <a href="#joinUs" class="bca-btn-ghost">Join Us</a>
+            </div>
         </div>
     </div>
 </section>
@@ -45,6 +49,23 @@ $SelectedOffice = isset($_GET['office']) ? sanitize_text_field($_GET['office']) 
             </div>
         </div>
         <?php echo do_shortcode('[bca_team_grid]') ?>
+    </div>
+</section>
+
+<!-- JOIN US -->
+<section class="bca-cta-dark" id="joinUs">
+    <div class="container">
+        <div class="bca-cta-dark__inner reveal">
+            <div class="bca-cta-dark__text">
+                <span class="bca-heading__eyebrow">Careers at BC&A</span>
+                <h2>Want to join a firm that <em>invests in you?</em></h2>
+                <p>We are always interested in hearing from talented, ambitious professionals who share our commitment to quality, integrity and exceptional client service.</p>
+            </div>
+            <div class="bca-cta__btns">
+                <a href="/contact/" class="bca-btn-primary">Email Your CV<svg style="margin-bottom: 4px;fill: none;height: 1.4em;padding-left: 8px;" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="4" width="14" height="10" rx="1"/><path d="M1 6l7 5 7-5"/></svg></a>
+                <a href="/contact/" class="bca-btn-ghost">Get in Touch</a>
+            </div>
+        </div>
     </div>
 </section>
 
