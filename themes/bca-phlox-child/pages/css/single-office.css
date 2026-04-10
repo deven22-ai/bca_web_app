@@ -3,6 +3,14 @@
     background: var(--white);
 }
 
+.bca-form-card h2 {
+    font-size: 18px;
+    height: 100%;
+    font-weight: 700;
+    color: var(--bca-dark-navy);
+    margin-bottom: 20px;
+}
+
 .bca-hero-section.portsmouth {
     background-image: url(/wp-content/uploads/2026/04/office_building.jpg);
 }
@@ -20,100 +28,6 @@
 
 .bca-hero__head-wrapper {
     margin-bottom: 36px;
-}
-
-.bca-hero__card {
-    background: rgba(255, 255, 255, 0.04);
-    border: 1px solid rgba(255, 255, 255, 0.09);
-    border-radius: 8px;
-    backdrop-filter: blur(12px);
-    overflow: hidden;
-}
-
-.bca-hero__card-head {
-    background: var(--bca-primary);
-    padding: 18px 24px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.bca-hero__card-head svg {
-    width: 16px;
-    height: 16px;
-    stroke: rgba(255, 255, 255, 0.8);
-    fill: none;
-    stroke-width: 2;
-}
-
-.bca-hero__card-head h4 {
-    font-size: 13px;
-    font-weight: 700;
-    margin: 0;
-    color: var(--white);
-    letter-spacing: 0.3px;
-}
-
-.bca-hero__card-body {
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-.bca-hero__card-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
-}
-
-.bca-hero__card-item svg {
-    width: 15px;
-    height: 15px;
-    stroke: var(--bca-primary);
-    fill: none;
-    stroke-width: 2;
-    flex-shrink: 0;
-    margin-top: 2px;
-}
-
-.bca-hero__card-label {
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.35);
-    margin-bottom: 2px;
-}
-
-.bca-hero__card-value {
-    font-size: 13px;
-    color: rgba(255,255,255,0.75);
-    line-height: 1.5;
-}
-
-.bca-hero__card-value a { color: rgba(255,255,255,0.75); }
-
-.bca-hero__card-divider {
-    height: 1px;
-    background: rgba(255, 255, 255, 0.07);
-}
-
-.bca-hero__card-foot {
-    padding: 16px 24px;
-    border-top: 1px solid rgba(255, 255, 255, 0.07);
-}
-
-.bca-hero__card-foot a {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    box-shadow: 0 4px 18px rgba(26, 86, 219, 0.3) !important;
-}
-
-.bca-hero__card-foot a svg {
-    padding-left: 0;
-    margin-left: 10px;
 }
 
 /* ════════════════════════════════════════
@@ -357,21 +271,8 @@
     height: 100%;
 }
 
-.bca-form-card {
-    background: var(--white);
-    border: 1px solid var(--bca-dark-border);
-    padding: 32px;
-}
-
-.bca-form-title {
-    font-size: 18px;
-    height: 100%;
-    font-weight: 700;
-    color: var(--bca-dark-navy);
-    margin-bottom: 20px;
-}
-
 .bca-details-card {
+    height: 100%;
     background: var(--bca-dark-navy);
     overflow: hidden;
 }
@@ -479,80 +380,6 @@
     font-weight: 400;
     color: var(--muted);
     margin-top: 2px;
-}
-
-
-/* ════════════════════════════════════════
-   CONTACT FORM 7
-   ════════════════════════════════════════ */
-.bca-form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 14px;
-    margin-bottom: 14px;
-}
-
-.bca-form-row--full {
-    grid-template-columns: 1fr;
-}
-
-.bca-field {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-}
-
-.bca-form-card p, .bca-form-card input { margin: 0; }
-
-.bca-field label {
-    font-size: 14px;
-    font-weight: 800;
-    margin-bottom: 6px;
-    color: var(--text);
-    letter-spacing: 0.3px;
-}
-
-.bca-field input, .bca-field select, .bca-field textarea {
-    padding: 11px 14px;
-    resize: vertical;
-    border: 1px solid var(--bca-dark-border);
-    font-family: 'Nunito', sans-serif;
-    font-size: 14px;
-    color: var(--text);
-    background: var(--white);
-    margin: 0 !important;
-    outline: none;
-    transition: border-color var(--transition), box-shadow var(--transition);
-    appearance: none;
-    -webkit-appearance: none;
-    width: 100%;
-}
-
-.bca-field input:focus, .bca-field select:focus, .bca-field textarea:focus {
-    border-color: var(--bca-primary) !important;
-    box-shadow: 0 0 0 3px rgba(26, 86, 219, 0.08);
-}
-
-.bca-field textarea {
-    min-height: 100px;
-    height: 100px;
-}
-
-.bca-form-submit {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
-    margin-top: 20px;
-    padding-top: 20px;
-    border-top: 1px solid var(--bca-dark-border);
-    flex-wrap: wrap;
-}
-
-.bca-form-submit p {
-    font-size: 12px;
-    color: var(--muted);
-    line-height: 1.5;
 }
 
 /* ════════════════════════════════════════

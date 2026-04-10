@@ -12,7 +12,7 @@ wp_enqueue_style('single-office-style');
 <div class="bca-hero-section portsmouth">
     <div class="bca-hero__overlay"></div>
     <div class="bca-hero container transparent-header">
-        <div class="bca-hero__content">
+        <div class="bca-hero__content-grid">
             <div>
                 <div class="bca-hero__eyebrow reveal">
                     <p><strong><span>Portsmouth Office</span></strong></p>
@@ -35,37 +35,29 @@ wp_enqueue_style('single-office-style');
                     <h4>Portsmouth Head Office</h4>
                 </div>
                 <div class="bca-hero__card-body">
-                    <div class="bca-hero__card-item"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    <div class="bca-hero__card-item">
+                        <div class="bca-hero__card-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
                         <div>
-                            <div class="bca-hero__card-label">Address</div>
+                            <div class="bca-hero__card-label">Visit Us</div>
                             <div class="bca-hero__card-value">24 Landport Terrace, Southsea,<br>Portsmouth, PO1 2RG</div>
                         </div>
                     </div>
                     <div class="bca-hero__card-divider"></div>
-                    <div class="bca-hero__card-item">
-                        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
+                    <a href="tel:02392833300" class="bca-hero__card-item">
+                        <div class="bca-hero__card-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg></div>
                         <div>
-                            <div class="bca-hero__card-label">Phone</div>
-                            <div class="bca-hero__card-value"><a href="tel:02392833300">02392 833 300</a></div>
+                            <div class="bca-hero__card-label">Call us</div>
+                            <div class="bca-hero__card-value">02392 833 300</div>
                         </div>
-                    </div>
+                    </a>
                     <div class="bca-hero__card-divider"></div>
-                    <div class="bca-hero__card-item">
-                        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                    <a href="mailto:info@bcaaccountants.com" class="bca-hero__card-item">
+                        <div class="bca-hero__card-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div>
                         <div>
-                            <div class="bca-hero__card-label">Email</div>
-                            <div class="bca-hero__card-value"><a href="mailto:info@bcaaccountants.com">info@bcaaccountants.com</a></div>
+                            <div class="bca-hero__card-label">Email Us</div>
+                            <div class="bca-hero__card-value">info@bcaaccountants.com</div>
                         </div>
-                    </div>
-                    <!-- <div class="bca-hero__card-divider"></div>
-                    <div class="bca-hero__card-item">
-                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
-                        <div>
-                            <div class="bca-hero__card-label">Office Hours</div>
-                            <div class="bca-hero__card-value">Mon–Fri: 9:00am – 5:30pm</div>
-                        </div>
-                    </div>
-                    -->
+                    </a>
                 </div>
                 <div class="bca-hero__card-foot">
                     <a href="https://maps.google.com/?q=24+Landport+Terrace+Portsmouth" target="_blank" rel="noopener" class="bca-btn-primary">

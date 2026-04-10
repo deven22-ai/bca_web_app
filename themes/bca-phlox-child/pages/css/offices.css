@@ -15,168 +15,6 @@
     padding: 15px 32px;
 }
 
-.bca-offices {
-    padding: 70px 0;
-    background: var(--bca-card-bg);
-}
-
-.bca-offices__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-}
-
-.bca-office-card {
-    background: var(--white);
-    border: 1px solid var(--bca-dark-border);
-    border-radius: 8px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.bca-office-card:hover {
-    box-shadow: 0 24px 64px rgba(13, 27, 62, 0.12);
-    transform: translateY(-5px);
-}
-
-.bca-office-card__photo {
-    position: relative;
-    height: 220px;
-    overflow: hidden;
-}
-
-.bca-office-card__photo img {
-    display: block;
-    max-width: 100%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-}
-
-.bca-office-card:hover .bca-office-card__photo img {
-    transform: scale(1.05);
-}
-
-.bca-office-card__type {
-    position: absolute;
-    bottom: 16px;
-    left: 16px;
-    z-index: 2;
-    font-size: 10px;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    color: var(--white);
-    background: var(--bca-primary);
-    padding: 4px 12px;
-    border-radius: 3px;
-}
-
-.bca-office-card__photo::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(to top, rgba(13, 27, 62, 0.65) 0%, transparent 60%);
-}
-
-.bca-office-card__body {
-    padding: 28px 28px 24px;
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-}
-
-.bca-office-card__name {
-    font-size: 26px;
-    font-weight: 800;
-    color: var(--bca-dark-navy);
-    letter-spacing: -0.5px;
-    margin-bottom: 12px;
-}
-
-.bca-office-card__desc {
-    font-size: 15px;
-    line-height: 1.75;
-    color: var(--muted);
-    margin-bottom: 22px;
-    flex: 1;
-}
-
-.bca-office-card__details {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    padding: 18px 0;
-    border-top: 1px solid var(--bca-dark-border);
-    border-bottom: 1px solid var(--bca-dark-border);
-    margin-bottom: 22px;
-}
-
-.bca-office-card__detail {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    font-size: 14px;
-    color: var(--muted);
-    line-height: 1.5;
-}
-
-.bca-office-card__detail a {
-    color: var(--muted);
-    font-weight: 600;
-    transition: color 0.2s ease;
-}
-
-.bca-office-card__detail svg {
-    width: 14px;
-    height: 14px;
-    stroke: var(--bca-primary);
-    fill: none;
-    stroke-width: 2;
-    flex-shrink: 0;
-    margin-top: 1px;
-}
-
-.bca-office-card__btns {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-}
-
-.bca-office-card__btns .bca-btn-primary { box-shadow: none !important; }
-
-.bca-office-card__btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    font-size: 14px;
-    font-weight: 600;
-    padding: 10px 14px;
-    color: var(--bca-dark-navy);
-    transition: all 0.22s ease;
-    text-align: center;
-    background: var(--bca-card-bg);
-    border: 1px solid var(--bca-dark-border);
-}
-
-.bca-office-card__btn:hover {
-    border-color: var(--bca-dark-navy);
-    background: var(--bca-dark-navy);
-    color: var(--white);
-}
-
-.bca-office-card__btn svg {
-    width: 12px;
-    height: 12px;
-    stroke: currentColor;
-    fill: none;
-    stroke-width: 2.5;
-}
-
 /* ════════════════════════════════════════
     WHY LOCAL STRIP
    ════════════════════════════════════════ */
@@ -326,10 +164,6 @@
 /* ════════════════════════════════════════
     RESPONSIVENESS
    ════════════════════════════════════════ */
-@media (max-width: 1138px) {
-    .bca-offices__grid { grid-template-columns: 1fr 1fr; }
-}
-
 @media (max-width: 1024px) {
     .bca-why-local__inner { grid-template-columns: repeat(2,1fr); }
     .bca-why-local__item:nth-child(2) { border-right: none; }
@@ -338,15 +172,7 @@
     .bca-why-local__item:nth-child(2) { border-bottom: 1px solid rgba(255,255,255,0.07); }
 }
 
-@media (max-width: 768px) {
-    .bca-offices__grid { grid-template-columns: 1fr; }
-}
-
 @media (max-width: 640px) {
     .bca-why-local__inner { grid-template-columns: 1fr; }
     .bca-why-local__item { border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.07); }
-}
-
-@media (max-width: 398px) {
-    .bca-office-card__btns { grid-template-columns: 1fr; }
 }
