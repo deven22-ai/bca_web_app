@@ -16,13 +16,10 @@ define('BCA_CUSTOM_PLUGIN_URL', plugin_dir_url(__FILE__));
 
 // Load the files, only once
 require_once BCA_CUSTOM_PLUGIN_PATH . 'includes/shortcode-team.php';
-require_once BCA_CUSTOM_PLUGIN_PATH . 'includes/shortcode-file-upload.php';
 require_once BCA_CUSTOM_PLUGIN_PATH . 'includes/shortcode-news.php';
 require_once BCA_CUSTOM_PLUGIN_PATH . 'includes/shortcode-cta.php';
 require_once BCA_CUSTOM_PLUGIN_PATH . 'includes/shortcode-sector.php';
-require_once BCA_CUSTOM_PLUGIN_PATH . 'includes/shortcode-section.php';
 require_once BCA_CUSTOM_PLUGIN_PATH . 'includes/ajax-handlers.php';
-/* require_once BCA_CUSTOM_PLUGIN_PATH . 'includes/dropbox-upload-handler.php'; */
 
 function register_assets() {
 
@@ -47,21 +44,6 @@ function register_assets() {
     wp_localize_script('team-script', 'selectedOffice', array(
         'office' => $selectedOffice
     ));
-
-    wp_register_style(
-        'file-upload-style',
-        BCA_CUSTOM_PLUGIN_URL . 'assets/css/file-upload.css',
-        array(),
-        '1.0.0'
-    );
-
-    wp_register_script(
-        'file-upload-script',
-        BCA_CUSTOM_PLUGIN_URL . 'assets/js/file-upload.js',
-        array('jquery'),
-        '1.0.0',
-        true
-    );
 
     wp_register_style(
         'news-style',

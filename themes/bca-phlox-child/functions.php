@@ -10,6 +10,14 @@ function bca_phlox_child_enqueue_assets() {
         true
     );
 
+    wp_register_script(
+        'file-upload-js',
+        get_stylesheet_directory_uri() . '/pages/js/file-upload.js',
+        array(),
+        filemtime(get_stylesheet_directory() . '/pages/js/file-upload.js'),
+        true
+    );
+
     wp_register_style(
         'home-style',
         get_stylesheet_directory_uri() . '/pages/css/home.css',
@@ -50,6 +58,13 @@ function bca_phlox_child_enqueue_assets() {
         get_stylesheet_directory_uri() . '/pages/css/contact.css',
         array(),
         filemtime(get_stylesheet_directory() . '/pages/css/contact.css')
+    );
+
+    wp_register_style(
+        'file-upload-style',
+        get_stylesheet_directory_uri() . '/pages/css/file-upload.css',
+        array(),
+        filemtime(get_stylesheet_directory() . '/pages/css/file-upload.css')
     );
 }
 

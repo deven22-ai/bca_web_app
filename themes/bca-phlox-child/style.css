@@ -1267,7 +1267,7 @@ a.bca-hero__card-item:hover .bca-hero__card-value { color: var(--bca-secondary);
 
 @media (max-width: 540px) {
   .bca-cta__inner { padding: 0 20px; }
-  .bca-cta__btns { flex-direction: column; }
+  .bca-cta__btns { flex-direction: column;width: 100%; }
 }
 
 @media (max-width: 398px) {
