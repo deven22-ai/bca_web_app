@@ -41,3 +41,5 @@ function scrollMargin() {
 
 document.addEventListener('DOMContentLoaded', scrollReveal);
 window.addEventListener('load', scrollMargin);
+const formSubmitBtn = document.querySelector('form .bca-form-submit input[type=submit]');
+if(formSubmitBtn != null) formSubmitBtn.classList.add('bca-btn-primary');

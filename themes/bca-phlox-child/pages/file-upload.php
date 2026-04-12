@@ -79,7 +79,7 @@ wp_enqueue_style('file-upload-style');
             <!-- Sidebar -->
             <aside class="bca-upload-sidebar">
                 <!-- Tips -->
-                <div class="bca-info-card">
+                <div class="bca-info-card reveal reveal-delay-1">
                     <div class="bca-info-card__head">
                         <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
                         <h4>Tips for uploading</h4>
@@ -103,7 +103,7 @@ wp_enqueue_style('file-upload-style');
                 </div>
 
                 <!-- Security note -->
-                <div class="bca-security-note">
+                <div class="bca-security-note reveal reveal-delay-2">
                     <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
                     <p>
                         <strong>Your files are secure</strong>
@@ -113,7 +113,7 @@ wp_enqueue_style('file-upload-style');
             </aside>
         </div>
 
-        <div class="bca-upload-help">
+        <div class="bca-upload-help reveal">
             <div class="bca-upload-help__text">
                 <strong>Having trouble uploading?</strong>
                 Call or email us and we can arrange an alternative secure transfer method.

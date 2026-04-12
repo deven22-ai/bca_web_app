@@ -3,6 +3,10 @@
     background: var(--white);
 }
 
+.bca-member__photo img {
+    background: var(--bca-card-bg);
+}
+
 .bca-form-card h2 {
     font-size: 18px;
     height: 100%;
@@ -11,9 +15,19 @@
     margin-bottom: 20px;
 }
 
+/* ════════════════════════════════════════
+   HERO SECTION
+   ════════════════════════════════════════ */
+
 .bca-hero-section.portsmouth {
-    background-image: url(/wp-content/uploads/2026/04/office_building.jpg);
+    background-image: url(/wp-content/uploads/2026/04/portsmouth.jpg);
 }
+
+.bca-hero-section.romsey {
+    background-image: url(/wp-content/uploads/2026/03/romsey_market_square.png);
+}
+
+.bca-hero__overlay { opacity: 0.96; }
 
 .bca-hero__content {
     position: relative;
@@ -29,6 +43,14 @@
 .bca-hero__head-wrapper {
     margin-bottom: 36px;
 }
+
+.bca-hero_card-value--group {
+    display: flex;
+    flex-flow: column;
+    gap: 4px;
+}
+
+.bca-hero_card-value--group a:hover { color: var(--bca-secondary); }
 
 /* ════════════════════════════════════════
    WHY CHOOSE BCA SECTION
@@ -51,9 +73,10 @@
 
 .bca-why__image img {
     width: 100%;
-    height: 480px;
+    height: 560px;
+    object-position: top;
     object-fit: cover;
-    border-radius: 2px;
+    border-radius: var(--border-radius);
 }
 
 /* Floating stat */
@@ -61,6 +84,7 @@
     position: absolute;
     bottom: -24px;
     right: -24px;
+    border-radius: var(--border-radius);
     background: var(--bca-dark-navy);
     padding: 22px 26px;
     box-shadow: 0 20px 50px rgba(13,27,62,0.28);
@@ -76,7 +100,12 @@
     margin-bottom: 4px;
 }
 .bca-why__stat-num span { color: var(--bca-primary); }
-.bca-why__stat-label { font-size: 12px; color: rgba(255,255,255,0.5); line-height: 1.4; }
+.bca-why__stat-label { 
+    font-size: 12px; 
+    color: rgba(255,255,255,0.5); 
+    line-height: 1.4; 
+    max-width: 120px;
+}
 
 .bca-why__content h2 {
     text-transform: none;
@@ -246,7 +275,7 @@
 .bca-service-card:nth-child(3) .bca-service-card__list li svg { stroke: var(--audit); }
 
 /* ════════════════════════════════════════
-   CONTACT - SPEACK TO THE TEAM
+   CONTACT - SPEAK TO THE TEAM
    ════════════════════════════════════════ */
 .bca-contact {
     padding: 80px 0;
@@ -313,7 +342,7 @@
     display: flex;
     align-items: flex-start;
     gap: 14px;
-}
+}   
 
 .bca-details-item svg {
     width: 18px;
@@ -370,7 +399,7 @@
     border: 1px solid var(--bca-dark-border);
     padding: 16px 20px;
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 800;
     color: var(--bca-dark-navy);
 }
 
@@ -439,6 +468,211 @@
 
 .bca-cta__btns { display: flex; gap: 12px; flex-wrap: wrap; flex-shrink: 0; }
 
+/* ════════════════════════════════════════
+   TWO PRACTICES INTRO
+   ════════════════════════════════════════ */
+.bca-practices-intro { 
+    padding: 80px 0; 
+    background: var(--white);
+}
+
+.bca-practices-grid { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 24px; 
+}
+
+.bca-practice-card { 
+    background: var(--bca-card-bg); 
+    border: 1px solid var(--bca-dark-border); 
+    border-radius: var(--border-radius); 
+    overflow: hidden; 
+    transition: box-shadow var(--transition), transform var(--transition); 
+}
+
+.bca-practice-card:hover { 
+    box-shadow: 0 16px 48px rgba(13,27,62,0.09); 
+    transform: translateY(-3px); 
+}
+
+.bca-practice-card__head { 
+    padding: 28px 28px 24px; 
+    border-bottom: 1px solid var(--bca-dark-border); 
+    position: relative; 
+}
+.bca-practice-card__head::before { 
+    content: ''; 
+    position: absolute; 
+    top: 0; left: 0; right: 0; 
+    height: 4px; 
+    background: var(--bca-secondary); 
+}
+
+.bca-practice-card:nth-child(2) .bca-practice-card__head::before { background: var(--bca-primary); }
+
+.bca-practice-card__badge { 
+    display: inline-flex; 
+    align-items: center; 
+    gap: 6px; 
+    font-family: 'Outfit', sans-serif; 
+    font-size: 10px; 
+    font-weight: 700; 
+    letter-spacing: 1.5px; 
+    text-transform: uppercase; 
+    color: var(--bca-secondary); 
+    background: rgba(201,168,76,0.1); 
+    border: 1px solid rgba(201,168,76,0.2); 
+    padding: 4px 10px; 
+    border-radius: 3px; 
+    margin-bottom: 12px; 
+}
+
+.bca-practice-card:nth-child(2) .bca-practice-card__badge { 
+    color: var(--bca-primary); 
+    background: rgba(26,86,219,0.08); 
+    border-color: rgba(26,86,219,0.2); 
+}
+
+.bca-practice-card__name { 
+    font-size: 22px; 
+    font-weight: 700; 
+    color: var(--bca-dark-navy); 
+    letter-spacing: -0.3px; 
+    margin-bottom: 8px; 
+}
+
+.bca-practice-card__tagline { 
+    font-size: 14px; 
+    color: var(--muted); 
+    line-height: 1.6; 
+}
+
+.bca-practice-card__body { padding: 24px 28px; }
+.bca-practice-card__body p { 
+    font-size: 14px; 
+    line-height: 1.8; 
+    color: var(--muted); 
+    margin-bottom: 0; 
+}
+
+.bca-practice-card__foot {
+    padding: 18px 28px; 
+    border-top: 1px solid var(--bca-dark-border); 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    gap: 12px; 
+}
+
+.bca-practice-card__foot-label {  
+    font-size: 13px; 
+    font-weight: 600;
+    color: var(--muted); 
+}
+
+.bca-practice-card__foot-link { 
+    display: inline-flex; 
+    align-items: center; 
+    gap: 6px; 
+    font-size: 13px; 
+    font-weight: 700; 
+    color: var(--bca-secondary); 
+    transition: gap 0.2s ease; 
+}
+
+.bca-practice-card:nth-child(2) .bca-practice-card__foot-link { color: var(--bca-primary); }
+
+.bca-practice-card__foot-link svg { 
+    width:12px; height:12px; 
+    stroke:currentColor; 
+    fill:none; 
+    stroke-width:1.5; 
+}
+
+.bca-practice-card__foot-link:hover { gap: 9px; }
+
+/* ════════════════════════════════════════
+   BCA-KUMAR ASSOCIATES
+   ════════════════════════════════════════ */
+.bca-kumar {
+    padding: 88px 0;
+    background: var(--bca-card-bg);
+    border-top: 1px solid var(--bca-dark-border);
+    border-bottom: 1px solid var(--bca-dark-border);
+}
+
+.bca-section-divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 52px;
+}
+
+.bca-section-divider__line {
+    flex: 1;
+    height: 1px;
+    background: var(--bca-dark-border);
+}
+
+.bca-section-divider__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--bca-secondary);
+    border: 1px solid rgba(201, 168, 76, 0.3);
+    background: rgba(201, 168, 76, 0.06);
+    padding: 7px 16px;
+    border-radius: 100px;
+    white-space: nowrap;
+}
+
+.bca-section-divider__badge-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--bca-secondary);
+}
+
+.bca-kumar .bca-heading__eyebrow { color: var(--bca-secondary); }
+.bca-kumar .bca-heading__title em { color: var(--bca-secondary); }
+.bca-kumar .bca-why__list li svg { stroke: var(--bca-secondary); }
+.bca-kumar .bca-why__stat-num span { color: var(--bca-secondary); }
+
+.bca-kumar-team {
+    padding: 80px 0;
+    background: var(--white);
+}
+
+.bca-kumar-team .bca-heading__eyebrow { color: var(--bca-secondary); }
+.bca-kumar-team .bca-heading__title span { color: var(--bca-secondary); }
+.bca-kumar-team .bca-heading__link { 
+    color: var(--bca-secondary); 
+    border-bottom: 1px solid rgb(201 168 76 / 22%);
+}
+
+
+/* ════════════════════════════════════════
+   BCA ROMSEY
+   ════════════════════════════════════════ */
+.bca-romsey {
+    padding: 88px 0;
+    background: var(--bca-card-bg);
+    border-top: 1px solid var(--bca-dark-border);
+}
+
+.bca-romsey .bca-section-divider__badge { 
+    color: var(--bca-primary); 
+    border-color: rgba(26, 86, 219, 0.25);
+    background: rgba(26, 86, 219, 0.06);
+}
+
+.bca-romsey .bca-section-divider__badge-dot { background: var(--bca-primary); }
+
 
 /* ════════════════════════════════════════
    RESPONSIVE
@@ -464,4 +698,9 @@
     .bca-cta__inner { flex-direction: column; }
     .bca-cta__btns { flex-direction: column; width: 100%; }
     .bca-btn { justify-content: center; }
+    .bca-why__image img { height: 390px; }
+}
+
+@media (max-width: 568px) {
+    .bca-why__image img { height: 350px; }
 }

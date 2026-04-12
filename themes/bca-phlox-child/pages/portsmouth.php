@@ -35,13 +35,13 @@ wp_enqueue_style('single-office-style');
                     <h4>Portsmouth Head Office</h4>
                 </div>
                 <div class="bca-hero__card-body">
-                    <div class="bca-hero__card-item">
+                    <a class="bca-hero__card-item" href="https://maps.app.goo.gl/S1QSrM8HmKFpMKvb8" target="_blank" rel="noopener">
                         <div class="bca-hero__card-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
                         <div>
                             <div class="bca-hero__card-label">Visit Us</div>
                             <div class="bca-hero__card-value">24 Landport Terrace, Southsea,<br>Portsmouth, PO1 2RG</div>
                         </div>
-                    </div>
+                    </a>
                     <div class="bca-hero__card-divider"></div>
                     <a href="tel:02392833300" class="bca-hero__card-item">
                         <div class="bca-hero__card-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg></div>
@@ -60,7 +60,7 @@ wp_enqueue_style('single-office-style');
                     </a>
                 </div>
                 <div class="bca-hero__card-foot">
-                    <a href="https://maps.google.com/?q=24+Landport+Terrace+Portsmouth" target="_blank" rel="noopener" class="bca-btn-primary">
+                    <a href="https://maps.app.goo.gl/S1QSrM8HmKFpMKvb8" target="_blank" rel="noopener" class="bca-btn-primary">
                         Get Directions<svg width="16" height="16" viewBox="0 0 2048 2048"><path fill="currentColor" d="M1536 256h384v384h-128V475l-456 456l-91-91l456-456h-165zm0 768l128-128v768H0V512h1280l-128 128H128v896h1408z"/></svg>
                     </a>
                 </div>
@@ -94,7 +94,7 @@ wp_enqueue_style('single-office-style');
     <div class="container">
         <div class="bca-why__inner">
             <div class="bca-why__image reveal">
-                <img src="/wp-content/uploads/2026/04/people_hi_fi.jpg" alt="BC&A Portsmouth team"/>
+                <img src="/wp-content/uploads/2026/04/portsmouth_office-e1775852161121.jpg" alt="BC&A Portsmouth Office"/>
                 <div class="bca-why__stat">
                     <div class="bca-why__stat-num">35<span>+</span></div>
                     <div class="bca-why__stat-label">Years serving<br/>Portsmouth</div>
@@ -104,6 +104,18 @@ wp_enqueue_style('single-office-style');
                 <span class="bca-heading__eyebrow">Why Choose BC&A</span>
                 <h2 class="bca-heading__title">Accountants in Portsmouth with a clear, personal and professional approach</h2>
                 <p>
+                    At BC&A Portsmouth, we provide a full range of accountancy, tax, payroll, and
+                    business advisory services to individuals and organisations across Portsmouth and
+                    south of England.
+                </p>
+                <p>
+                    Our central Payroll Team is based in Portsmouth, alongside our specialist Research
+                    & Development tax team, which supports clients across the UK. Our Portsmouth office supports 
+                    a diverse client base. We work closely with our clients to help them achieve their financial and 
+                    business goals, building long-term relationships based on trust, responsiveness and quality 
+                    service.
+                </p>
+                <!--<p>
                     At BC&A Chartered Accountants in Portsmouth, we provide comprehensive accountancy, 
                     tax and advisory services to businesses and individuals across Portsmouth and the 
                     surrounding area.
@@ -113,7 +125,7 @@ wp_enqueue_style('single-office-style');
                     focused advice. We work closely with our clients to help them achieve their financial and 
                     business goals, building long-term relationships based on trust, responsiveness and quality 
                     service.
-                </p>
+                </p>-->
                 <p>
                     We support a wide range of clients, from established businesses and growing companies to 
                     start-ups and private individuals across Portsmouth, Southsea, Fareham, Havant and the wider 
@@ -169,7 +181,7 @@ wp_enqueue_style('single-office-style');
             <!-- Tax Services -->
             <div class="bca-service-card reveal reveal-delay-2">
                 <div class="bca-service-card__head">
-                    <div class="bca-service-card__icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg></div>
+                    <div class="bca-service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 6a4 4 0 00-8 0c0 2.5 2 4.5 2 6.5S9.5 16 7 18h10"></path><line x1="7" y1="11" x2="15" y2="11"></line></svg></div>
                     <h3 class="bca-service-card__title">Tax Services</h3>
                     <p class="bca-service-card__desc">Clear guidance on compliance, planning and tax efficiency for companies and individuals.</p>
                 </div>

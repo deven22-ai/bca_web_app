@@ -33,7 +33,7 @@ wp_enqueue_style('contact-style');
             <div class="bca-hero__card reveal reveal-delay-1">
                 <div class="bca-hero__card-head">
                     <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                    <h4>Portsmouth Head Office</h4>
+                    <h4>Need to arrange a callback?</h4>
                 </div>
                 <div class="bca-hero__card-body">
                     <a href="tel:02392833300" class="bca-hero__card-item">
@@ -59,11 +59,6 @@ wp_enqueue_style('contact-style');
                             <div class="bca-hero__card-value">Mon–Fri: 9:00am – 5:30pm</div>
                         </div>
                     </div>
-                </div>
-                <div class="bca-hero__card-foot">
-                    <a href="https://maps.google.com/?q=24+Landport+Terrace+Portsmouth" target="_blank" rel="noopener" class="bca-btn-primary">
-                        Get Directions<svg width="16" height="16" viewBox="0 0 2048 2048"><path fill="currentColor" d="M1536 256h384v384h-128V475l-456 456l-91-91l456-456h-165zm0 768l128-128v768H0V512h1280l-128 128H128v896h1408z"></path></svg>
-                    </a>
                 </div>
             </div>
         </div>

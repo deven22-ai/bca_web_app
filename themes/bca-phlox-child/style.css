@@ -20,16 +20,19 @@ Author: Deven Warang
   --bca-ghost: #6C757D5E;
   --bca-title: #242F65;
   --bca-text-desc: #5f6983;
+  --border-radius: 2px;
   --white: #FFFFFF;
   --muted: #64748b;
   --text: #1e293b;
-  --general: #64748b;
+  /*--general: #64748b;*/
+  --general: #E8A020;
   --medical: #1A56DB;
   --parish: #0891B2;
   --tax-relief:#059669;
   --audit:#7C3AED;
   --header-h: 160px;
   --transition:  0.28s ease;
+  --reveal-transition: transform 0.65s ease;
   --box-shadow: 0 18px 45px rgba(1, 16, 57, 0.08);
 }
 
@@ -69,15 +72,19 @@ h2 {
 
 .bca-btn-primary.gold {
   background: var(--bca-secondary);
-  color: var(--bca-dark-navy);
+  color: white;
   font-weight: 700;
+}
+
+.bca-btn-primary.gold:hover {
+  background: #c78510;
 }
 
 .bca-btn-primary.gold svg {
   height: 1.5em;
   stroke: currentColor;
   fill: none;
-  stroke-width: 2.5;
+  stroke-width: 1.5;
   transition: transform 0.25s ease;
 }
 
@@ -163,7 +170,7 @@ h2 {
 .reveal {
   opacity: 0;
   transform: translateY(25px);
-  transition: opacity 0.65s ease, transform 0.65s ease;
+  transition: opacity 0.65s ease, var(--reveal-transition);
 }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 .reveal-delay-1 { transition-delay: 0.1s; }
@@ -1040,10 +1047,12 @@ a.bca-hero__card-item:hover .bca-hero__card-value { color: var(--bca-secondary);
 }
 
 .bca-form-submit p {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--muted);
   line-height: 1.5;
 }
+
+form .bca-form-submit input[type=submit] { font-size: 12px; }
 
 /*════════════════════════════════════════
   BCA OFFICES GRID
@@ -1063,11 +1072,11 @@ a.bca-hero__card-item:hover .bca-hero__card-value { color: var(--bca-secondary);
 .bca-office-card {
   background: var(--white);
   border: 1px solid var(--bca-dark-border);
-  border-radius: 8px;
+  border-radius: var(--border-radius);
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  transition: box-shadow 0.3s ease, var(--reveal-transition);
 }
 
 .bca-office-card:hover {
@@ -1139,6 +1148,8 @@ a.bca-hero__card-item:hover .bca-hero__card-value { color: var(--bca-secondary);
   flex: 1;
 }
 
+.bca-office-card__desc b { color: black; }
+
 .bca-office-card__details {
   display: flex;
   flex-direction: column;
@@ -1153,6 +1164,7 @@ a.bca-hero__card-item:hover .bca-hero__card-value { color: var(--bca-secondary);
   display: flex;
   align-items: center;
   gap: 14px;
+  font-weight: 600;
   font-size: 14px;
   color: var(--muted);
   line-height: 1.5;
@@ -1163,6 +1175,8 @@ a.bca-hero__card-item:hover .bca-hero__card-value { color: var(--bca-secondary);
   font-weight: 600;
   transition: color 0.2s ease;
 }
+
+.bca-office-card__detail:hover a { color: var(--bca-primary); }
 
 .bca-office-card__detail svg {
   width: 14px;
@@ -1210,7 +1224,6 @@ a.bca-hero__card-item:hover .bca-hero__card-value { color: var(--bca-secondary);
   fill: none;
   stroke-width: 2.5;
 }
-
 
 /*=========================
   RESPONSIVENESS
@@ -1263,6 +1276,10 @@ a.bca-hero__card-item:hover .bca-hero__card-value { color: var(--bca-secondary);
     min-width: 54px;
     height: 52px;
   }
+}
+
+@media (max-width: 624px) {
+  .bca-heading-section.left-align { flex-flow: column; }
 }
 
 @media (max-width: 540px) {

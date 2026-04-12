@@ -103,7 +103,7 @@ wp_enqueue_style('home-style');
                 </svg>
             </div>
             <span class="bca-specialist-card__pill">Core Services</span>
-            <div class="bca-specialist-card__title">General Compliance</div>
+            <div class="bca-specialist-card__title">General Accounting & Tax Compliance</div>
             <div class="bca-specialist-card__desc">Annual accounts, self-assessment, VAT returns and company secretarial — the essential compliance services every business and individual needs, done properly.</div>
             <div class="bca-specialist-card__cta">
                 Find out more

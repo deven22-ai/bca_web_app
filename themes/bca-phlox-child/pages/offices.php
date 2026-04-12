@@ -48,10 +48,28 @@ wp_enqueue_style('offices-style');
     </div>
 </div>
 
+<!-- ── Intro text — add above the offices grid ── -->
+<section class="bca-offices-intro reveal">
+    <div class="container">
+        <div class="bca-offices-intro__inner">
+            <div class="bca-heading-section left-align reveal">
+                <div class="bca-heading-container left-align">
+                    <div class="bca-heading__eyebrow">Our Offices</div>
+                    <h2 class="bca-heading__title">Serving clients across the <em>South of England</em></h2>
+                </div>
+            </div>
+            <div class="bca-offices-intro__text">
+                <p>At BC&A, the majority of our clients are based in the South of the UK, with others located across the country and some operating internationally. We have offices throughout the South of England, each staffed by experienced teams with strong local insight and professional expertise, enabling us to deliver trusted advice and tailored services.</p>
+                <p>Whether you meet us in person or connect with us remotely, you can expect the same high standard of care and professionalism.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- OFFICE GRID -->
 <section class="bca-offices">
     <div class="container">
-        <div class="bca-heading-section left-align reveal reveal-delay-3">
+        <div class="bca-heading-section left-align reveal">
             <div class="bca-heading-container left-align">
                 <div class="bca-heading__eyebrow">Our Locations</div>
                 <h2 class="bca-heading__title">Three offices. One <span>standard of excellence</span></h2>
@@ -60,22 +78,23 @@ wp_enqueue_style('offices-style');
 
         <div class="bca-offices__grid">
             <!-- Portsmouth -->
-            <div class="bca-office-card reveal">
+            <div class="bca-office-card reveal reveal-delay-1">
                 <div class="bca-office-card__photo">
-                    <img src="/wp-content/uploads/2026/04/office_building.jpg" alt="Portsmouth">
+                    <img src="/wp-content/uploads/2026/04/portsmouth.jpg" alt="Portsmouth">
                     <span class="bca-office-card__type">Head Office</span>
                 </div>
                 <div class="bca-office-card__body">
                     <h3 class="bca-office-card__name">Portsmouth</h3>
                     <p class="bca-office-card__desc">
-                        Our flagship office and the home of BC&amp;A. A large team of dedicated advisers 
-                        supporting businesses, individuals and charities across Portsmouth and Hampshire 
-                        with clear, dependable advice.
+                        BC&A Portsmouth serves as our group head office, with our first office opening there in
+                        <b>December 2004</b>. <br>
+                        A large team of dedicated advisers supporting businesses, individuals 
+                        and charities across Portsmouth with clear, dependable advice.
                     </p>
                     <div class="bca-office-card__details">
                         <div class="bca-office-card__detail">
                             <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                            <span>24 Landport Terrace, Southsea, Portsmouth, PO1 2RG</span>
+                            <span>24 Landport Terrace, Southsea, Portsmouth, Hampshire, PO1 2RG</span>
                         </div>
                         <div class="bca-office-card__detail">
                             <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
@@ -97,31 +116,44 @@ wp_enqueue_style('offices-style');
             </div>
 
             <!-- Romsey -->
-            <div class="bca-office-card reveal reveal-delay-2">
+            <div class="bca-office-card bca-office-card--romsey reveal reveal-delay-2">
                 <div class="bca-office-card__photo">
                     <img src="/wp-content/uploads/2026/03/romsey_market_square.png" alt="Romsey">
-                    <span class="bca-office-card__type">Regional Hub</span>
+                    <span class="bca-office-card__type romsey">2 Practices</span>
                 </div>
                 <div class="bca-office-card__body">
                     <h3 class="bca-office-card__name">Romsey</h3>
-                    <p class="bca-office-card__desc">Serving local businesses, families and owner-managed companies across Hampshire and Wiltshire. Best known for personal service, practical advice and a genuine understanding of the local business community.</p>
+                    <div class="bca-office-card__desc">
+                        We operate two practices from Romsey office:
+                        <!-- Two practice sub-cards -->
+                        <div class="bca-office-practices">
+                            <div class="bca-office-practice">
+                                <div class="bca-office-practice__name">
+                                    <span class="bca-office-practice__dot bca-office-practice__dot--gold"></span>
+                                    Kumar Associates
+                                </div>
+                                <div class="bca-office-practice__tagline">
+                                    Our specialist medical division dedicated to supporting healthcare professionals nationwide.
+                                </div>
+                            </div>
+                            <div class="bca-office-practice">
+                                <div class="bca-office-practice__name">
+                                    <span class="bca-office-practice__dot bca-office-practice__dot--blue"></span>
+                                    BC&A Romsey
+                                </div>
+                                <div class="bca-office-practice__tagline">A general practice serving individuals, businesses, and charities across South UK.</div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="bca-office-card__details">
                         <div class="bca-office-card__detail">
                             <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                            <span>Buckley House, 29 to 31A, The Hundred, Romsey, SO51 8GD</span>
-                        </div>
-                        <div class="bca-office-card__detail">
-                            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
-                            <a href="tel:02392833300">02392 833 300</a>
-                        </div>
-                        <div class="bca-office-card__detail">
-                            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                            <a href="mailto:info@bcaaccountants.com">info@bcaaccountants.com</a>
+                            <span>Buckley House, 29 to 31A, The Hundred, Romsey, Hampshire, SO51 8GD</span>
                         </div>
                     </div>
                     <div class="bca-office-card__btns">
                         <a href="/offices/romsey/" class="bca-btn-primary">View Office<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
-                        <a href="https://maps.google.com/?q=Buckley+House+Romsey" target="_blank" rel="noopener" class="bca-office-card__btn">
+                        <a href="https://maps.google.com/?q=Uffcott+Farm+Swindon" target="_blank" rel="noopener" class="bca-office-card__btn">
                             <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                             Directions
                         </a>
@@ -133,11 +165,14 @@ wp_enqueue_style('offices-style');
             <div class="bca-office-card reveal reveal-delay-3">
                 <div class="bca-office-card__photo">
                     <img src="/wp-content/uploads/2026/03/lydiard_park_and_house.png" alt="Swindon">
-                    <span class="bca-office-card__type">Expansion Site</span>
                 </div>
                 <div class="bca-office-card__body">
                     <h3 class="bca-office-card__name">Swindon</h3>
-                    <p class="bca-office-card__desc">Delivering dependable expertise and a personal service to businesses across Wiltshire. Our Swindon team supports sustainable growth and confident decision-making for ambitious local companies.</p>
+                    <p class="bca-office-card__desc">
+                        BC&amp;A Swindon trades under <b>BC&amp;A Accounting Solutions</b>. The practice has a dedicated team supporting parish 
+                        and city councils nationwide with their accounting needs, VAT advisory, payroll, and internal audit services. 
+                        We also work with ambitious local businesses, individuals, and charities.
+                    </p>
                     <div class="bca-office-card__details">
                         <div class="bca-office-card__detail">
                             <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
@@ -145,11 +180,11 @@ wp_enqueue_style('offices-style');
                         </div>
                         <div class="bca-office-card__detail">
                             <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
-                            <a href="tel:02392833300">02392 833 300</a>
+                            <a href="tel:01793739110">01793 739110</a>
                         </div>
                         <div class="bca-office-card__detail">
                             <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                            <a href="mailto:info@bcaaccountants.com">info@bcaaccountants.com</a>
+                            <a href="mailto:swindon@bcaaccountants.com">swindon@bcaaccountants.com</a>
                         </div>
                     </div>
                     <div class="bca-office-card__btns">
@@ -161,6 +196,38 @@ wp_enqueue_style('offices-style');
                     </div>
                 </div>
             </div>
+
+            <!-- COMING SOON CARDS -->
+             <div class="bca-office-card bca-office-card--soon reveal reveal-delay-1">
+                <div class="bca-office-card__photo">
+                    <img src="/wp-content/uploads/2026/04/brighton.jpg" alt="Brighton"/>
+                    <span class="bca-office-card__type bca-office-card__type--soon">Coming Soon</span>
+                </div>
+                <div class="bca-office-card__body">
+                    <div class="bca-office-card__name">Brighton</div>
+                    <div class="bca-office-card__desc">We are expanding to Brighton. Stay tuned for updates on our new office opening.</div>
+                </div>
+            </div>
+            <div class="bca-office-card bca-office-card--soon reveal reveal-delay-2">
+                <div class="bca-office-card__photo">
+                    <img src="/wp-content/uploads/2026/04/bournemouth.jpg" alt="Bournemouth"/>
+                    <span class="bca-office-card__type bca-office-card__type--soon">Coming Soon</span>
+                </div>
+                <div class="bca-office-card__body">
+                    <div class="bca-office-card__name">Bournemouth</div>
+                    <div class="bca-office-card__desc">We are expanding to Bournemouth. Stay tuned for updates on our new office opening.</div>
+                </div>
+            </div>
+            <div class="bca-office-card bca-office-card--soon reveal reveal-delay-3">
+                <div class="bca-office-card__photo">
+                    <img src="/wp-content/uploads/2026/04/london.jpg" alt="London"/>
+                    <span class="bca-office-card__type bca-office-card__type--soon">Coming Soon</span>
+                </div>
+                <div class="bca-office-card__body">
+                    <div class="bca-office-card__name">London</div>
+                    <div class="bca-office-card__desc">We are expanding to London. Stay tuned for updates on our new office opening.</div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -168,22 +235,22 @@ wp_enqueue_style('offices-style');
 <!-- WHY LOCAL STRIP -->
 <section class="bca-why-local">
     <div class="bca-why-local__inner">
-        <div class="bca-why-local__item bca-reveal bca-in">
+        <div class="bca-why-local__item reveal">
             <div class="bca-why-local__icon"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path><circle cx="9" cy="7" r="4"></circle></svg></div>
             <div class="bca-why-local__title">A named adviser, always</div>
             <div class="bca-why-local__text">You'll always deal with the same person — someone who knows your name and your business inside out.</div>
         </div>
-        <div class="bca-why-local__item bca-reveal bca-d1 bca-in">
+        <div class="bca-why-local__item reveal reveal-delay-1">
             <div class="bca-why-local__icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
             <div class="bca-why-local__title">Local knowledge, big firm expertise</div>
             <div class="bca-why-local__text">Regional insight combined with the technical depth of a large practice — the best of both worlds.</div>
         </div>
-        <div class="bca-why-local__item bca-reveal bca-d2 bca-in">
+        <div class="bca-why-local__item reveal reveal-delay-2">
             <div class="bca-why-local__icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg></div>
             <div class="bca-why-local__title">Proactive, not reactive</div>
             <div class="bca-why-local__text">We reach out before deadlines, not after. You'll never miss a tax saving or planning window with BC&amp;A.</div>
         </div>
-        <div class="bca-why-local__item bca-reveal bca-d3 bca-in">
+        <div class="bca-why-local__item reveal reveal-delay-3">
             <div class="bca-why-local__icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
             <div class="bca-why-local__title">Regulated &amp; accountable</div>
             <div class="bca-why-local__text">Every BC&amp;A office is regulated by ICAEW and CIMA — you're always in safe, qualified hands.</div>

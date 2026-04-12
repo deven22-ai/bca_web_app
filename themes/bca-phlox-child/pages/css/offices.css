@@ -34,7 +34,7 @@
     display: flex;
     flex-direction: column;
     gap: 12px;
-    transition: background 0.25s ease;
+    transition: background 0.25s ease, var(--reveal-transition);
 }
 
 .bca-why-local__item:last-child { border-right: none; }
@@ -162,6 +162,107 @@
 }
 
 /* ════════════════════════════════════════
+    OFFICE INTRO TEXT
+   ════════════════════════════════════════ */
+.bca-offices-intro {
+    padding: 80px 0;
+}
+
+.bca-offices-intro__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+    align-items: start;
+}
+
+.bca-offices-intro__text p {
+    font-size: 15px;
+    line-height: 1.82;
+    color: var(--muted);
+    margin-bottom: 12px;
+}
+
+.bca-offices-intro__text p:last-child { margin-bottom: 0; }
+
+/* office cards */
+.bca-office-card__btns.romsey {
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+}
+
+.bca-office-card__btns .bca-btn-primary.gold svg {
+    fill: var(--white);
+    stroke-width: 1;
+}
+
+/* Practice sub-cards container */
+.bca-office-practices {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+/* Individual practice sub-card */
+.bca-office-practice {
+    background: var(--bca-card-bg);
+    border: 1px solid var(--bca-dark-border);
+    border-radius: var(--border-radius);
+    padding: 12px 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+/* Practice name row */
+.bca-office-practice__name {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--bca-dark-navy);
+}
+
+/* Colour dot */
+.bca-office-practice__dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+.bca-office-practice__dot--gold { background: var(--bca-secondary); }
+.bca-office-practice__dot--blue { background: var(--bca-primary); }
+.bca-office-practice__tagline { font-size: 14px;line-height: 1.55; }
+
+/* Coming soon card */
+.bca-office-card--soon {
+  /* opacity: 0.75;*/
+  pointer-events: none; /* disables hover entirely */
+}
+
+.bca-office-card--soon img {
+  filter: grayscale(80%);
+}
+
+.bca-office-card__type--soon {
+  background: rgba(13,27,62,0.75) !important;
+  color: var(--bca-secondary) !important;
+  border: 1px solid rgba(201,168,76,0.3);
+}
+
+.bca-office-card__soon-text {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.65;
+  margin-bottom: 16px;
+  margin-top: 8px;
+}
+
+
+/* ════════════════════════════════════════
     RESPONSIVENESS
    ════════════════════════════════════════ */
 @media (max-width: 1024px) {
@@ -170,6 +271,11 @@
     .bca-why-local__item:nth-child(3) { border-right: 1px solid rgba(255,255,255,0.07); }
     .bca-why-local__item:nth-child(1),
     .bca-why-local__item:nth-child(2) { border-bottom: 1px solid rgba(255,255,255,0.07); }
+}
+
+@media (max-width: 768px) {
+    .bca-offices-intro { padding: 50px 0; }
+    .bca-offices-intro__inner { grid-template-columns: 1fr; gap: 0px; }
 }
 
 @media (max-width: 640px) {

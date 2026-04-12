@@ -25,10 +25,12 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
     
-    console.log(selectedOffice.office);
-    if(selectedOffice != '') {
-        document.querySelector('.bca-team__pill[data-office="' + selectedOffice.office + '"]').click(); 
-        const section = document.querySelector('#teamSection');
-        section.scrollIntoView({ behavior: 'smooth' });
-    } else document.querySelector('.bca-team__pill[data-office="all"]').click(); 
+    var office = selectedOffice.office;
+    const section = document.querySelector('#teamSection');
+    const pill = document.querySelector('.bca-team__pill[data-office="' + office + '"]');
+    if(pill) {
+        pill.click(); 
+        if(office != '' && section != null) section.scrollIntoView({ behavior: 'smooth' });
+        else document.querySelector('.bca-team__pill[data-office="all"]').click(); 
+    } 
 });
