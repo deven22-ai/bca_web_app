@@ -14,7 +14,7 @@ wp_enqueue_style('home-style');
     <div class="bca-hero container transparent-header">
         <div class="bca-hero__content">
             <div class="bca-hero__eyebrow reveal">
-                <p><strong><span>BC&A Chartered Accountants</span></strong></p>
+                <p><strong><span>Our Vision</span></strong></p>
             </div>
             <div class="bca-hero__head-wrapper reveal reveal-delay-1">
                 <h1 class="bca-hero__title">Big Firm Expertise.<br>Personal Service.<br><em>Real Results.</em></h1>

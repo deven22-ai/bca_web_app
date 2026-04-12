@@ -34,24 +34,30 @@ wp_enqueue_style('single-office-style');
             <div class="bca-hero__card reveal reveal-delay-1">
                 <div class="bca-hero__card-head">
                     <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                    <h4>Romsey - Two Locations</h4>
+                    <h4>Romsey - Two Practices</h4>
                 </div>
                 <div class="bca-hero__card-body">
                     <div class="bca-hero__card-item">
                         <div class="bca-hero__card-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
                         <div class="bca-hero_card-value--group">
-                            <div class="bca-hero__card-label">Kumar Associates</div>
-                            <a class="bca-hero__card-value" href="https://maps.app.goo.gl/Dg2PQqs6bptEyoDv9" target="_blank" rel="noopener noreferrer">1st Floor, 29-31A, Buckley House, The Hundred, Romsey SO51 8GD</a>
-                            <a class="bca-hero__card-value" href="mailto:info@kumarassociates.co.uk">info@kumarassociates.co.uk</a>
-                            <a class="bca-hero__card-value" href="tel:01794 516225">01794 516225</a>
+                            <div class="bca-hero__card-label">Visit Us</div>
+                            <a class="bca-hero__card-value" href="https://maps.app.goo.gl/WwHUzfqyej8jKnVL8" target="_blank" rel="noopener noreferrer">Buckley House, 29–31A The Hundred, Romsey, Hampshire, SO51 8GD</a>
                         </div>
                     </div>
                     <div class="bca-hero__card-divider"></div>
                     <div class="bca-hero__card-item">
-                        <div class="bca-hero__card-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+                        <div class="bca-hero__card-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"></path></svg></div>
+                        <div class="bca-hero_card-value--group">
+                            <div class="bca-hero__card-label">Kumar Associates</div>
+                            <a class="bca-hero__card-value" href="mailto:romsey@bcaaccountants.com">romsey@bcaaccountants.com</a>
+                            <a class="bca-hero__card-value" href="tel:01794 511511">01794 511511</a>
+                        </div>
+                    </div>
+                    <div class="bca-hero__card-divider"></div>
+                    <div class="bca-hero__card-item">
+                        <div class="bca-hero__card-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"></path></svg></div>
                         <div class="bca-hero_card-value--group">
                             <div class="bca-hero__card-label">BC&A Romsey</div>
-                            <a class="bca-hero__card-value" href="https://maps.app.goo.gl/WwHUzfqyej8jKnVL8" target="_blank" rel="noopener noreferrer">Buckley House, 29–31A The Hundred, Romsey, SO51 8GD</a>
                             <a class="bca-hero__card-value" href="mailto:romsey@bcaaccountants.com">romsey@bcaaccountants.com</a>
                             <a class="bca-hero__card-value" href="tel:01794 511511">01794 511511</a>
                         </div>
@@ -59,7 +65,7 @@ wp_enqueue_style('single-office-style');
                 </div>
                 <div class="bca-hero__card-foot">
                     <a href="/contact/" target="_blank" rel="noopener" class="bca-btn-primary">
-                        Contact Us<svg width="16" height="16" viewBox="0 0 2048 2048"><path fill="currentColor" d="M1536 256h384v384h-128V475l-456 456l-91-91l456-456h-165zm0 768l128-128v768H0V512h1280l-128 128H128v896h1408z"/></svg>
+                        Get Directions<svg width="16" height="16" viewBox="0 0 2048 2048"><path fill="currentColor" d="M1536 256h384v384h-128V475l-456 456l-91-91l456-456h-165zm0 768l128-128v768H0V512h1280l-128 128H128v896h1408z"/></svg>
                     </a>
                 </div>
             </div>
@@ -329,9 +335,8 @@ wp_enqueue_style('single-office-style');
     </div>
 </section>
 
-
 <!-- SPEAK TO THE TEAM -->
-<section class="bca-contact" id="contact">
+<section class="bca-contact romsey" id="contact">
     <div class="container">
         <div class="bca-heading-section reveal">
             <div class="bca-heading-container">
@@ -345,33 +350,35 @@ wp_enqueue_style('single-office-style');
 
         <div class="bca-contact__inner">
             <div class="bca-contact__left reveal reveal-delay-1">
-                <?php echo do_shortcode('[contact-form-7 id="e7e2d8b"]');?>
+                <?php echo do_shortcode('[contact-form-7 id="59083a1"]');?>
             </div>
             <div class="bca-contact__right reveal reveal-delay-2">
                 <div class="bca-details-card">
-                    <div class="bca-details-card__head"><h4>Portsmouth Office Details</h4></div>
+                    <div class="bca-details-card__head"><h4>Romsey Office Details</h4></div>
                     <div class="bca-details-card__body">
                         <div class="bca-details-item">
                             <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                             <div>
                                 <div class="bca-details-item__label">Address</div>
-                                <div class="bca-details-item__value">24 Landport Terrace, Southsea, Portsmouth, PO1 2RG</div>
+                                <div class="bca-details-item__value">Buckley House, 29 to 31A, The Hundred, Romsey, Hampshire, SO51 8GD</div>
                             </div>
                         </div>
                         <div class="bca-details-divider"></div>
                         <div class="bca-details-item">
-                            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
+                            <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"></path></svg>
                             <div>
-                                <div class="bca-details-item__label">Phone</div>
+                                <div class="bca-details-item__label">Kumar Associates</div>
+                                <div class="bca-details-item__value"><a href="mailto:info@kumarassociates.com">info@kumarassociates.com</a></div>
                                 <div class="bca-details-item__value"><a href="tel:02392833300">02392 833 300</a></div>
                             </div>
                         </div>
                         <div class="bca-details-divider"></div>
                         <div class="bca-details-item">
-                            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                            <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"></path></svg>
                             <div>
-                                <div class="bca-details-item__label">Email</div>
-                                <div class="bca-details-item__value"><a href="mailto:info@bcaaccountants.com">info@bcaaccountants.com</a></div>
+                                <div class="bca-details-item__label">BC&A Romsey</div>
+                                <div class="bca-details-item__value"><a href="mailto:romsey@bcaaccountants.com">romsey@bcaaccountants.com</a></div>
+                                <div class="bca-details-item__value"><a href="tel:01794 511511">01794 511511</a></div>
                             </div>
                         </div>
                         <div class="bca-details-divider"></div>
@@ -379,7 +386,7 @@ wp_enqueue_style('single-office-style');
                             <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
                             <div>
                                 <div class="bca-details-item__label">Office Hours</div>
-                                <div class="bca-details-item__value">Monday – Friday: 9:00am – 5:30pm</div>
+                                <div class="bca-details-item__value">Monday - Friday: 9:00am - 5:30pm</div>
                             </div>
                         </div>
                     </div>

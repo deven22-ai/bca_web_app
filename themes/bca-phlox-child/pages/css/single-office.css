@@ -283,6 +283,10 @@
     border-top: 1px solid var(--bca-dark-border);
 }
 
+.bca-contact.romsey { background: var(--white); }
+
+.bca-form-card.romsey { background: var(--bca-card-bg); }
+
 .bca-contact__inner {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
