@@ -53,10 +53,10 @@ $SelectedOffice = isset($_GET['office']) ? sanitize_text_field($_GET['office']) 
 </section>
 
 <!-- JOIN US -->
-<section class="bca-cta-dark" id="joinUs">
+<section class="bca-cta bca-cta-var2 dark" id="joinUs">
     <div class="container">
-        <div class="bca-cta-dark__inner reveal">
-            <div class="bca-cta-dark__text">
+        <div class="bca-cta-var2__inner reveal">
+            <div class="bca-cta-var2__text">
                 <span class="bca-heading__eyebrow">Careers at BC&A</span>
                 <h2>Want to join a firm that <em>invests in you?</em></h2>
                 <p>We are always interested in hearing from talented, ambitious professionals who share our commitment to quality, integrity and exceptional client service.</p>

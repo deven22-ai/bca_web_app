@@ -141,7 +141,7 @@ wp_enqueue_style('about-us-style');
             <!-- 1st Card -->
             <div class="bca-timeline__item">
                 <div class="bca-timeline__empty"></div>
-                <div class="bca-timeline__dot right"><div class="bca-timeline__year">2004</div></div>
+                <div class="bca-timeline__dot right"><div class="bca-timeline__year"></div></div>
                 <div class="bca-timeline__right">
                     <div class="notch"></div>
                     <span class="bca-tl__year">2004</span>
@@ -163,7 +163,7 @@ wp_enqueue_style('about-us-style');
                         <span class="bca-tl__text">Growing reputation across Hampshire leads to significant team expansion and the introduction of specialist sector advisory services.</span>
                     </div>
                 </div>
-                <div class="bca-timeline__dot left"><div class="bca-timeline__year">2010</div></div>
+                <div class="bca-timeline__dot left"><div class="bca-timeline__year"></div></div>
                 <div class="bca-timeline__right">
                     <div class="notch"></div>
                     <span class="bca-tl__year">2010</span>
@@ -177,7 +177,7 @@ wp_enqueue_style('about-us-style');
             <!-- 3rd Card -->
             <div class="bca-timeline__item">
                 <div class="bca-timeline__empty"></div>
-                <div class="bca-timeline__dot right"><div class="bca-timeline__year">2016</div></div>
+                <div class="bca-timeline__dot right"><div class="bca-timeline__year"></div></div>
                 <div class="bca-timeline__right">
                     <div class="notch"></div>
                     <span class="bca-tl__year">2016</span>
@@ -199,7 +199,7 @@ wp_enqueue_style('about-us-style');
                         <span class="bca-tl__text">Full adoption of cloud accounting technology — enabling real-time reporting and more proactive financial management for every client.</span>
                     </div>
                 </div>
-                <div class="bca-timeline__dot left"><div class="bca-timeline__year">2020</div></div>
+                <div class="bca-timeline__dot left"><div class="bca-timeline__year"></div></div>
                 <div class="bca-timeline__right">
                     <div class="notch"></div>
                     <span class="bca-tl__year">2020</span>
@@ -213,7 +213,7 @@ wp_enqueue_style('about-us-style');
             <!-- 5th Card -->
             <div class="bca-timeline__item">
                 <div class="bca-timeline__empty"></div>
-                <div class="bca-timeline__dot right"><div class="bca-timeline__year">2024</div></div>
+                <div class="bca-timeline__dot right"><div class="bca-timeline__year"></div></div>
                 <div class="bca-timeline__right">
                     <div class="notch"></div>
                     <span class="bca-tl__year">2024</span>

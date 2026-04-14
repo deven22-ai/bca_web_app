@@ -39,7 +39,31 @@ function scrollMargin() {
     });
 }
 
+function onLoad() {
+    scrollMargin();
+    
+    // ── FAQ ───
+    document.querySelectorAll('.bca-faq__question').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const item = btn.closest('.bca-faq__item');
+            const isOpen = item.classList.contains('open');
+
+            // Close all
+            document.querySelectorAll('.bca-faq__item').forEach(i => {
+                i.classList.remove('open');
+                i.querySelector('.bca-faq__question').setAttribute('aria-expanded', 'false');
+            });
+
+            // Open clicked if it was closed
+            if (!isOpen) {
+                item.classList.add('open');
+                btn.setAttribute('aria-expanded', 'true');
+            }
+        });
+    });
+}
+
 document.addEventListener('DOMContentLoaded', scrollReveal);
-window.addEventListener('load', scrollMargin);
+window.addEventListener('load', onLoad);
 const formSubmitBtn = document.querySelector('form .bca-form-submit input[type=submit]');
 if(formSubmitBtn != null) formSubmitBtn.classList.add('bca-btn-primary');

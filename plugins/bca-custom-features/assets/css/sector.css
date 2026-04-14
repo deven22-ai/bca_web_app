@@ -485,6 +485,9 @@
   }
 }
 
+.bca-cta.contact {
+  background-color: var(--white);
+}
 
 /* CTA Grid Section */
 .bca-cta-grid-section {

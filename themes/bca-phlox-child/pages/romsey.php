@@ -64,7 +64,7 @@ wp_enqueue_style('single-office-style');
                     </div>
                 </div>
                 <div class="bca-hero__card-foot">
-                    <a href="/contact/" target="_blank" rel="noopener" class="bca-btn-primary">
+                    <a href="https://maps.app.goo.gl/WwHUzfqyej8jKnVL8" target="_blank" rel="noopener noreferrer" class="bca-btn-primary">
                         Get Directions<svg width="16" height="16" viewBox="0 0 2048 2048"><path fill="currentColor" d="M1536 256h384v384h-128V475l-456 456l-91-91l456-456h-165zm0 768l128-128v768H0V512h1280l-128 128H128v896h1408z"/></svg>
                     </a>
                 </div>

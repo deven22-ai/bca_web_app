@@ -89,7 +89,7 @@ wp_enqueue_style('home-style');
                         sets us apart from general accountancy practices.</p>
                 </div>
             </div>
-            <a href="/sectors/" class="bca-heading__link">View all services<svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></a>
+            <a href="/services/" class="bca-heading__link">View all services<svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></a>
         </div>
     </div>
 
@@ -399,30 +399,7 @@ wp_enqueue_style('home-style');
 </section>
 
 <!-- SEE HOW BCA WE WORK -->
-<section class="bca-cta dark">
-    <div class="bca-cta__inner container">
-        <div class="bca-cta__image reveal reveal-delay-1">
-            <img src="https://images.unsplash.com/photo-1560179707-f14e90ef3623?w=800&amp;q=80" 
-                alt="BC&A team at work">
-        </div>
-        <div class="bca-cta__text reveal">
-            <span class="bca-heading__eyebrow white" aria-hidden="true">See How We Work</span>
-            <h2 class="bca-heading__title white">See How BC&amp;A Can Help Your Business <em>Thrive</em></h2>
-            <div class="bca-cta__body">
-                <p>
-                    Our proactive accountancy and business advisory services are designed to give you 
-                    complete confidence in your finances — so you can focus on what you do best.
-                </p>
-            </div>
-            <div class="bca-cta__btns">
-                <a href="/about-us/" class="bca-btn-primary">Our Story<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
-                <a href="/contact/" class="bca-btn-ghost">Get in Touch</a>
-            </div>
-        </div>
-
-        
-    </div>
-</section>
+<?php echo do_shortcode('[bca_cta_about_us theme="dark"]'); ?>
 
 <!-- TESTIMONIALS -->
 <section class="bca-testimonials">

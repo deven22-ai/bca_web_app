@@ -171,27 +171,7 @@ echo do_shortcode('[bca_cta_contact]');
 get_footer(); ?>
 
 <!-- ══ JAVASCRIPT ══════════════════════════════════ -->
-<script>
-    // ── FAQ ───
-    document.querySelectorAll('.bca-faq__question').forEach(btn => {
-        btn.addEventListener('click', () => {
-            const item = btn.closest('.bca-faq__item');
-            const isOpen = item.classList.contains('open');
-
-            // Close all
-            document.querySelectorAll('.bca-faq__item').forEach(i => {
-                i.classList.remove('open');
-                i.querySelector('.bca-faq__question').setAttribute('aria-expanded', 'false');
-            });
-
-            // Open clicked if it was closed
-            if (!isOpen) {
-                item.classList.add('open');
-                btn.setAttribute('aria-expanded', 'true');
-            }
-        });
-    });
-    
+<script>    
     // ── Explore more sectors ─── 
     document.querySelectorAll('.bca-explore__track').forEach(track => {
         track.innerHTML += track.innerHTML; //Duplicate each track's cards for a seamless infinite loop

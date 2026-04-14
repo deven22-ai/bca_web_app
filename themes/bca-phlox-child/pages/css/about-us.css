@@ -227,7 +227,7 @@
     height: 54px;
     align-self: end;
     border-radius: 50%;
-    background: var(--white);
+    /* background: var(--white); --removed the timeline year */
     border: 2px solid var(--bca-primary);
     display: flex;
     align-items: center;
