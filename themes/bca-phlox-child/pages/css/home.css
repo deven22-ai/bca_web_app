@@ -187,12 +187,19 @@
     margin-bottom: 22px;
 }
 
+.bca-audience-card--individuals .bca-audience-card__icon { background: rgba(201, 168, 76, 0.1); } 
+
 .bca-audience-card__icon svg { 
     width:24px; 
     height:24px; 
     stroke:var(--bca-primary); 
     fill:none; 
     stroke-width:1.7; 
+}
+
+.bca-audience-card--individuals .bca-audience-card__icon svg,
+.bca-audience-card--individuals .bca-audience-card__list li svg { 
+    stroke: var(--bca-secondary); 
 }
 
 .bca-audience-card h3 {

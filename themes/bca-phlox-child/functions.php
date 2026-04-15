@@ -2,6 +2,19 @@
 
 /* Loads parent theme CSS first, and then loading the child theme CSS after it */
 function bca_phlox_child_enqueue_assets() {
+    wp_enqueue_style(
+        'bca-header',
+        get_stylesheet_directory_uri() . '/pages/css/header.css',
+        [],
+        '1.0.0'
+    );
+    wp_enqueue_script(
+        'bca-header-js',
+        get_stylesheet_directory_uri() . '/pages/js/header.js',
+        [],
+        '1.0.0',
+        true  // ← true means it loads in footer, which is correct for JS
+    );
     wp_enqueue_script(
         'main-js',
         get_stylesheet_directory_uri() . '/main.js',
@@ -9,7 +22,6 @@ function bca_phlox_child_enqueue_assets() {
         filemtime(get_stylesheet_directory() . '/main.js'),
         true
     );
-
     wp_register_script(
         'file-upload-js',
         get_stylesheet_directory_uri() . '/pages/js/file-upload.js',
@@ -17,56 +29,48 @@ function bca_phlox_child_enqueue_assets() {
         filemtime(get_stylesheet_directory() . '/pages/js/file-upload.js'),
         true
     );
-
     wp_register_style(
         'home-style',
         get_stylesheet_directory_uri() . '/pages/css/home.css',
         array(),
         filemtime(get_stylesheet_directory() . '/pages/css/home.css')
     );
-
     wp_register_style(
         'offices-style',
         get_stylesheet_directory_uri() . '/pages/css/offices.css',
         array(),
         filemtime(get_stylesheet_directory() . '/pages/css/offices.css')
     );
-
     wp_register_style(
         'single-office-style',
         get_stylesheet_directory_uri() . '/pages/css/single-office.css',
         array(),
         filemtime(get_stylesheet_directory() . '/pages/css/single-office.css')
     );
-
     wp_register_style(
         'request-quote-style',
         get_stylesheet_directory_uri() . '/pages/css/request-quote.css',
         array(),
         filemtime(get_stylesheet_directory() . '/pages/css/request-quote.css')
     );
-
     wp_register_style(
         'about-us-style',
         get_stylesheet_directory_uri() . '/pages/css/about-us.css',
         array(),
         filemtime(get_stylesheet_directory() . '/pages/css/about-us.css')
     );
-
     wp_register_style(
         'contact-style',
         get_stylesheet_directory_uri() . '/pages/css/contact.css',
         array(),
         filemtime(get_stylesheet_directory() . '/pages/css/contact.css')
     );
-
     wp_register_style(
         'file-upload-style',
         get_stylesheet_directory_uri() . '/pages/css/file-upload.css',
         array(),
         filemtime(get_stylesheet_directory() . '/pages/css/file-upload.css')
     );
-
     wp_register_style(
         'services-style',
         get_stylesheet_directory_uri() . '/pages/css/services.css',
@@ -121,6 +125,7 @@ function bca_load_service_category_template($template) {
 
 /* Function calls */
 add_filter('query_vars', 'bca_query_vars');
+add_filter('show_admin_bar', '__return_false'); // Disable admin bar on the front-end
 add_action('init', 'bca_services_rewrite_rules');
 add_filter('template_include', 'bca_load_service_category_template');
 

@@ -410,10 +410,10 @@ wp_enqueue_style('single-office-style');
 </section>
 
 <!--- DARK CTA -->
-<section class="bca-cta-dark">
+<section class="bca-cta bca-cta-var2 dark">
     <div class="container">
-        <div class="bca-cta-dark__inner reveal">
-            <div class="bca-cta-dark__text">
+        <div class="bca-cta-var2__inner reveal">
+            <div class="bca-cta-var2__text">
                 <span class="bca-heading__eyebrow">Other Offices</span>
                 <h2>Also serving <em>Portsmouth &amp; Swindon</em></h2>
                 <p>

@@ -178,7 +178,7 @@ wp_enqueue_style('home-style');
                     <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Virtual Finance Director services</li>
                     <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>R&amp;D tax relief &amp; mergers</li>
                 </ul>
-                <a href="/services/" class="bca-btn-primary">Explore Business Services</a>
+                <a href="/services/" class="bca-btn-primary">Explore Business Services<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
             </div>
             <div class="bca-audience-card bca-audience-card--individuals reveal reveal-delay-2">
                 <div class="bca-audience-card__icon">
@@ -192,7 +192,7 @@ wp_enqueue_style('home-style');
                     <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Inheritance tax &amp; estate planning</li>
                     <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Specialist wealth advisory</li>
                 </ul>
-                <a href="/personal-services/" class="bca-btn-primary">Explore Personal Services</a>
+                <a href="/personal-services/" class="bca-btn-primary gold">Explore Individual Services<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
             </div>
         </div>
     </div>

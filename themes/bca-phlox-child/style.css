@@ -32,7 +32,7 @@ Author: Deven Warang
   --audit:#7C3AED;
   --header-h: 160px;
   --transition:  0.28s ease;
-  --reveal-transition: transform 0.5s ease;
+  --reveal-transition: transform 0.4s ease;
   --box-shadow: 0 18px 45px rgba(1, 16, 57, 0.08);
 }
 
@@ -49,7 +49,7 @@ h2 {
 /* Global styles for Buttons */
 .bca-btn-primary {
   animation-duration: 0.2s;
-  background-image: linear-gradient(115deg, var(--e-global-color-primary) 0%, var(--e-global-color-fc3d4c5) 100%);
+  background-image: linear-gradient(115deg, var(--bca-primary) 0%, var(--bca-dark-blue) 100%);
   border-color: var(--bca-button-border);
   box-shadow: 3px 4px 10px 0px rgba(0, 0, 0, 0.5);
   border-style: none;
@@ -248,7 +248,7 @@ h2 {
 .bca-heading__border {
   height: 4px;
   width: 100px;
-  background: var(--e-global-color-primary);
+  background: var(--bca-primary);
   border-radius: 2px;
   position: relative;
   margin-left: auto;
@@ -258,14 +258,14 @@ h2 {
 .bca-heading__border::before {
   content: "";
   position: absolute;
-  color: var(--e-global-color-primary);
+  color: var(--bca-primary);
   left: -27px;
   top: 0;
   display: inline-block;
   height: 4px;
   width: 4px;
   border-radius: 50%;
-  background-color: var(--e-global-color-primary);
+  background-color: var(--bca-primary);
   -webkit-box-shadow: 9px 0 0 0 currentColor, 18px 0 0 0 currentColor;
   box-shadow: 9px 0 0 0 currentColor, 18px 0 0 0 currentColor;
 }
@@ -375,47 +375,6 @@ h2 {
 	overflow: hidden;
 }
 
-/*=========================
-  HOME PAGE MENU
-  transparent at top
-  dark blue when sticky
-  ========================= */
-body:has(.transparent-header) header.aux-overlay-header.aux-sticky {
-	top: 0;
-	background-color: var(--bca-header-bg);
-}
-/* Animate */
-body:has(.transparent-header) header.aux-overlay-header{
-   /* top: -120px; */
-    transition: top 0.5s ease;
-}
-
-@media (max-width: 767px) {
-	.hide { display: none; }
-}
-
-/*=========================
-  ALL OTHER PAGES
-  ========================= */
-body:not(:has(.transparent-header)) header.aux-overlay-header {
-	background-color: var(--bca-header-bg) !important;
-	box-shadow: 0 6px 20px rgba(0,0,0,0.18);
-}
-
-.bca-header{
-    transition: transform 0.35s ease, background-color 0.35s ease, box-shadow 0.35s ease;
-    background-color: transparent;
-}
-
-.bca-header.header-hidden{
-    transform: translateY(-100%);
-}
-
-.bca-header.header-visible{
-    transform: translateY(0);
-    background-color: rgba(10, 18, 32, 0.95); /* dark background */
-    box-shadow: 0 6px 20px rgba(0,0,0,0.18);
-}
 
 /*=========================
   BCA HERO SECTION

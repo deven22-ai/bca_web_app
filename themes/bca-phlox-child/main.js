@@ -63,7 +63,16 @@ function onLoad() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', scrollReveal);
+function onDomLoad() {
+    scrollReveal();
+    
+    /* Make header transparent */
+    const hero = document.querySelector('.transparent-header');
+    const header = document.querySelector('.bca-header');
+    if (!hero && header) header.classList.add('is-bg');
+}
+
+document.addEventListener('DOMContentLoaded', onDomLoad);
 window.addEventListener('load', onLoad);
 const formSubmitBtn = document.querySelector('form .bca-form-submit input[type=submit]');
 if(formSubmitBtn != null) formSubmitBtn.classList.add('bca-btn-primary');
