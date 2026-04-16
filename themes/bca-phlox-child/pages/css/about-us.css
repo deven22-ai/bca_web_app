@@ -92,11 +92,10 @@
 
 .bca-pillar__num {
     font-family: 'Outfit', sans-serif;
-    font-size: 11px;
+    font-size: 12px;
     font-weight: 700;
     letter-spacing: 2px;
-    color: var(--gold);
-    opacity: 0.6;
+    color: var(--bca-secondary);
 }
 
 .bca-pillar__icon {
@@ -118,7 +117,7 @@
 .bca-pillar__text {
     font-size: 13px;
     line-height: 1.72;
-    color: rgba(255,255,255,0.42);
+    color: rgb(255 255 255 / 70%);
 }
 
 /* ════════════════════════════════════════
@@ -402,23 +401,17 @@
 }
 
 
-/* ── Responsive ── */
-@media (max-width: 900px) {
-  .bca-story__stats { flex-wrap: wrap; }
-  .bca-story__stat { flex: 1 1 50%; border-bottom: 1px solid var(--bca-dark-border); }
-}
-
+ /* ════════════════════════════════════════
+    RESPONSIVE
+    ════════════════════════════════════════ */
 @media (max-width: 1024px) {
     .bca-timeline__item { grid-template-columns: 54px 1fr;gap: 20px; }
     .bca-timeline__left , .bca-timeline__empty { display: none;}
     .bca-timeline::before { left: 28px; }
     .bca-timeline__item:nth-child(even) .bca-timeline__right .notch::after { border-right: 10px solid var(--bca-secondary); }
     .bca-timeline__right .notch::after { bottom: -105px; }
-    /* Reset card width to fill available space */
     .bca-timeline__left, .bca-timeline__right { width: 100%; }
-    .bca-timeline__item.left .bca-timeline__right {
-        display: block;
-    }
+    .bca-timeline__item.left .bca-timeline__right { display: block; }
     /* Reset the even/left transforms so all cards animate from the right */
     .bca-timeline__item:nth-child(even) .bca-timeline__right {
         justify-self: start;
@@ -426,5 +419,19 @@
         border-left: 3px solid var(--bca-secondary);
     }
 
+    .bca-pillars__inner { grid-template-columns: repeat(2, 1fr); }
+    .bca-pillar:nth-child(2) { border-right: none; }
+    .bca-pillar:nth-child(1), .bca-pillar:nth-child(2) { border-bottom: 1px solid rgba(255,255,255,0.07); }
+    .bca-who__inner,
     .bca-approach__inner { grid-template-columns: 1fr; gap: 44px; }
+}
+
+@media (max-width: 900px) {
+  .bca-story__stats { flex-wrap: wrap; }
+  .bca-story__stat { flex: 1 1 50%; border-bottom: 1px solid var(--bca-dark-border); }
+}
+
+@media (max-width: 640px) {
+    .bca-pillars__inner { grid-template-columns: 1fr; }
+    .bca-pillar { border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.07) !important; }
 }

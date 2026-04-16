@@ -23,7 +23,7 @@ wp_enqueue_style('home-style');
                     supporting businesses, individuals and charities across Hampshire for over 25 years.
                 </p>
             </div>
-            <div class="bca-hero__services-label reveal reveal-delay-2"><span>Services other firms don't offer</span></div>
+            <div class="bca-hero__services-label reveal reveal-delay-2"><span>✦ OUR  SPECIALIST SERVICES</span></div>
             <div class="bca-hero__services reveal reveal-delay-3">
                 <a href="/services/medical-specialist/" class="bca-hero__service-item">
                     <span class="bca-hero__service-dot"></span>
@@ -44,6 +44,18 @@ wp_enqueue_style('home-style');
                     <span class="bca-hero__service-dot"></span>
                     <span class="bca-hero__service-name">Audit Services</span>
                     <span class="bca-hero__service-arrow"><svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></span>
+                </a>
+            </div>
+            <div class="bca-core-svc reveal reveal-delay-4">
+                <a href="/services/accounting-solutions/" class="bca-hero__service-item bca-svc-box--core">
+                    <div class="bca-svc-box__inner">
+                        <span class="bca-svc-box__core-label">Core Service</span>
+                        <span class="bca-svc-box__name">General Accounting &amp; Tax Compliance</span>
+                    </div>
+                    <div class="bca-svc-box__core-right">
+                        <span class="bca-svc-box__core-desc">The foundation of every great business</span>
+                        <svg class="bca-svc-box__arr" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"></path></svg>
+                    </div>
                 </a>
             </div>
             <div class="bca-hero__btns reveal reveal-delay-4">
@@ -178,7 +190,7 @@ wp_enqueue_style('home-style');
                     <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Virtual Finance Director services</li>
                     <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>R&amp;D tax relief &amp; mergers</li>
                 </ul>
-                <a href="/services/" class="bca-btn-primary">Explore Business Services<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
+                <a href="/services/businesses/" class="bca-btn-primary">Explore Business Services<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
             </div>
             <div class="bca-audience-card bca-audience-card--individuals reveal reveal-delay-2">
                 <div class="bca-audience-card__icon">
@@ -192,7 +204,7 @@ wp_enqueue_style('home-style');
                     <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Inheritance tax &amp; estate planning</li>
                     <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Specialist wealth advisory</li>
                 </ul>
-                <a href="/personal-services/" class="bca-btn-primary gold">Explore Individual Services<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
+                <a href="/services/individuals/" class="bca-btn-primary gold">Explore Individual Services<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
             </div>
         </div>
     </div>

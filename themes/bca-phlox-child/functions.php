@@ -13,7 +13,7 @@ function bca_phlox_child_enqueue_assets() {
         get_stylesheet_directory_uri() . '/pages/js/header.js',
         [],
         '1.0.0',
-        true  // ← true means it loads in footer, which is correct for JS
+        true  // true means it loads in footer, which is correct for JS
     );
     wp_enqueue_script(
         'main-js',
@@ -32,49 +32,55 @@ function bca_phlox_child_enqueue_assets() {
     wp_register_style(
         'home-style',
         get_stylesheet_directory_uri() . '/pages/css/home.css',
-        array(),
+        array('auxin-child'), // Ensure it loads after the child stylesheet (style.css)
         filemtime(get_stylesheet_directory() . '/pages/css/home.css')
     );
     wp_register_style(
         'offices-style',
         get_stylesheet_directory_uri() . '/pages/css/offices.css',
-        array(),
+        array('auxin-child'),
         filemtime(get_stylesheet_directory() . '/pages/css/offices.css')
     );
     wp_register_style(
         'single-office-style',
         get_stylesheet_directory_uri() . '/pages/css/single-office.css',
-        array(),
+        array('auxin-child'),
         filemtime(get_stylesheet_directory() . '/pages/css/single-office.css')
     );
     wp_register_style(
         'request-quote-style',
         get_stylesheet_directory_uri() . '/pages/css/request-quote.css',
-        array(),
+        array('auxin-child'),
         filemtime(get_stylesheet_directory() . '/pages/css/request-quote.css')
     );
     wp_register_style(
         'about-us-style',
         get_stylesheet_directory_uri() . '/pages/css/about-us.css',
-        array(),
+        array('auxin-child'),
         filemtime(get_stylesheet_directory() . '/pages/css/about-us.css')
+    );
+    wp_register_style(
+        'community-style',
+        get_stylesheet_directory_uri() . '/pages/css/community.css',
+        array('auxin-child'),
+        filemtime(get_stylesheet_directory() . '/pages/css/community.css')
     );
     wp_register_style(
         'contact-style',
         get_stylesheet_directory_uri() . '/pages/css/contact.css',
-        array(),
+        array('auxin-child'),
         filemtime(get_stylesheet_directory() . '/pages/css/contact.css')
     );
     wp_register_style(
         'file-upload-style',
         get_stylesheet_directory_uri() . '/pages/css/file-upload.css',
-        array(),
+        array('auxin-child'),
         filemtime(get_stylesheet_directory() . '/pages/css/file-upload.css')
     );
     wp_register_style(
         'services-style',
         get_stylesheet_directory_uri() . '/pages/css/services.css',
-        array('auxin-child'), // Ensure it loads after the child stylesheet (style.css)
+        array('auxin-child'), 
         filemtime(get_stylesheet_directory() . '/pages/css/services.css')
     );
 }

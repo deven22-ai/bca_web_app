@@ -141,4 +141,6 @@
 @media (max-width: 1024px) {
     .bca-hero__quick { max-width: 480px; }
     .bca-careers__inner { grid-template-columns: 1fr; gap: 44px; }
+    .bca-contact-main__inner { grid-template-columns: 1fr; }
+    .bca-contact-sidebar { position: static; }
 }

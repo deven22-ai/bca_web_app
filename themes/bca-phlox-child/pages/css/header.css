@@ -377,6 +377,7 @@
     flex-direction: column;
     gap: 16px;
 }
+
 .bca-mega__cta-eyebrow {
     font-family: 'Outfit', sans-serif;
     font-size: 10px;
@@ -385,6 +386,7 @@
     text-transform: uppercase;
     color: var(--bca-secondary);
 }
+
 .bca-mega__cta h3 {
     font-family: 'Outfit', sans-serif;
     font-size: 16px;
@@ -392,7 +394,9 @@
     color: var(--white);
     line-height: 1.3;
 }
+
 .bca-mega__cta h3 em { font-style: italic; color: var(--bca-secondary); }
+
 .bca-mega__cta p {
     font-size: 13px;
     color: rgba(255,255,255,0.5);
@@ -421,6 +425,7 @@
     color: rgba(255,255,255,0.6);
     transition: background 0.2s ease, color 0.2s ease;
 }
+
 .bca-header__icon-btn:hover { background: rgba(255,255,255,0.08); color: var(--white); }
 .bca-header__icon-btn svg { width:16px; height:16px; stroke:currentColor; fill:none; stroke-width:2; }
 
@@ -441,6 +446,7 @@
     transition: background 0.22s ease, transform 0.22s ease;
     box-shadow: 0 4px 14px rgba(26,86,219,0.35);
 }
+
 .bca-header__quote-btn:hover { color: white; background-image: linear-gradient(115deg, #0533a7 0%, #082f93 100%); }
 .bca-header__quote-btn svg { width:13px; height:13px; stroke:currentColor; fill:none; stroke-width:2.5; transition: transform 0.22s ease; }
 .bca-header__quote-btn:hover svg { transform: translateX(2px); }
@@ -486,6 +492,7 @@
     border-radius: 4px;
     transition: background 0.2s ease;
 }
+
 .bca-hamburger:hover { background: rgba(255,255,255,0.08); }
 .bca-hamburger span {
     display: block;
@@ -495,6 +502,7 @@
     transition: all 0.28s ease;
     transform-origin: center;
 }
+
 .bca-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .bca-hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
 .bca-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
@@ -513,6 +521,7 @@
     transform: translateX(100%);
     transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
 .bca-mobile-menu.open { transform: translateX(0); }
 
 .bca-mobile-nav { list-style: none; display: flex; flex-direction: column; gap: 0; }
@@ -556,8 +565,8 @@
 }
 
 .bca-mobile-sub__link:hover { color: var(--white); }
-
 .bca-mobile-actions { margin-top: 28px; display: flex; flex-direction: column; gap: 12px; }
+
 .bca-mobile-actions a {
     display: flex;
     align-items: center;
@@ -570,6 +579,7 @@
     text-decoration: none;
     transition: all 0.22s ease;
 }
+
 .bca-mobile-actions a svg { height:15px; stroke:currentColor; fill:none; stroke-width:2.5; }
 .bca-mobile-actions__outline { background: transparent; color: rgba(255,255,255,0.7); border: 1px solid rgba(255,255,255,0.15); }
 
@@ -582,6 +592,7 @@
     .bca-header__inner { padding: 0 20px; }
     .bca-header__logo { margin-right: 24px; }
 }
+
 @media (max-width: 900px) {
     .bca-topbar { display: none; }
     .bca-header { top: 0;}
@@ -591,6 +602,7 @@
     .bca-hamburger { display: flex; }
     .bca-mobile-menu { display: block; }
 }
+
 @media (max-width: 480px) {
     .bca-header__logo svg { height: 28px; }
 }

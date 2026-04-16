@@ -57,20 +57,16 @@
     align-items: center;
     gap: 10px;
     margin-bottom: 14px;
-}
-
-.bca-hero__services-label::before {
-    content: "";
-    background: var(--muted);
-    width: 10px;
-    height: 1px;
+    border-bottom: 1px solid #e2e8f02e;
 }
 
 .bca-hero__services-label span {
     font-size: 15px;
-    font-weight: 800;
-    letter-spacing: 2.5px;
+    font-weight: 700;
+    padding-bottom: 5px;
+    letter-spacing: 2px;
     text-transform: uppercase;
+    font-family: 'Outfit', sans-serif;
     color: var(--gold);
 }
 
@@ -78,7 +74,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 8px;
-    margin-bottom: 44px;
+    margin-bottom: 8px;
 }
 
 .bca-hero__service-item {
@@ -131,6 +127,72 @@
     fill: var(--gold);
     transform: translateX(4px);
 }
+
+
+.bca-core-svc {
+    margin-bottom: 30px;
+}
+
+.bca-svc-box--core {
+    background: rgba(26, 86, 219, 0.12);
+    border: 1px solid rgba(26, 86, 219, 0.25);
+    border-left: 3px solid var(--bca-primary);
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.bca-svc-box__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.bca-svc-box__core-label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.bca-svc-box__name {
+    font-size: 14px;
+    color: var(--white);
+    font-weight: 600;
+    font-family: 'Outfit', sans-serif;
+}
+
+.bca-svc-box__core-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.bca-svc-box__core-desc {
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px;
+    color: rgb(255 255 255);
+    white-space: nowrap;
+}
+
+.bca-svc-box__arr {
+    width: 14px;
+    height: 14px;
+    stroke: rgb(255 255 255);
+    fill: none;
+    stroke-width: 2;
+    flex-shrink: 0;
+    transition: stroke 0.22s ease, transform 0.22s ease;
+}
+
+.bca-svc-box--core:hover .bca-svc-box__arr {
+    stroke: var(--white);
+    transform: translateX(3px);
+}
+
+.bca-svc-box--core:hover .bca-svc-box__core-desc { color: var(--white); }
 
 /* CTA - OFFICE */
 .bca-cta.office .bca-cta__image img{
@@ -858,7 +920,6 @@
     .bca-why__grid { grid-template-columns: 1fr; }
     .bca-testimonials__grid { grid-template-columns: 1fr; }
     .bca-news__grid { grid-template-columns: 1fr; }
-    .bca-hero__btns { flex-direction: column; }
 }
 
 @media (max-width: 580px) {

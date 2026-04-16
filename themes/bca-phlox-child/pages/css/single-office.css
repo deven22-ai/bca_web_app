@@ -691,6 +691,7 @@
     .bca-contact__inner { grid-template-columns: 1fr; }
     .bca-hero__bottom-inner { gap: 10px; }
     .bca-hero__head-wrapper { margin-bottom: 20px; }
+    .bca-practices-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 640px) {

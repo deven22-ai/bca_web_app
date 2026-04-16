@@ -30,9 +30,9 @@ Author: Deven Warang
   --parish: #0891B2;
   --tax-relief:#059669;
   --audit:#7C3AED;
-  --header-h: 160px;
+  --header-h: 90px;
   --transition:  0.28s ease;
-  --reveal-transition: transform 0.4s ease;
+  --reveal-transition: transform 0.5s ease;
   --box-shadow: 0 18px 45px rgba(1, 16, 57, 0.08);
 }
 
@@ -471,7 +471,7 @@ h2 {
   margin-bottom: 0px;
   max-width: 600px;
   line-height: 1.8;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgb(255 255 255 / 80%);
   font-size: 16px;
   font-weight: 600;
   text-shadow: 14px 15px 20px rgba(0, 0, 0, 0.3);
@@ -1364,7 +1364,7 @@ form .bca-form-submit input[type=submit] { font-size: 12px; }
 
 @media (max-width: 767px) {
   .bca-hero { min-height: 70vh;padding: 110px 0 70px;}
-  .bca-hero__content-grid { padding: 110px 20px 64px; }
+  .bca-hero__content-grid { padding: 110px 20px 30px; }
   .bca-hero__content,
   .bca-hero__text { width: 100%;max-width: 100%;}
   .bca-hero__eyebrow { font-size: 13px; }
@@ -1397,6 +1397,7 @@ form .bca-form-submit input[type=submit] { font-size: 12px; }
 @media (max-width: 540px) {
   .bca-cta__inner { padding: 0 20px; }
   .bca-cta__btns { flex-direction: column;width: 100%; }
+  .bca-hero__btns { flex-direction: column; }
 }
 
 @media (max-width: 398px) {
