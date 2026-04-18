@@ -76,37 +76,92 @@ wp_enqueue_style('offices-style');
             </div>
         </div>
 
-        <div class="bca-offices__grid">
-            <!-- Portsmouth -->
-            <div class="bca-office-card reveal reveal-delay-1">
-                <div class="bca-office-card__photo">
-                    <img src="/wp-content/uploads/2026/04/portsmouth.jpg" alt="Portsmouth">
-                    <span class="bca-office-card__type">Head Office</span>
-                </div>
-                <div class="bca-office-card__body">
-                    <h3 class="bca-office-card__name">Portsmouth</h3>
-                    <p class="bca-office-card__desc">
-                        BC&A Portsmouth serves as our group head office, with our first office opening there in
-                        <b>December 2004</b>. <br>
-                        A large team of dedicated advisers supporting businesses, individuals 
-                        and charities across Portsmouth with clear, dependable advice.
-                    </p>
-                    <div class="bca-office-card__details">
-                        <div class="bca-office-card__detail">
-                            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                            <span>24 Landport Terrace, Southsea, Portsmouth, Hampshire, PO1 2RG</span>
+        <div class="bca-offices__list">
+            <!--PORTSMOUTH -->
+            <div class="bca-ofc bca-ofc--portsmouth reveal reveal-delay-1">
+                <div class="bca-ofc__banner">
+                    <img src="/wp-content/uploads/2026/04/portsmouth.jpg" alt="Portsmouth"/>
+                    <div class="bca-ofc__banner-overlay"></div>
+                    <div class="bca-ofc__banner-content">
+                        <div class="bca-ofc__banner-left">
+                            <span class="bca-ofc__name">Portsmouth</span>
+                            <span class="bca-ofc__badge badge--blue">Head Office</span>
                         </div>
-                        <div class="bca-office-card__detail">
-                            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
+                    </div>
+                </div>
+                <div class="bca-ofc__body">
+                    <div class="bca-ofc__two-col">
+                        <div>
+                            <p class="bca-ofc__intro">
+                                Our Group Head Office — established in Portsmouth since December 2004 and forming the foundation of our continued 
+                                growth.
+                            </p>
+                            <p class="bca-ofc__desc">
+                                From this office, our experienced team of chartered accountants and tax advisers supports businesses, 
+                                individuals, and charities across Portsmouth, the surrounding areas, and nationwide. We pride ourselves on 
+                                delivering clear, practical, and dependable advice, building long-term relationships with our clients and supporting 
+                                them at every stage of their journey.
+                            </p>
+                            <p class="bca-ofc__desc">
+                                We work closely with ambitious and growing businesses, providing tailored guidance on structuring, compliance, and 
+                                strategic planning to help them scale efficiently and sustainably. Our Portsmouth office is home to a specialist R&D 
+                                Tax team, supporting SMEs and large companies across the UK with identifying qualifying activities and preparing 
+                                robust claims. This expertise allows us to add significant value to innovative businesses seeking to maximise 
+                                available tax reliefs.
+                            </p>
+                            <p class="bca-ofc__desc">
+                                With a strong focus on quality, responsiveness, and a personal approach, BC&A Portsmouth continues to 
+                                play a central role in delivering the high standards our clients expect across the group.
+                            </p>
+                        </div>
+                        <div class="bca-ofc__highlights">
+                            <div class="bca-ofc__highlight">
+                                <div class="bca-ofc__highlight-icon bca-ofc__highlight-icon--blue">
+                                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                                </div>
+                                <div>
+                                    <div class="bca-ofc__highlight-title">35+ Years in Portsmouth</div>
+                                    <div class="bca-ofc__highlight-desc">Driving growth for local businesses and individuals.</div>
+                                </div>
+                            </div>
+                            <div class="bca-ofc__highlight">
+                                <div class="bca-ofc__highlight-icon bca-ofc__highlight-icon--gold">
+                                    <svg viewBox="0 0 24 24"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                                </div>
+                                <div>
+                                    <div class="bca-ofc__highlight-title">Specialist R&D Tax Team</div>
+                                    <div class="bca-ofc__highlight-desc">Supporting innovative SMEs and large companies across the UK with robust R&D tax credit claims.</div>
+                                </div>
+                            </div>
+                            <div class="bca-ofc__highlight">
+                                <div class="bca-ofc__highlight-icon bca-ofc__highlight-icon--blue">
+                                    <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                                </div>
+                                <div>
+                                    <div class="bca-ofc__highlight-title">Nationwide Reach</div>
+                                    <div class="bca-ofc__highlight-desc">Serving businesses and individuals far beyond Portsmouth and the South of England.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bca-ofc__footer">
+                    <div class="bca-ofc__contacts">
+                        <div class="bca-ofc__contact">
+                            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            24 Landport Terrace, Southsea, Portsmouth, Hampshire, PO1 2RG
+                        </div>
+                        <div class="bca-ofc__contact">
+                            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
                             <a href="tel:02392833300">02392 833 300</a>
                         </div>
-                        <div class="bca-office-card__detail">
-                            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <div class="bca-ofc__contact">
+                            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                             <a href="mailto:info@bcaaccountants.com">info@bcaaccountants.com</a>
                         </div>
                     </div>
-                    <div class="bca-office-card__btns">
-                        <a href="/offices/portsmouth/" class="bca-btn-primary">View Office<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
+                    <div class="bca-ofc__footer-btns">
+                        <a href="/offices/portsmouth/" class="bca-btn-primary">View Office <svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
                         <a href="https://maps.google.com/?q=24+Landport+Terrace+Portsmouth" target="_blank" rel="noopener" class="bca-office-card__btn">
                             <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                             Directions
@@ -115,89 +170,147 @@ wp_enqueue_style('offices-style');
                 </div>
             </div>
 
-            <!-- Romsey -->
-            <div class="bca-office-card bca-office-card--romsey reveal reveal-delay-2">
-                <div class="bca-office-card__photo">
-                    <img src="/wp-content/uploads/2026/03/romsey_market_square.png" alt="Romsey">
-                    <span class="bca-office-card__type romsey">2 Practices</span>
+            <!--- ROMSEY --->
+            <div class="bca-ofc bca-ofc--romsey reveal reveal-delay-2">
+                <div class="bca-ofc__banner">
+                    <img src="/wp-content/uploads/2026/03/romsey_market_square.png" alt="Romsey" style="object-position: bottom;"/>
+                    <div class="bca-ofc__banner-overlay"></div>
+                    <div class="bca-ofc__banner-content">
+                        <div class="bca-ofc__banner-left">
+                            <span class="bca-ofc__name">Romsey</span>
+                            <span class="bca-ofc__badge badge--gold">2 Practices</span>
+                        </div>
+                        <div class="bca-ofc__banner-right">
+                            <div class="bca-ofc__banner-stat">
+                                <div class="bca-ofc__banner-stat-num">35<span>+</span></div>
+                                <div class="bca-ofc__banner-stat-label">Years established</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="bca-office-card__body">
-                    <h3 class="bca-office-card__name">Romsey</h3>
-                    <div class="bca-office-card__desc">
-                        We operate two practices from Romsey office:
-                        <!-- Two practice sub-cards -->
-                        <div class="bca-office-practices">
-                            <div class="bca-office-practice">
-                                <div class="bca-office-practice__name">
-                                    <span class="bca-office-practice__dot bca-office-practice__dot--gold"></span>
-                                    Kumar Associates
-                                </div>
-                                <div class="bca-office-practice__tagline">
-                                    Our specialist medical division dedicated to supporting healthcare professionals nationwide.
+                <div class="bca-ofc__body">
+                    <p class="bca-ofc__intro">
+                        We operate two established practices from our Romsey location, each delivering specialist, high-quality accountancy 
+                        services to their clients. 
+                    </p>
+                    <p class="bca-ofc__desc" style="margin-bottom: 20px;">
+                        BC&A Romsey, a general practice serving individuals, businesses, and charities across South 
+                        Central UK; and Kumar Associates, our specialist medical division dedicated to supporting healthcare 
+                        professionals nationwide.
+                    </p>
+                    <div class="bca-ofc__practices">
+                        <!-- Kumar Associates -->
+                        <div class="bca-practice bca-practice--gold">
+                            <div class="bca-practice__head kumar">
+                                <span class="bca-practice__dot bca-practice__dot--gold"></span>
+                                <span class="bca-practice__name">Kumar Associates</span>
+                                <span class="bca-practice__tag bca-practice__tag--gold">Medical Specialist</span>
+                            </div>
+                            <div class="bca-practice__body">
+                                <p class="bca-practice__desc">
+                                    The dedicated specialist medical division of BC&A. We support NHS consultants, GPs, locums, practice managers 
+                                    and opticians with specialist financial advice, including NHS pension schemes, partnership structures 
+                                    and healthcare-specific tax planning.
+                                </p>
+                                <div class="bca-practice__contacts">
+                                    <div class="bca-practice__contact">
+                                        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                                        <a href="tel:01794516225">01794 516225</a>
+                                    </div>
+                                    <div class="bca-practice__contact">
+                                        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                                        <a href="mailto:info@kumarassociates.co.uk">info@kumarassociates.co.uk</a>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="bca-office-practice">
-                                <div class="bca-office-practice__name">
-                                    <span class="bca-office-practice__dot bca-office-practice__dot--blue"></span>
-                                    BC&A Romsey
+                        </div>
+                        <!-- BC&A Romsey -->
+                        <div class="bca-practice bca-practice--blue">
+                            <div class="bca-practice__head romsey">
+                                <span class="bca-practice__dot bca-practice__dot--blue"></span>
+                                <span class="bca-practice__name">BC&A Romsey</span>
+                                <span class="bca-practice__tag bca-practice__tag--blue">General Practice</span>
+                            </div>
+                            <div class="bca-practice__body">
+                                <p class="bca-practice__desc">Romsey-based accountants specialising in automotive industries, agriculture and more — working with mechanics, garage owners, farmers and local entrepreneurs across the region. Now part of BC&A, combining small-firm service with big-firm expertise across bookkeeping, tax planning, payroll and management accounts.</p>
+                                <div class="bca-practice__contacts">
+                                    <div class="bca-practice__contact">
+                                        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                                        <a href="tel:01794511511">01794 511511</a>
+                                    </div>
+                                    <div class="bca-practice__contact">
+                                        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                                        <a href="mailto:romsey@bcaaccountants.com">romsey@bcaaccountants.com</a>
+                                    </div>
                                 </div>
-                                <div class="bca-office-practice__tagline">A general practice serving individuals, businesses, and charities across South UK.</div>
                             </div>
                         </div>
                     </div>
-                    <div class="bca-office-card__details">
-                        <div class="bca-office-card__detail">
-                            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                            <span>Buckley House, 29 to 31A, The Hundred, Romsey, Hampshire, SO51 8GD</span>
+                </div>
+                <div class="bca-ofc__footer">
+                    <div class="bca-ofc__contacts">
+                        <div class="bca-ofc__contact">
+                            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Buckley House, 29 to 31A, The Hundred, Romsey, Hampshire, SO51 8GD
                         </div>
                     </div>
-                    <div class="bca-office-card__btns">
-                        <a href="/offices/romsey/" class="bca-btn-primary">View Office<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
-                        <a href="https://maps.google.com/?q=Uffcott+Farm+Swindon" target="_blank" rel="noopener" class="bca-office-card__btn">
+                    <div class="bca-ofc__footer-btns">
+                        <a href="/offices/romsey/" class="bca-btn-primary">View Office <svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
+                        <a href="https://maps.google.com/?q=Buckley+House+The+Hundred+Romsey" target="_blank" rel="noopener" class="bca-office-card__btn">
                             <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                             Directions
                         </a>
                     </div>
                 </div>
             </div>
-
-            <!-- Swindon -->
-            <div class="bca-office-card reveal reveal-delay-3">
-                <div class="bca-office-card__photo">
-                    <img src="/wp-content/uploads/2026/03/lydiard_park_and_house.png" alt="Swindon">
+            
+            <!--- SWINDON --->
+            <div class="bca-ofc bca-ofc--swindon reveal reveal-delay-3">
+                <div class="bca-ofc__banner">
+                    <img src="/wp-content/uploads/2026/03/lydiard_park_and_house.png" alt="Swindon"/>
+                    <div class="bca-ofc__banner-overlay"></div>
+                    <div class="bca-ofc__banner-content">
+                        <div class="bca-ofc__banner-left">
+                            <span class="bca-ofc__name">Swindon</span>
+                        </div>
+                    </div>
                 </div>
-                <div class="bca-office-card__body">
-                    <h3 class="bca-office-card__name">Swindon</h3>
-                    <p class="bca-office-card__desc">
-                        BC&amp;A Swindon trades under <b>BC&amp;A Accounting Solutions</b>. The practice has a dedicated team supporting parish 
-                        and city councils nationwide with their accounting needs, VAT advisory, payroll, and internal audit services. 
-                        We also work with ambitious local businesses, individuals, and charities.
+                <div class="bca-ofc__body">
+                    <p class="bca-ofc__intro">BC&A Swindon trades under BC&A Accounting Solutions.</p>
+                    <p class="bca-ofc__desc">
+                        The practice has a dedicated team supporting parish and city councils nationwide with their accounting needs, 
+                        VAT advisory, payroll, and internal audit services. We also work with ambitious local businesses, individuals, 
+                        and charities.
                     </p>
-                    <div class="bca-office-card__details">
-                        <div class="bca-office-card__detail">
-                            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                            <span>Unit 1 Uffcott Farm, Uffcott, Swindon, Wiltshire, SN4 9NB</span>
+                </div>
+                <div class="bca-ofc__footer">
+                    <div class="bca-ofc__contacts">
+                        <div class="bca-ofc__contact">
+                            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Unit 1 Uffcott Farm, Uffcott, Swindon, Wiltshire, SN4 9NB
                         </div>
-                        <div class="bca-office-card__detail">
-                            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
-                            <a href="tel:01793739110">01793 739110</a>
+                        <div class="bca-ofc__contact">
+                            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                            <a href="tel:01793739110">01793 739 110</a>
                         </div>
-                        <div class="bca-office-card__detail">
-                            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <div class="bca-ofc__contact">
+                            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
                             <a href="mailto:swindon@bcaaccountants.com">swindon@bcaaccountants.com</a>
                         </div>
                     </div>
-                    <div class="bca-office-card__btns">
-                        <a href="/offices/swindon/" class="bca-btn-primary">View Office<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
-                        <a href="https://maps.google.com/?q=Uffcott+Farm+Swindon" target="_blank" rel="noopener" class="bca-office-card__btn">
+                    <div class="bca-ofc__footer-btns">
+                        <a href="/offices/swindon/" class="bca-btn-primary">View Office <svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
+                        <a href="https://maps.google.com/?q=Unit+1+Uffcott+Farm+Swindon" target="_blank" rel="noopener" class="bca-office-card__btn">
                             <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                             Directions
                         </a>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- COMING SOON CARDS -->
+        <!-- COMING SOON CARDS -->
+        <div class="bca-offices__grid">
              <div class="bca-office-card bca-office-card--soon reveal reveal-delay-1">
                 <div class="bca-office-card__photo">
                     <img src="/wp-content/uploads/2026/04/brighton.jpg" alt="Brighton"/>

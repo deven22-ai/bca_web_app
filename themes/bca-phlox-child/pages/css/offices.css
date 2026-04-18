@@ -184,7 +184,332 @@
 
 .bca-offices-intro__text p:last-child { margin-bottom: 0; }
 
-/* office cards */
+
+/* ════════════════════════════════════════
+    BCA OFFICE CARDS
+   ═══════════════════════════════════════ */
+.bca-offices__list { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 24px; 
+    margin-bottom: 24px;
+}
+
+.bca-ofc {
+    background: var(--white);
+    border: 1px solid var(--bca-dark-border);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    transition: box-shadow 0.3s ease, opacity 0.5s, var(--reveal-transition);
+}
+
+.bca-ofc:hover { box-shadow: 0 12px 40px rgba(13,27,62,0.09); }
+
+/* ── Banner image ── */
+.bca-ofc__banner {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+}
+.bca-ofc__banner img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.bca-ofc:hover .bca-ofc__banner img { transform: scale(1.03); }
+.bca-ofc--portsmouth .bca-ofc__banner img { object-position: 0 -120px; }
+.bca-ofc--romsey .bca-ofc__banner img { object-position: bottom; }
+.bca-ofc--swindon .bca-ofc__banner img { object-position: center; }
+
+.bca-ofc__banner-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgb(13 27 62 / 90%) 0%, rgb(13 27 62 / 55%) 40%, rgba(13, 27, 62, 0.15) 100%);
+}
+
+/* Top colour bar */
+.bca-ofc__banner::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 4px; z-index: 2;
+}
+.bca-ofc--portsmouth .bca-ofc__banner::before { background: var(--bca-primary); }
+.bca-ofc--romsey .bca-ofc__banner::before     { background: var(--bca-secondary); }
+.bca-ofc--swindon .bca-ofc__banner::before     { background: var(--tax-relief); }
+
+/* Banner content overlay */
+.bca-ofc__banner-content {
+    position: absolute; bottom: 0; left: 0; right: 0;
+    padding: 24px 36px;
+    z-index: 2;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.bca-ofc__banner-left { 
+    display: flex; 
+    align-items: center; 
+    gap: 14px; 
+}
+
+.bca-ofc__badge {
+    font-family: 'Outfit', sans-serif;
+    font-size: 10px; font-weight: 700;
+    letter-spacing: 1.5px; text-transform: uppercase;
+    padding: 5px 12px; border-radius: 4px;
+    white-space: nowrap;
+}
+
+.badge--blue  { background: var(--bca-primary); color: var(--white); }
+.badge--gold  { background: var(--bca-secondary); color: var(--white); border: 1px solid rgba(201,168,76,0.4); }
+.badge--green { background: rgba(5,150,105,0.15); color: #6ee7b7; border: 1px solid rgba(5,150,105,0.4); }
+
+.bca-ofc__name {
+    font-family: 'Outfit', sans-serif;
+    font-size: clamp(24px, 3vw, 32px);
+    font-weight: 800;
+    color: var(--white);
+    letter-spacing: -0.4px;
+}
+
+.bca-ofc__banner-right {
+    display: flex; gap: 8px;
+}
+
+.bca-ofc__banner-stat {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 6px;
+    padding: 8px 14px;
+    text-align: center;
+}
+
+.bca-ofc__banner-stat-num {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px; font-weight: 800;
+    color: var(--white); line-height: 1;
+}
+
+.bca-ofc__banner-stat-num span { color: var(--bca-secondary); }
+.bca-ofc__banner-stat-label {
+    font-size: 9px; color: rgba(255,255,255,0.45);
+    margin-top: 2px;
+}
+
+/* ── Body ── */
+.bca-ofc__body {
+    padding: 32px 36px;
+}
+
+/* Two-column layout for Portsmouth */
+.bca-ofc__two-col {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 40px;
+    align-items: start;
+}
+
+.bca-ofc__desc {
+    font-size: 14px; line-height: 1.85;
+    color: var(--muted);
+    margin-bottom: 14px;
+}
+
+.bca-ofc__desc:last-of-type { margin-bottom: 0; }
+
+.bca-ofc__intro {
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px; font-weight: 700;
+    color: var(--bca-dark-navy);
+    margin-bottom: 14px; line-height: 1.5;
+}
+
+/* Highlights sidebar */
+.bca-ofc__highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.bca-ofc__highlight {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 16px;
+    background: var(--bca-card-bg);
+    border: 1px solid var(--bca-dark-border);
+    border-radius: var(--border-radius);
+}
+
+.bca-ofc__highlight-icon {
+    width: 38px; height: 38px;
+    border-radius: 8px;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+}
+
+.bca-ofc__highlight-icon--blue { background: rgba(26,86,219,0.08); }
+.bca-ofc__highlight-icon--gold { background: rgba(201,168,76,0.1); }
+.bca-ofc__highlight-icon svg {
+    width: 17px; height: 17px;
+    fill: none; stroke-width: 1.8;
+}
+
+.bca-ofc__highlight-icon--blue svg { stroke: var(--bca-primary); }
+.bca-ofc__highlight-icon--gold svg { stroke: var(--bca-secondary); }
+.bca-ofc__highlight-title {
+    font-family: 'Outfit', sans-serif;
+    font-size: 13px; font-weight: 700;
+    color: var(--bca-dark-navy); margin-bottom: 3px;
+}
+
+.bca-ofc__highlight-desc {
+    font-size: 12px; color: var(--muted); line-height: 1.55;
+}
+
+/* ── Contact strip ── */
+.bca-ofc__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px 36px;
+    border-top: 1px solid var(--bca-dark-border);
+    background: var(--bca-card-bg);
+}
+
+.bca-ofc__contacts {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+.bca-ofc__contact {
+    display: flex; align-items: center; gap: 7px;
+    font-size: 13px; 
+    font-weight: 500;
+    color: var(--text);
+}
+.bca-ofc__contact svg {
+    width: 14px; height: 14px;
+    fill: none; stroke-width: 2; flex-shrink: 0;
+}
+
+.bca-ofc--portsmouth .bca-ofc__contact svg { stroke: var(--bca-primary); }
+.bca-ofc--romsey .bca-ofc__contact svg     { stroke: var(--bca-primary); }
+.bca-ofc--swindon .bca-ofc__contact svg    { stroke: var(--bca-primary); }
+.bca-ofc__contact a { color: var(--text); font-weight: 600; transition: color 0.2s; }
+.bca-ofc__contact a:hover { color: var(--bca-primary); }
+
+.bca-ofc__footer-btns { display: flex; gap: 10px; flex-shrink: 0; }
+
+/* ══════════════════════════════════
+    ROMSEY — Practices
+══════════════════════════════════ */
+.bca-ofc__romsey-intro {
+    font-size: 14px; line-height: 1.85;
+    color: var(--muted);
+    margin-bottom: 20px;
+}
+
+.bca-ofc__address {
+    display: flex; align-items: flex-start; gap: 8px;
+    font-size: 13px; color: var(--muted);
+    margin-bottom: 20px; line-height: 1.55;
+}
+.bca-ofc__address svg {
+    width: 14px; height: 14px;
+    stroke: var(--muted); fill: none;
+    stroke-width: 2; flex-shrink: 0; margin-top: 2px;
+}
+
+.bca-ofc__practices {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.bca-practice {
+    background: var(--bca-card-bg);
+    border: 1px solid var(--bca-dark-border);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.bca-practice__head {
+    display: flex; align-items: center; gap: 10px;
+    padding: 14px 18px;
+    border-bottom: 1px solid var(--bca-dark-border);
+}
+
+.bca-practice__head::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 3px;
+}
+
+.bca-practice__head-kumar { border-top: 3px solid var(--bca-secondary);}
+.bca-practice__head-romsey { border-top: 3px solid var(--bca-primary);}
+
+.bca-practice__dot {
+    width: 8px; height: 8px;
+    border-radius: 50%; flex-shrink: 0;
+}
+.bca-practice__dot--gold { background: var(--bca-secondary); }
+.bca-practice__dot--blue { background: var(--bca-primary); }
+.bca-practice__name {
+    font-family: 'Outfit', sans-serif;
+    font-size: 15px; font-weight: 700;
+    color: var(--bca-dark-navy);
+}
+.bca-practice__tag {
+    margin-left: auto;
+    font-family: 'Outfit', sans-serif;
+    font-size: 9px; font-weight: 700;
+    letter-spacing: 1px; text-transform: uppercase;
+    padding: 2px 8px; border-radius: 3px;
+}
+.bca-practice__tag--gold { background: rgba(201,168,76,0.1); color: var(--bca-secondary); border: 1px solid rgba(201,168,76,0.25); }
+.bca-practice__tag--blue { background: rgba(26,86,219,0.08); color: var(--bca-primary); border: 1px solid rgba(26,86,219,0.2); }
+
+.bca-practice__body {
+    padding: 16px 18px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.bca-practice__desc {
+    font-size: 14px; color: var(--muted);
+    line-height: 1.72; margin-bottom: 16px;
+    flex: 1;
+}
+.bca-practice__contacts {
+    display: flex; flex-direction: column; gap: 6px;
+    padding-top: 14px;
+    border-top: 1px solid var(--bca-dark-border);
+}
+.bca-practice__contact {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 13px; color: var(--text); font-weight: 600;
+}
+.bca-practice__contact svg {
+    width: 13px; height: 13px;
+    fill: none; stroke-width: 2; flex-shrink: 0;
+}
+.bca-practice--gold .bca-practice__contact svg { stroke: var(--bca-secondary); }
+.bca-practice--blue .bca-practice__contact svg { stroke: var(--bca-primary); }
+.bca-practice__contact a { color: var(--text); transition: color 0.2s; }
+.bca-practice__contact a:hover { color: var(--bca-primary); }
+
+
+/* ════════════════════════════════════════
+    OFFICE COMING SOON GRID
+   ════════════════════════════════════════ */
 .bca-office-card__btns.romsey {
     display: flex;
     flex-flow: column;
@@ -272,14 +597,32 @@
     .bca-why-local__item:nth-child(1),
     .bca-why-local__item:nth-child(2) { border-bottom: 1px solid rgba(255,255,255,0.07); }
     .bca-find__inner { grid-template-columns: 1fr; gap: 40px; }
+    .bca-ofc__two-col { grid-template-columns: 1fr; gap: 28px; }
+    .bca-ofc__highlights { flex-direction: row; gap: 10px; }
+    .bca-ofc__highlight { flex: 1; }
+    .bca-ofc--portsmouth .bca-ofc__banner img { object-position: 0 -30px; }
+   
 }
 
 @media (max-width: 768px) {
     .bca-offices-intro { padding: 50px 0; }
     .bca-offices-intro__inner { grid-template-columns: 1fr; gap: 0px; }
+    .bca-ofc__body { padding: 24px 20px; }
+    .bca-ofc__footer { padding: 16px 20px; flex-direction: column; align-items: flex-start; }
+    .bca-ofc__banner-content { padding: 16px 20px; }
+    .bca-ofc__banner-right { display: none; }
+    .bca-ofc__practices { grid-template-columns: 1fr; }
+    .bca-ofc__highlights { flex-direction: column; }
+    .bca-offices__soon { grid-template-columns: 1fr; }
+    .bca-ofc--portsmouth .bca-ofc__banner img { object-position: top; }
 }
 
 @media (max-width: 640px) {
     .bca-why-local__inner { grid-template-columns: 1fr; }
     .bca-why-local__item { border-right: none !important; border-bottom: 1px solid rgba(255,255,255,0.07); }
+}
+
+@media (max-width: 480px) {
+    .bca-wrap { padding: 0 20px; }
+    .bca-ofc__banner { height: 180px; }
 }

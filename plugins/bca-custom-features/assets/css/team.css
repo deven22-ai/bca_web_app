@@ -121,8 +121,9 @@
 /* Dot colour per office */
 .bca-team__pill[data-office="portsmouth"] .bca-team__pill-dot { background: var(--bca-primary); }
 .bca-team__pill[data-office="romsey"] .bca-team__pill-dot { background: var(--bca-secondary); }
+.bca-team__pill[data-office="kumar"] .bca-team__pill-dot { background: var(--bca-secondary); }
 .bca-team__pill[data-office="swindon"] .bca-team__pill-dot { background: var(--tax-relief); }
-.bca-team__pill.active .bca-team__pill-dot { background: rgba(255,255,255,0.6); }
+.bca-team__pill.active[data-office="all"] .bca-team__pill-dot { background: rgba(255,255,255,0.6); }
 
 .bca-team__filter-count {
     font-size: 13px; color: var(--muted);
@@ -150,7 +151,7 @@
 .bca-member {
     background: var(--white);
     border: 1px solid var(--bca-dark-border);
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -194,7 +195,8 @@
     height: 3px; z-index: 2;
     background: var(--bca-primary);
 }
-.bca-member--romsey .bca-member__photo::before { background: var(--bca-secondary); }
+.bca-member--romsey .bca-member__photo::before,
+.bca-member--kumar .bca-member__photo::before { background: var(--bca-secondary); }
 .bca-member--swindon .bca-member__photo::before { background: var(--tax-relief); }
 
 /* Office tag on photo bottom */
@@ -207,7 +209,7 @@
     padding: 3px 10px;
     font-size: 10px; font-weight: 700;
     letter-spacing: 1px; text-transform: uppercase;
-    color: rgba(255,255,255,0.7);
+    color: var(--white);
 }
 
 /*

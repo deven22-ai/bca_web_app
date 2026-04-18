@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Romsey
+Template Name: Romsey Office
 Author: Deven Warang
 Date: 11th April 2026
 */
@@ -207,9 +207,9 @@ wp_enqueue_style('single-office-style');
                 <div class="bca-heading__eyebrow">Kumar Associates</div>
                 <h2 class="bca-heading__title">Meet the Kumar Associates <span>team</span></h2>
             </div>
-            <a href="/about-us/our-team?office=romsey" class="bca-heading__link">View full team<svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></a>
+            <a href="/about-us/our-team?office=kumar" class="bca-heading__link">View full Kumar Associates team<svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></a>
         </div>
-        <?php echo do_shortcode('[bca_portsmouth_team]') ?>
+        <?php echo do_shortcode('[bca_kumar_team]') ?>
     </div>
 </section>
 
@@ -269,9 +269,9 @@ wp_enqueue_style('single-office-style');
                 <div class="bca-heading__eyebrow">BC&A Romsey</div>
                 <h2 class="bca-heading__title">Meet the BC&A Romsey <span>team</span></h2>
             </div>
-            <a href="/about-us/our-team?office=portsmouth" class="bca-heading__link">View full Portsmouth team<svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></a>
+            <a href="/about-us/our-team?office=romsey" class="bca-heading__link">View full BC&A Romsey team<svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></a>
         </div>
-        <?php echo do_shortcode('[bca_portsmouth_team]') ?>
+        <?php echo do_shortcode('[bca_romsey_team]') ?>
     </div>
 </section>
 
@@ -391,7 +391,7 @@ wp_enqueue_style('single-office-style');
                         </div>
                     </div>
                     <div class="bca-details-foot">
-                        <a href="https://maps.google.com/?q=24+Landport+Terrace+Portsmouth" target="_blank" rel="noopener" class="bca-btn-primary">
+                        <a href="https://maps.app.goo.gl/LmbkYvTXGCN7W8NT9" target="_blank" rel="noopener" class="bca-btn-primary">
                             Get Directions<svg width="16" height="16" viewBox="0 0 2048 2048"><path fill="currentColor" d="M1536 256h384v384h-128V475l-456 456l-91-91l456-456h-165zm0 768l128-128v768H0V512h1280l-128 128H128v896h1408z"></path></svg>
                         </a>
                         <a href="/contact/" class="bca-btn-ghost">Contact Us</a>
@@ -402,7 +402,9 @@ wp_enqueue_style('single-office-style');
         <!-- Google Maps -->
         <div class="bca-contact__map-full reveal reveal-delay-3"">
             <div class="bca-map-frame">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d674.2321390201164!2d-1.4981761860245084!3d50.988814365675346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48738aa76c4204a7%3A0xb7185a91c36cf3af!2sBC%26A%20Chartered%20Accountants!5e0!3m2!1sen!2suk!4v1775992235407!5m2!1sen!2suk" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            <div class="bca-map-directions">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d156.96745810017603!2d-1.497493!3d50.988814!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48738aa76c4204a7%3A0xb7185a91c36cf3af!2sBC%26A%20Chartered%20Accountants!5e0!3m2!1sen!2suk!4v1776509557955!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="bca-map-directions">
                 Buckley House, 29 to 31A, The Hundred, <span>Romsey, Hampshire, SO51 8GD</span>
             </div>
         </div>

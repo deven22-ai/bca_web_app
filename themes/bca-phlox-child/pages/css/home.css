@@ -143,17 +143,23 @@
 
 .bca-svc-box__inner {
     display: flex;
-    flex-direction: column;
-    gap: 4px;
+    align-content: center;
+    flex-direction: row;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+    justify-items: center;
 }
 
 .bca-svc-box__core-label {
     font-family: 'Outfit', sans-serif;
-    font-size: 9px;
+    font-size: 10px;
     font-weight: 700;
+    justify-self: center;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.4);
+    align-self: center;
 }
 
 .bca-svc-box__name {

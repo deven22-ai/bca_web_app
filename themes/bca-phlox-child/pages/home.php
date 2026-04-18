@@ -14,7 +14,7 @@ wp_enqueue_style('home-style');
     <div class="bca-hero container transparent-header">
         <div class="bca-hero__content">
             <div class="bca-hero__eyebrow reveal">
-                <p><strong><span>Our Vision</span></strong></p>
+               <!-- <p><strong><span>Our Vision</span></strong></p> -->
             </div>
             <div class="bca-hero__head-wrapper reveal reveal-delay-1">
                 <h1 class="bca-hero__title">Big Firm Expertise.<br>Personal Service.<br><em>Real Results.</em></h1>
@@ -50,12 +50,14 @@ wp_enqueue_style('home-style');
                 <a href="/services/accounting-solutions/" class="bca-hero__service-item bca-svc-box--core">
                     <div class="bca-svc-box__inner">
                         <span class="bca-svc-box__core-label">Core Service</span>
-                        <span class="bca-svc-box__name">General Accounting &amp; Tax Compliance</span>
+                        <span class="bca-svc-box__name">
+                            General Accounting &amp; Tax Compliance &nbsp;
+                            <svg class="bca-svc-box__arr" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"></path></svg>
+                        </span>
                     </div>
-                    <div class="bca-svc-box__core-right">
+                    <!--<div class="bca-svc-box__core-right">
                         <span class="bca-svc-box__core-desc">The foundation of every great business</span>
-                        <svg class="bca-svc-box__arr" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"></path></svg>
-                    </div>
+                    </div> -->
                 </a>
             </div>
             <div class="bca-hero__btns reveal reveal-delay-4">

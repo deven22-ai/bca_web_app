@@ -138,4 +138,30 @@ add_filter('template_include', 'bca_load_service_category_template');
 add_action('wp_enqueue_scripts', 'bca_phlox_child_enqueue_assets');
 add_action( 'wp', 'bca_remove_titlebar_on_sector_archive' );
 add_action( 'wp', 'bca_remove_phlox_sliders_on_service_category_routes' );
+
+
+/* WP ADMIN UI - Office Terms */
+add_filter('manage_edit-office_columns', function($columns) {
+    $new = [];
+
+    $new['cb'] = $columns['cb']; // checkbox
+    $new['name'] = $columns['name']; // term name
+    $new['order'] = 'Order';
+
+    return $new + $columns;
+});
+add_filter('manage_office_custom_column', function($content, $column_name, $term_id) {
+    if ($column_name === 'order') {
+        $order = get_field('order', 'term_' . $term_id);
+        $content = $order !== null && $order !== '' ? $order : '—';
+    }
+    return $content;
+}, 10, 3);
+add_action('pre_get_terms', function($query) {
+    if (is_admin() && $query->query_vars['taxonomy'] === 'office') {
+        $query->query_vars['meta_key'] = 'order';
+        $query->query_vars['orderby'] = 'meta_value_num';
+        $query->query_vars['order'] = 'ASC';
+    }
+});
 ?>

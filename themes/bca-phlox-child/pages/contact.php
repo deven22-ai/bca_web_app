@@ -151,7 +151,7 @@ wp_enqueue_style('contact-style');
             <!-- Portsmouth -->
             <div class="bca-office-card reveal reveal-delay-1">
                 <div class="bca-office-card__photo">
-                    <img src="/wp-content/uploads/2026/04/office_building.jpg" alt="Portsmouth">
+                    <img src="/wp-content/uploads/2026/04/portsmouth.jpg" alt="Portsmouth">
                     <span class="bca-office-card__type">Head Office</span>
                 </div>
                 <div class="bca-office-card__body">
@@ -170,9 +170,9 @@ wp_enqueue_style('contact-style');
                             <a href="mailto:info@bcaaccountants.com">info@bcaaccountants.com</a>
                         </div>
                     </div>
-                    <div class="bca-office-card__btns">
+                    <div class="bca-office-card__btns" style="display: flex;flex-flow: column;">
                         <a href="/offices/portsmouth/" class="bca-btn-primary">View Office<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
-                        <a href="https://maps.google.com/?q=24+Landport+Terrace+Portsmouth" target="_blank" rel="noopener" class="bca-office-card__btn">
+                        <a href="https://maps.app.goo.gl/euNJsXaUrXRQ29LX7" target="_blank" rel="noopener" class="bca-office-card__btn">
                             <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                             Directions
                         </a>
@@ -184,7 +184,7 @@ wp_enqueue_style('contact-style');
             <div class="bca-office-card reveal reveal-delay-2">
                 <div class="bca-office-card__photo">
                     <img src="/wp-content/uploads/2026/03/romsey_market_square.png" alt="Romsey">
-                    <span class="bca-office-card__type">Regional Hub</span>
+                    <span class="bca-office-card__type">2 Practices</span>
                 </div>
                 <div class="bca-office-card__body">
                     <h3 class="bca-office-card__name">Romsey</h3>
@@ -193,18 +193,36 @@ wp_enqueue_style('contact-style');
                             <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                             <span>Buckley House, 29 to 31A, The Hundred, Romsey, SO51 8GD</span>
                         </div>
-                        <div class="bca-office-card__detail">
-                            <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
-                            <a href="tel:02392833300">02392 833 300</a>
+                        <div class="bca-office-card-grp">
+                            <span class="kumar">Kumar Associates</span>
+                            <div class="bca-ofc-de-grp">
+                                <div class="bca-ofc-de">
+                                    <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
+                                    <a href="tel:02392833300">02392 833 300</a>
+                                </div>
+                                <div class="bca-ofc-de">
+                                    <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                    <a href="mailto:info@kumarassociates.com">info@kumarassociates.com</a>
+                                </div>
+                            </div>
                         </div>
-                        <div class="bca-office-card__detail">
-                            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                            <a href="mailto:info@bcaaccountants.com">info@bcaaccountants.com</a>
+                        <div class="bca-office-card-grp">
+                            <span>BC&A Romsey</span>
+                            <div class="bca-ofc-de-grp">
+                                <div class="bca-ofc-de">
+                                    <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
+                                    <a href="tel:01794 511511">01794 511511</a>
+                                </div>
+                                <div class="bca-ofc-de">
+                                    <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                    <a href="mailto:romsey@bcaaccountants.com">romsey@bcaaccountants.com</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="bca-office-card__btns">
                         <a href="/offices/romsey/" class="bca-btn-primary">View Office<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
-                        <a href="https://maps.google.com/?q=Buckley+House+Romsey" target="_blank" rel="noopener" class="bca-office-card__btn">
+                        <a href="https://maps.app.goo.gl/LmbkYvTXGCN7W8NT9" target="_blank" rel="noopener" class="bca-office-card__btn">
                             <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                             Directions
                         </a>
@@ -216,7 +234,6 @@ wp_enqueue_style('contact-style');
             <div class="bca-office-card reveal reveal-delay-3">
                 <div class="bca-office-card__photo">
                     <img src="/wp-content/uploads/2026/03/lydiard_park_and_house.png" alt="Swindon">
-                    <span class="bca-office-card__type">Expansion Site</span>
                 </div>
                 <div class="bca-office-card__body">
                     <h3 class="bca-office-card__name">Swindon</h3>
@@ -227,16 +244,16 @@ wp_enqueue_style('contact-style');
                         </div>
                         <div class="bca-office-card__detail">
                             <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
-                            <a href="tel:02392833300">02392 833 300</a>
+                            <a href="tel:01793739110">01793 739 110</a>
                         </div>
                         <div class="bca-office-card__detail">
                             <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                            <a href="mailto:info@bcaaccountants.com">info@bcaaccountants.com</a>
+                            <a href="mailto:swindon@bcaaccountants.com">swindon@bcaaccountants.com</a>
                         </div>
                     </div>
-                    <div class="bca-office-card__btns">
+                    <div class="bca-office-card__btns" style="display: flex;flex-flow: column;">
                         <a href="/offices/swindon/" class="bca-btn-primary">View Office<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
-                        <a href="https://maps.google.com/?q=Uffcott+Farm+Swindon" target="_blank" rel="noopener" class="bca-office-card__btn">
+                        <a href="https://maps.app.goo.gl/94TAKawC5WxWqZv59" target="_blank" rel="noopener" class="bca-office-card__btn">
                             <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                             Directions
                         </a>

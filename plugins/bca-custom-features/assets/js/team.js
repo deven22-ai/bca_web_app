@@ -12,13 +12,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
             let visible = 0;
             members.forEach(m => {
-            const offices = m.dataset.office.split(',');
-            if (office === 'all' || offices.includes(office)) {
-                m.classList.remove('hidden');
-                visible++;
-            } else {
-                m.classList.add('hidden');
-            }
+                const offices = m.dataset.office.split(',');
+                m.classList.remove('bca-member--portsmouth', 'bca-member--romsey', 'bca-member--kumar', 'bca-member--swindon');
+
+                if (office === 'all' || offices.includes(office)) {
+                    m.classList.remove('hidden');
+                    m.classList.add('bca-member--' + office);
+                    visible++;
+                } else {
+                    m.classList.add('hidden');
+                }
             });
 
             if (countEl) countEl.textContent = visible;

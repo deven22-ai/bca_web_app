@@ -27,6 +27,15 @@
     background-image: url(/wp-content/uploads/2026/03/romsey_market_square.png);
 }
 
+.bca-hero-section.swindon {
+    background-image: url(/wp-content/uploads/2026/03/lydiard_park_and_house.png);
+}
+
+/*.bca-hero-section.swindon .bca-hero__title em { color: var(--tax-relief); }
+.bca-hero-section.swindon .bca-hero__card-head { background: var(--tax-relief); }
+.bca-hero-section.swindon .bca-hero__card-icon { background: #05966917; }
+.bca-hero-section.swindon .bca-hero__card-icon svg { stroke: var(--tax-relief); } */
+
 .bca-hero__overlay { opacity: 0.96; }
 
 .bca-hero__content {
@@ -147,8 +156,26 @@
     margin-top:2px; 
 }
 
+.swindon .bca-why__stat-num span,
+.swindon .bca-heading__eyebrow,
+.swindon .bca-heading__title em,
+.swindon .bca-heading__title span,
+.swindon .bca-heading__link
+{
+    color: var(--tax-relief);
+}
+.bca-why.swindon .bca-why__list li svg { stroke: var(--tax-relief); }
+
+.bca-btn-primary.green {
+    background: var(--tax-relief);
+    color: var(--white);
+    box-shadow: 0 4px 18px rgba(5, 150, 105, 0.3);
+}
+
+.bca-btn-primary.green:hover { background: #047857; }
+
 /* ════════════════════════════════════════
-   SERVICES
+   SERVICES CARDS
    ════════════════════════════════════════ */
 .bca-services {
     padding: 80px 0;
@@ -219,6 +246,10 @@
 .bca-service-card:nth-child(2) .bca-service-card__head::before { background: var(--tax-relief); }
 .bca-service-card:nth-child(3) .bca-service-card__head::before { background: var(--audit); }
 
+.swindon .bca-service-card:nth-child(1) .bca-service-card__head::before { background: var(--tax-relief); }
+.swindon .bca-service-card:nth-child(2) .bca-service-card__head::before { background: var(--bca-secondary); }
+.swindon .bca-service-card:nth-child(3) .bca-service-card__head::before { background: var(--bca-primary); }
+
 .bca-service-card__icon {
     width: 44px; height: 44px;
     border-radius: 8px;
@@ -232,6 +263,13 @@
 .bca-service-card:nth-child(2) .bca-service-card__icon svg { stroke: var(--tax-relief); }
 .bca-service-card:nth-child(3) .bca-service-card__icon { background: rgba(124,58,237,0.08); }
 .bca-service-card:nth-child(3) .bca-service-card__icon svg { stroke: var(--audit); }
+
+.swindon .bca-service-card:nth-child(1) .bca-service-card__icon { background: rgba(5,150,105,0.08); }
+.swindon .bca-service-card:nth-child(1) .bca-service-card__icon svg { stroke: var(--tax-relief); }
+.swindon .bca-service-card:nth-child(2) .bca-service-card__icon { background: rgba(201,168,76,0.1); }
+.swindon .bca-service-card:nth-child(2) .bca-service-card__icon svg { stroke: var(--bca-secondary); }
+.swindon .bca-service-card:nth-child(3) .bca-service-card__icon { background: rgba(26,86,219,0.08); }
+.swindon .bca-service-card:nth-child(3) .bca-service-card__icon svg { stroke: var(--bca-primary); }
 
 .bca-service-card__icon svg { width:21px; height:21px; fill:none; stroke-width:1.7; }
 
@@ -273,6 +311,7 @@
 .bca-service-card:nth-child(1) .bca-service-card__list li svg { stroke: var(--bca-primary); }
 .bca-service-card:nth-child(2) .bca-service-card__list li svg { stroke: var(--tax-relief); }
 .bca-service-card:nth-child(3) .bca-service-card__list li svg { stroke: var(--audit); }
+
 
 /* ════════════════════════════════════════
    CONTACT - SPEAK TO THE TEAM

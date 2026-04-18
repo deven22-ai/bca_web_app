@@ -217,7 +217,6 @@ wp_enqueue_style('community-style');
     </div>
 </section>
 
-
 <?php 
 get_footer();
 ?>

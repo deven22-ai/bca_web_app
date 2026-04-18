@@ -1,6 +1,6 @@
 <?php
 /*
-Template Name: Portsmouth Office
+Template Name: Swindon Office
 Author: Deven Warang
 */
 
@@ -9,19 +9,19 @@ wp_enqueue_style('single-office-style');
 ?>
 
 <!-- HERO SECTION -->
-<div class="bca-hero-section portsmouth">
+<div class="bca-hero-section swindon">
     <div class="bca-hero__overlay"></div>
     <div class="bca-hero container transparent-header">
         <div class="bca-hero__content-grid">
             <div>
                 <div class="bca-hero__eyebrow reveal">
-                    <p><strong><span>Portsmouth Office</span></strong></p>
+                    <p><strong><span>Swindon Office</span></strong></p>
                 </div>
                 <div class="bca-hero__head-wrapper reveal reveal-delay-1">
-                    <h1 class="bca-hero__title">Trusted accountancy support in <em>Portsmouth</em></h1>
+                    <h1 class="bca-hero__title">Specialist accountants at the <em>heart of Wiltshire</em></h1>
                     <p class="bca-hero__text">
-                        Our Portsmouth office provides professional accountancy, tax and advisory services to 
-                        businesses and individuals across Portsmouth and the surrounding area.
+                        Our dedicated team provides specialist public sector accountancy alongside a 
+                        full range of general practice services to businesses and individuals across Wiltshire.
                     </p>
                 </div>
                 <div class="bca-hero__btns reveal reveal-delay-2">
@@ -35,27 +35,27 @@ wp_enqueue_style('single-office-style');
                     <h4>Portsmouth Head Office</h4>
                 </div>
                 <div class="bca-hero__card-body">
-                    <a class="bca-hero__card-item" href="https://maps.app.goo.gl/S1QSrM8HmKFpMKvb8" target="_blank" rel="noopener">
+                    <a class="bca-hero__card-item" href="https://maps.app.goo.gl/94TAKawC5WxWqZv59" target="_blank" rel="noopener">
                         <div class="bca-hero__card-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
                         <div>
                             <div class="bca-hero__card-label">Visit Us</div>
-                            <div class="bca-hero__card-value">24 Landport Terrace, Southsea,Portsmouth, Hampshire, PO1 2RG</div>
+                            <div class="bca-hero__card-value">Unit 1 Uffcott Farm, Uffcott, Swindon,<br>Wiltshire, SN4 9NB</div>
                         </div>
                     </a>
                     <div class="bca-hero__card-divider"></div>
-                    <a href="tel:02392833300" class="bca-hero__card-item">
+                    <a href="tel:01793739110" class="bca-hero__card-item">
                         <div class="bca-hero__card-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg></div>
                         <div>
                             <div class="bca-hero__card-label">Call us</div>
-                            <div class="bca-hero__card-value">02392 833 300</div>
+                            <div class="bca-hero__card-value">01793 739 110</div>
                         </div>
                     </a>
                     <div class="bca-hero__card-divider"></div>
-                    <a href="mailto:info@bcaaccountants.com" class="bca-hero__card-item">
+                    <a href="mailto:swindon@bcaaccountants.com" class="bca-hero__card-item">
                         <div class="bca-hero__card-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div>
                         <div>
                             <div class="bca-hero__card-label">Email Us</div>
-                            <div class="bca-hero__card-value">info@bcaaccountants.com</div>
+                            <div class="bca-hero__card-value">swindon@bcaaccountants.com</div>
                         </div>
                     </a>
                 </div>
@@ -74,7 +74,7 @@ wp_enqueue_style('single-office-style');
                 </span>
                 <span class="bca-hero__bottom-item">
                     <svg viewBox="0 0 16 16"><path d="M13 7.5A5.5 5.5 0 112 7.5 5.5 5.5 0 0113 7.5z"></path><path d="M15 15l-3-3"></path></svg>
-                    No-obligation free quote
+                    Parish & City Council specialists
                 </span>
                 <span class="bca-hero__bottom-item">
                     <svg viewBox="0 0 16 16"><path d="M2 4h12v8a1 1 0 01-1 1H3a1 1 0 01-1-1V4z"></path><path d="M2 4l6 5 6-5"></path></svg>
@@ -82,7 +82,7 @@ wp_enqueue_style('single-office-style');
                 </span>
                 <span class="bca-hero__bottom-item">
                     <svg viewBox="0 0 16 16"><path d="M8 1v6l4 2"></path><circle cx="8" cy="8" r="7"></circle></svg>
-                    Proactive year-round support
+                    Previously DCK Accounting Solutions
                 </span>
             </div>
         </div>
@@ -90,55 +90,39 @@ wp_enqueue_style('single-office-style');
 </div>
 
 <!--- WHY CHOOSE BC&A IN PORTSMOUTH -->
-<section class="bca-why">
+<section class="bca-why swindon">
     <div class="container">
         <div class="bca-why__inner">
             <div class="bca-why__image reveal">
-                <img src="/wp-content/uploads/2026/04/portsmouth_office-e1775852161121.jpg" alt="BC&A Portsmouth Office"/>
+                <img src="/wp-content/uploads/2026/04/ai_upscale.png" alt="BC&A Swindon Office"/>
                 <div class="bca-why__stat">
-                    <div class="bca-why__stat-num">35<span>+</span></div>
-                    <div class="bca-why__stat-label">Years serving<br/>Portsmouth</div>
+                    <div class="bca-why__stat-num">30<span>+</span></div>
+                    <div class="bca-why__stat-label">Years serving in Swindon</div>
                 </div>
             </div>
             <div class="bca-why__content reveal reveal-delay-1">
-                <span class="bca-heading__eyebrow">Why Choose BC&A</span>
-                <h2 class="bca-heading__title">Accountants in Portsmouth with a clear, personal and professional approach</h2>
+                <span class="bca-heading__eyebrow">Why Choose BC&A in Swindon</span>
+                <h2 class="bca-heading__title">Accountants in Swindon with a <em>specialist edge</em></h2>
                 <p>
-                    At BC&A Portsmouth, we provide a full range of accountancy, tax, payroll, and
-                    business advisory services to individuals and organisations across Portsmouth and
-                    south of England.
+                    BC&A Swindon operates under BC&A Accounting Solutions, originally founded by Derek Kemp in the 1990s and 
+                    previously trading as DCK Accounting Solutions. With over three decades of experience serving businesses across Wiltshire, 
+                    our Swindon team combines deep local knowledge with the full resources and expertise of the wider BC&A group.
                 </p>
                 <p>
-                    Our central Payroll Team is based in Portsmouth, alongside our specialist Research
-                    & Development tax team, which supports clients across the UK. Our Portsmouth office supports 
-                    a diverse client base. We work closely with our clients to help them achieve their financial and 
-                    business goals, building long-term relationships based on trust, responsiveness and quality 
-                    service.
-                </p>
-                <!--<p>
-                    At BC&A Chartered Accountants in Portsmouth, we provide comprehensive accountancy, 
-                    tax and advisory services to businesses and individuals across Portsmouth and the 
-                    surrounding area.
+                   Our Swindon office is home to a specialist team dedicated to supporting parish and city councils across the UK.
                 </p>
                 <p>
-                    Our Portsmouth office supports a diverse client base with clear, practical and commercially 
-                    focused advice. We work closely with our clients to help them achieve their financial and 
-                    business goals, building long-term relationships based on trust, responsiveness and quality 
-                    service.
-                </p>-->
-                <p>
-                    We support a wide range of clients, from established businesses and growing companies to 
-                    start-ups and private individuals across Portsmouth, Southsea, Fareham, Havant and the wider 
-                    Hampshire region.
+                    We provide expert services including bookkeeping, consultancy, accounts preparation, and advice on partial VAT exemption, 
+                    with a strong understanding of the regulatory requirements specific to the public sector.
                 </p>
                 <ul class="bca-why__list">
-                    <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Tailored financial guidance backed by strong local understanding</li>
-                    <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Trusted long-term support for businesses and individuals</li>
-                    <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Practical advice delivered in a responsive and approachable way</li>
-                    <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>We understand the unique challenges faced by local businesses</li>
+                    <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Specialist parish & city council accountancy team</li>
+                    <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Full general practice services — tax, payroll, advisory</li>
+                    <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Fixed fees with no hidden charges</li>
+                    <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Part of one of Hampshire's largest independent firms</li>
                 </ul>
                 <div style="display:flex;gap:14px;flex-wrap:wrap;">
-                    <a href="/contact" class="bca-btn-primary">Get in Touch<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
+                    <a href="/contact" class="bca-btn-primary green">Get in Touch<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
                     <a href="/request-quote/" class="bca-btn-outline">Get Free Quote</a>
                 </div>
             </div>
@@ -147,7 +131,7 @@ wp_enqueue_style('single-office-style');
 </section>
  
 <!--- SERVICES --->
-<section class="bca-services" id="services">
+<section class="bca-services swindon" id="services">
     <div class="container">
         <div class="bca-heading-section reveal">
             <div class="bca-heading-container">
@@ -163,49 +147,46 @@ wp_enqueue_style('single-office-style');
         </div>
  
         <div class="bca-services__grid">
-            <!-- Business Services -->
+            <!-- Parish & City Council Accounting -->
             <div class="bca-service-card reveal reveal-delay-1">
                 <div class="bca-service-card__head">
-                    <div class="bca-service-card__icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg></div>
-                    <h3 class="bca-service-card__title">Business Services</h3>
-                    <p class="bca-service-card__desc">Essential support for day-to-day financial operations, reporting and business development.</p>
+                    <div class="bca-service-card__icon"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg></div>
+                    <h3 class="bca-service-card__title">Parish & City Council Accounting</h3>
+                    <p class="bca-service-card__desc">Specialist accountancy and compliance for local councils. Our core specialism at the Swindon office.</p>
                 </div>
                 <ul class="bca-service-card__list">
-                    <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Business accounting and bookkeeping</li>
-                    <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Annual and management accounts</li>
-                    <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Payroll management</li>
-                    <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>VAT support and MTD compliance</li>
-                    <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Business advisory and growth consulting</li>
+                    <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Annual accounts preparation & AGAR</li>
+                    <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Bookkeeping & financial management</li>
+                    <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Partial VAT exemption advice</li>
+                    <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Internal audit & governance reviews</li>
                 </ul>
             </div>
-            <!-- Tax Services -->
+            <!-- Tax & Compliance -->
             <div class="bca-service-card reveal reveal-delay-2">
                 <div class="bca-service-card__head">
                     <div class="bca-service-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 6a4 4 0 00-8 0c0 2.5 2 4.5 2 6.5S9.5 16 7 18h10"></path><line x1="7" y1="11" x2="15" y2="11"></line></svg></div>
-                    <h3 class="bca-service-card__title">Tax Services</h3>
-                    <p class="bca-service-card__desc">Clear guidance on compliance, planning and tax efficiency for companies and individuals.</p>
+                    <h3 class="bca-service-card__title">Tax & Compliance</h3>
+                    <p class="bca-service-card__desc">Clear, practical tax advice for businesses and individuals across Swindon and Wiltshire.</p>
                 </div>
                 <ul class="bca-service-card__list">
-                    <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Personal and corporate tax planning</li>
-                    <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Self-assessment tax returns</li>
-                    <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Tax compliance and reporting</li>
-                    <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Retirement and succession planning</li>
-                    <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Inheritance and long-term tax guidance</li>
+                    <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Corporation tax & personal tax returns</li>
+                    <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Self-assessment support</li>
+                    <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>VAT registration & returns</li>
+                    <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>HMRC correspondence management</li>
                 </ul>
             </div>
-            <!-- Audit & Advisory -->
+            <!-- Business Services & Advisory -->
             <div class="bca-service-card reveal reveal-delay-3">
                 <div class="bca-service-card__head">
-                    <div class="bca-service-card__icon"><svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12h6M9 16h4"/></svg></div>
-                    <h3 class="bca-service-card__title">Audit &amp; Advisory</h3>
-                    <p class="bca-service-card__desc">Professional insight to support performance, confidence and informed decision-making.</p>
+                    <div class="bca-service-card__icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"></path></svg></div>
+                    <h3 class="bca-service-card__title">Business Services & Advisory</h3>
+                    <p class="bca-service-card__desc">Ongoing support for ambitious businesses, from day-to-day bookkeeping to strategic growth advice.</p>
                 </div>
                 <ul class="bca-service-card__list">
-                    <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Financial auditing</li>
-                    <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Business planning and forecasting</li>
-                    <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Accountancy software advice</li>
-                    <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Commercial support and strategic input</li>
-                    <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Reliable proactive client service</li>
+                    <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Management accounts & reporting</li>
+                    <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Payroll processing</li>
+                    <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Company secretarial services</li>
+                    <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Business planning & cashflow</li>
                 </ul>
             </div>
         </div>
@@ -213,16 +194,16 @@ wp_enqueue_style('single-office-style');
 </section>
 
 <!-- MEET THE TEAM -->
-<section class="bca-team">
+<section class="bca-team swindon">
     <div class="container">
         <div class="bca-heading-section left-align reveal">
             <div class="bca-heading-container left-align">
                 <div class="bca-heading__eyebrow">The Portsmouth Team</div>
                 <h2 class="bca-heading__title">Meet the people behind <span>your advice</span></h2>
             </div>
-            <a href="/about-us/our-team?office=portsmouth" class="bca-heading__link">View full Portsmouth team<svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></a>
+            <a href="/about-us/our-team?office=swindon" class="bca-heading__link">View full Swindon team<svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></a>
         </div>
-        <?php echo do_shortcode('[bca_portsmouth_team]') ?>
+        <?php echo do_shortcode('[bca_swindon_team]') ?>
     </div>
 </section>
 
@@ -244,17 +225,17 @@ wp_enqueue_style('single-office-style');
 
         <div class="bca-contact__inner">
             <div class="bca-contact__left reveal reveal-delay-1">
-                <?php echo do_shortcode('[contact-form-7 id="e7e2d8b"]');?>
+                <?php echo do_shortcode('[contact-form-7 id="494b41b"]');?>
             </div>
             <div class="bca-contact__right reveal reveal-delay-2">
                 <div class="bca-details-card">
-                    <div class="bca-details-card__head"><h4>Portsmouth Office Details</h4></div>
+                    <div class="bca-details-card__head"><h4>Swindon Office Details</h4></div>
                     <div class="bca-details-card__body">
                         <div class="bca-details-item">
                             <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                             <div>
                                 <div class="bca-details-item__label">Address</div>
-                                <div class="bca-details-item__value">24 Landport Terrace, Southsea, Portsmouth, PO1 2RG</div>
+                                <div class="bca-details-item__value">Unit 1 Uffcott Farm, Uffcott, Swindon, Wiltshire, SN4 9NB</div>
                             </div>
                         </div>
                         <div class="bca-details-divider"></div>
@@ -262,7 +243,7 @@ wp_enqueue_style('single-office-style');
                             <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
                             <div>
                                 <div class="bca-details-item__label">Phone</div>
-                                <div class="bca-details-item__value"><a href="tel:02392833300">02392 833 300</a></div>
+                                <div class="bca-details-item__value"><a href="tel:01793739110">01793 739 110</a></div>
                             </div>
                         </div>
                         <div class="bca-details-divider"></div>
@@ -270,7 +251,7 @@ wp_enqueue_style('single-office-style');
                             <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                             <div>
                                 <div class="bca-details-item__label">Email</div>
-                                <div class="bca-details-item__value"><a href="mailto:info@bcaaccountants.com">info@bcaaccountants.com</a></div>
+                                <div class="bca-details-item__value"><a href="mailto:swindon@bcaaccountants.com">swindon@bcaaccountants.com</a></div>
                             </div>
                         </div>
                         <div class="bca-details-divider"></div>
@@ -283,7 +264,7 @@ wp_enqueue_style('single-office-style');
                         </div>
                     </div>
                     <div class="bca-details-foot">
-                        <a href="https://maps.google.com/?q=24+Landport+Terrace+Portsmouth" target="_blank" rel="noopener" class="bca-btn-primary">
+                        <a href="https://maps.app.goo.gl/94TAKawC5WxWqZv59" target="_blank" rel="noopener" class="bca-btn-primary">
                             Get Directions<svg width="16" height="16" viewBox="0 0 2048 2048"><path fill="currentColor" d="M1536 256h384v384h-128V475l-456 456l-91-91l456-456h-165zm0 768l128-128v768H0V512h1280l-128 128H128v896h1408z"></path></svg>
                         </a>
                         <a href="/contact/" class="bca-btn-ghost">Contact Us</a>
@@ -294,10 +275,9 @@ wp_enqueue_style('single-office-style');
         <!-- Google Maps -->
         <div class="bca-contact__map-full reveal reveal-delay-3"">
             <div class="bca-map-frame">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2522.1310783962817!2d-1.095745188689895!3d50.79167931624496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48745d9ba62bff7b%3A0x32ab2de9bbab22e0!2s24%20Landport%20Terrace%2C%20Southsea%2C%20Portsmouth%20PO1%202RG!5e0!3m2!1sen!2suk!4v1775492566222!5m2!1sen!2suk" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                
-            </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1044.354384815741!2d-1.820899939546863!3d51.49656803939162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48715cabc1a9bfa5%3A0x55cce48a466d39fe!2sDCK%20Accounting%20Solutions%20Ltd!5e0!3m2!1sen!2suk!4v1776508322005!5m2!1sen!2suk" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </div>
             <div class="bca-map-directions">
-                24 Landport Terrace, Southsea <span>Portsmouth, PO1 2RG</span>
+                Unit 1 Uffcott Farm, Uffcott, Swindon, <span>Wiltshire, SN4 9NB</span>
             </div>
         </div>
     </div>

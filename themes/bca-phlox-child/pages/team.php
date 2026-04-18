@@ -44,7 +44,7 @@ $SelectedOffice = isset($_GET['office']) ? sanitize_text_field($_GET['office']) 
                 <h2 class="bca-heading__title reveal reveal-delay-1">Our BC&A Team</span></h2>
                 <div class="bca-heading__description reveal reveal-delay-1">
                     <p>Say hello to the professionals who make BC&A a trusted partner to 
-                        businesses and individuals.</p>
+                        businesses and individuals across the South of England.</p>
                 </div>
             </div>
         </div>
