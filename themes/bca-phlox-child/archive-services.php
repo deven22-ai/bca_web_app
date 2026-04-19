@@ -26,7 +26,7 @@ get_header();
 </div>
 
 <!-- SERVICES HUB -->
-<section class="bca-types">
+<section class="bca-types" id="servicesHub">
     <div class="container">
         <div class="bca-heading-section reveal">
             <div class="bca-heading-container">
@@ -109,3 +109,14 @@ get_header();
 <?php 
 get_footer(); 
 ?>
+
+<script>
+    let params = new URLSearchParams(document.location.search);
+    if(parseInt(params.get('content')) === 1) {
+        const mainContent = document.getElementById('servicesHub');
+        mainContent.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
+</script>

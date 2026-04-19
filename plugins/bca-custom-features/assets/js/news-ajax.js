@@ -1,5 +1,9 @@
 /* Send request from frontend JS */
 async function loadNews(cat = 'all') {
+
+    const newsContainer = document.getElementById('bca-news-results');
+    newsContainer.classList.add('loading'); // Fade out
+
     const body = new URLSearchParams({
         action : 'bca_get_news',
         nonce  : bcaAjax.nonce,
@@ -14,20 +18,25 @@ async function loadNews(cat = 'all') {
 
     const data = await request.json();
     if(data.success) {
-        const newsContainer = document.getElementById('bca-news-results');
-        newsContainer.innerHTML = data.data;
-        scrollReveal(); // reveal the found news articles
+        newsContainer.innerHTML = data.data; // Swap content while hidden
+        // Small delay then fade in
+        requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+                newsContainer.classList.remove('loading');
+                scrollReveal(); // reveal the found news articles
+            });
+        });
     }
     else alert(data.data);
 }
 
 document.addEventListener('click', async(e) => {
-    const link = e.target.closest('.bca-news-filter-item');
+    const link = e.target.closest('.bca-news__pill');
     if(!link) return;
 
     e.preventDefault();
 
-    document.querySelectorAll('.bca-news-filter-item').forEach(item => {
+    document.querySelectorAll('.bca-news__pill').forEach(item => {
         item.classList.remove('active');
     });
     link.classList.add('active');

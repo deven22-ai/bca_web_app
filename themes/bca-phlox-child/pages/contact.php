@@ -26,8 +26,8 @@ wp_enqueue_style('contact-style');
                     </p>
                 </div>
                 <div class="bca-hero__btns reveal reveal-delay-4">
-                    <a href="#" class="bca-btn-primary">Send us a Message</a>
-                    <a href="#" class="bca-btn-ghost">Find an Office</a>
+                    <a href="#contactForm" class="bca-btn-primary">Send us a Message<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
+                    <a href="#bcaOffices" class="bca-btn-ghost">Find an Office</a>
                 </div>
             </div>
             <div class="bca-hero__card reveal reveal-delay-1">
@@ -86,7 +86,7 @@ wp_enqueue_style('contact-style');
 </div>
 
 <!-- CONTACT FORM 7 -->
-<section class="bca-contact-main">
+<section class="bca-contact-main" id="contactForm">
     <div class="container">
         <div class="bca-contact-main__inner">
             <?php echo do_shortcode('[contact-form-7 id="7c0d793"]') ?>
@@ -135,7 +135,7 @@ wp_enqueue_style('contact-style');
 </section>
 
 <!-- BCA OFFICES -->
-<section class="bca-offices">
+<section class="bca-offices" id="bcaOffices">
     <div class="container">
         <div class="bca-heading-section reveal">
             <div class="bca-heading-container">

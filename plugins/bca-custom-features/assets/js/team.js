@@ -9,22 +9,39 @@ document.addEventListener('DOMContentLoaded', function () {
 
             pills.forEach(p => p.classList.remove('active'));
             pill.classList.add('active');
-
-            let visible = 0;
+            
+            // Fade out all visible cards
             members.forEach(m => {
-                const offices = m.dataset.office.split(',');
-                m.classList.remove('bca-member--portsmouth', 'bca-member--romsey', 'bca-member--kumar', 'bca-member--swindon');
-
-                if (office === 'all' || offices.includes(office)) {
-                    m.classList.remove('hidden');
-                    m.classList.add('bca-member--' + office);
-                    visible++;
-                } else {
-                    m.classList.add('hidden');
-                }
+                if (!m.classList.contains('hidden')) m.classList.add('fade-out');
             });
+            
+            setTimeout(() => {
+                let visible = 0;
 
-            if (countEl) countEl.textContent = visible;
+                members.forEach(m => {
+                    const offices = m.dataset.office.split(',');
+                    m.classList.remove('bca-member--portsmouth', 'bca-member--romsey', 'bca-member--kumar', 'bca-member--swindon');
+
+                    if (office === 'all' || offices.includes(office)) {
+                        m.classList.remove('hidden', 'fade-out');
+                        m.classList.add('bca-member--' + office);
+                        visible++;
+                    } else {
+                        m.classList.add('hidden');
+                        m.classList.remove('fade-out');
+                    }
+                });
+                if (countEl) countEl.textContent = visible;
+                
+                // Stagger fade-in for each visible card
+                const visibleCards = document.querySelectorAll('.bca-member:not(.hidden)');
+                visibleCards.forEach((card, i) => {
+                    card.classList.add('fade-out');
+                    setTimeout(() => {
+                        card.classList.remove('fade-out');
+                    }, 50 * i); // 50ms stagger per card
+                });
+            }, 250);
         });
     });
     

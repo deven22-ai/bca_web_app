@@ -33,9 +33,12 @@ get_header();
 <section style="padding: 70px 0;">
     <div class="container">
         <div class="bca-heading-section">
-            <div class="bca-heading-container">
-                <div class="bca-heading__eyebrow reveal">BC&A News</div>
-                <h2 class="bca-heading__title reveal reveal-delay-1">Latest News & Updates</span></h2>
+            <div class="bca-heading-container reveal">
+                <div class="bca-heading__eyebrow">BC&A News</div>
+                <h2 class="bca-heading__title">Latest News & Updates</span></h2>
+                <div class="bca-heading__description">
+                    <p>The latest tax updates, business advice and company news from BC&A.</p>
+                </div>
             </div>
         </div>
         <?php echo do_shortcode('[bca_news_grid]') ?>

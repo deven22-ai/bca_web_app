@@ -103,7 +103,7 @@ wp_enqueue_style('home-style');
                         sets us apart from general accountancy practices.</p>
                 </div>
             </div>
-            <a href="/services/" class="bca-heading__link">View all services<svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></a>
+            <a href="/services?content=1" class="bca-heading__link">View all services<svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></a>
         </div>
     </div>
 

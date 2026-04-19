@@ -15,6 +15,12 @@ function bca_phlox_child_enqueue_assets() {
         '1.0.0',
         true  // true means it loads in footer, which is correct for JS
     );
+    wp_enqueue_style(
+        'bca-footer',
+        get_stylesheet_directory_uri() . '/pages/css/footer.css',
+        [],
+        '1.0.0'
+    );
     wp_enqueue_script(
         'main-js',
         get_stylesheet_directory_uri() . '/main.js',

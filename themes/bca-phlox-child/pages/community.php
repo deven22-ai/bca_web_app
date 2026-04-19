@@ -202,16 +202,13 @@ wp_enqueue_style('community-style');
     <div class="container">
         <div class="bca-cta__inner reveal">
             <div class="bca-cta__text">
-                <span class="bca-heading__eyebrow white">Work with BC&A</span>
+                <span class="bca-heading__eyebrow">Work with BC&A</span>
                 <h2>Accountants who care about <em>community as much as business</em></h2>
                 <p>BC&A combines commercial expertise with a genuine commitment to the people and organisations around us. Speak to our team to find out how we can support your business, charity or organisation.</p>
             </div>
             <div class="bca-cta__btns">
-                <a href="/contact/" class="bca-btn-primary gold">
-                    Get in Touch
-                    <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-                </a>
-                <a href="/about-us/" class="bca-btn-ghost">About BC&A</a>
+                <a href="/contact/" class="bca-btn-primary">Get in Touch<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
+                <a href="/about-us/" class="bca-btn-outline">About BC&A</a>
             </div>
         </div>
     </div>

@@ -28,7 +28,7 @@ $SelectedOffice = isset($_GET['office']) ? sanitize_text_field($_GET['office']) 
                 </p>
             </div>
             <div class="bca-hero__btns reveal reveal-delay-3">
-                <a href="#teamSection" class="bca-btn-primary">Meet the Team</a>
+                <a href="#teamSection" class="bca-btn-primary">Meet the Team<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
                 <a href="#joinUs" class="bca-btn-ghost">Join Us</a>
             </div>
         </div>
