@@ -30,17 +30,17 @@ wp_enqueue_style('home-style');
                     <span class="bca-hero__service-name">Medical Specialist Accounting</span>
                     <span class="bca-hero__service-arrow"><svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></span>
                 </a>
-                <a href="/services/city-parish-councils/" class="bca-hero__service-item">
+                <a href="/services/accounting-for-parish-city-councils/" class="bca-hero__service-item">
                     <span class="bca-hero__service-dot"></span>
                     <span class="bca-hero__service-name">City &amp; Parish Council Accounts</span>
                     <span class="bca-hero__service-arrow"><svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></span>
                 </a>
-                <a href="/services/rd-tax-credit/" class="bca-hero__service-item">
+                <a href="/services/rd-tax-relief/" class="bca-hero__service-item">
                     <span class="bca-hero__service-dot"></span>
                     <span class="bca-hero__service-name">R&amp;D Tax Credit Claims</span>
                     <span class="bca-hero__service-arrow"><svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></span>
                 </a>
-                <a href="/services/audit/" class="bca-hero__service-item">
+                <a href="/services/audit-services/" class="bca-hero__service-item">
                     <span class="bca-hero__service-dot"></span>
                     <span class="bca-hero__service-name">Audit Services</span>
                     <span class="bca-hero__service-arrow"><svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></span>
@@ -61,7 +61,7 @@ wp_enqueue_style('home-style');
                 </a>
             </div>
             <div class="bca-hero__btns reveal reveal-delay-4">
-                <a href="/request-quote/" class="bca-btn-primary">Get Free Quote</a>
+                <a href="/request-quote/" class="bca-btn-primary">Get Free Quote<?php echo get_arrow_icon(); ?></a>
                 <a href="tel:02392833300" class="bca-btn-ghost">
                     <svg viewBox="0 0 16 16"><path d="M14 10.67v2a1.33 1.33 0 01-1.45 1.33 13.2 13.2 0 01-5.75-2.05 13 13 0 01-4-4 13.2 13.2 0 01-2.05-5.78A1.33 1.33 0 012.07 1h2a1.33 1.33 0 011.33 1.15c.085.64.24 1.27.467 1.87a1.33 1.33 0 01-.3 1.4L4.6 6.4a10.67 10.67 0 004 4l.98-.98a1.33 1.33 0 011.4-.3c.6.228 1.23.382 1.87.467A1.33 1.33 0 0114 10.67z"></path></svg>
                     Call Us Now
@@ -136,7 +136,7 @@ wp_enqueue_style('home-style');
             <div class="bca-specialist-card__cta">Find out more<svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg></div>
         </a>
 
-        <a href="/services/city-parish-councils/" class="bca-specialist-card reveal reveal-delay-3">
+        <a href="/services/accounting-for-parish-city-councils/" class="bca-specialist-card reveal reveal-delay-3">
             <span class="bca-unique-badge">✦ BC&A Specialist</span>
             <div class="bca-specialist-card__icon"><svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21V11h6v10"/></svg></div>
             <span class="bca-specialist-card__pill">Public Sector</span>
@@ -145,7 +145,7 @@ wp_enqueue_style('home-style');
             <div class="bca-specialist-card__cta">Find out more<svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg></div>
         </a>
 
-        <a href="/services/rd-tax-credit/" class="bca-specialist-card reveal reveal-delay-4">
+        <a href="/services/rd-tax-relief/" class="bca-specialist-card reveal reveal-delay-4">
             <span class="bca-unique-badge">✦ BC&A Specialist</span>
             <div class="bca-specialist-card__icon"><svg viewBox="0 0 24 24"><path d="M9 3h6v10l3.5 6a1 1 0 01-.87 1.5H6.37a1 1 0 01-.87-1.5L9 13V3z"/><path d="M6.5 17h11"/></svg></div>
             <span class="bca-specialist-card__pill">Tax Relief</span>
@@ -154,7 +154,7 @@ wp_enqueue_style('home-style');
             <div class="bca-specialist-card__cta">Find out more<svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg></div>
         </a>
 
-        <a href="/services/audit/" class="bca-specialist-card reveal reveal-delay-5">
+        <a href="/services/audit-services/" class="bca-specialist-card reveal reveal-delay-5">
             <span class="bca-unique-badge">✦ BC&A Specialist</span>
             <div class="bca-specialist-card__icon"><svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"/><rect x="9" y="3" width="6" height="4" rx="1"/><path d="M9 12h6M9 16h4"/></svg></div>
             <span class="bca-specialist-card__pill">Compliance</span>
@@ -192,7 +192,7 @@ wp_enqueue_style('home-style');
                     <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Virtual Finance Director services</li>
                     <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>R&amp;D tax relief &amp; mergers</li>
                 </ul>
-                <a href="/services/businesses/" class="bca-btn-primary">Explore Business Services<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
+                <a href="/services/businesses/" class="bca-btn-primary">Explore Business Services<?php echo get_arrow_icon() ?></a>
             </div>
             <div class="bca-audience-card bca-audience-card--individuals reveal reveal-delay-2">
                 <div class="bca-audience-card__icon">
@@ -206,7 +206,7 @@ wp_enqueue_style('home-style');
                     <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Inheritance tax &amp; estate planning</li>
                     <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Specialist wealth advisory</li>
                 </ul>
-                <a href="/services/individuals/" class="bca-btn-primary gold">Explore Individual Services<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
+                <a href="/services/individuals/" class="bca-btn-primary gold">Explore Individual Services<?php echo get_arrow_icon() ?></a>
             </div>
         </div>
     </div>
@@ -225,60 +225,60 @@ wp_enqueue_style('home-style');
     </div>
 
     <div class="bca-expand-card__accordion reveal reveal-delay-1">
-        <article class="accordion-card">
-            <img src="/wp-content/uploads/2026/02/medical.jpg" alt="Medical nurses" />
+        <a href="/sectors/healthcare/" class="accordion-card">
+            <img src="/wp-content/uploads/2026/04/medical.jpg" alt="Medical nurses" />
             <div class="accordion-card__overlay"></div>
             <div class="accordion-content">
-                <h3>Medical</h3>
+                <h3>Healthcare</h3>
                 <p>Financial advice for healthcare professionals.</p>
-                <a href="#">Read More</a>
+                <div class="accordion-card__read-more">Read More</div>
             </div>
-        </article>
-        <article class="accordion-card">
-            <img src="/wp-content/uploads/2026/02/construction.jpg" alt="Construction Mens" />
+        </a>
+        <a href="/sectors/property-and-construction/" class="accordion-card">
+            <img src="/wp-content/uploads/2026/03/property_construction.jpg" alt="Property Construction" />
             <div class="accordion-card__overlay"></div>
             <div class="accordion-content">
                 <h3>Construction</h3>
                 <p>Specialist accountancy support for contractors, developers, and construction businesses at every stage of growth.</p>
-                <a href="#">Read More</a>
+                <div class="accordion-card__read-more">Read More</div>
             </div>
-        </article>
-        <article class="accordion-card">
+        </a>
+        <a href="/sectors/hospitality-tourism-leisure/" class="accordion-card">
             <img src="/wp-content/uploads/2026/02/hospitality.jpg" alt="Hopitality" />
             <div class="accordion-card__overlay"></div>
             <div class="accordion-content">
-                <h3>Hopitality</h3>
+                <h3>Hopitality, Tourism & Leisure</h3>
                 <p>Practical accounting and tax support for restaurants, hotels, cafés, and leisure businesses.</p>
-                <a href="#">Read More</a>
+                <div class="accordion-card__read-more">Read More</div>
             </div>
-        </article>
-        <article class="accordion-card">
+        </a>
+        <a href="/sectors/retail/" class="accordion-card">
             <img src="/wp-content/uploads/2026/02/retail.jpg" alt="Retail" />
             <div class="accordion-card__overlay"></div>
             <div class="accordion-content">
                 <h3>Retail</h3>
                 <p>Strategic financial support for retailers looking to improve cash flow, profitability, and long-term growth.</p>
-                <a href="#">Read More</a>
+                <div class="accordion-card__read-more">Read More</div>
             </div>
-        </article>
-        <article class="accordion-card">
-            <img src="/wp-content/uploads/2026/02/r_and_d.jpg" alt="Construction" />
+        </a>
+        <a href="/sectors/real-estate-landlords/" class="accordion-card">
+            <img src="/wp-content/uploads/2026/03/real_estate_landlord.jpg" alt="Real Estate & Landlords" />
             <div class="accordion-card__overlay"></div>
             <div class="accordion-content">
-                <h3>R & D Tax Relief</h3>
+                <h3>Real Estate & Landlords</h3>
                 <p>Helping innovative businesses identify qualifying activity and maximise valuable R&D tax relief claims.</p>
-                <a href="#">Read More</a>
+                <div class="accordion-card__read-more">Read More</div>
             </div>
-        </article>
-        <article class="accordion-card">
-            <img src="/wp-content/uploads/2026/03/motorsport.jpg" alt="Automobiles" />
+        </a>
+        <a href="/sectors/motorsport/" class="accordion-card">
+            <img src="/wp-content/uploads/2026/03/motorsport.jpg" alt="MotorSports" />
             <div class="accordion-card__overlay"></div>
             <div class="accordion-content">
-                <h3>Automobiles</h3>
+                <h3>Motorsport</h3>
                 <p>Commercial accountancy services designed for dealerships, garages, and automotive businesses.</p>
-                <a href="#">Read More</a>
+                <div class="accordion-card__read-more">Read More</div>
             </div>
-        </article>
+        </a>
     </div>
 </section>
 
@@ -300,7 +300,7 @@ wp_enqueue_style('home-style');
             <div class="bca-why-card reveal">
                 <div class="bca-why-card__num">01</div>
                 <div class="bca-why-card__icon">
-                <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
                 </div>
                 <h4>Long-Term Partnership</h4>
                 <p>We invest in understanding your business deeply. Our clients stay with us for years because we treat their success as our own.</p>
@@ -308,27 +308,21 @@ wp_enqueue_style('home-style');
 
             <div class="bca-why-card reveal reveal-delay-1">
                 <div class="bca-why-card__num">02</div>
-                <div class="bca-why-card__icon">
-                <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-                </div>
+                <div class="bca-why-card__icon"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
                 <h4>Support At Every Stage</h4>
                 <p>Whether you're just starting out or planning your exit, we provide the right advice at the right time — not just at year end.</p>
             </div>
 
             <div class="bca-why-card reveal reveal-delay-2">
                 <div class="bca-why-card__num">03</div>
-                <div class="bca-why-card__icon">
-                <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                </div>
+                <div class="bca-why-card__icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
                 <h4>Proactive Risk &amp; Opportunity</h4>
                 <p>We don't wait for problems to arise. We proactively identify risks and opportunities so you're always one step ahead.</p>
             </div>
 
             <div class="bca-why-card reveal reveal-delay-3">
                 <div class="bca-why-card__num">04</div>
-                <div class="bca-why-card__icon">
-                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-                </div>
+                <div class="bca-why-card__icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg></div>
                 <h4>Expertise That Evolves</h4>
                 <p>Tax law changes. Technology evolves. We stay at the forefront so you benefit from the latest reliefs, tools and strategies.</p>
             </div>
@@ -336,7 +330,7 @@ wp_enqueue_style('home-style');
             <div class="bca-why-card reveal reveal-delay-4">
                 <div class="bca-why-card__num">05</div>
                 <div class="bca-why-card__icon">
-                <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+                    <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
                 </div>
                 <h4>Clear, Practical Advice</h4>
                 <p>We cut through the jargon. You get straightforward, actionable advice you can actually use — delivered by people who care.</p>
@@ -345,7 +339,7 @@ wp_enqueue_style('home-style');
             <div class="bca-why-card reveal reveal-delay-5">
                 <div class="bca-why-card__num">06</div>
                 <div class="bca-why-card__icon">
-                <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 </div>
                 <h4>Local Presence</h4>
                 <p>Four Hampshire offices. You're never far from a real person who knows your name, your business, and your goals.</p>
@@ -397,7 +391,7 @@ wp_enqueue_style('home-style');
                 </p>
             </div>
             <div class="bca-cta__btns">
-                <a href="/our-offices/" class="bca-btn-primary">Find Your Local Office<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
+                <a href="/our-offices/" class="bca-btn-primary">Find Your Local Office<?php echo get_arrow_icon()?></a>
                 <a href="/contact/" class="bca-btn-outline">Contact Us</a>
             </div>
         </div> 

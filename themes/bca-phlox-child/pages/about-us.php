@@ -5,6 +5,7 @@ Author: Deven Warang
 */
 
 get_header();
+
 wp_enqueue_style('about-us-style');
 ?>
 
@@ -309,7 +310,6 @@ wp_enqueue_style('about-us-style');
 </script>
 
 <?php 
-/* CONTACT SHORTCODE */
-echo do_shortcode('[bca_cta_contact]');
+echo do_shortcode('[bca_cta_contact]'); /* CONTACT SHORTCODE */
 get_footer();
 ?>

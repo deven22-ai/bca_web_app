@@ -1,0 +1,230 @@
+ /* ══════════════════════════════════
+    SPECIALIST SERVICES CTA
+   ══════════════════════════════════ */
+.bca-cta-services.light {
+    padding: 80px 0;
+    background: var(--bca-card-bg);
+    border-top: 1px solid var(--bca-dark-border);
+    border-bottom: 1px solid var(--bca-dark-border);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Grid texture */
+.bca-cta-services.light::before {
+    content: '';
+    position: absolute; inset: 0;
+    background-image:
+    linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+    background-size: 56px 56px;
+    pointer-events: none;
+}
+
+/* Radial glow — gold tint for specialist feel */
+.bca-cta-services.light::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 55% 80% at 90% 50%, rgba(201,168,76,0.07) 0%, transparent 65%);
+    pointer-events: none;
+}
+
+.bca-cta-services__inner {
+    position: relative; z-index: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 64px;
+    align-items: center;
+}
+
+/* ── Left: text ── */
+.bca-cta-services__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--bca-font-heading);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--bca-secondary);
+    margin-bottom: 14px;
+}
+.bca-cta-services__eyebrow::before {
+    content: '';
+    width: 20px; height: 2px;
+    background: var(--bca-secondary);
+    flex-shrink: 0;
+}
+
+.bca-cta-services__title {
+    font-size: clamp(24px, 3vw, 36px);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.15;
+    letter-spacing: -0.4px;
+    margin-bottom: 14px;
+}
+.bca-cta-services__title em {
+    font-style: italic;
+    color: var(--bca-secondary);
+}
+.bca-cta-services.light .bca-cta-services__title { color: var(--bca-dark-navy); }
+.bca-cta-services.light .bca-cta-services__title em { color: var(--bca-primary); }
+
+.bca-cta-services__desc {
+    font-size: 15px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 28px;
+    /*max-width: 440px;*/
+}
+.bca-cta-services.light .bca-cta-services__desc { color: var(--muted); }
+
+.bca-cta-services__btns {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+/* ── Right: service items ── */
+.bca-cta-services__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Specialist service row */
+.bca-cta-svc {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    padding: 14px 18px;
+    border-radius: var(--border-radius);
+    transition: all 0.22s ease;
+    text-decoration: none;
+}
+
+.bca-cta-svc--specialist {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.08);
+}
+.bca-cta-svc--specialist:hover {
+    background: rgba(255,255,255,0.08);
+    border-color: rgba(201,168,76,0.3);
+    transform: translateX(4px);
+}
+.bca-cta-services.light .bca-cta-svc--specialist {border: 1px solid var(--bca-dark-border); }
+.bca-cta-services.light .bca-cta-svc--specialist:hover {
+    border-color: var(--bca-primary);
+    box-shadow: 0 6px 24px rgba(13,27,62,0.07);
+}
+
+.bca-cta-svc__left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.bca-cta-svc__icon {
+    width: 34px; height: 34px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.bca-cta-svc--specialist .bca-cta-svc__icon {
+    background: rgba(201,168,76,0.1);
+}
+.bca-cta-svc--specialist .bca-cta-svc__icon svg {
+    width: 16px; height: 16px;
+    stroke: var(--bca-secondary);
+    fill: none; stroke-width: 1.8;
+}
+
+.bca-cta-svc__info { display: flex; flex-direction: column; gap: 2px; }
+
+.bca-cta-svc__badge {
+    font-family: var(--bca-font-heading);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--bca-secondary);
+}
+
+.bca-cta-svc__name {
+    font-family: var(--bca-font-heading);
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.3;
+}
+.bca-cta-services.light .bca-cta-svc__name { color: var(--bca-dark-navy); }
+
+.bca-cta-svc__arrow {
+    width: 14px; height: 14px;
+    stroke: rgba(255,255,255,0.25);
+    fill: none; stroke-width: 2;
+    flex-shrink: 0;
+    transition: stroke 0.22s ease, transform 0.22s ease;
+}
+.bca-cta-svc:hover .bca-cta-svc__arrow {
+    stroke: rgba(255,255,255,0.7);
+    transform: translateX(3px);
+}
+
+/* Core service row — different styling */
+.bca-cta-svc--core {
+    background: rgba(26,86,219,0.1);
+    border: 1px solid rgba(26,86,219,0.2);
+    border-left: 3px solid var(--bca-primary);
+    margin-top: 4px;
+}
+.bca-cta-svc--core:hover {
+    background: rgba(26,86,219,0.16);
+    border-color: rgba(26,86,219,0.35);
+    border-left-color: var(--bca-primary);
+    transform: translateX(4px);
+}
+.bca-cta-services.light .bca-cta-svc--core {
+    background: rgba(26,86,219,0.04);
+    border: 1px solid rgba(26,86,219,0.15);
+    border-left: 3px solid var(--bca-primary);
+}
+.bca-cta-services.light .bca-cta-svc--core:hover {
+    background: rgba(26,86,219,0.07);
+    border-color: rgba(26,86,219,0.25);
+    border-left-color: var(--bca-primary);
+    box-shadow: 0 6px 24px rgba(13,27,62,0.07);
+}
+
+.bca-cta-svc--core .bca-cta-svc__icon {
+    background: rgba(26,86,219,0.15);
+}
+.bca-cta-svc--core .bca-cta-svc__icon svg {
+    width: 16px; height: 16px;
+    stroke: var(--bca-primary);
+    fill: none; stroke-width: 1.8;
+}
+
+.bca-cta-svc--core .bca-cta-svc__badge { color: rgba(255,255,255,0.35); }
+.bca-cta-svc--core .bca-cta-svc__name { color: var(--white);font-size: 14px; }
+.bca-cta-services.light .bca-cta-svc--core .bca-cta-svc__badge { color: var(--muted); }
+.bca-cta-services.light .bca-cta-svc--core .bca-cta-svc__name { color: var(--bca-dark-navy); }
+
+
+
+/* ══════════════════════════════════
+    RESPONSIVE
+══════════════════════════════════ */
+@media (max-width: 1024px) {
+    .bca-cta-services__inner { grid-template-columns: 1fr; gap: 40px; }
+}
+@media (max-width: 640px) {
+    .bca-cta-services__inner { padding: 0 20px; }
+    .bca-cta-services__btns { flex-direction: column; }
+    .bca-cta-svc__icon { display: none; }
+}

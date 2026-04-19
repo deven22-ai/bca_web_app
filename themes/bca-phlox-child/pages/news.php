@@ -8,6 +8,8 @@ get_header();
 ?>
 <style>
     .bca-hero-section { background-image: url('/wp-content/uploads/2026/03/news.jpg'); }
+    .bca-cta-services.light { border-bottom: none; }
+    .bca-cta.contact { background: var(--white); }
 </style>
 
 <!-- HERO SECTION -->
@@ -47,8 +49,8 @@ get_header();
 
 
 <?php 
-/* CTA (CONTACT US) */
-echo do_shortcode('[bca_cta_contact]'); 
+echo do_shortcode('[bca_cta_services]');  /* CTA SERVICES    */
+echo do_shortcode('[bca_cta_contact]'); /* CTA (CONTACT US) */
 
 get_footer();
 ?>

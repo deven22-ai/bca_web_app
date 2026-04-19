@@ -6,6 +6,14 @@ Text Domain: bca-phlox-child
 Author: Deven Warang
 */
 
+@font-face {
+  font-family: 'BCA Playfair Display';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url('https://fonts.gstatic.com/s/playfairdisplay/v40/nuFkD-vYSZviVYUb_rj3ij__anPXDTnogkk7.woff2') format('woff2');
+}
+
 :root {
   --bca-primary: #1A5AFF;
   --bca-secondary: #E8A020;
@@ -63,7 +71,6 @@ h2 {
   border-radius: var(--border-radius);
   color: var(--white);
   margin: 0;
-  transition: transform var(--transition);
   transition: background var(--transition), transform var(--transition);
   gap: 7px;
   font-size: 13px;

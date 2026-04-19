@@ -1,9 +1,4 @@
 <?php
-
-/*
- * Description: Custom shortcode to display team members
- */
-
 if (!defined('ABSPATH')) {
     exit;
 }

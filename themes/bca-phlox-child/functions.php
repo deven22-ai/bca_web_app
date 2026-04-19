@@ -1,5 +1,12 @@
 <?php 
 
+// Shortcodes - Load the files, only once
+require_once get_stylesheet_directory() . '/shortcodes/shortcode-cta.php';
+require_once get_stylesheet_directory() . '/shortcodes/shortcode-news.php';
+require_once get_stylesheet_directory() . '/shortcodes/shortcode-sector.php';
+require_once get_stylesheet_directory() . '/shortcodes/shortcode-team.php';
+require_once get_stylesheet_directory() . '/shortcodes/includes/ajax-handlers.php';  // AJAX handlers
+
 /* Loads parent theme CSS first, and then loading the child theme CSS after it */
 function bca_phlox_child_enqueue_assets() {
     wp_enqueue_style(
@@ -135,18 +142,65 @@ function bca_load_service_category_template($template) {
     return $template;
 }
 
-/* Function calls */
-add_filter('query_vars', 'bca_query_vars');
-add_filter('show_admin_bar', '__return_false'); // Disable admin bar on the front-end
-add_action('init', 'bca_services_rewrite_rules');
-add_filter('template_include', 'bca_load_service_category_template');
-
-add_action('wp_enqueue_scripts', 'bca_phlox_child_enqueue_assets');
-add_action( 'wp', 'bca_remove_titlebar_on_sector_archive' );
-add_action( 'wp', 'bca_remove_phlox_sliders_on_service_category_routes' );
+function get_arrow_icon() {
+    return '<svg viewBox="0 0 16 16">
+        <path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path>
+    </svg>';
+}
 
 
-/* WP ADMIN UI - Office Terms */
+/* ------------------------- SHORTCODE FILES LOAD ----------------------- */
+
+function register_shortcode_assets() {
+    wp_register_style(
+        'team-style',
+        get_stylesheet_directory_uri() . '/shortcodes/css/team.css',
+        array('auxin-child'),
+        '1.0.0'
+    );
+    wp_register_script(
+        'team-script',
+        get_stylesheet_directory_uri() . '/shortcodes/js/team.js',
+        array(),
+        '1.0.0',
+        true
+    );
+    wp_register_style(
+        'news-style',
+        get_stylesheet_directory_uri() . '/shortcodes/css/news.css',
+        array('auxin-child'),
+        '1.0.0'
+    );
+
+    /* Registering JS file for AJAX calls */
+    wp_register_script(
+        'news-ajax', 
+        get_stylesheet_directory_uri() . '/shortcodes/js/news-ajax.js',
+        [],
+        '1.0',
+        true
+    );
+    wp_localize_script('news-ajax', 'bcaAjax', [
+        'url'   => admin_url('admin-ajax.php'),
+        'nonce' => wp_create_nonce('bca_news_nonce')
+    ]); 
+
+    wp_register_style(
+        'sector-style',
+        get_stylesheet_directory_uri() . '/shortcodes/css/sector.css',
+        array('auxin-child'),
+        '1.0.0'
+    );
+    wp_register_style(
+        'cta-style',
+        get_stylesheet_directory_uri() . '/shortcodes/css/cta.css',
+        array('auxin-child'),
+        '1.0.0'
+    );
+}
+
+
+/* ------------------------- WP ADMIN UI - Office Terms ----------------------- */
 add_filter('manage_edit-office_columns', function($columns) {
     $new = [];
 
@@ -170,4 +224,16 @@ add_action('pre_get_terms', function($query) {
         $query->query_vars['order'] = 'ASC';
     }
 });
+
+
+/* ---------------------------- MAIN BLOCK ------------------------------------- */
+add_filter('query_vars', 'bca_query_vars');
+add_filter('show_admin_bar', '__return_false'); // Disable admin bar on the front-end
+add_action('init', 'bca_services_rewrite_rules');
+add_filter('template_include', 'bca_load_service_category_template');
+
+add_action('wp_enqueue_scripts', 'register_shortcode_assets');
+add_action('wp_enqueue_scripts', 'bca_phlox_child_enqueue_assets');
+add_action( 'wp', 'bca_remove_titlebar_on_sector_archive' );
+add_action( 'wp', 'bca_remove_phlox_sliders_on_service_category_routes' );
 ?>

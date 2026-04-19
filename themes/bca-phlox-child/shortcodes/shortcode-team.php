@@ -1,9 +1,4 @@
 <?php
-
-/*
- * Description: Custom shortcode to display team members
- */
-
 if (!defined('ABSPATH')) {
     exit;
 }
@@ -26,7 +21,7 @@ function team_grid_shortcode() {
         'order'          => 'ASC',
     ]);
     
-    return generateTeam($offTerm, $query);
+    return bca_render_team_grid($offTerm, $query);
 }
 
 function portsmouthTeam() {
@@ -45,7 +40,7 @@ function portsmouthTeam() {
         ],
     ]);
 
-    return generateTeam(null, $query);
+    return bca_render_team_grid(null, $query);
 }
 
 function romseyTeam() {
@@ -64,7 +59,7 @@ function romseyTeam() {
         ],
     ]);
 
-    return generateTeam(null, $query);
+    return bca_render_team_grid(null, $query);
 }
 
 function kumarTeam() {
@@ -83,7 +78,7 @@ function kumarTeam() {
         ],
     ]);
 
-    return generateTeam(null, $query, 'kumar');
+    return bca_render_team_grid(null, $query, 'kumar');
 }
 
 function swindonTeam() {
@@ -102,14 +97,18 @@ function swindonTeam() {
         ],
     ]);
 
-    return generateTeam(null, $query, 'swindon');
+    return bca_render_team_grid(null, $query, 'swindon');
 }
 
-function generateTeam($offTerm, $query, $team='') {
+function bca_render_team_grid($offTerm, $query, $team='') {
     /* Import style and scripts */
     wp_enqueue_style('team-style');
     wp_enqueue_script('team-script');
     
+    // pass the $office variable
+    $selectedOffice = isset($_GET['office']) ? sanitize_text_field($_GET['office']) : '';
+    wp_localize_script('team-script', 'selectedOffice', array( 'office' => $selectedOffice ));
+
     $isFullTeam = $offTerm != null && !empty($offTerm) && count($offTerm) > 1;
 
     ob_start(); 

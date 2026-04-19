@@ -325,6 +325,6 @@ wp_enqueue_style('contact-style');
 
 <?php 
 /* EXPLORE SECTORS */
-echo do_shortcode('[bca_cta_sector]');
+echo do_shortcode('[bca_cta_services]');
 get_footer();
 ?>

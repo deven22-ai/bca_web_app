@@ -23,6 +23,8 @@
     padding: 15px 32px;
 }
 
+.bca-cta-services.light { background: var(--white); border-bottom: none; }
+
 /* ════════════════════════════════════════
    WHO ARE WE
    ════════════════════════════════════════ */
@@ -127,6 +129,7 @@
 .bca-story {
     padding: 80px 0;
     background: var(--bca-card-bg);
+    border-bottom: 1px solid var(--bca-dark-border);
 }
 
 .bca-timeline {
@@ -398,6 +401,7 @@
 .bca-senior {
     padding: 80px 0;
     background: var(--bca-card-bg);
+    border-top: 1px solid var(--bca-dark-border);
 }
 
 

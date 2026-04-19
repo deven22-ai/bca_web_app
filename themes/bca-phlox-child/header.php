@@ -6,7 +6,10 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
+    <?php 
+    wp_body_open(); 
+    $arrow = '<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg>';
+?>
 
 <div class="bca-nav-backdrop" id="nav-backdrop"></div>
 
@@ -37,7 +40,6 @@
         </div>
     </div>
 </div>
-
 
 <!-------------------------------
     MAIN HEADER
@@ -193,6 +195,24 @@
         </div>
     </div>
 </header>
+
+<!-------------------------------
+    SEARCH OVERLAY
+   ------------------------------>
+<div class="bca-search-overlay" id="search-overlay" role="dialog" aria-label="Search">
+    <div class="bca-search-overlay__inner">
+        <span class="bca-search-overlay__label">Search BC&A</span>
+        <div class="bca-search-overlay__input-wrap">
+            <svg class="bca-search-overlay__icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="search" class="bca-search-overlay__input" id="search-input" placeholder="Search services, sectors, news…" autocomplete="off"/>
+            <button class="bca-search-overlay__close" id="search-close">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+                Close
+            </button>
+        </div>
+        <p class="bca-search-overlay__hint">Press Esc to close</p>
+    </div>
+</div>
 
 
 <!-------------------------------
