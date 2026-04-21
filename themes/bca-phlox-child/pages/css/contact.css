@@ -179,3 +179,7 @@
     .bca-contact-main__inner { grid-template-columns: 1fr; }
     .bca-contact-sidebar { position: static; }
 }
+
+@media (max-width: 767px) {
+    .bca-contact-main { padding: 50px 0 };
+}

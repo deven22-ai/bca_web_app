@@ -121,9 +121,8 @@ h2 {
 }
 
 .bca-btn-ghost {
-  
   display: inline-flex;
-  align-items: center;
+  align-items: center; justify-content: center;
   gap: 7px;
   font-size: 13px;
   font-weight: 600;
@@ -385,16 +384,6 @@ h2 {
     margin-bottom: 0;
 }
 
-/* Add Uniform box-shadow */
-.drop-shadow {
-  box-shadow: var(--box-shadow);
-}
-
-/* This is for that annoying second scrollbar */
-.aux-full-width #inner-body {
-	overflow: hidden;
-}
-
 
 /*=========================
   BCA HERO SECTION
@@ -543,7 +532,7 @@ h2 {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 14px;
+  font-size: 13px;
   color: rgba(255, 255, 255, 0.5);
   font-family: 'Outfit', sans-serif;
   font-weight: 500;
@@ -986,12 +975,14 @@ a.bca-hero__card-item:hover .bca-hero__card-value { color: var(--bca-secondary);
 { margin: 0; }
 
 .bca-field label {
-  font-size: 14px;
-  font-weight: 800;
+  font-size: 13px;
+  font-weight: 600;
   margin-bottom: 6px;
   color: var(--text);
   letter-spacing: 0.3px;
 }
+
+.bca-field label span { color: var(--bca-primary);margin-left: 2px; }
 
 .bca-field input, .bca-field select, .bca-field textarea {
   padding: 11px 14px;
@@ -1037,6 +1028,54 @@ a.bca-hero__card-item:hover .bca-hero__card-value { color: var(--bca-secondary);
 }
 
 form .bca-form-submit input[type=submit] { font-size: 12px; }
+
+.bca-field .chkbox-grid .wpcf7-checkbox {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.bca-field .chkbox-grid .wpcf7-list-item {
+  margin: 0;
+}
+
+label:has(> input[type="checkbox"]) {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 1px solid var(--bca-dark-border);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+label:has(> input[type="checkbox"]):hover {
+  border-color: #b0c4f5;
+  background: rgba(26, 86, 219, 0.03);
+}
+
+label > input[type="checkbox"] {
+  width: 16px !important;
+  height: 16px !important;
+  accent-color: var(--bca-primary);
+  flex-shrink: 0;
+  cursor: pointer;
+  margin: 0;
+  padding: 0;
+  box-shadow: none;
+}
+
+label > input[type="checkbox"]:checked {
+  background: var(--bca-primary) !important;
+  border: none !important;
+}
+
+label > input[type="checkbox"] + span {
+  font-size: 13px !important;
+  color: var(--text) !important;
+  line-height: 1.3;
+}
 
 /*════════════════════════════════════════
   BCA OFFICES GRID
@@ -1396,8 +1435,9 @@ form .bca-form-submit input[type=submit] { font-size: 12px; }
 
   .bca-sectors-heading-section { padding: 50px 15px; }
   .bca-sectors-heading-title { margin: 18px 0; }
-
   .bca-offices__grid { grid-template-columns: 1fr; }
+  .bca-form-row { grid-template-columns: 1fr; }
+  .bca-field .chkbox-grid .wpcf7-checkbox { grid-template-columns: 1fr; }
 
   .news-search-bar .wp-block-search__input {
     height: 52px;
