@@ -89,7 +89,7 @@ wp_enqueue_style('single-office-style');
     </div>
 </div>
 
-<!--- WHY CHOOSE BC&A IN PORTSMOUTH -->
+<!--- WHY CHOOSE BC&A IN SWINDON -->
 <section class="bca-why swindon">
     <div class="container">
         <div class="bca-why__inner">
@@ -136,10 +136,10 @@ wp_enqueue_style('single-office-style');
         <div class="bca-heading-section reveal">
             <div class="bca-heading-container">
                 <div class="bca-heading__eyebrow">What We Offer</div>
-                <h2 class="bca-heading__title">Our accounting services <span>in Portsmouth</span></h2>
+                <h2 class="bca-heading__title">Our accounting services <span>in Swindon</span></h2>
                 <div class="bca-heading__description">
                     <p>
-                        As a leading firm of chartered accountants in Portsmouth, we provide a full range of 
+                        As a leading firm of chartered accountants in Swindon, we provide a full range of 
                         services designed to support businesses and individuals at every stage.
                     </p>
                 </div>
@@ -198,7 +198,7 @@ wp_enqueue_style('single-office-style');
     <div class="container">
         <div class="bca-heading-section left-align reveal">
             <div class="bca-heading-container left-align">
-                <div class="bca-heading__eyebrow">The Portsmouth Team</div>
+                <div class="bca-heading__eyebrow">The Swindon Team</div>
                 <h2 class="bca-heading__title">Meet the people behind <span>your advice</span></h2>
             </div>
             <a href="/about-us/our-team?office=swindon" class="bca-heading__link">View full Swindon team<svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"></path></svg></a>
@@ -213,7 +213,7 @@ wp_enqueue_style('single-office-style');
         <div class="bca-heading-section reveal">
             <div class="bca-heading-container">
                 <div class="bca-heading__eyebrow">Speak To The Team</div>
-                <h2 class="bca-heading__title">Get in touch with our Portsmouth office</h2>
+                <h2 class="bca-heading__title">Get in touch with our Swindon office</h2>
                 <div class="bca-heading__description">
                     <p>
                         Send us your enquiry and the most relevant member of the team will get back to you. 
@@ -289,9 +289,9 @@ wp_enqueue_style('single-office-style');
         <div class="bca-cta-var2__inner reveal">
             <div class="bca-cta-var2__text">
                 <span class="bca-heading__eyebrow">Other Offices</span>
-                <h2>Also serving <em>Romsey &amp; Swindon</em></h2>
+                <h2>Also serving <em>Portsmouth &amp; Romsey</em></h2>
                 <p>
-                    BC&A operates three offices across the South of England. If Romsey or Swindon is 
+                    BC&A operates three offices across the South of England. If Portsmouth or Romsey is 
                     more convenient for you, our teams there offer the same high standard of service 
                     and expertise.
                 </p>

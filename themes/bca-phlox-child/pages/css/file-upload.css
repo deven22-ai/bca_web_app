@@ -193,25 +193,39 @@
 .bca-file-item__remove:hover { background: #fee2e2; border-color: #fca5a5; color: #dc2626; }
 .bca-file-item__remove svg { width:12px; height:12px; stroke:currentColor; fill:none; stroke-width:2.5; }
 
-/* Submit row */
-.bca-upload-submit__btn {
-    display: inline-flex; 
-    align-items: center; 
-    gap: 8px;
-    font-family: 'Outfit', sans-serif; 
-    font-size: 14px; 
-    font-weight: 600;
-    padding: 13px 28px;
-    border: none;
-    background: var(--bca-primary); 
-    color: var(--white); 
-    cursor: pointer;
-    box-shadow: 0 4px 18px rgba(26,86,219,0.3);
-    transition: all var(--transition);
+/* Submit Button Spinner (hidden by default) */
+.bca-upload-submit__spinner {
+    display: none;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
 }
-.bca-upload-submit__btn:hover { /*background: var(--bca-secondary);*/ transform: translateY(-2px); }
-.bca-upload-submit__btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
-.bca-upload-submit__btn svg { width:14px; height:14px; stroke:currentColor; fill:none; stroke-width:2.5; }
+.bca-upload-submit__spinner svg {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    animation: bca-spin 0.7s linear infinite;
+}
+
+@keyframes bca-spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Loading state */
+.bca-btn-primary.is-loading {
+    pointer-events: none;
+    opacity: 0.85;
+    cursor: wait;
+}
+
+.bca-btn-primary.is-loading .bca-upload-submit__spinner {
+    display: inline-flex;
+}
+
+.bca-btn-primary.is-loading .bca-upload-submit__arrow {
+    display: none;
+}
+
 
 
 /* Upload Sidebar */
@@ -417,11 +431,10 @@
     border-radius: var(--border-radius);
     padding: 18px 20px;
     margin: 32px 32px 0px;
-    margin-bottom: 24px;
     animation: bca-alert-slide-in 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.bca-upload-alert.is-visible { display: flex; }
+.bca-upload-alert.is-visible { display: flex;background: var(--bca-card-bg); }
 
 @keyframes bca-alert-slide-in {
     from { opacity: 0; transform: translateY(-8px); }
@@ -449,16 +462,17 @@
 
 .bca-upload-alert__title {
     font-family: var(--bca-font-heading);
-    font-size: 14px;
-    font-weight: 700;
+    font-size: 15px;
+    font-weight: 600;
     color: var(--bca-dark-navy);
     margin-bottom: 4px;
     letter-spacing: -0.1px;
 }
 
 .bca-upload-alert__message {
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.6;
+    margin-bottom: 2px;
     color: var(--muted);
     word-wrap: break-word;
 }

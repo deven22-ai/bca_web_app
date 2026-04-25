@@ -82,9 +82,16 @@ h2 {
   cursor: pointer;
 }
 
-.bca-btn-primary:hover {
+.bca-btn-primary:not(:disabled):hover {
   color: white;
   background-image: linear-gradient(115deg, #0533a7 0%, #082f93 100%);
+}
+
+.bca-btn-primary:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none !important;
+  box-shadow: none;
 }
 
 .bca-btn-primary.gold {
@@ -161,7 +168,7 @@ h2 {
   transition: transform var(--transition);
 }
 
-.bca-btn-primary:hover svg {
+.bca-btn-primary:not(:disabled):hover svg {
   transform: translateX(4px);
 }
 

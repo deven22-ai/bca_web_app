@@ -57,7 +57,10 @@ function resetForm() {
     uploadFormWrp.style.display = 'block';
     uploadSuccess.classList.remove('is-visible');
     submitBtn.disabled = true;
-    submitBtn.innerHTML = 'Send Files to BC&A <svg viewBox="0 0 16 16" width="14" height="14"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+    submitBtn.classList.remove('is-loading');
+     submitBtnTxt.textContent = 'Send Files to BC&A';
+    //document.querySelector('.bca-upload-submit__text').innerHTML = "Send Files to BC&A";
+    //submitBtn.innerHTML = 'Send Files to BC&A <svg viewBox="0 0 16 16" width="14" height="14"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 }
 
 function showUploadError(message) {
@@ -82,30 +85,38 @@ async function ajaxFileUpload() {
         formData.append('files[]', file, file.name);
     }
    
-    const request = await fetch(bcaAjax.url, {
-        method : 'POST',
-        body: formData
-    });
-    const data = await request.json();
-    if(data.success) {
-        uploadFormWrp.style.display = 'none';
-        uploadSuccess.classList.add('is-visible');   
-        uploadSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    } else {
-        console.log(data);
-        const msg = data.data || 'An unknown error occurred. Please try again.';
-        showUploadError(msg);
+    try {
+        const request = await fetch(bcaAjax.url, {
+            method : 'POST',
+            body: formData
+        });
+        const data = await request.json();
+        console.log(data.success);
+        if(data.success) {
+            uploadFormWrp.style.display = 'none';
+            uploadSuccess.classList.add('is-visible');   
+            uploadSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        } else {
+            const msg = data.data || 'An unknown error occurred. Please try again.';
+            showUploadError(msg);
+            resetForm();
+        }
+    }
+    catch (err) {
+        showUploadError('Unable to reach the server. Please check your connection and try again.');
+        resetForm();
     }
 }
 
 /* MAIN */
-let dropzone, fileInput, fileList, submitBtn, uploadForm, uploadFormWrp, uploadSuccess, officeInput;
+let dropzone, fileInput, fileList, submitBtn, submitBtnTxt, uploadForm, uploadFormWrp, uploadSuccess, officeInput;
 
 document.addEventListener('DOMContentLoaded', () => {
     dropzone      = document.getElementById('dropzone');
     fileInput     = document.getElementById('fileInput');
     fileList      = document.getElementById('fileList');
     submitBtn     = document.getElementById('submitBtn');
+    submitBtnTxt  = submitBtn.querySelector('.bca-upload-submit__text');
     uploadForm    = document.getElementById('uploadForm');
     uploadFormWrp = document.getElementById('uploadFormWrap');
     uploadSuccess = document.getElementById('uploadSuccess');
@@ -128,8 +139,10 @@ document.addEventListener('DOMContentLoaded', () => {
     uploadForm.addEventListener('submit', function(e) {
         e.preventDefault();
         if (submitBtn.disabled) return;
-        submitBtn.textContent = 'Uploading…';
-        submitBtn.disabled = true;
+
+        submitBtn.classList.add('is-loading');
+        submitBtnTxt.textContent = 'Uploading…';
+
         setTimeout(ajaxFileUpload, 500);
     });
 });

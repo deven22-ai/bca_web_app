@@ -1,4 +1,7 @@
 <?php
+
+use const Avifinfo\UNDEFINED;
+
 add_action('wp_ajax_bca_get_news', 'bca_get_news_handler');
 add_action('wp_ajax_nopriv_bca_get_news', 'bca_get_news_handler'); // for logged-out users
 
@@ -38,11 +41,25 @@ function bca_get_news_handler() {
 function bca_file_upload() {
     check_ajax_referer('bca_file_upload_nonce', 'nonce');
     
-    $maxFiles = 5;
-    $maxSize  = 5 * 1024 * 1024; // 5MB
-    $office = $_POST['office'] ?? null;
-    $files  = $_FILES['files'] ?? null;
-    $count =  count($files['name']);
+    $maxFiles   = 5;
+    $maxSize    = 10 * 1024 * 1024; // 5MB
+    $office     = $_POST['office'] ?? null;
+    $files      = $_FILES['files'] ?? null;
+    $count      = count($files['name']);
+    $filesTxt   = "\n";
+    
+    $officeLocs = [
+        'portsmouth' => 'BCA Portsmouth',
+        'romsey'     => 'BCA Romsey',
+        'swindon'    => 'BCA Swindon',
+        'kumar'      => 'Kumar Associates'
+    ];
+    $officeEmail = [
+        'portsmouth' => 'info@bcaaccountants.com',
+        'romsey'     => 'romsey@bcaaccountants.com',
+        'swindon'    => 'swindon@bcaaccountants.com',
+        'kumar'      => 'Kumar Associates'
+    ];
     $allowedMimeTypes = [
         'application/pdf',
         'image/jpeg',
@@ -50,18 +67,19 @@ function bca_file_upload() {
         'image/jpg'
     ];
     
-    if($office === null) wp_send_json_error('Office Location not found. Please select one of the offices from the dropdown');
+    if($office === null || !isset($officeLocs[$office])) wp_send_json_error('Office Location not found. Please select one of the offices from the dropdown');
     if($count > $maxFiles) wp_send_json_error('Max 5 files allowed. Please upload not more than 5 files at the same time');
 
     /* Do Files validation before initiating Sharepoint process */
     if (!(is_array($files) && isset($files['name']))) wp_send_json_error('No files were received.');
     for ($i = 0; $i < $count; $i++) {
 
-        $tmpName = $files['tmp_name'][$i];
-        $name    = $files['name'][$i];
-        $size    = $files['size'][$i];
+        $tmpName  = $files['tmp_name'][$i];
+        $name     = $files['name'][$i];
+        $size     = $files['size'][$i];
+        $filesTxt = $filesTxt . ($i + 1) . ". " . $name . "\n";
 
-        if ($size > $maxSize) wp_send_json_error("Selected File '" . $name . "' exceed the maximum limit of 5MB");
+        if ($size > $maxSize) wp_send_json_error("Selected File '" . $name . "' exceeds the maximum file size limit of 5MB");
 
         // MIME validation
       /*  $mime = mime_content_type($tmpName);
@@ -69,9 +87,21 @@ function bca_file_upload() {
     }
     
     // Process Upload Finally
-    initiate_sharepoint($office, $files);
+    $response = initiate_sharepoint($officeLocs[$office], $files);
+    
+    if (is_wp_error($response)) wp_send_json_error([ 'message' => $response->get_error_message() ]);
 
-    // TODO: Send Email to the respective office
+    // Send Email to the respective office
+    error_log(($count == 1) . "??");
+    $subject = 'New Document Uploaded';
+    $message = "Hello Team,\n" . 
+                (($count == 1) ? "A new file" : $count . " files ") . " has been uploaded via the BC&A Website.\n" .
+                "Office: {$officeLocs[$office]} \n" .
+                "File(s): {$filesTxt} \n" .
+                "Uploaded At: " . current_time('Y-m-d H:i:s');
+    $headers = ['Content-Type: text/plain; charset=UTF-8'];
+
+    wp_mail("devenwarang07@gmail.com", $subject, $message, $headers);
 
     wp_send_json_success("File(s) uploaded successfully");
 }

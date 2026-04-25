@@ -6,9 +6,7 @@ function initiate_sharepoint($folderName, $files) {
     $driveId = get_drive_id($accessToken);
     if(!$driveId) return new WP_Error('Upload Failed', 'Not able to fetch the Drive ID');
 
-    if(checkFolderExists($accessToken, $driveId, $folderName)) {
-        error_log('Folder Exists!');
-        
+    if(checkFolderExists($accessToken, $driveId, $folderName)) {        
         for ($i = 0; $i < count($files['name']); $i++) {
             $file = [ 
                 'name' => sanitize_file_name($files['name'][$i]), 
@@ -18,13 +16,14 @@ function initiate_sharepoint($folderName, $files) {
 
             $response = upload_file_to_sharepoint($accessToken, $driveId, $folderName, $file);
             if (is_wp_error($response)) return new WP_Error('Upload Failed', $response->get_error_message());
-            else error_log(wp_remote_retrieve_body($response));
+            else {
+                $res = wp_remote_retrieve_body($response); 
+                $json = json_decode($res, true);
+                error_log($json['name'] . " uploaded on " . $json['createdDateTime']);
+            }
         }
 
-        return [
-            "success" => true,
-            "message" => "Upload process completed",
-        ];
+        return true;
     } else return new WP_Error('Upload Failed', 'Folder doesnt exists.');
 }
 

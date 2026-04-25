@@ -20,7 +20,7 @@ wp_enqueue_style('home-style');
                 <h1 class="bca-hero__title">Big Firm Expertise.<br>Personal Service.<br><em>Real Results.</em></h1>
                 <p class="bca-hero__text">
                     One of the South of England's largest independent chartered accountancy firms,
-                    supporting businesses, individuals and charities across Hampshire for over 25 years.
+                    supporting businesses, individuals and charities across Hampshire for over 35 years.
                 </p>
             </div>
             <div class="bca-hero__services-label reveal reveal-delay-2"><span>✦ OUR  SPECIALIST SERVICES</span></div>

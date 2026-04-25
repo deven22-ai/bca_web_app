@@ -49,8 +49,8 @@ wp_enqueue_style('single-office-style');
                         <div class="bca-hero__card-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"></path></svg></div>
                         <div class="bca-hero_card-value--group">
                             <div class="bca-hero__card-label">Kumar Associates</div>
-                            <a class="bca-hero__card-value" href="mailto:romsey@bcaaccountants.com">romsey@bcaaccountants.com</a>
-                            <a class="bca-hero__card-value" href="tel:01794 511511">01794 511511</a>
+                            <a class="bca-hero__card-value" href="mailto:info@kumarassociates.com">info@kumarassociates.com</a>
+                            <a class="bca-hero__card-value" href="tel:02392 833 300">02392 833 300</a>
                         </div>
                     </div>
                     <div class="bca-hero__card-divider"></div>

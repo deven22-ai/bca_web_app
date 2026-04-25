@@ -95,9 +95,9 @@
 }
 
 .bca-footer__links li a {
-    font-family: 'Outfit', sans-serif;
-    font-size: 14px;
-    color: rgba(255,255,255,0.55);
+    /*font-family: var(--bca-font-heading); */
+    font-size: 15px;
+    color: rgba(255,255,255,0.803);
     transition: color 0.2s ease, padding-left 0.2s ease, font-weight 0.2s ease;
     display: block;
 }
@@ -119,8 +119,8 @@
     gap: 4px;
 }
 .bca-footer__office-name {
-    font-family: 'Outfit', sans-serif;
-    font-size: 14px;
+    font-family: var(--bca-font-heading);
+    font-size: 15px;
     font-weight: 700;
     letter-spacing: 0.5px;
     color: rgba(255,255,255,0.8);
@@ -138,7 +138,7 @@
 .bca-footer__office-dot--green { background: var(--tax-relief); }
 
 .bca-footer__office-badge {
-    font-size: 9px; font-weight: 700;
+    font-size: 11px; font-weight: 700;
     letter-spacing: 1px; text-transform: uppercase;
     color: var(--bca-primary);
     background: rgba(26,86,219,0.12);
@@ -147,8 +147,8 @@
 }
 
 .bca-footer__office-addr {
-    font-size: 14px;
-    color: rgba(255,255,255,0.35);
+    font-size: 15px;
+    color: rgba(255,255,255,0.80);
     line-height: 1.55;
     padding-left: 13px;
 }
@@ -156,7 +156,7 @@
 .bca-footer__office-contact {
     display: flex; align-items: center; gap: 6px;
     padding-left: 13px;
-    font-size: 13px;
+    font-size: 15px;
     color: rgba(255,255,255,0.45);
 }
 .bca-footer__office-contact svg {
@@ -165,7 +165,7 @@
     stroke-width: 2; flex-shrink: 0;
 }
 .bca-footer__office-contact a {
-    color: rgba(255,255,255,0.45);
+    color: rgba(255,255,255,0.60);
     font-weight: 600;
     transition: color 0.2s;
 }
@@ -209,8 +209,8 @@
     border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 .bca-footer__reg-label {
-    font-family: 'Outfit', sans-serif;
-    font-size: 11px; font-weight: 600;
+    font-family: var(--bca-font-heading);
+    font-size: 12px; font-weight: 600;
     letter-spacing: 1px; text-transform: uppercase;
     color: rgb(255 255 255 / 80%);
 }
@@ -237,8 +237,8 @@
     flex-wrap: wrap;
 }
 .bca-footer__legal {
-    font-size: 11px;
-    color: rgba(255,255,255,0.2);
+    font-size: 12px;
+    color: rgba(255,255,255,0.3);
     line-height: 1.65;
     max-width: 720px;
 }
@@ -246,9 +246,9 @@
     display: flex; gap: 16px; flex-shrink: 0;
 }
 .bca-footer__legal-links a {
-    font-family: 'Outfit', sans-serif;
-    font-size: 12px; font-weight: 600;
-    color: rgba(255,255,255,0.25);
+    font-family: var(--bca-font-heading);
+    font-size: 13px; font-weight: 600;
+    color: rgba(255,255,255,0.30);
     transition: color 0.2s;
 }
 .bca-footer__legal-links a:hover { color: rgba(255,255,255,0.6); }

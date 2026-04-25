@@ -59,10 +59,10 @@ wp_enqueue_style('file-upload-style');
                             <label>Upload to Office</label>
                             <select id="office" required="">
                                 <option value="" disabled="" selected="">—Please choose an option—</option>
-                                <option value="BCA Portsmouth">Portsmouth — Head Office</option>
-                                <option value="BCA Romsey">BC&A Romsey</option>
-                                <option value="BCA Swindon">Swindon</option>
-                                <option value="Kumar Associates">Kumar Associates</option>
+                                <option value="portsmouth">Portsmouth — Head Office</option>
+                                <option value="romsey">BC&A Romsey</option>
+                                <option value="swindon">Swindon</option>
+                                <option value="kumar">Kumar Associates</option>
                             </select>
                         </div>
                     </div>
@@ -79,7 +79,7 @@ wp_enqueue_style('file-upload-style');
                                     <svg viewBox="0 0 16 16" width="13" height="13"><path d="M8 1v10M4 7l4-4 4 4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"></path><path d="M2 13h12" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"></path></svg>
                                     Choose Files
                                 </div>
-                                <div class="bca-dropzone__types">PDF · DOC · DOCX · XLS · XLSX · CSV · JPG · PNG · Max 5MB per file</div>
+                                <div class="bca-dropzone__types">PDF · DOC · DOCX · XLS · XLSX · CSV · JPG · PNG · Max 10MB per file</div>
                             </div>
                         </div>
                     </div>
@@ -90,9 +90,14 @@ wp_enqueue_style('file-upload-style');
                     <!-- Submit -->
                     <div class="bca-form-submit">
                         <p>Your files are transmitted securely. By uploading you agree to our <a href="/privacy-policy/">Privacy Policy</a>.</p>
-                        <button type="submit" class="bca-upload-submit__btn" id="submitBtn" disabled>
-                            Send Files to BC&A
-                            <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                        <button type="submit" class="bca-btn-primary" id="submitBtn" disabled>
+                            <span class="bca-upload-submit__text">Send Files to BC&A</span>
+                            <span class="bca-upload-submit__spinner" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path d="M12 2a10 10 0 0 1 10 10" stroke-linecap="round"/>
+                                </svg>
+                            </span>
+                            <span class="bca-upload-submit__arrow"><?php echo get_arrow_icon() ?></span>
                         </button>
                     </div>
                 </div>

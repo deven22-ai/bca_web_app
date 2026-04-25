@@ -10,10 +10,10 @@
                 <div class="bca-footer__tagline">Big Firm Expertise. Personal Service.<br/><em>Real Results.</em></div>
             </div>
             <div class="bca-footer__socials">
-                <a href="https://facebook.com" target="_blank" rel="noopener" class="bca-footer__social bca-footer__social--fb" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
-                <a href="https://linkedin.com" target="_blank" rel="noopener" class="bca-footer__social bca-footer__social--li" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
-                <a href="https://twitter.com" target="_blank" rel="noopener" class="bca-footer__social" aria-label="X / Twitter"><svg viewBox="0 0 24 24"><path d="M4 4l11.733 16h4.267l-11.733-16zM4 20l6.768-6.768M20 4l-6.768 6.768"/></svg></a>
-                <a href="https://instagram.com" target="_blank" rel="noopener" class="bca-footer__social" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>
+                <!--<a href="https://facebook.com" target="_blank" rel="noopener" class="bca-footer__social bca-footer__social--fb" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>-->
+                <a href="https://www.linkedin.com/company/bc-a-chartered-accountants/" target="_blank" rel="noopener" class="bca-footer__social bca-footer__social--li" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+                <!--<a href="https://twitter.com" target="_blank" rel="noopener" class="bca-footer__social" aria-label="X / Twitter"><svg viewBox="0 0 24 24"><path d="M4 4l11.733 16h4.267l-11.733-16zM4 20l6.768-6.768M20 4l-6.768 6.768"/></svg></a>-->
+                <!--<a href="https://instagram.com" target="_blank" rel="noopener" class="bca-footer__social" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg></a>-->
             </div>
         </div>
 
@@ -70,7 +70,7 @@
                             <span class="bca-footer__office-badge">2 practices</span>
                         </div>
                         <div class="bca-footer__office-addr">Buckley House, 29-31A The Hundred, Romsey, SO51 8GD</div>
-                        <div class="bca-footer__office-practices">
+                        <!--<div class="bca-footer__office-practices">
                             <div class="bca-footer__office-practice">
                                 <span class="bca-footer__office-practice-dot bca-footer__office-practice-dot--gold"></span>
                                 Kumar Associates ·
@@ -81,7 +81,7 @@
                                 BC&A Romsey ·
                                 <a href="tel:01794511511">01794 511511</a>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <!-- Swindon -->
                     <div class="bca-footer__office">
