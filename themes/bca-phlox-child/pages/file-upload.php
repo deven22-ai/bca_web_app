@@ -32,47 +32,77 @@ wp_enqueue_style('file-upload-style');
         <div class="bca-upload__inner">
             <!-- Main upload card -->
             <form id="uploadForm" class="bca-form-card reveal" novalidate>
-                <h2>Upload your documents</h2>
-                <p>Fill in your details, select your office and upload your files below.</p>
-                <div class="bca-form-row bca-form-row--full">
-                    <div class="bca-field">
-                        <label>Upload to Office</label>
-                        <select id="office" required="">
-                            <option value="" disabled="" selected="">—Please choose an option—</option>
-                            <option value="portsmouth">Portsmouth — Head Office</option>
-                            <option value="romsey">Romsey — Regional Hub</option>
-                            <option value="swindon">Swindon — Expansion Site</option>
-                        </select>
+                <div class="bca-form-card__head">
+                    <h2>Upload your documents</h2>
+                    <p>Fill in your details, select your office and upload your files below.</p>
+                </div>
+
+                <!-- Error State -->
+                <div id="uploadError" class="bca-upload-alert bca-upload-alert--error" role="alert" aria-live="polite">
+                    <div class="bca-upload-alert__icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+                    </div>
+                    <div class="bca-upload-alert__body">
+                        <div class="bca-upload-alert__title">Upload failed</div>
+                        <div id="uploadErrorMsg" class="bca-upload-alert__message" >Something went wrong. Please try again.</div>
+                        <a href="/contact/" class="bca-upload-alert__support">Contact support</a>
+                    </div>
+                    <div class="bca-upload-alert__close" onclick="hideUploadError();" aria-label="Dismiss">
+                        <svg viewBox="0 0 16 16"><line x1="4" y1="4" x2="12" y2="12"/><line x1="12" y1="4" x2="4" y2="12"/></svg>
                     </div>
                 </div>
-                <!-- Dropbox -->
-                <div class="bca-form-row bca-form-row--full">
-                    <div class="bca-field">
-                        <label>Upload Documents</label>
-                        <div class="bca-dropzone" id="dropzone">
-                            <input type="file" id="fileInput" multiple="" accept=".pdf,.doc,.docx,.xls,.xlsx,.csv,.jpg,.jpeg,.png,.gif,.zip,.txt,.msg" aria-label="File upload">
-                            <div class="bca-dropzone__icon"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg></div>
-                            <div class="bca-dropzone__title">Drop files here or click to browse</div>
-                            <div class="bca-dropzone__sub">Upload multiple files at once — all common document formats accepted</div>
-                            <div class="bca-dropzone__btn">
-                                <svg viewBox="0 0 16 16" width="13" height="13"><path d="M8 1v10M4 7l4-4 4 4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"></path><path d="M2 13h12" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"></path></svg>
-                                Choose Files
-                            </div>
-                            <div class="bca-dropzone__types">PDF · DOC · DOCX · XLS · XLSX · CSV · JPG · PNG · ZIP · Max 50MB per file</div>
+
+                <!-- Upload Form -->
+                <div id="uploadFormWrap" class="upload-form_wrap">
+                    <div class="bca-form-row bca-form-row--full">
+                        <div class="bca-field">
+                            <label>Upload to Office</label>
+                            <select id="office" required="">
+                                <option value="" disabled="" selected="">—Please choose an option—</option>
+                                <option value="BCA Portsmouth">Portsmouth — Head Office</option>
+                                <option value="BCA Romsey">BC&A Romsey</option>
+                                <option value="BCA Swindon">Swindon</option>
+                                <option value="Kumar Associates">Kumar Associates</option>
+                            </select>
                         </div>
                     </div>
+                    <!-- Dropbox -->
+                    <div class="bca-form-row bca-form-row--full">
+                        <div class="bca-field">
+                            <label>Upload Documents</label>
+                            <div class="bca-dropzone" id="dropzone">
+                                <input type="file" id="fileInput" multiple="" accept=".pdf,.doc,.docx,.xls,.xlsx,.csv,.jpg,.jpeg,.png,.gif,.zip,.txt,.msg" aria-label="File upload">
+                                <div class="bca-dropzone__icon"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg></div>
+                                <div class="bca-dropzone__title">Drop files here or click to browse</div>
+                                <div class="bca-dropzone__sub">Upload multiple files at once — all common document formats accepted</div>
+                                <div class="bca-dropzone__btn">
+                                    <svg viewBox="0 0 16 16" width="13" height="13"><path d="M8 1v10M4 7l4-4 4 4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"></path><path d="M2 13h12" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"></path></svg>
+                                    Choose Files
+                                </div>
+                                <div class="bca-dropzone__types">PDF · DOC · DOCX · XLS · XLSX · CSV · JPG · PNG · Max 5MB per file</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- File list -->
+                    <div class="bca-file-list" id="fileList"></div>
+
+                    <!-- Submit -->
+                    <div class="bca-form-submit">
+                        <p>Your files are transmitted securely. By uploading you agree to our <a href="/privacy-policy/">Privacy Policy</a>.</p>
+                        <button type="submit" class="bca-upload-submit__btn" id="submitBtn" disabled>
+                            Send Files to BC&A
+                            <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+                        </button>
+                    </div>
                 </div>
 
-                <!-- File list -->
-                <div class="bca-file-list" id="fileList"></div>
-
-                <!-- Submit -->
-                <div class="bca-form-submit">
-                    <p>Your files are transmitted securely. By uploading you agree to our <a href="/privacy-policy/">Privacy Policy</a>.</p>
-                    <button type="submit" class="bca-upload-submit__btn" id="submitBtn" disabled>
-                        Send Files to BC&A
-                        <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-                    </button>
+                <!-- Success state -->
+                <div class="bca-upload-success" id="uploadSuccess">
+                    <div class="bca-upload-success__icon"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg></div>
+                    <h3>Files uploaded successfully!</h3>
+                    <p>Your documents have been sent securely to the BC&A team. Your adviser will be in touch shortly.</p>
+                    <div class="upload-more-btn" onclick="resetForm()">Upload More Files</div>
                 </div>
             </form>
 

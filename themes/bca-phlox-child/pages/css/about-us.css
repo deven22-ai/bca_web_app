@@ -24,6 +24,7 @@
 }
 
 .bca-cta-services.light { background: var(--white); border-bottom: none; }
+.bca-cta.contact { background: var(--white); }
 
 /* ════════════════════════════════════════
    WHO ARE WE
@@ -93,7 +94,7 @@
 .bca-pillar:hover { background: rgba(255,255,255,0.03); }
 
 .bca-pillar__num {
-    font-family: 'Outfit', sans-serif;
+    font-family: var(--bca-font-heading);
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 2px;

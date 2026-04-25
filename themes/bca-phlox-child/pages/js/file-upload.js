@@ -54,14 +54,52 @@ function resetForm() {
     selectedFiles = [];
     uploadForm.reset();
     fileList.innerHTML = '';
-    uploadForm.style.display = 'block';
-    uploadSuccess.style.display = 'none';
+    uploadFormWrp.style.display = 'block';
+    uploadSuccess.classList.remove('is-visible');
     submitBtn.disabled = true;
     submitBtn.innerHTML = 'Send Files to BC&A <svg viewBox="0 0 16 16" width="14" height="14"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>';
 }
 
+function showUploadError(message) {
+    const alert = document.getElementById('uploadError');
+    const msgEl = document.getElementById('uploadErrorMsg');
+    msgEl.textContent = message;
+    alert.classList.add('is-visible');
+    alert.scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+function hideUploadError() {
+    document.getElementById('uploadError').classList.remove('is-visible');
+}
+
+async function ajaxFileUpload() {
+    const formData = new FormData();
+    formData.append('action', 'bca_file_upload');
+    formData.append('nonce', bcaAjax.nonce);
+    formData.append('office', officeInput.value);
+    for (let i = 0; i < selectedFiles.length; i++) {
+        const file = selectedFiles[i];
+        formData.append('files[]', file, file.name);
+    }
+   
+    const request = await fetch(bcaAjax.url, {
+        method : 'POST',
+        body: formData
+    });
+    const data = await request.json();
+    if(data.success) {
+        uploadFormWrp.style.display = 'none';
+        uploadSuccess.classList.add('is-visible');   
+        uploadSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else {
+        console.log(data);
+        const msg = data.data || 'An unknown error occurred. Please try again.';
+        showUploadError(msg);
+    }
+}
+
 /* MAIN */
-let dropzone, fileInput, fileList, submitBtn, uploadForm, uploadSuccess, officeInput;
+let dropzone, fileInput, fileList, submitBtn, uploadForm, uploadFormWrp, uploadSuccess, officeInput;
 
 document.addEventListener('DOMContentLoaded', () => {
     dropzone      = document.getElementById('dropzone');
@@ -69,6 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
     fileList      = document.getElementById('fileList');
     submitBtn     = document.getElementById('submitBtn');
     uploadForm    = document.getElementById('uploadForm');
+    uploadFormWrp = document.getElementById('uploadFormWrap');
     uploadSuccess = document.getElementById('uploadSuccess');
     officeInput   = document.getElementById('office');
 
@@ -91,9 +130,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (submitBtn.disabled) return;
         submitBtn.textContent = 'Uploading…';
         submitBtn.disabled = true;
-        setTimeout(() => {
-            uploadForm.style.display = 'none';
-            uploadSuccess.style.display = 'block';
-        }, 1500);
+        setTimeout(ajaxFileUpload, 500);
     });
 });

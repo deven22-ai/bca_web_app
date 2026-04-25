@@ -171,7 +171,7 @@
     justify-items: center;
 }
 
-.bca-partner-card__img img { width: 200px; object-fit: cover; transition: transform 0.45s ease; }
+.bca-partner-card__img img { width: 200px; object-fit: cover; transition: transform 0.45s ease; display: flex; }
 .bca-partner-card:hover .bca-partner-card__img img { transform: scale(1.04); }
 
 .bca-partner-card__body { padding: 24px; flex: 1; display: flex; flex-direction: column; }
@@ -211,7 +211,7 @@
 }
 
 .bca-cta__text h2 em { font-style: italic; color: var(--bca-primary); }
-.bca-cta__text p { font-size: 15px; line-height: 1.8; max-width: 500px; }
+.bca-cta__text p { font-size: 15px; line-height: 1.8; max-width: 500px;color: var(--muted); }
 .bca-cta__btns { display: flex; gap: 12px; flex-wrap: wrap; flex-shrink: 0; }
 
 .bca-footer-stub { 
@@ -224,7 +224,7 @@
 }
 
 .bca-footer-stub span { 
-    font-family:'Outfit',sans-serif; 
+    font-family: var(--bca-font-heading); 
     font-size:11px; color:rgba(255,255,255,0.18); 
     letter-spacing:2px; 
     text-transform:uppercase; 

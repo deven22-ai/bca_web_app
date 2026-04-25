@@ -7,6 +7,15 @@
     background: var(--bca-dark-navy);
 }
 
+.bca-hero-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+    background-size: 52px 52px;
+    pointer-events: none;
+}
+
 .bca-hero { padding: 150px 0 80px; } 
 
 .bca-upload {
@@ -19,6 +28,22 @@
     gap: 32px;
     align-items: start;
 }
+
+.bca-form-card { padding: 0; }
+
+.bca-form-card__head {
+    padding: 32px 32px 0px 32px;
+    border-bottom: 1px solid var(--bca-dark-border);
+}
+
+.bca-form-card__head p {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 36px;
+    line-height: 1.6;
+}
+
+.bca-form-card .upload-form_wrap { padding: 32px; }
 
 /* Dropbox */
 .bca-dropzone {
@@ -334,6 +359,136 @@
     font-size: 15px;
     margin-bottom: 3px; 
 }
+
+/* Success state */
+.bca-upload-success {
+    display: none; 
+    text-align: center; 
+    padding: 60px 32px;
+    transition: display 0.5sec ease-in;
+    animation: bca-alert-slide-in 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bca-upload-success.is-visible { display: block; }
+
+.bca-upload-success__icon {
+    width: 72px; height: 72px; border-radius: 50%;
+    background: rgba(5,150,105,0.08); border: 2px solid rgba(5,150,105,0.2);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 20px;
+}
+.bca-upload-success__icon svg { width:30px; height:30px; stroke:#059669; fill:none; stroke-width:2; }
+
+.bca-upload-success h3 {
+    font-size: 22px; font-weight: 700;
+    color: var(--bca-dark-navy); margin-bottom: 10px;
+}
+
+.bca-upload-success p {
+    font-size: 14px; color: var(--muted);
+    line-height: 1.7; max-width: 360px; margin: 0 auto 24px;
+}
+
+.bca-upload-success .upload-more-btn {
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    font-family:var(--bca-font-heading);
+    font-size:13px;font-weight:600;
+    padding:11px 22px;
+    border-radius:var(--border-radius);
+    border:1.5px solid var(--bca-dark-border);
+    background:transparent;color:#0D1B3E;
+    cursor:pointer;
+}
+
+.bca-upload-success .upload-more-btn:hover { background: var(--bca-card-bg); }
+
+/* ════════════════════════════════════
+   UPLOAD ALERT BANNER
+   ════════════════════════════════════ */
+.bca-upload-alert {
+    display: none;
+    align-items: flex-start;
+    gap: 16px;
+    background: var(--white);
+    border: 1px solid var(--bca-dark-border);
+    border-left: 4px solid #dc2626;
+    border-radius: var(--border-radius);
+    padding: 18px 20px;
+    margin: 32px 32px 0px;
+    margin-bottom: 24px;
+    animation: bca-alert-slide-in 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.bca-upload-alert.is-visible { display: flex; }
+
+@keyframes bca-alert-slide-in {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Error variant */
+.bca-upload-alert--error { border-left-color: #dc2626; }
+
+/* Icon */
+.bca-upload-alert__icon {
+    flex-shrink: 0;
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: rgba(220,38,38,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #dc2626;
+}
+.bca-upload-alert__icon svg { width: 18px; height: 18px; }
+
+/* Body */
+.bca-upload-alert__body { flex: 1; min-width: 0; }
+
+.bca-upload-alert__title {
+    font-family: var(--bca-font-heading);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--bca-dark-navy);
+    margin-bottom: 4px;
+    letter-spacing: -0.1px;
+}
+
+.bca-upload-alert__message {
+    font-size: 13px;
+    line-height: 1.6;
+    color: var(--muted);
+    word-wrap: break-word;
+}
+
+.bca-upload-alert__support {
+    font-family: var(--bca-font-heading);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--bca-primary);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(26,86,219,0.3);
+    transition: border-color 0.2s ease;
+}
+.bca-upload-alert__support:hover { color: var(--bca-primary); border-bottom-color: var(--bca-primary); }
+
+/* Close button */
+.bca-upload-alert__close {
+    flex-shrink: 0;
+    width: 28px; height: 28px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+.bca-upload-alert__close svg { width: 14px; height: 14px; stroke: var(--bca-dark-navy); stroke-width: 2px; }
+.bca-upload-alert__close:hover { background: var(--bca-dark-border); }
 
 /* ════════════════════════════════════════
     RESPONSIVE

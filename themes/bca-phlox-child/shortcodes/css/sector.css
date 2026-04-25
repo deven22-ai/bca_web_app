@@ -4,7 +4,8 @@
 }
 
 .bca-news-shortcode {
-  padding: 70px 0;
+  padding: 80px 0;
+  background: var(--bca-card-bg);
 }
 
 /*=========================
@@ -132,7 +133,7 @@
   ========================= */
 .bca-faq {
   padding: 80px 0;
-  border-top: 1px solid var(--bca-card-border);
+  border-top: 1px solid var(--bca-dark-border);
 }
 
 .bca-faq__inner {
@@ -144,8 +145,15 @@
 
 /* Accordion */
 .bca-faq__item {
-  border-bottom: 1px solid var(--bca-card-border);
+  border-bottom: 1px solid var(--bca-dark-border);
+  border-left: 1px solid var(--bca-dark-border);
+  border-right: 1px solid var(--bca-dark-border);
   background: #FFFFFF;
+}
+
+.bca-faq__item:first-child {
+    border-top: 1px solid var(--bca-dark-border);
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
 .bca-faq__question {
@@ -209,7 +217,7 @@
 
 .bca-faq__answer-inner {
   padding: 0 24px 22px;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.8;
   color: var(--bca-text-desc);
 }
@@ -492,6 +500,7 @@
   padding: 45px;
   background: white;
   border: 1px solid var(--bca-card-border);
+  box-shadow: 2px 2px 10px 3px #e2e8f073;
   grid-template-columns: 1.4fr 0.9fr;
   gap: 50px;
   align-items: center;
@@ -604,6 +613,78 @@
 .bca-sector-card-minimal:hover .bca-sector-card-minimal__arrow {
   opacity: 1;
   transform: translateX(0);
+}
+
+/* ════════════════════════════════════
+   WHY BC&A SECTION (specialist sectors)
+════════════════════════════════════ */
+.bca-sector-why {
+  padding: 88px 0;
+  border-top: 1px solid var(--bca-dark-border);
+}
+
+.bca-sector-why__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.bca-sector-why__card {
+  background: var(--white);
+  border: 1px solid var(--bca-dark-border);
+  border-radius: var(--border-radius);
+  padding: 28px 24px;
+  text-align: left;
+  transition: box-shadow var(--transition), transform var(--transition), border-color var(--transition);
+}
+.bca-sector-why__card:hover {
+  box-shadow: 0 12px 36px rgba(13,27,62,0.08);
+  transform: translateY(-4px);
+  border-color: rgba(201,168,76,0.3);
+}
+
+.bca-sector-why__icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 8px;
+  background: rgba(201,168,76,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+.bca-sector-why__icon svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--bca-secondary);
+  fill: none;
+  stroke-width: 1.8;
+}
+
+.bca-sector-why__title {
+  font-family: var(--bca-font-heading);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--bca-dark-navy);
+  margin-bottom: 8px;
+  letter-spacing: 0.2px;
+}
+
+.bca-sector-why__desc {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.65;
+}
+
+/* ════════════════════════════════════
+  RESPONSIVE
+  ════════════════════════════════════ */
+@media (max-width: 1024px) {
+  .bca-sector-why__grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .bca-sector-why__grid { grid-template-columns: 1fr; gap: 12px; }
+  .bca-sector-why { padding: 60px 0; }
 }
 
 @media (max-width: 1100px) {

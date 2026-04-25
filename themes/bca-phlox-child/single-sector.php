@@ -69,6 +69,53 @@ if (have_posts()) {
                     </div>
                 </div>
             </section>
+                            
+            <?php if((int) get_field('show_why_bca_section') === 1) : ?>
+            <!-- ══ WHY CHOOSE BC&A ═════════════════ -->
+            <section class="bca-sector-why">
+                <div class="container">
+                    <div class="bca-heading-section reveal">
+                        <div class="bca-heading-container">
+                            <span class="bca-section__eyebrow">Why Choose BC&A</span>
+                            <h2 class="bca-heading__title">A <em>Specialist Team</em> you can trust</h2>
+                            <div class="bca-heading__description">
+                                <p>Most firms don't offer this service. We've built a dedicated team around it.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bca-sector-why__grid">
+                        <div class="bca-sector-why__card reveal reveal-delay-1">
+                            <div class="bca-sector-why__icon">
+                                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+                            </div>
+                            <div class="bca-sector-why__title">35+ Years Experience</div>
+                            <div class="bca-sector-why__desc">Supporting over 200+ local councils and public sector bodies.</div>
+                        </div>
+                        <div class="bca-sector-why__card reveal reveal-delay-2">
+                            <div class="bca-sector-why__icon">
+                                <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+                            </div>
+                            <div class="bca-sector-why__title">Dedicated Specialist Team</div>
+                            <div class="bca-sector-why__desc">Not a side service. A full team focused entirely on this sector.</div>
+                        </div>
+                        <div class="bca-sector-why__card reveal reveal-delay-3">
+                            <div class="bca-sector-why__icon">
+                                <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            </div>
+                            <div class="bca-sector-why__title">Nationwide Coverage</div>
+                            <div class="bca-sector-why__desc">Serving clients across the UK, not just the South of England.</div>
+                        </div>
+                        <div class="bca-sector-why__card reveal reveal-delay-4">
+                            <div class="bca-sector-why__icon">
+                                <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><path d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                            </div>
+                            <div class="bca-sector-why__title">Fixed Fees, No Surprises</div>
+                            <div class="bca-sector-why__desc">Transparent pricing agreed upfront. No hidden extras.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <?php endif; ?>
             
             <!-- ══ FAQ ═════════════════ -->
             <?php if((int) get_field('show_faq') === 1) : ?>
@@ -81,7 +128,7 @@ if (have_posts()) {
                             <p>Can't find what you're looking for? Our team is always happy to have a 
                                 no-obligation conversation.
                             </p>
-                            <div class="btn-wrapper"><a href="/contact/" class="bca-btn-primary">Speak To An Adviser</a></div>
+                            <div class="btn-wrapper"><a href="/contact/" class="bca-btn-primary">Speak To An Adviser<?php echo get_arrow_icon() ?></a></div>
                         </div>
                         <div class="bca-faq-list drop-shadow reveal reveal-delay-1">
                             <?php 

@@ -363,10 +363,10 @@ h2 {
   color: var(--white);
 }
 
+.bca-section__title em, 
 .bca-section__title.white em {
-  font-style: italic;
-  color: var(--bca-primary);
   font-weight: 700;
+  color: var(--bca-primary);
 }
 
 .bca-section__text {
@@ -484,6 +484,14 @@ h2 {
   font-size: 16px;
   font-weight: 600;
   text-shadow: 14px 15px 20px rgba(0, 0, 0, 0.3);
+}
+
+.bca-hero__meta {
+  font-family: var(--bca-font-heading);
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.35);
+  letter-spacing: 0.3px;
 }
 
 .bca-hero__btns {
@@ -1022,7 +1030,7 @@ a.bca-hero__card-item:hover .bca-hero__card-value { color: var(--bca-secondary);
 }
 
 .bca-form-submit p {
-  font-size: 13px;
+  font-size: 12px;
   color: var(--muted);
   line-height: 1.5;
 }

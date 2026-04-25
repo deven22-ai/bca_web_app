@@ -1,5 +1,5 @@
 /* Send request from frontend JS */
-async function loadNews(cat = 'all') {
+async function ajaxLoadNews(cat = 'all') {
 
     const newsContainer = document.getElementById('bca-news-results');
     newsContainer.classList.add('loading'); // Fade out
@@ -42,5 +42,5 @@ document.addEventListener('click', async(e) => {
     link.classList.add('active');
 
     const cat = link.dataset.cat || 'all';
-    await loadNews(cat);
+    await ajaxLoadNews(cat);
 });

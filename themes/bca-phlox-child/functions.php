@@ -1,11 +1,14 @@
 <?php 
 
+require_once get_stylesheet_directory() . '/includes/services/microsoft-sharepoint.php';
+require_once get_stylesheet_directory() . '/includes/ajax-handlers.php';  // AJAX handlers
+
 // Shortcodes - Load the files, only once
 require_once get_stylesheet_directory() . '/shortcodes/shortcode-cta.php';
 require_once get_stylesheet_directory() . '/shortcodes/shortcode-news.php';
 require_once get_stylesheet_directory() . '/shortcodes/shortcode-sector.php';
 require_once get_stylesheet_directory() . '/shortcodes/shortcode-team.php';
-require_once get_stylesheet_directory() . '/shortcodes/includes/ajax-handlers.php';  // AJAX handlers
+
 
 /* Loads parent theme CSS first, and then loading the child theme CSS after it */
 function bca_phlox_child_enqueue_assets() {
@@ -42,6 +45,12 @@ function bca_phlox_child_enqueue_assets() {
         filemtime(get_stylesheet_directory() . '/pages/js/file-upload.js'),
         true
     );
+    /* Adding Ajax call script */
+    wp_localize_script('file-upload-js', 'bcaAjax', [
+        'url'   => admin_url('admin-ajax.php'),
+        'nonce' => wp_create_nonce('bca_file_upload_nonce')
+    ]); 
+
     wp_register_style(
         'home-style',
         get_stylesheet_directory_uri() . '/pages/css/home.css',
@@ -95,6 +104,12 @@ function bca_phlox_child_enqueue_assets() {
         get_stylesheet_directory_uri() . '/pages/css/services.css',
         array('auxin-child'), 
         filemtime(get_stylesheet_directory() . '/pages/css/services.css')
+    );
+    wp_register_style(
+        'privacy-style',
+        get_stylesheet_directory_uri() . '/pages/css/privacy-policy.css',
+        array('auxin-child'), 
+        filemtime(get_stylesheet_directory() . '/pages/css/privacy-policy.css')
     );
 }
 

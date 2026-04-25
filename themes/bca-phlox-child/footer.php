@@ -52,7 +52,7 @@
                         <div class="bca-footer__office-name">
                             <span class="bca-footer__office-dot bca-footer__office-dot--blue"></span>
                             Portsmouth
-                            <span class="bca-footer__office-badge">HEADQUARTERS</span>
+                            <span class="bca-footer__office-badge">Headquarter</span>
                         </div>
                         <div class="bca-footer__office-addr">24 Landport Terrace, Southsea, Portsmouth, PO1 2RG</div>
                         <div class="bca-footer__office-contact">
@@ -67,8 +67,9 @@
                         <div class="bca-footer__office-name">
                             <span class="bca-footer__office-dot bca-footer__office-dot--gold"></span>
                             Romsey
+                            <span class="bca-footer__office-badge">2 practices</span>
                         </div>
-                        <div class="bca-footer__office-addr">Buckley House, 29–31A The Hundred, Romsey, SO51 8GD</div>
+                        <div class="bca-footer__office-addr">Buckley House, 29-31A The Hundred, Romsey, SO51 8GD</div>
                         <div class="bca-footer__office-practices">
                             <div class="bca-footer__office-practice">
                                 <span class="bca-footer__office-practice-dot bca-footer__office-practice-dot--gold"></span>
