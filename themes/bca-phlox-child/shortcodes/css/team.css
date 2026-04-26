@@ -13,6 +13,10 @@
     background-color: var(--bca-card-bg);
 }
 
+.bca-cta.contact {
+    background-color: var(--white);
+}
+
 .bca-join {
     padding: 80px 0;
     background: var(--bca-dark-navy);

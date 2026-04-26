@@ -44,7 +44,7 @@ hamburgerBtn.addEventListener('click', () => {
     const item = document.getElementById(id);
     if (!item) return;
     item.querySelector('.bca-mobile-nav__link').addEventListener('click', () => {
-    item.classList.toggle('open');
+        item.classList.toggle('open');
     });
 });
 

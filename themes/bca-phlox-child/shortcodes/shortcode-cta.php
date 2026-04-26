@@ -29,8 +29,7 @@ function contact() {
                 </div>
             </div> 
             <div class="bca-cta__image reveal reveal-delay-1">
-                <img src="http://bca-new2.local/wp-content/uploads/2026/03/15628.jpg" 
-                    alt="BC&A team supporting clients" />
+                <img src="/wp-content/uploads/2026/03/15628.jpg" alt="BC&A team supporting clients" />
                 <!-- Floating badge -->
                 <div class="bca-cta__image-badge">
                     <div class="bca-cta__image-badge-dot"></div>
@@ -71,7 +70,7 @@ function sector($atts) {
                 </div>
             </div> 
             <div class="bca-cta__image reveal reveal-delay-1">
-                <img src="http://bca-new2.local/wp-content/uploads/2026/03/sectors.png" alt="BC&A Sectors" />
+                <img src="/wp-content/uploads/2026/03/sectors.png" alt="BC&A Sectors" />
                 <!-- Floating badge -->
                 <div class="bca-cta__image-badge">
                     <div class="bca-cta__image-badge-dot"></div>

@@ -106,7 +106,7 @@
             <div class="bca-footer__reg-label">Regulated By</div>
             <div class="bca-footer__reg-logos">
                 <img src="/wp-content/uploads/2026/02/icaew_white.svg" alt="ICAEW Logo"/>
-                <img src="http://bca-new2.local/wp-content/uploads/2026/02/cima_white.svg" alt="CIMA Logo"/>
+                <img src="/wp-content/uploads/2026/02/cima_white.svg" alt="CIMA Logo"/>
             </div>
         </div>
 

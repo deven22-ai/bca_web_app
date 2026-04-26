@@ -396,7 +396,7 @@ wp_enqueue_style('home-style');
             </div>
         </div> 
         <div class="bca-cta__image reveal reveal-delay-1">
-            <img src="http://bca-new2.local/wp-content/uploads/2026/03/BCA_building.png" alt="BC&A Office Building" />
+            <img src="/wp-content/uploads/2026/03/BCA_building.png" alt="BC&A Office Building" />
             <!-- Floating badge -->
             <div class="bca-cta__image-badge">
                 <div class="bca-cta__image-badge-dot"></div>

@@ -662,4 +662,5 @@
 
 @media (max-width: 480px) {
     .bca-header__logo svg { height: 28px; }
+    .bca-header__quote-btn { display: none;}
 }

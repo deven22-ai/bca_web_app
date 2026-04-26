@@ -935,6 +935,14 @@
     }
 }
 
+@media (max-width: 480px){
+    .bca-hero-section::before { 
+        background: radial-gradient(circle at 20% 50%, rgb(1 13 43) 0%, rgb(1 13 43 / 77%) 25%, rgb(13 27 62 / 59%) 45%,
+            rgb(13 27 62 / 42%) 60%, rgba(13, 27, 62, 0) 75%), linear-gradient(90deg, rgb(1 13 43) 0%, rgb(13 27 62 / 42%) 40%, 
+            rgb(13 27 62 / 9%) 65%); 
+    }
+}
+
 @media (max-width: 438px) {
     .bca-hero__services-label::before {
         content: none;

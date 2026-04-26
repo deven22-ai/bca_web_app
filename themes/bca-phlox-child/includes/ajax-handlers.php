@@ -67,7 +67,7 @@ function bca_file_upload() {
         'image/jpg'
     ];
     
-    if($office === null || !isset($officeLocs[$office])) wp_send_json_error('Office Location not found. Please select one of the offices from the dropdown');
+    if($office === null || !array_key_exists($office, $officeLocs)) wp_send_json_error('Office Location not found. Please select one of the offices from the dropdown');
     if($count > $maxFiles) wp_send_json_error('Max 5 files allowed. Please upload not more than 5 files at the same time');
 
     /* Do Files validation before initiating Sharepoint process */

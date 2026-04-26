@@ -189,7 +189,7 @@
                 <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
             </a>
             <!-- Quote button -->
-            <a href="/request-quote/" class="bca-header__quote-btn"><span>Get Free Quote</span><svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+            <a href="/request-quote/" class="bca-header__quote-btn"><span>Get Free Quote</span><?php echo get_arrow_icon() ?></a>
             <!-- Mobile hamburger -->
             <a class="bca-hamburger" id="hamburger-btn" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></a>
         </div>

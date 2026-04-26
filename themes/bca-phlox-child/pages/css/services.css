@@ -80,7 +80,7 @@
     display: inline-flex; 
     align-items: center; 
     gap: 6px; 
-    font-family: 'Outfit', sans-serif; 
+    font-family: var(--bca-font-heading); 
     font-size: 11px; 
     font-weight: 700; 
     letter-spacing: 1.5px; 
@@ -101,7 +101,7 @@
 }
 
 .bca-type-card__title { 
-    font-family: 'Outfit', sans-serif; 
+    font-family: var(--bca-font-heading); 
     font-size: clamp(22px, 3vw, 32px); 
     font-weight: 800; color: var(--white); 
     line-height: 1.15; 
@@ -125,7 +125,7 @@
 }
 
 .bca-type-card__service-pill { 
-    font-family: 'Outfit', sans-serif; 
+    font-family: var(--bca-font-heading); 
     font-size: 11px; 
     font-weight: 600; 
     color: rgba(255,255,255,0.7); 
@@ -139,7 +139,7 @@
     display: inline-flex; 
     align-items: center; 
     gap: 8px; 
-    font-family: 'Outfit', sans-serif; 
+    font-family: var(--bca-font-heading); 
     font-size: 14px; font-weight: 700; 
     color: var(--white); 
     border: 2px solid rgba(255,255,255,0.3); 
@@ -348,12 +348,12 @@
 
 /* ── Left: content ── */
 .bca-content h2 { 
-    font-size: clamp(22px, 2.8vw, 30px); 
+    font-size: clamp(22px, 2.8vw, 32px); 
     font-weight: 700; 
     color: var(--bca-dark-navy); 
     line-height: 1.2; 
     letter-spacing: -0.4px; 
-    margin-bottom: 16px; 
+    margin-bottom: 28px; 
 }
 
 .bca-content__html { padding: 24px 0; }
@@ -368,9 +368,11 @@
 /* FAQ Accordion */
 .bca-faq__item {
   border-bottom: 1px solid var(--bca-card-border);
-  background: #FFFFFF;
+  background: #f7f9fcd6;
 }
 
+.bca-faq__item:first-child { border-top: 1px solid var(--bca-dark-border); }
+    
 .bca-faq__question {
   width: 100%;
   display: flex;
@@ -487,7 +489,7 @@
     align-items: flex-start; 
     gap: 9px; 
     margin: 0;
-    font-size: 13px; 
+    font-size: 14px; 
     color: var(--text); 
     line-height: 1.5; 
 }

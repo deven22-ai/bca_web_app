@@ -131,7 +131,7 @@
 
 .bca-find__card {
     background: var(--bca-dark-navy);
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     overflow: hidden;
     position: relative;
 }
@@ -255,7 +255,7 @@
 }
 
 .bca-ofc__badge {
-    font-family: 'Outfit', sans-serif;
+    font-family: var(--bca-font-heading);
     font-size: 10px; font-weight: 700;
     letter-spacing: 1.5px; text-transform: uppercase;
     padding: 5px 12px; border-radius: 4px;
@@ -267,7 +267,7 @@
 .badge--green { background: rgba(5,150,105,0.15); color: #6ee7b7; border: 1px solid rgba(5,150,105,0.4); }
 
 .bca-ofc__name {
-    font-family: 'Outfit', sans-serif;
+    font-family: var(--bca-font-heading);
     font-size: clamp(24px, 3vw, 32px);
     font-weight: 800;
     color: var(--white);
@@ -287,7 +287,7 @@
 }
 
 .bca-ofc__banner-stat-num {
-    font-family: 'Outfit', sans-serif;
+    font-family: var(--bca-font-heading);
     font-size: 18px; font-weight: 800;
     color: var(--white); line-height: 1;
 }
@@ -320,7 +320,7 @@
 .bca-ofc__desc:last-of-type { margin-bottom: 0; }
 
 .bca-ofc__intro {
-    font-family: 'Outfit', sans-serif;
+    font-family: var(--bca-font-heading);
     font-size: 15px; font-weight: 700;
     color: var(--bca-dark-navy);
     margin-bottom: 14px; line-height: 1.5;
@@ -360,7 +360,7 @@
 .bca-ofc__highlight-icon--blue svg { stroke: var(--bca-primary); }
 .bca-ofc__highlight-icon--gold svg { stroke: var(--bca-secondary); }
 .bca-ofc__highlight-title {
-    font-family: 'Outfit', sans-serif;
+    font-family: var(--bca-font-heading);
     font-size: 13px; font-weight: 700;
     color: var(--bca-dark-navy); margin-bottom: 3px;
 }
@@ -463,13 +463,13 @@
 .bca-practice__dot--gold { background: var(--bca-secondary); }
 .bca-practice__dot--blue { background: var(--bca-primary); }
 .bca-practice__name {
-    font-family: 'Outfit', sans-serif;
+    font-family: var(--bca-font-heading);
     font-size: 15px; font-weight: 700;
     color: var(--bca-dark-navy);
 }
 .bca-practice__tag {
     margin-left: auto;
-    font-family: 'Outfit', sans-serif;
+    font-family: var(--bca-font-heading);
     font-size: 9px; font-weight: 700;
     letter-spacing: 1px; text-transform: uppercase;
     padding: 2px 8px; border-radius: 3px;
@@ -545,7 +545,7 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    font-family: 'Outfit', sans-serif;
+    font-family: var(--bca-font-heading);
     font-size: 14px;
     font-weight: 700;
     color: var(--bca-dark-navy);
@@ -601,7 +601,6 @@
     .bca-ofc__highlights { flex-direction: row; gap: 10px; }
     .bca-ofc__highlight { flex: 1; }
     .bca-ofc--portsmouth .bca-ofc__banner img { object-position: 0 -30px; }
-   
 }
 
 @media (max-width: 768px) {
@@ -615,6 +614,7 @@
     .bca-ofc__highlights { flex-direction: column; }
     .bca-offices__soon { grid-template-columns: 1fr; }
     .bca-ofc--portsmouth .bca-ofc__banner img { object-position: top; }
+    .bca-ofc__footer-btns, .bca-ofc__footer-btns a { width: 100%; }
 }
 
 @media (max-width: 640px) {
