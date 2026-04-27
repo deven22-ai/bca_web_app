@@ -221,7 +221,7 @@ wp_enqueue_style('contact-style');
                         </div>
                     </div>
                     <div class="bca-office-card__btns">
-                        <a href="/offices/romsey/" class="bca-btn-primary">View Office<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
+                        <a href="/offices/romsey/" class="bca-btn-primary">View Offices<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
                         <a href="https://maps.app.goo.gl/LmbkYvTXGCN7W8NT9" target="_blank" rel="noopener" class="bca-office-card__btn">
                             <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                             Directions

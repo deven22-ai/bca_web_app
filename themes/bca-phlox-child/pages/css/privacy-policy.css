@@ -12,6 +12,7 @@
     pointer-events: none;
 }
 
+.bca-hero { min-height: auto; }
 .bca-legal { padding: 72px 0 96px; background: var(--white); }
 
 .bca-legal__grid {
@@ -47,8 +48,7 @@
 }
 .bca-legal__toc a {
     font-family: 'Outfit', sans-serif;
-    font-size: 13px;
-    font-weight: 500;
+    font-size: 15px;
     color: var(--muted);
     text-decoration: none;
     transition: color 0.2s ease, padding-left 0.2s ease;
@@ -64,7 +64,6 @@
 
 /* Content typography */
 .bca-legal__content {
-    max-width: 720px;
     color: var(--text);
     font-size: 15px;
     line-height: 1.8;
@@ -83,6 +82,7 @@
 .bca-legal__content h3 {
     font-size: 17px;
     font-weight: 700;
+    letter-spacing: 0.5px;
     color: var(--bca-dark-navy);
     margin: 32px 0 12px;
 }
@@ -129,7 +129,6 @@
     margin: 16px 0 24px;
 }
 .bca-legal__contact-name {
-    font-family: var(--bca-font-heading);
     font-size: 15px;
     font-weight: 700;
     color: var(--bca-dark-navy);
@@ -155,6 +154,11 @@
 }
 .bca-legal__contact-row a { color: var(--text); }
 .bca-legal__contact-row a:hover { color: var(--bca-primary); }
+
+.bca-legal__content ul { list-style: unset; }
+
+.bca-privacy__list-wrapper { display: flex; gap: 20px; }
+.bca-privacy__list-wrapper .list { width: 100%; }
 
 /* Responsive */
 @media (max-width: 1024px) {

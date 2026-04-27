@@ -1,14 +1,25 @@
 .services-hub-hero {
     min-height: 70vh;
-    background-image: url(https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1600&q=80);
 }
 
-.businesses-hero {
-    background-image: url(/wp-content/uploads/2026/03/job-5382501_1280.jpg);
-}
+.bca-hero-section.businesses  { background-image: url(/wp-content/uploads/2026/03/job-5382501_1280.jpg); }
+.bca-hero-section.individuals { background-image: url(/wp-content/uploads/2026/04/individual_business.jpg); }
 
 .bca-hero__overlay { opacity: 0.98; }
 .bca-hero__btns { margin-top: 25px; }
+.bca-hero__badge {
+    background: var(--bca-primary);
+    color: var(--white) !important;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 3px 8px 01px 8px;
+    border-radius: 1px;
+    opacity: 1;
+    align-self: center;
+    transition: opacity 0.28s ease, transform 0.28s ease;
+}
 
 #inner-body {
     overflow: visible !important; /* To keep the aside section sticky */
@@ -179,7 +190,7 @@
 .bca-intro__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 48px;
+    gap: 70px;
     align-items: center;
 }
 
@@ -353,10 +364,34 @@
     color: var(--bca-dark-navy); 
     line-height: 1.2; 
     letter-spacing: -0.4px; 
+    text-transform: capitalize;
     margin-bottom: 28px; 
 }
 
-.bca-content__html { padding: 24px 0; }
+.bca-content__html { padding: 8px 0; }
+
+.bca-content__html ul {
+    list-style: none;
+    position: relative;
+    padding-left: 24px;
+    margin: 24px 0 32px;
+}
+
+.bca-content__html ul li {
+    margin-bottom: 10px;
+}
+
+.bca-content__html ul li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    margin-top: 10px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--bca-primary);
+}
+
 .bca-content h2 em { font-style: italic; color: var(--bca-primary); }
 .bca-content p { font-size: 15px; line-height: 1.85; color: var(--muted); margin-bottom: 16px; }
 .bca-content p:last-of-type { margin-bottom: 0; }
@@ -472,8 +507,9 @@
 
 .bca-checklist__head h3 { 
     margin: 0;
-    font-size: 15px; 
-    font-weight: 700; 
+    font-size: 16px;
+    font-weight: 600; 
+    text-transform: capitalize;
     color: var(--bca-dark-navy); 
 }
 

@@ -165,6 +165,7 @@
     color: var(--tax-relief);
 }
 .bca-why.swindon .bca-why__list li svg { stroke: var(--tax-relief); }
+.bca-why__btns { display: flex; gap: 14px; flex-wrap: wrap; }
 
 .bca-btn-primary.green {
     background: var(--tax-relief);
@@ -218,7 +219,7 @@
 .bca-service-card {
     background: var(--white);
     border: 1px solid var(--bca-dark-border);
-    border-radius: 8px;
+    border-radius: var(--border-radius);
     overflow: hidden;
     transition: box-shadow var(--transition), transform var(--transition);
 }
@@ -746,4 +747,7 @@
 
 @media (max-width: 568px) {
     .bca-why__image img { height: 350px; }
+    .bca-why__stat { padding: 12px; min-width: 120px; }
+    .bca-why__btns { flex-wrap: nowrap; }
+    .bca-why__btns a { width: 100%; }
 }

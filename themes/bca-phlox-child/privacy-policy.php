@@ -32,9 +32,9 @@ wp_enqueue_style('privacy-style');
                 <ul>
                     <li><a href="#introduction">Introduction</a></li>
                     <li><a href="#contact">Contact Details</a></li>
-                    <li><a href="#data-collected">Data We Collect</a></li>
-                    <li><a href="#how-we-use">How We Use Data</a></li>
-                    <li><a href="#your-rights">Your Rights</a></li>
+                    <li><a href="#scope-and-source-data">Scope and Source of Data</a></li>
+                    <li><a href="#data-protection">Data Protection Principles</a></li>
+                    <li><a href="#data-collect">Data We Collect</a></li>
                     <li><a href="#cookies">Cookies</a></li>
                     <li><a href="#changes">Changes to This Policy</a></li>
                 </ul>
@@ -78,7 +78,141 @@ wp_enqueue_style('privacy-style');
                     </div>
                 </div>
 
-                <!-- Add remaining sections: data-collected, how-we-use, your-rights, cookies, changes -->
+                <h3>Data Protection Contact</h3>
+                <p>
+                    <ul>
+                        <li>Tahir Ahmed</li>
+                        <li>Data Protection Lead</li>
+                        <li>Email: info@bcaaccountants.com</li>
+                    </ul>
+                </p>
+
+                <h2 id="scope-and-source-data">Scope and Source of Data</h2>
+                <p>We process personal data obtained:</p>
+                <ul>
+                    <li>Directly from you (e.g. when you contact us or engage services)</li>
+                    <li>Indirectly from third parties (e.g. HMRC, Companies House, financial institutions)</li>
+                    <li>Automatically via website usage, cookies and digital interactions</li>
+                </ul>
+
+                <h2 id="data-protection">Data Protection Principles</h2>
+                <p>We process personal data in accordance with the following principles:</p>
+                <ul>
+                    <li>Lawfulness, fairness and transparency</li>
+                    <li>Purpose limitation</li>
+                    <li>Data minimisation</li>
+                    <li>Accuracy</li>
+                    <li>Storage limitation</li>
+                    <li>Integrity and confidentiality</li>
+                </ul>
+
+                <h2 id="data-collect">What Personal Data We Collect</h2>
+                <h3>Data You Provide</h3>
+                <ul>
+                    <li>Name, address, email, telephone</li>
+                    <li>Date of birth</li>
+                    <li>National Insurance number</li>
+                    <li>Tax reference numbers</li>
+                    <li>Financial and business information</li>
+                    <li>Identification documents</li>
+                </ul>
+                <h3>Automatically Collected Data</h3>
+                <ul>
+                    <li>IP address</li>
+                    <li>Browser type and version</li>
+                    <li>Device identifiers</li>
+                    <li>Website interaction data</li>
+                </ul>
+                <h3>Third-Party Data Sources</h3>
+                <ul>
+                    <li>HMRC</li>
+                    <li>Companies House</li>
+                    <li>Financial institutions</li>
+                    <li>Professional advisers</li>
+                    <li>Credit reference agencies</li>
+                </ul>
+                <h3>Live Chat Data</h3>
+                <p>We use tawk.to. We may Collect:</p>
+                <ul>
+                    <li>Chat transcripts</li>
+                    <li>Contact details (if provided)</li>
+                    <li>Technical data</li>
+                </ul>
+                <h3>Special Category Data</h3>
+                <p>We do not routinely process special category data. Where such data is processed, enhanced safeguards 
+                    are applied in accordance with UK GDPR.</p>
+                
+                <h2>How We Use Your Personal Data</h2>
+                <p>We process personal data for the following purposes:</p>
+                <ul>
+                    <li>Delivery of professional services</li>
+                    <li>Responding to enquiries</li>
+                    <li>Identity verification</li>
+                    <li>Compliance with legal and regulatory obligations</li>
+                    <li>Billing and financial management</li>
+                    <li>Dispute resolution and complaints handling</li>
+                    <li>Internal record keeping and compliance</li>
+                    <li>Service improvement and analytics</li>
+                    <li>Marketing (where lawful)</li>
+                </ul>
+
+                <h2>Legal Basis for Processing</h2>
+                <div class="bca-privacy__list-wrapper">
+                    <div class="list">
+                        <p>Purpose</p>
+                        <ul>
+                            <li>Service delivery</li>
+                            <li>AML compliance</li>
+                            <li>Client management</li>
+                            <li>Website analytics</li>
+                            <li>Marketing</li>
+                        </ul>
+                    </div>
+                    <div class="list">
+                        <p>Legal Basis</p>
+                        <ul>
+                            <li>Contract</li>
+                            <li>Legal obligation</li>
+                            <li>Contract + Legitimate interests</li>
+                            <li>Consent</li>
+                            <li>Consent / Legitimate interests</li>
+                        </ul>
+                    </div>
+                </div>
+                <p>In most cases, we process personal data because it is necessary to provide our services or comply with legal obligations.
+                    Where consent is required, it is obtained prior to processing.
+                    Where we rely on legitimate interests, we ensure that such interests are balanced against your rights and freedoms.
+                </p>
+
+                <h2>Failure to Provide Data</h2>
+                <p>Where personal data is required by law or under the terms of a contract, failure to provide such data may result in:</p>
+                <ul>
+                    <li>Inability to provide services</li>
+                    <li>Delay in service delivery</li>
+                    <li>Termination or refusal of engagement</li>
+                </ul>
+
+                <h2>Sharing Your Personal Data</h2>
+                <h3>Service Providers</h3>
+                <p>We use trusted third-party systems to support our operations, including:</p>
+                <ul>
+                    <li>Microsoft 365 (Outlook, OneDrive)</li>
+                    <li>ClickUp (CRM system)</li>
+                    <li>Xero (accounting platform)</li>
+                    <li>Brevo</li>
+                    <li>tawk.to</li>
+                    <li>Other IT and cloud service providers</li>
+                </ul>
+                <p>We only share personal data where necessary and ensure that all providers are subject to appropriate contractual and 
+                    security obligations, including Data Processing Agreements.
+                </p>
+                <h3>Regulatory and Legal Bodies</h3>
+                <p>We may share data with:</p>
+                <ul>
+                    <li>Law enforcement agencies</li>
+                    <li>Courts and tribunals</li>
+                    <li>Information Commissioner's Office</li>
+                </ul>
 
             </article>
         </div>

@@ -5,15 +5,20 @@ wp_enqueue_style('services-style');
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 <!-- HERO SECTION -->
-<div class="bca-hero-section services-hub-hero" style="background-image: url(<?php echo get_the_post_thumbnail_url(get_the_ID(), 'medium large'); ?>);">
+<div class="bca-hero-section" style="background-image: url(<?php echo get_the_post_thumbnail_url(get_the_ID(), 'medium large'); ?>);">
     <div class="bca-hero__overlay"></div>
     <section class="bca-hero container transparent-header">
         <div class="bca-hero__content">
             <div class="bca-hero__eyebrow reveal">
-                <p><strong><span>Services for Businesses</span></strong></p>
+                <p style="display: flex; gap: 10px;">
+                    <strong><span><?php echo get_field('eyebrow') ?></span></strong>
+                    <?php if((int)get_field('is_specialist_service') === 1) : ?>
+                    <span class="bca-hero__badge">✦ BC&amp;A Specialist</span>
+                    <?php endif; ?>
+                </p>
             </div>
             <div class="bca-hero__head-wrapper">
-                <h1 class="bca-hero__title reveal reveal-delay-1"><?php the_title(); ?></h1>
+                <h1 class="bca-hero__title reveal reveal-delay-1"><?php echo get_field('hero_title') ?></h1>
                 <p class="bca-hero__text reveal reveal-delay-2"><?php echo get_field('hero_description'); ?></p>
             </div>
         </div>
@@ -41,7 +46,7 @@ wp_enqueue_style('services-style');
                 <div class="bca-checklist-grid reveal reveal-delay-1">
                     <div class="bca-checklist__head">
                         <svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2"></path><rect x="9" y="3" width="6" height="4" rx="1"></rect><path d="M9 12h6M9 16h4"></path></svg>
-                        <h3>How We Support</h3>
+                        <h3><?php echo get_field('checklist_title') ?></h3>
                     </div>
                     <div class="bca-checklist__body">
                         <ul class="bca-checklist__list"><?php echo get_field('checklist_items') ?></ul>
@@ -49,9 +54,9 @@ wp_enqueue_style('services-style');
                 </div>
                 <?php endif; ?>
                 
-                <?php if(get_field('content_html') != ''): ?>
+                <?php if(get_field('html_content') != ''): ?>
                 <!-- Content HTML -->
-                <div class="bca-content__html reveal reveal-delay-1"><?php echo get_field('content_html') ?></div>
+                <div class="bca-content__html reveal reveal-delay-1"><?php echo get_field('html_content') ?></div>
                 <?php endif; ?>
                 
                 <!-- FAQ -->

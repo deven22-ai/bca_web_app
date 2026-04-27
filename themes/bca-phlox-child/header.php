@@ -268,8 +268,8 @@
             <div class="bca-mobile-sub">
                 <div class="bca-mobile-sub__section">
                     <a href="/about-us/" class="bca-mobile-sub__link">About BC&A</a>
-                    <a href="/about-us/team/" class="bca-mobile-sub__link">Our Team</a>
-                    <a href="/community/" class="bca-mobile-sub__link">In the Community</a>
+                    <a href="/about-us/our-team/" class="bca-mobile-sub__link">Our Team</a>
+                    <a href="/about-us/community/" class="bca-mobile-sub__link">In the Community</a>
                     <a href="/about-us/news/" class="bca-mobile-sub__link">News &amp; Updates</a>
                 </div>
             </div>

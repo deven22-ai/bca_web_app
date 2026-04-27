@@ -16,7 +16,7 @@
     pointer-events: none;
 }
 
-.bca-hero { padding: 150px 0 80px; } 
+.bca-hero { padding: 150px 0 80px; min-height: auto; } 
 
 .bca-upload {
     padding: 64px 0 88px;

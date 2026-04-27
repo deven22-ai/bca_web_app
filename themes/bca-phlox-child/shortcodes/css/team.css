@@ -183,7 +183,7 @@
 .bca-member__photo .no-img {
     width: 100%;
     height: 100%;
-    background: aliceblue;
+    background: var(--img-placeholder);
 }
 
 .bca-member:hover .bca-member__photo img { transform: scale(1.04); }

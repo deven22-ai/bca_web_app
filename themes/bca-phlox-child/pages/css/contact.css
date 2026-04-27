@@ -183,3 +183,8 @@
 @media (max-width: 767px) {
     .bca-contact-main { padding: 50px 0 };
 }
+
+@media (max-width: 480px) {
+    .bca-ofc-de-grp { flex-flow: column; gap: 5px;} 
+    .bca-office-card__btns { grid-template-columns: 1fr; }
+}

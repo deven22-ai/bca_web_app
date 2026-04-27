@@ -26,10 +26,33 @@ $args = array(
     'order'          => 'ASC'
 );
 $services = new WP_Query($args);
+
+/* Page Content */
+$altPage = 'Individuals';
+$hero_title = 'Supporting Your Business <br><em>At Every Stage</em>';
+$hero_desc  = 'At BC&A, we support businesses from start-up to established enterprise — combining strategic insight with robust compliance services to deliver tailored solutions that drive sustainable growth.';
+$intro_eyebrow = 'Business Services';
+$intro_title = 'One firm. Everything <em>your business needs.</em>';
+$intro_description = 'From day-to-day compliance to high-level strategic planning, BC&A provides a complete range of accountancy, tax and advisory services designed to support your business at every stage of its journey.';
+$services_cta_title = 'Services for <em>Individuals</em>';
+$services_cta_desc = 'From personal tax and self-assessment to wealth management and estate planning — BC&A also provides a full range of specialist services for private clients.';
+if($category === 'individuals') {
+    $hero_title = 'Supporting Your Personal <em>Financial Growth</em>';
+    $hero_desc = 'Our personal advisory services help you manage and plan your finances with clarity and confidence. From tax planning & wealth management to inheritance advice, we provide tailored guidance to support your long-term financial goals.';
+
+    $intro_eyebrow = 'Personal Services';
+    $intro_title = 'Your Personal <em>Finance Support</em>';
+    $intro_description = 'From straightforward tax returns to complex wealth and estate planning, BC&A offers a comprehensive range of personal ' .
+                        'accountancy and advisory services to support you at every stage of life.';
+
+    $services_cta_title = 'Services for <em>Businesses</em>';
+    $services_cta_desc = 'BC&A offers a wide range of general and specialised accounting services to suit everyone from small businesses to large organisations and groups.';                        
+}
+
 ?>
 
 <!-- HERO SECTION -->
-<div class="bca-hero-section businesses-hero">
+<div class="bca-hero-section <?php echo $category ?>">
     <div class="bca-hero__overlay"></div>
     <section class="bca-hero container transparent-header">
         <div class="bca-hero__content">
@@ -37,13 +60,11 @@ $services = new WP_Query($args);
                 <p><strong><span>Services for <?php echo ucfirst($category); ?></span></strong></p>
             </div>
             <div class="bca-hero__head-wrapper">
-                <h1 class="bca-hero__title reveal reveal-delay-1">
-                    Supporting your business <br><em>at every stage</em>
-                </h1>
-                <p class="bca-hero__text reveal reveal-delay-2">At BC&A, we support businesses from start-up to established enterprise — combining strategic insight with robust compliance services to deliver tailored solutions that drive sustainable growth.</p>
+                <h1 class="bca-hero__title reveal reveal-delay-1"><?php echo $hero_title ?></h1>
+                <p class="bca-hero__text reveal reveal-delay-2"><?php echo $hero_desc ?></p>
             </div>
             <div class="bca-hero__btns reveal reveal-delay-4">
-                <a href="#services" class="bca-btn-primary">Explore Our Services</a>
+                <a href="#services" class="bca-btn-primary">Explore Our <?php echo ucfirst($category) ?> Services</a>
                 <a href="/request-quote/" class="bca-btn-ghost">Get a Free Quote</a>
             </div>
         </div>
@@ -55,7 +76,7 @@ $services = new WP_Query($args);
                 </span>
                 <span class="bca-hero__bottom-item">
                     <svg viewBox="0 0 16 16"><path d="M13 7.5A5.5 5.5 0 112 7.5 5.5 5.5 0 0113 7.5z"></path><path d="M15 15l-3-3"></path></svg>
-                    Tailored to your business needs
+                    Tailored to your <?php echo ($category != 'individuals') ? 'business' : ''?> needs
                 </span>
                 <span class="bca-hero__bottom-item">
                     <svg viewBox="0 0 16 16"><path d="M2 4h12v8a1 1 0 01-1 1H3a1 1 0 01-1-1V4z"></path><path d="M2 4l6 5 6-5"></path></svg>
@@ -76,10 +97,10 @@ $services = new WP_Query($args);
         <div class="bca-intro__grid">
             <div class="bca-heading-section left-align reveal">
                 <div class="bca-heading-container">
-                    <div class="bca-heading__eyebrow">Business Services</div>
-                    <h2 class="bca-heading__title">One firm. Everything <em>your business needs.</em></h2>
+                    <div class="bca-heading__eyebrow"><?php echo $intro_eyebrow ?></div>
+                    <h2 class="bca-heading__title"><?php echo $intro_title ?></h2>
                     <div class="bca-heading__description">
-                        <p>From day-to-day compliance to high-level strategic planning, BC&A provides a complete range of accountancy, tax and advisory services designed to support your business at every stage of its journey.</p>
+                        <p><?php echo $intro_description ?></p>
                     </div>
                 </div>
             </div>
@@ -98,7 +119,7 @@ $services = new WP_Query($args);
         <div class="bca-heading-section reveal">
             <div class="bca-heading-container">
                 <div class="bca-heading__eyebrow">What We Offer</div>
-                <h2 class="bca-heading__title">Our services <span>for <?php echo ucfirst($category); ?>s</span></h2>
+                <h2 class="bca-heading__title">Our services <span>for <?php echo ucfirst($category); ?></span></h2>
                 <div class="bca-heading__description"><p>Click any service to find out more about how we can help you and your business grow.</p></div>
             </div>
         </div>
@@ -114,7 +135,7 @@ $services = new WP_Query($args);
                         <?php if (has_post_thumbnail()) {
                             the_post_thumbnail('medium_large');
                         } else { ?>
-                            <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=600&amp;q=80" alt="<?php the_title(); ?>">
+                            <img style="background: var(--img-placeholder);" alt="<?php the_title(); ?>">
                         <?php } ?>
                         <?php if ($isSpecialistService) : ?>
                             <div class="bca-svc-card__specialist">✦ BC&amp;A Specialist</div>
@@ -142,11 +163,13 @@ $services = new WP_Query($args);
         <div class="bca-cta-var2__inner reveal">
             <div class="bca-cta-var2__text">
                 <span class="bca-heading__eyebrow">Also available</span>
-                <h2>Services for <em>Individuals</em></h2>
-                <p>From personal tax and self-assessment to wealth management and estate planning — BC&A also provides a full range of specialist services for private clients.</p>
+                <h2><?php echo $services_cta_title; ?></h2>
+                <p><?php echo $services_cta_desc ?></p>
             </div>
             <div class="bca-cta__btns">
-                <a href="/services/individuals/" class="bca-btn-primary">View Individual Services<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
+                <a href="/services/<?php echo ($category === 'businesses') ? 'individuals' : 'businesses' ?>/" class="bca-btn-primary">
+                    View <?php echo ($category === 'businesses') ? 'Individual' : 'Business' ?> Services<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg>
+                </a>
                 <a href="/contact/" class="bca-btn-ghost">Get in Touch</a>
             </div>
         </div>

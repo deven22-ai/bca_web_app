@@ -4,7 +4,7 @@ get_header();
 ?>
 
 <!-- HERO SECTION -->
-<div class="bca-hero-section services-hub-hero">
+<div class="bca-hero-section" style="background-image: url(/wp-content/uploads/2026/04/empty_meeting_room.jpg)">
     <div class="bca-hero__overlay"></div>
     <section class="bca-hero container transparent-header">
         <div class="bca-hero__content">

@@ -137,7 +137,7 @@ wp_enqueue_style('single-office-style');
                     <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Practical advice delivered in a responsive and approachable way</li>
                     <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>We understand the unique challenges faced by local businesses</li>
                 </ul>
-                <div style="display:flex;gap:14px;flex-wrap:wrap;">
+                <div class="bca-why__btns">
                     <a href="/contact" class="bca-btn-primary">Get in Touch<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
                     <a href="/request-quote/" class="bca-btn-outline">Get Free Quote</a>
                 </div>
