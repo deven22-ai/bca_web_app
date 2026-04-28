@@ -9,6 +9,38 @@
     <?php 
     wp_body_open(); 
     $arrow = '<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg>';
+    $services = [
+        [
+            'name' => 'Accounting Solutions', 
+            'is_specialist' => false,
+            'link' => '/services/accounting-solutions/'
+        ],
+        [
+            'name' => 'Accouting for Parish & City Councils',
+            'is_specialist' => true,
+            'link' => '/services/accounting-for-parish-city-councils/'
+        ],
+        [
+            'name' => 'Business Tax Services',
+            'is_specialist' => false,
+            'link' => '/services/business-tax/'
+        ],
+        [
+            'name' => 'Payroll Services',
+            'is_specialist' => false,
+            'link' => '/services/payroll-services/'
+        ],
+        [
+            'name' => 'R&D Tax Relief',
+            'is_specialist' => true,
+            'link' => '/services/rd-tax-relief/'
+        ],
+        [
+            'name' => 'Making Tax Digital (MTD)',
+            'is_specialist' => false,
+            'link' => '/services/making-tax-digital-mtd/'
+        ],
+    ];
 ?>
 
 <div class="bca-nav-backdrop" id="nav-backdrop"></div>
@@ -16,7 +48,7 @@
 <!-------------------------------
     TOP BAR
   ------------------------------>
-<div class="bca-topbar" id="bca-topbar" >
+<div class="bca-topbar" id="bca-topbar">
     <div class="bca-topbar__inner">
         <div class="bca-topbar__left">
             <a href="tel:02392833300" class="bca-topbar__item">
@@ -70,13 +102,15 @@
                                 </div>
                             </div>
                             <ul class="bca-mega__list">
-                                <li class="bca-mega__list-item"><a href="/services/accounting-solutions/">Accounting Solutions <svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg></a></li>
-                                <li class="bca-mega__list-item"><a href="/services/business-tax/">Business Tax Services <svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg></a></li>
-                                <li class="bca-mega__list-item"><a href="/services/payroll/">Payroll Services <svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg></a></li>
-                                <li class="bca-mega__list-item"><a href="/services/audit/">Audit Services <svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg></a></li>
-                                <li class="bca-mega__list-item"><a href="/services/business-advisory/">Business Advisory <svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg></a></li>
-                                <li class="bca-mega__list-item"><a href="/services/virtual-finance-director/">Virtual Finance Director <svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg></a></li>
-                                <li class="bca-mega__list-item bca-mega__list-item--specialist"><a href="/services/rd-tax-relief/">R&amp;D Tax Relief <svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg> <span>BC&amp;A Specialist</span></a></li>
+                                <?php foreach($services as $serivce) : ?>
+                                <li class="bca-mega__list-item <?php echo $serivce['is_specialist'] ? 'bca-mega__list-item--specialist"' : '' ?>">
+                                    <a href="<?php echo $serivce['link'] ?>">
+                                        <?php echo esc_html($serivce['name']); ?>    
+                                        <svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg>
+                                        <?php echo $serivce['is_specialist'] ? '<span>BC&amp;A Specialist</span>' : '' ?>
+                                    </a>
+                                </li>
+                                <?php endforeach; ?>
                             </ul>
                             <a href="/services/businesses/" class="bca-mega__view-all">
                                 View all business services
@@ -100,10 +134,9 @@
                                 <li class="bca-mega__list-item"><a href="/services/private-client-tax/">Private Client Tax <svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg></a></li>
                                 <li class="bca-mega__list-item"><a href="/services/self-assessment/">Self-Assessment Tax Return <svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg></a></li>
                                 <li class="bca-mega__list-item"><a href="/services/personal-tax-planning/">Personal Tax Planning <svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg></a></li>
-                                <li class="bca-mega__list-item"><a href="/services/wealth-management/">Personal Wealth Management <svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg></a></li>
-                                <li class="bca-mega__list-item"><a href="/services/estate-planning/">Estate &amp; Trust Planning <svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg></a></li>
-                                <li class="bca-mega__list-item"><a href="/services/property-tax/">Property Tax Planning <svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg></a></li>
-                                <li class="bca-mega__list-item"><a href="/services/making-tax-digital/">Making Tax Digital (MTD) <svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg></a></li>
+                                <li class="bca-mega__list-item"><a href="/services/personal-wealth-management/">Personal Wealth Management <svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg></a></li>
+                                <li class="bca-mega__list-item"><a href="/services/estate-and-trust-planning/">Estate &amp; Trust Planning <svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg></a></li>
+                                <li class="bca-mega__list-item"><a href="/services/property-tax/">Property Tax Planning For Landlords & Investors <svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg></a></li>
                             </ul>
                             <a href="/services/individuals/" class="bca-mega__view-all">View all individual services<svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg></a>
                         </div>
@@ -229,19 +262,18 @@
             <div class="bca-mobile-sub">
                 <div class="bca-mobile-sub__section">
                     <span class="bca-mobile-sub__section-label">For Businesses</span>
-                    <a href="/services/accounting-solutions/" class="bca-mobile-sub__link">Accounting Solutions</a>
-                    <a href="/services/business-tax/" class="bca-mobile-sub__link">Business Tax Services</a>
-                    <a href="/services/payroll/" class="bca-mobile-sub__link">Payroll Services</a>
-                    <a href="/services/audit/" class="bca-mobile-sub__link">Audit Services</a>
-                    <a href="/services/rd-tax-relief/" class="bca-mobile-sub__link">R&D Tax Relief ✦</a>
+                    <?php foreach($services as $serivce) : ?>
+                    <a href="<?php echo $serivce['link'] ?>" class="bca-mobile-sub__link"><?php echo esc_html($serivce['name']); ?></a>
+                    <?php endforeach; ?>
                     <a href="/services/businesses/" class="bca-mobile-sub__link" style="color:var(--bca-secondary);">View all business services →</a>
                 </div>
                 <div class="bca-mobile-sub__section">
                     <span class="bca-mobile-sub__section-label">For Individuals</span>
-                    <a href="/services/self-assessment/" class="bca-mobile-sub__link">Self-Assessment</a>
+                    <a href="/services/private-client-tax/" class="bca-mobile-sub__link">Private Client Tax</a>
+                    <a href="/services/self-assessment/" class="bca-mobile-sub__link">Self-Assessment Tax Return</a>
                     <a href="/services/personal-tax-planning/" class="bca-mobile-sub__link">Personal Tax Planning</a>
-                    <a href="/services/wealth-management/" class="bca-mobile-sub__link">Wealth Management</a>
-                    <a href="/services/estate-planning/" class="bca-mobile-sub__link">Estate Planning</a>
+                    <a href="/services/personal-wealth-management/" class="bca-mobile-sub__link">Wealth Management</a>
+                    <a href="/services/estate-and-trust-planning/" class="bca-mobile-sub__link">Estate & Trust Planning</a>
                     <a href="/services/individuals/" class="bca-mobile-sub__link" style="color:var(--bca-secondary);">View all individual services →</a>
                 </div>
             </div>

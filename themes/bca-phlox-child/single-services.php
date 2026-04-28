@@ -3,7 +3,17 @@ get_header();
 wp_enqueue_style('services-style'); 
 ?>
 
-<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+<?php if (have_posts()) : 
+    while (have_posts()) : 
+        the_post(); 
+        $service_type_slug = ''; $service_type_name = '';
+        $service_types = get_the_terms(get_the_ID(), 'service_type');
+        if(!empty($service_types) && !is_wp_error($service_types)) {
+            $service_type_slug = $service_types[0]->slug /*. "?section=services"*/;
+            $service_type_name = $service_types[0]->name;
+        }
+        ?>
+
 <!-- HERO SECTION -->
 <div class="bca-hero-section" style="background-image: url(<?php echo get_the_post_thumbnail_url(get_the_ID(), 'medium large'); ?>);">
     <div class="bca-hero__overlay"></div>
@@ -24,7 +34,7 @@ wp_enqueue_style('services-style');
         </div>
         <div class="bca-hero__btns reveal reveal-delay-4">
             <a href="#enquire" class="bca-btn-primary">Enquire About This Service</a>
-            <a href="/services/businesses/" class="bca-btn-ghost">All Business Services</a>
+            <a href="/services/<?php echo $service_type_slug ?>" class="bca-btn-ghost">All <?php echo $service_type_name ?> Services</a>
         </div>
     </section>
 </div>

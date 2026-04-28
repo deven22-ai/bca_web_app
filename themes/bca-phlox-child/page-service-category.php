@@ -178,4 +178,5 @@ if($category === 'individuals') {
 
 <?php 
 echo do_shortcode('[bca_cta_sector]');
-get_footer(); ?>
+get_footer(); 
+?>
