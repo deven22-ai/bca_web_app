@@ -21,7 +21,7 @@
     inset: 0;
     z-index: 1;
     pointer-events: none;
-    background:radial-gradient(circle at 20% 50%, rgb(1 13 43) 0%, rgba(1, 13, 43, 0.75) 25%, rgba(13, 27, 62, 0.4) 45%, rgb(13 27 62 / 0%) 60%, rgba(13, 27, 62, 0) 75%), linear-gradient(90deg, rgb(1 13 43) 0%, rgb(13 27 62 / 10%) 40%, rgba(13, 27, 62, 0) 65%);
+    background:radial-gradient(circle at 20% 50%, rgb(1 13 43) 0%, rgb(1 13 43 / 75%) 25%, rgb(13 27 62 / 36%) 45%, rgb(13 27 62 / 0%) 60%, rgba(13, 27, 62, 0) 75%), linear-gradient(90deg, rgb(1 13 43) 0%, rgb(13 27 62 / 30%) 40%, rgba(13, 27, 62, 0) 65%);
 }
 
 .bca-hero {
@@ -66,7 +66,7 @@
     padding-bottom: 5px;
     letter-spacing: 2px;
     text-transform: uppercase;
-    font-family: 'Outfit', sans-serif;
+    font-family: var(--bca-font-heading);
     color: var(--gold);
 }
 
@@ -105,7 +105,7 @@
 .bca-hero__service-name {
     font-size: 15px;
     font-weight: 700;
-    color: rgba(255, 255, 255, 0.75);
+    color: var(--white);
     /* line-height: 1.3; */
     flex: 1;
 }
@@ -152,13 +152,13 @@
 }
 
 .bca-svc-box__core-label {
-    font-family: 'Outfit', sans-serif;
+    font-family: var(--bca-font-heading);
     font-size: 10px;
     font-weight: 700;
     justify-self: center;
     letter-spacing: 1.5px;
     text-transform: uppercase;
-    color: rgba(255, 255, 255, 0.4);
+    color: rgb(255 255 255 / 60%);
     align-self: center;
 }
 
@@ -166,7 +166,7 @@
     font-size: 14px;
     color: var(--white);
     font-weight: 600;
-    font-family: 'Outfit', sans-serif;
+    font-family: var(--bca-font-heading);
 }
 
 .bca-svc-box__core-right {
@@ -177,7 +177,7 @@
 }
 
 .bca-svc-box__core-desc {
-    font-family: 'Outfit', sans-serif;
+    font-family: var(--bca-font-heading);
     font-size: 13px;
     color: rgb(255 255 255);
     white-space: nowrap;
