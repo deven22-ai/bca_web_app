@@ -143,6 +143,6 @@ document.addEventListener('DOMContentLoaded', () => {
         submitBtn.classList.add('is-loading');
         submitBtnTxt.textContent = 'Uploading…';
 
-        setTimeout(ajaxFileUpload, 500);
+        setTimeout(ajaxFileUpload, 10);
     });
 });

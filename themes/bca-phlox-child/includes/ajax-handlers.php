@@ -1,9 +1,4 @@
 <?php
-
-use WpOrg\Requests\Response;
-
-use const Avifinfo\UNDEFINED;
-
 add_action('wp_ajax_bca_get_news', 'bca_get_news_handler');
 add_action('wp_ajax_nopriv_bca_get_news', 'bca_get_news_handler'); // for logged-out users
 
