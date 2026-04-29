@@ -1,5 +1,7 @@
 <?php
 
+use WpOrg\Requests\Response;
+
 use const Avifinfo\UNDEFINED;
 
 add_action('wp_ajax_bca_get_news', 'bca_get_news_handler');
@@ -101,7 +103,8 @@ function bca_file_upload() {
                 "Uploaded At: " . current_time('Y-m-d H:i:s');
     $headers = ['Content-Type: text/plain; charset=UTF-8'];
 
-    wp_mail("devenwarang07@gmail.com", $subject, $message, $headers);
+    $sent = wp_mail("deven@aishatech.ai", $subject, $message, $headers);
+    if(!$sent) error_log('Failed to send email');        
 
     wp_send_json_success("File(s) uploaded successfully");
 }

@@ -507,11 +507,11 @@
 /* ════════════════════════════════════════
     RESPONSIVE
 ════════════════════════════════════════ */
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
     .bca-upload__inner { grid-template-columns: 1fr; }
     .bca-upload-sidebar { position: static; }
     .bca-upload-submit { flex-direction: column; align-items: flex-start; }
-    .bca-upload-submit__btn { width: 100%; justify-content: center; }
+    #submitBtn { width: 100%; justify-content: center; }
 }
 
 @media (max-width: 480px) {

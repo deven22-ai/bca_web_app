@@ -1,7 +1,8 @@
 <?php 
 
-require_once get_stylesheet_directory() . '/includes/services/microsoft-sharepoint.php';
+require_once get_stylesheet_directory() . '/includes/services/microsoft-sharepoint.php'; // Microsoft Sharepoint API
 require_once get_stylesheet_directory() . '/includes/ajax-handlers.php';  // AJAX handlers
+require_once get_stylesheet_directory() . '/includes/services/mail.php'; // PHPMailer
 
 // Shortcodes - Load the files, only once
 require_once get_stylesheet_directory() . '/shortcodes/shortcode-cta.php';

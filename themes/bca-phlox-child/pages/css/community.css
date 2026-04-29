@@ -163,15 +163,16 @@
 .bca-partner-card:hover { box-shadow: 0 14px 40px rgba(13,27,62,0.09); transform: translateY(-3px); }
 
 .bca-partner-card__img { 
-    height: 180px; 
-    overflow: hidden; 
-    background: var(--bca-card-bg); 
-    position: relative; 
-    align-content: center;
-    justify-items: center;
+    height: 180px;
+    overflow: hidden;
+    background: var(--bca-card-bg);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.bca-partner-card__img img { width: 200px; object-fit: cover; transition: transform 0.45s ease; display: flex; }
+.bca-partner-card__img img { width: 200px; object-fit: cover; transition: transform 0.45s ease; }
 .bca-partner-card:hover .bca-partner-card__img img { transform: scale(1.04); }
 
 .bca-partner-card__body { padding: 24px; flex: 1; display: flex; flex-direction: column; }

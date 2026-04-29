@@ -1,4 +1,5 @@
 <?php 
+
 function initiate_sharepoint($folderName, $files) {
     $accessToken = get_access_token();
     if(!$accessToken) return new WP_Error('Upload Failed', 'Not able to fetch the access token');
@@ -19,7 +20,8 @@ function initiate_sharepoint($folderName, $files) {
             else {
                 $res = wp_remote_retrieve_body($response); 
                 $json = json_decode($res, true);
-                error_log($json['name'] . " uploaded on " . $json['createdDateTime']);
+                error_log($json['name'] . " uploaded on " . $json['createdDateTime
+                /** @var \PHPMailer\PHPMailer\PHPMailer $phpmailer */']);
             }
         }
 
