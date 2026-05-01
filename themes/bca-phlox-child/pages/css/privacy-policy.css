@@ -160,10 +160,18 @@
 .bca-privacy__list-wrapper { display: flex; gap: 20px; }
 .bca-privacy__list-wrapper .list { width: 100%; }
 
+/* Active TOC link */
+.bca-legal__toc a.active {
+    color: var(--bca-primary);
+    border-left-color: var(--bca-primary);
+    padding-left: 16px;
+    font-weight: 600;
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
     .bca-legal__grid { grid-template-columns: 1fr; gap: 40px; }
-    .bca-legal__toc { position: static; }
+    .bca-legal__toc { position: static; display: none; }
 }
 @media (max-width: 640px) {
     .bca-legal { padding: 56px 0 72px; }
