@@ -1,6 +1,6 @@
 <?php 
 
-function initiate_sharepoint($folderName, $files) {
+function initiate_sharepoint(string $folderName, array $files) {
     $accessToken = get_access_token();
     if(!$accessToken) return new WP_Error('Upload Failed', 'Not able to fetch the access token');
 
@@ -8,6 +8,7 @@ function initiate_sharepoint($folderName, $files) {
     if(!$driveId) return new WP_Error('Upload Failed', 'Not able to fetch the Drive ID');
 
     if(checkFolderExists($accessToken, $driveId, $folderName)) {        
+        $uploaded_files = [];
         for ($i = 0; $i < count($files['name']); $i++) {
             $file = [ 
                 'name' => sanitize_file_name($files['name'][$i]), 
@@ -20,16 +21,22 @@ function initiate_sharepoint($folderName, $files) {
             else {
                 $res = wp_remote_retrieve_body($response); 
                 $json = json_decode($res, true);
-                error_log($json['name'] . " uploaded on " . $json['createdDateTime
-                /** @var \PHPMailer\PHPMailer\PHPMailer $phpmailer */']);
+
+                $uploaded_files[] = [
+                    'file_name'    => $json['name'],
+                    'download_url' => $json['@microsoft.graph.downloadUrl'],
+                    'web_url'      => $json['webUrl'],
+                    'size'         => $json['size']
+                ]; 
+                error_log($json['name'] . " uploaded on " . $json['createdDateTime']);
             }
         }
+        return $uploaded_files;
 
-        return true;
-    } else return new WP_Error('Upload Failed', 'Folder doesnt exists.');
+    } else return new WP_Error('Upload Failed', 'Folder doesn\'t exists.');
 }
 
-function upload_file_to_sharepoint ($accessToken, $driveId, $folderName, $file) {
+function upload_file_to_sharepoint (string $accessToken, string $driveId, string $folderName, array $file) {
     $fileName = $file['name'];
     $filePath = $file['tmp_name'];
 
@@ -79,7 +86,7 @@ function get_drive_id ($accessToken) {
     return $jsonData['parentReference']['driveId'];
 }
 
-function get_drive_graph_api ($accessToken)  {
+function get_drive_graph_api (string $accessToken)  {
     error_log('DRIVE not found using the drive_id. Trying to fetching the drive id using Graph API now');
     $siteId = fetch_site_id($accessToken);
     if(!$siteId) return false;
@@ -122,7 +129,7 @@ function get_access_token () {
     return $accessToken;
 }
 
-function fetch_site_id ($accessToken) {
+function fetch_site_id (string $accessToken) {
     $response = wp_remote_get(BCA_MS_SITE_URL . BCA_SHAREPOINT_URL, [
         'headers' => [
             'Authorization' => 'Bearer ' . $accessToken
@@ -145,7 +152,7 @@ function fetch_site_id ($accessToken) {
     return $jsonData['id'];
 }
 
-function fetch_drive_id ($accessToken, $siteId) {
+function fetch_drive_id (string $accessToken, string $siteId) {
     $response = wp_remote_get(BCA_MS_SITE_URL . $siteId . '/drives', [
         'headers' => [
             'Authorization' => 'Bearer ' . $accessToken

@@ -1,5 +1,8 @@
 <?php 
-function php_mailer($phpmailer) {    
+
+use PHPMailer\PHPMailer\PHPMailer;
+
+function php_mailer(PHPMailer $phpmailer) {    
     $phpmailer->isSMTP();
 
 
@@ -13,14 +16,17 @@ function php_mailer($phpmailer) {
     $phpmailer->From       = SMTP_USER;
     $phpmailer->FromName   = 'BCA Website';
 
+    /* This code is just for debugging SMTP 
     $phpmailer->SMTPDebug = 2;
     $phpmailer->Debugoutput = function($str, $level) {
         error_log("SMTP DEBUG: $str");
-    };
+    }; */
+}
+
+function php_mailer_error(WP_Error $error) {
+    error_log('Mail Error: ' . print_r($error->get_error_message(), true));
 }
 
 add_action('phpmailer_init', 'php_mailer');
-add_action('wp_mail_failed', function($error) {
-    error_log('Mail Error: ' . print_r($error->get_error_message(), true));
-});
+add_action('wp_mail_failed', 'php_mailer_error');
 ?>

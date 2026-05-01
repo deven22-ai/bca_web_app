@@ -93,6 +93,8 @@ async function ajaxFileUpload() {
         const data = await request.json();
         console.log(data.success);
         if(data.success) {
+            const el = document.getElementById('uploadError');
+            el.classList.remove('is-visible');
             uploadFormWrp.style.display = 'none';
             uploadSuccess.classList.add('is-visible');   
             uploadSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -143,6 +145,6 @@ document.addEventListener('DOMContentLoaded', () => {
         submitBtn.classList.add('is-loading');
         submitBtnTxt.textContent = 'Uploading…';
 
-        setTimeout(ajaxFileUpload, 10);
+        ajaxFileUpload();
     });
 });
