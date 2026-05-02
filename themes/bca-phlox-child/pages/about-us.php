@@ -144,35 +144,35 @@ wp_enqueue_style('about-us-style');
                 <div class="bca-timeline__empty"></div>
                 <div class="bca-timeline__dot right"><div class="bca-timeline__year"></div></div>
                 <div class="bca-timeline__right">
-                    <div class="notch"></div>
                     <span class="bca-tl__year">2004</span>
                     <span class="bca-tl__tag">Founded</span>
                     <div class="bca-t1-card__description">
                         <span class="bca-tl__title">Established in Portsmouth</span>
                         <span class="bca-tl__text">BC&amp;A opens its doors in Southsea with a clear mission — big-firm expertise delivered with a genuinely personal approach to every client.</span>
                     </div>
+                    <div class="notch"></div>
                 </div>
             </div>
             <!-- 2nd Card -->
-            <div class="bca-timeline__item left">
+            <div class="bca-timeline__item bca-timeline__item-left">
                 <div class="bca-timeline__left">
-                    <div class="notch"></div>
                     <span class="bca-tl__year">2010</span>
                     <span class="bca-tl__tag">Growth</span>
                     <div class="bca-t1-card__description">
                         <span class="bca-tl__title">Expanding our expertise</span>
                         <span class="bca-tl__text">Growing reputation across Hampshire leads to significant team expansion and the introduction of specialist sector advisory services.</span>
                     </div>
+                    <div class="notch"></div>
                 </div>
-                <div class="bca-timeline__dot left"><div class="bca-timeline__year"></div></div>
+                <div class="bca-timeline__dot bca-timeline__item-left"><div class="bca-timeline__year"></div></div>
                 <div class="bca-timeline__right">
-                    <div class="notch"></div>
                     <span class="bca-tl__year">2010</span>
                     <span class="bca-tl__tag">Growth</span>
                     <div class="bca-t1-card__description">
                         <span class="bca-tl__title">Expanding our expertise</span>
                         <span class="bca-tl__text">Growing reputation across Hampshire leads to significant team expansion and the introduction of specialist sector advisory services.</span>
                     </div>
+                    <div class="notch"></div>
                 </div>
             </div>
             <!-- 3rd Card -->
@@ -180,35 +180,35 @@ wp_enqueue_style('about-us-style');
                 <div class="bca-timeline__empty"></div>
                 <div class="bca-timeline__dot right"><div class="bca-timeline__year"></div></div>
                 <div class="bca-timeline__right">
-                    <div class="notch"></div>
                     <span class="bca-tl__year">2016</span>
                     <span class="bca-tl__tag">Expansion</span>
                     <div class="bca-t1-card__description">
                         <span class="bca-tl__title">Romsey office opens</span>
                         <span class="bca-tl__text">A second Hampshire office brings dedicated local support to businesses and individuals across central Hampshire and beyond.</span>
                     </div>
+                    <div class="notch"></div>
                 </div>
             </div>
             <!-- 4th Card -->
-            <div class="bca-timeline__item left">
+            <div class="bca-timeline__item bca-timeline__item-left">
                 <div class="bca-timeline__left">
-                    <div class="notch"></div>
                     <span class="bca-tl__year">2020</span>
                     <span class="bca-tl__tag">Innovation</span>
                     <div class="bca-t1-card__description">
                         <span class="bca-tl__title">Cloud-first transformation</span>
                         <span class="bca-tl__text">Full adoption of cloud accounting technology — enabling real-time reporting and more proactive financial management for every client.</span>
                     </div>
+                    <div class="notch"></div>
                 </div>
-                <div class="bca-timeline__dot left"><div class="bca-timeline__year"></div></div>
+                <div class="bca-timeline__dot bca-timeline__item-left"><div class="bca-timeline__year"></div></div>
                 <div class="bca-timeline__right">
-                    <div class="notch"></div>
                     <span class="bca-tl__year">2020</span>
                     <span class="bca-tl__tag">Innovation</span>
                     <div class="bca-t1-card__description">
                         <span class="bca-tl__title">Cloud-first transformation</span>
                         <span class="bca-tl__text">Full adoption of cloud accounting technology — enabling real-time reporting and more proactive financial management for every client.</span>
                     </div>
+                    <div class="notch"></div>
                 </div>
             </div>
             <!-- 5th Card -->
@@ -216,13 +216,13 @@ wp_enqueue_style('about-us-style');
                 <div class="bca-timeline__empty"></div>
                 <div class="bca-timeline__dot right"><div class="bca-timeline__year"></div></div>
                 <div class="bca-timeline__right">
-                    <div class="notch"></div>
                     <span class="bca-tl__year">2024</span>
                     <span class="bca-tl__tag">Today</span>
                     <div class="bca-t1-card__description">
                         <span class="bca-tl__title">Swindon expansion</span>
                         <span class="bca-tl__text">BC&A's third office opens in Wiltshire — extending our reach and bringing the same standard of excellence to businesses across the South of England.</span>
                     </div>
+                    <div class="notch"></div>
                 </div>
             </div>
         </div>
@@ -286,6 +286,11 @@ wp_enqueue_style('about-us-style');
     </div>
 </section>
 
+<?php 
+echo do_shortcode('[bca_cta_contact]'); /* CONTACT SHORTCODE */
+get_footer();
+?>
+
 
 <script>
     (function() {
@@ -308,8 +313,3 @@ wp_enqueue_style('about-us-style');
         window.addEventListener('resize', check);
     })();
 </script>
-
-<?php 
-echo do_shortcode('[bca_cta_contact]'); /* CONTACT SHORTCODE */
-get_footer();
-?>

@@ -49,11 +49,11 @@
                 <div class="bca-footer__offices">
                     <!-- Portsmouth -->
                     <div class="bca-footer__office">
-                        <div class="bca-footer__office-name">
+                        <a href="/offices/portsmouth/" class="bca-footer__office-name">
                             <span class="bca-footer__office-dot bca-footer__office-dot--blue"></span>
                             Portsmouth
                             <span class="bca-footer__office-badge">Headquarter</span>
-                        </div>
+                        </a>
                         <div class="bca-footer__office-addr">24 Landport Terrace, Southsea, Portsmouth, PO1 2RG</div>
                         <div class="bca-footer__office-contact">
                             <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
@@ -64,11 +64,11 @@
                     </div>
                     <!-- Romsey -->
                     <div class="bca-footer__office">
-                        <div class="bca-footer__office-name">
+                        <a href="/offices/romsey/" class="bca-footer__office-name">
                             <span class="bca-footer__office-dot bca-footer__office-dot--gold"></span>
                             Romsey
                             <span class="bca-footer__office-badge">2 practices</span>
-                        </div>
+                        </a>
                         <div class="bca-footer__office-addr">Buckley House, 29-31A The Hundred, Romsey, SO51 8GD</div>
                         <!--<div class="bca-footer__office-practices">
                             <div class="bca-footer__office-practice">
@@ -85,10 +85,10 @@
                     </div>
                     <!-- Swindon -->
                     <div class="bca-footer__office">
-                        <div class="bca-footer__office-name">
+                        <a href="/offices/swindon/" class="bca-footer__office-name">
                             <span class="bca-footer__office-dot bca-footer__office-dot--green"></span>
                             Swindon
-                        </div>
+                        </a>
                         <div class="bca-footer__office-addr">Unit 1 Uffcott Farm, Uffcott, Swindon, SN4 9NB</div>
                         <div class="bca-footer__office-contact">
                             <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>

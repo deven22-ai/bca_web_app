@@ -30,7 +30,7 @@ wp_enqueue_style('privacy-style');
                 <div class="bca-legal__toc-inner">
                 <div class="bca-legal__toc-head">On This Page</div>
                 <ul>
-                    <li><a href="#introduction">Introduction</a></li>
+                    <li><a href="#introduction" class="active">Introduction</a></li>
                     <li><a href="#contact">Contact Details</a></li>
                     <li><a href="#scope-and-source-data">About This Policy</a></li>
                     <li><a href="#data-collect">Data We Collect & Use</a></li>

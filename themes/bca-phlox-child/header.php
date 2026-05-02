@@ -205,6 +205,10 @@
                         <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
                         News &amp; Updates
                     </a>
+                    <a href="/about-us/become-client/" class="bca-dropdown__item">
+                        <svg viewBox="0 0 24 24" fill="none"><circle cx="10" cy="8" r="3" stroke="currentColor" stroke-width="2"></circle><path d="M4 20c0-3 3-5 6-5s6 2 6 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path><path d="M19 8v4M17 10h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
+                        Become a Client
+                    </a>
                 </div>
             </div>
 

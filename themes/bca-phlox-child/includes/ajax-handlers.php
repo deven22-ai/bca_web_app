@@ -209,7 +209,7 @@ function bca_file_upload() {
     if (is_wp_error($response)) wp_send_json_error([ 'message' => $response->get_error_message() ]);
 
     /* Send Email to the respective office */
-    $subject = "New " . count($response) > 1 ? "Documents" : "Document" . " Uploaded";
+    $subject = "New " . (count($response) > 1 ? "Documents" : "Document") . " Uploaded";
     $message = bca_generate_email($response, $officeLocs[$office]);
 
     $headers = ['Content-Type: text/html; charset=UTF-8'];

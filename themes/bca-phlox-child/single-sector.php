@@ -130,7 +130,7 @@ if (have_posts()) {
                             </p>
                             <div class="btn-wrapper"><a href="/contact/" class="bca-btn-primary">Speak To An Adviser<?php echo get_arrow_icon() ?></a></div>
                         </div>
-                        <div class="bca-faq-list drop-shadow reveal reveal-delay-1">
+                        <div class="bca-faq-list reveal reveal-delay-1">
                             <?php 
                             $raw_faqs = get_field('faq');
                             if($raw_faqs) {

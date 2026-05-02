@@ -112,6 +112,12 @@ function bca_phlox_child_enqueue_assets() {
         array('auxin-child'), 
         filemtime(get_stylesheet_directory() . '/pages/css/privacy-policy.css')
     );
+    wp_register_style(
+        'become-client-style',
+        get_stylesheet_directory_uri() . '/pages/css/become-client.css',
+        array('auxin-child'), 
+        filemtime(get_stylesheet_directory() . '/pages/css/become-client.css')
+    );
 }
 
 /* Remove Phlox Hooks Title area (includes breadcrumb) for the Sector archive only. */

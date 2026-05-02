@@ -160,7 +160,7 @@
     padding: 25px 0;
 }
 
-.bca-timeline__item.left .bca-timeline__right { display: none; }
+.bca-timeline__item-left .bca-timeline__right { display: none; }
 
 .bca-timeline__left , .bca-timeline__right {
     width: 380px;
@@ -190,11 +190,12 @@
     position: absolute;
 }
 
-.bca-timeline__right .notch::after {
+.bca-timeline__right .notch::after,
+.bca-timeline__left .notch::after {
     content: "";
     position: absolute;
-    bottom: var(--notch-bottom);
     left: -37px;
+    bottom: -5px;
     width: 0;
     height: 0;
     border-top: 8px solid transparent;
@@ -203,14 +204,8 @@
 }
 
 .bca-timeline__left .notch::after {
-    content: "";
-    position: absolute;
-    bottom: var(--notch-bottom);
     left: 351px;
-    width: 0;
-    height: 0;
-    border-top: 8px solid transparent;
-    border-bottom: 8px solid transparent;
+    border-right: 0px;
     border-left: 10px solid var(--bca-secondary);
 }
 
@@ -412,11 +407,11 @@
 @media (max-width: 1024px) {
     .bca-timeline__item { grid-template-columns: 54px 1fr;gap: 20px; }
     .bca-timeline__left , .bca-timeline__empty { display: none;}
+    .bca-timeline__right { transform: none !important; }
     .bca-timeline::before { left: 28px; }
     .bca-timeline__item:nth-child(even) .bca-timeline__right .notch::after { border-right: 10px solid var(--bca-secondary); }
-    .bca-timeline__right .notch::after { bottom: -105px; }
     .bca-timeline__left, .bca-timeline__right { width: 100%; }
-    .bca-timeline__item.left .bca-timeline__right { display: block; }
+    .bca-timeline__item-left .bca-timeline__right { display: block; }
     /* Reset the even/left transforms so all cards animate from the right */
     .bca-timeline__item:nth-child(even) .bca-timeline__right {
         justify-self: start;

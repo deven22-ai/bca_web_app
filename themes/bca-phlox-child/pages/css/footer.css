@@ -118,6 +118,7 @@
     flex-direction: column;
     gap: 4px;
 }
+.bca-footer__office a:hover { color: var(--bca-secondary); }
 .bca-footer__office-name {
     font-family: var(--bca-font-heading);
     font-size: 15px;
@@ -169,7 +170,6 @@
     font-weight: 600;
     transition: color 0.2s;
 }
-.bca-footer__office-contact a:hover { color: var(--bca-secondary); }
 
 /* Romsey sub-practices */
 .bca-footer__office-practices {

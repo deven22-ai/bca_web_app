@@ -1382,7 +1382,7 @@ label > input[type="checkbox"] + span {
 .bca-sidebar-item__value a { transition: color 0.2s ease; }
 .bca-sidebar-item__value a:hover { color: var(--bca-primary); }
 
-
+/* BCA WHY LIST */
 .bca-why-list { 
   list-style: none; 
   display: flex; 
@@ -1411,6 +1411,112 @@ label > input[type="checkbox"] + span {
   margin-top:2px; 
 }
 
+/*=========================
+  BCA FAQ
+  ========================= */
+
+.bca-faq__inner {
+  display: grid;
+  grid-template-columns: 340px 1fr;
+  gap: 70px;
+  align-items: start;
+}
+
+.bca-faq__inner-left p { color: var(--bca-text-desc); font-size: 15px; }
+
+/* Accordion */
+.bca-faq__item {
+  border-bottom: 1px solid var(--bca-dark-border);
+  border-left: 1px solid var(--bca-dark-border);
+  border-right: 1px solid var(--bca-dark-border);
+  background: #FFFFFF;
+}
+
+.bca-faq__item:first-child {
+  border-top: 1px solid var(--bca-dark-border);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+.bca-faq__item {
+  border-bottom: 1px solid var(--bca-card-border);
+  background: #f7f9fcd6;
+  border-left: 0px;
+  border-right: 0px;
+}
+
+.bca-faq__item:first-child { border-top: 0px; }
+.bca-faq__item:last-child { border-bottom: 0px; }
+
+.bca-faq__question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 22px 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  font-weight: 600;
+  color: black;
+  transition: color var(--transition);
+}
+
+.bca-faq__question:hover { color: var(--bca-primary); }
+
+.bca-faq__chevron {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  border: 1.5px solid var(--bca-card-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition), border-color var(--transition);
+}
+
+.bca-faq__chevron svg {
+  width: 12px; 
+  height: 12px;
+  stroke: var(--bca-navy); 
+  fill: none; 
+  stroke-width: 2.5;
+  transition: transform var(--transition), stroke var(--transition);
+}
+
+.bca-faq__item.open .bca-faq__chevron {
+  background: var(--bca-primary);
+  border-color: var(--bca-primary);
+}
+
+.bca-faq__item.open .bca-faq__chevron svg {
+  stroke: white;
+  transform: rotate(180deg);
+}
+
+.bca-faq__answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.36s ease, padding 0.28s ease;
+}
+
+.bca-faq__item.open .bca-faq__answer {
+  max-height: 400px;
+}
+
+.bca-faq__answer-inner {
+  padding: 0 24px 22px;
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--bca-text-desc);
+}
+
+.btn-wrapper {
+  padding-top: 20px; 
+}
+
 
 /*=========================
   RESPONSIVENESS
@@ -1426,11 +1532,12 @@ label > input[type="checkbox"] + span {
 @media (max-width: 1024px) {
   .bca-hero { padding: 120px 0 90px; }
   .bca-hero__container { width: 100%;padding: 0px 48px;}
-  .bca-hero__content-grid { grid-template-columns: 1fr; gap: 25px; }
+  .bca-hero__content-grid { grid-template-columns: 1fr; gap: 35px; }
   .bca-hero__card { max-width: 100%; }
   .bca-hero__text { width: 75%;font-size: 18px;line-height: 30px; }
   .bca-contact-sidebar { position: static; }
   .bca-cta-var2__text p { max-width: 100%; }
+  .bca-faq__inner { grid-template-columns: 1fr; gap: 40px; }
 }
 
 @media (max-width: 960px) {
@@ -1440,8 +1547,8 @@ label > input[type="checkbox"] + span {
 }
 
 @media (max-width: 767px) {
-  .bca-hero { min-height: 70vh;padding: 110px 0 70px;}
-  .bca-hero__content-grid { padding: 110px 20px 30px; }
+  .bca-hero { min-height: 70vh;padding: 110px 0 50px;}
+  .bca-hero__content-grid { padding: 110px 0 0; }
   .bca-hero__content,
   .bca-hero__text { width: 100%;max-width: 100%;}
   .bca-hero__eyebrow { font-size: 13px; }
