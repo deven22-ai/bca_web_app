@@ -53,7 +53,7 @@ $faq_questions = [
                 </div>
                 <div class="bca-hero__btns reveal reveal-delay-4">
                     <a href="#our-process" class="bca-btn-primary">See How It Works<?php echo get_arrow_icon(); ?></a>
-                    <a href="#" class="bca-btn-ghost">Start the Conversation</a>
+                    <a href="#cta-contact" class="bca-btn-ghost">Start the Conversation</a>
                 </div>
             </div>
             
@@ -273,7 +273,7 @@ $faq_questions = [
 </section>
 
 <!-- CTA CONTACT FORM -->
-<section class="bca-cta find">
+<section class="bca-cta find" id="cta-contact">
     <div class="bca-find__inner container reveal">
         <div class="bca-cta__text">
             <div class="bca-heading__eyebrow" aria-hidden="true">Get Started</div>

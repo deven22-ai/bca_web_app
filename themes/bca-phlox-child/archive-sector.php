@@ -121,7 +121,7 @@ get_header();
             <div class="bca-cta-grid__right">
                 <div class="bca-cta-grid__btns">
                     <a href="/offices" class="bca-btn-primary">Find the team <svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
-                    <a href="/contact-us" class="bca-btn-outline">Contact us</a>
+                    <a href="/contact" class="bca-btn-outline">Contact us</a>
                 </div>
             </div>
         </div>
