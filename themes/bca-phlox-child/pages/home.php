@@ -109,7 +109,7 @@ wp_enqueue_style('home-style');
 
     <!-- 4 Cards -->
     <div class="bca-specialist__grid reveal">
-        <a href="/services/general-compliance/" class="bca-specialist-card reveal reveal-delay-1">
+        <a href="/services/accounting-solutions/" class="bca-specialist-card reveal reveal-delay-1">
             <div class="bca-specialist-card__icon">
                 <svg viewBox="0 0 24 24">
                     <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>

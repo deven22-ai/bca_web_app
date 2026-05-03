@@ -48,7 +48,7 @@ function bca_generate_email(array $uploaded_files, string $office_name) {
                 <td style='padding: 10px 14px; border-bottom: 1px solid #f0f0f0; font-size: 14px; color: #777; text-align: center;'>" 
                     . round($file['size'] / 1024, 1) . ' KB' . 
                 "</td>
-                <td style='padding: 10px 14px; border-bottom: 1px solid #f0f0f0; text-align: right;'>
+                <td style='display: flex;gap: 5px;padding: 10px 14px; border-bottom: 1px solid #f0f0f0; text-align: right;'>
                     <a href='{$file['download_url']}' style='display: inline-block; align-items: center; gap: 5px; background-color: #0078d4; color: #ffffff; 
                             text-decoration: none; font-size: 12px; font-weight: bold; padding: 6px 16px; border-radius: 4px;'>
                         Download

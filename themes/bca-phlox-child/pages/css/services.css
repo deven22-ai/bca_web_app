@@ -386,6 +386,9 @@
 .bca-content__overview ul li, 
 .bca-content__html ul li {
     margin-bottom: 10px;
+    font-size: 15px;
+    line-height: 1.85;
+    color: var(--muted);
 }
 
 .bca-content__overview ul li::before, 

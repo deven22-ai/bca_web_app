@@ -119,7 +119,7 @@
             </div>
             <div class="bca-footer__legal-links">
                 <a href="/privacy-policy/">Privacy Policy</a>
-                <a href="/terms/">Terms</a>
+                <!--<a href="/terms/">Terms</a>-->
                 <a href="/cookie-policy/">Cookies</a>
             </div>
         </div>
