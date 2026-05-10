@@ -225,7 +225,6 @@ wp_enqueue_style('services-style');
         <div class="reveal reveal-delay-1"><?php echo do_shortcode('[bca_mini_news_grid]') ?></div>
     </div>
 </section>
-<?php echo do_shortcode('[]') ?>
 <?php endwhile; endif; ?>
 
 <?php get_footer(); ?>

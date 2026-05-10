@@ -548,6 +548,7 @@
 @media (max-width: 1024px) {
     .bca-main__inner { grid-template-columns: 1fr; }
     .bca-checklist__list { grid-template-columns: 1fr; }
+    .bca-intro__grid { grid-template-columns: 1fr; gap: 0px; }
 }
 
 @media (max-width: 768px) { 
@@ -560,9 +561,7 @@
 @media (max-width: 640px) {
     .bca-cta__inner { flex-direction: column; }
     .bca-checklist__list { grid-template-columns: 1fr; }
+    .bca-svc-grid { grid-template-columns: 1fr; gap: 12px; } 
 }
 
-@media (max-width: 480px) { 
-    .bca-svc-grid { grid-template-columns: 1fr 1fr; gap: 12px; } 
-}
 

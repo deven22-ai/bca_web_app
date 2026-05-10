@@ -197,13 +197,13 @@
                         <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
                         Our Team
                     </a>
-                    <a href="/community/" class="bca-dropdown__item">
-                        <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
-                        In the Community
-                    </a>
                     <a href="/about-us/news/" class="bca-dropdown__item">
                         <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
                         News &amp; Updates
+                    </a>
+                    <a href="/community/" class="bca-dropdown__item">
+                        <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                        In the Community
                     </a>
                     <a href="/about-us/become-client/" class="bca-dropdown__item">
                         <svg viewBox="0 0 24 24" fill="none"><circle cx="10" cy="8" r="3" stroke="currentColor" stroke-width="2"></circle><path d="M4 20c0-3 3-5 6-5s6 2 6 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path><path d="M19 8v4M17 10h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
@@ -290,9 +290,10 @@
             </div>
             <div class="bca-mobile-sub">
                 <div class="bca-mobile-sub__section">
-                    <a href="/our-offices/portsmouth/" class="bca-mobile-sub__link">Portsmouth — Head Office</a>
-                    <a href="/our-offices/romsey/" class="bca-mobile-sub__link">Romsey — Two Practices</a>
-                    <a href="/our-offices/swindon/" class="bca-mobile-sub__link">Swindon</a>
+                    <a href="/offices/" class="bca-mobile-sub__link">All Offices</a>
+                    <a href="/offices/portsmouth/" class="bca-mobile-sub__link">Portsmouth — Head Office</a>
+                    <a href="/offices/romsey/" class="bca-mobile-sub__link">Romsey — Two Practices</a>
+                    <a href="/offices/swindon/" class="bca-mobile-sub__link">Swindon</a>
                 </div>
             </div>
         </li>
@@ -305,8 +306,8 @@
                 <div class="bca-mobile-sub__section">
                     <a href="/about-us/" class="bca-mobile-sub__link">About BC&A</a>
                     <a href="/about-us/our-team/" class="bca-mobile-sub__link">Our Team</a>
-                    <a href="/about-us/community/" class="bca-mobile-sub__link">In the Community</a>
                     <a href="/about-us/news/" class="bca-mobile-sub__link">News &amp; Updates</a>
+                    <a href="/about-us/community/" class="bca-mobile-sub__link">In the Community</a>
                     <a href="/about-us/become-client/" class="bca-mobile-sub__link">Become a client</a>
                 </div>
             </div>
