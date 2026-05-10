@@ -19,7 +19,7 @@ wp_enqueue_style('request-quote-style');
                 <h1 class="bca-hero__title">Request a <em>Free Quote</em></h1>
                 <p class="bca-hero__text">
                     Fill in the form and one of our team will be in touch with a tailored, no-obligation quote. Prefer to talk? We're happy to meet 
-                    online or at one of our Hampshire offices.
+                    online or at one of our offices.
                 </p>
             </div>
             <div class="bca-hero__btns reveal reveal-delay-4">
@@ -87,7 +87,7 @@ wp_enqueue_style('request-quote-style');
                             </div>
                             <div>
                                 <div class="bca-sidebar-item__label">Visit us</div>
-                                <div class="bca-sidebar-item__value"><span>161–163 Elm Grove, Southsea,<br/>Portsmouth, PO5 1LU</span></div>
+                                <div class="bca-sidebar-item__value"><span>24 Landport Terrace, Southsea, Portsmouth, PO1 2RG</span></div>
                             </div>
                         </div>
                     </div>
@@ -103,7 +103,7 @@ wp_enqueue_style('request-quote-style');
                             <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Regulated by ICAEW &amp; CIMA</li>
                             <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>No-obligation, tailored quote</li>
                             <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Dedicated adviser — not a call centre</li>
-                            <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Hampshire-based with three local offices</li>
+                            <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>4 Local offices near you</li>
                             <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Proactive year-round support, not just year end</li>
                         </ul>
                     </div>

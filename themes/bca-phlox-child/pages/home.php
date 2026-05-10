@@ -25,7 +25,7 @@ wp_enqueue_style('home-style');
             </div>
             <div class="bca-hero__services-label reveal reveal-delay-2"><span>✦ OUR  SPECIALIST SERVICES</span></div>
             <div class="bca-hero__services reveal reveal-delay-3">
-                <a href="/services/medical-specialist/" class="bca-hero__service-item">
+                <a href="/sectors/healthcare/" class="bca-hero__service-item">
                     <span class="bca-hero__service-dot"></span>
                     <span class="bca-hero__service-name">Medical Specialist Accounting</span>
                     <span class="bca-hero__service-arrow"><svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></span>
@@ -118,13 +118,13 @@ wp_enqueue_style('home-style');
             </div>
             <span class="bca-specialist-card__pill">Core Services</span>
             <div class="bca-specialist-card__title">General Accounting & Tax Compliance</div>
-            <div class="bca-specialist-card__desc">Annual accounts, self-assessment, VAT returns and company secretarial — the essential compliance services every business and individual needs, done properly.</div>
+            <div class="bca-specialist-card__desc">Book-keeping, annual accounts, self-assessment, VAT returns, payroll and company secretarial. The essential compliance services every business and individual needs, done professionally.</div>
             <div class="bca-specialist-card__cta">
                 Find out more
                 <svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg>
             </div>
         </a>
-        <a href="/services/medical-specialist/" class="bca-specialist-card reveal reveal-delay-2">
+        <a href="/sectors/healthcare/" class="bca-specialist-card reveal reveal-delay-2">
             <span class="bca-unique-badge">✦ BC&A Specialist</span>
             <div class="bca-specialist-card__icon"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
             <span class="bca-specialist-card__pill">Healthcare</span>
@@ -141,7 +141,7 @@ wp_enqueue_style('home-style');
             <div class="bca-specialist-card__icon"><svg viewBox="0 0 24 24"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21V11h6v10"/></svg></div>
             <span class="bca-specialist-card__pill">Public Sector</span>
             <div class="bca-specialist-card__title">City &amp; Parish Council Accounts</div>
-            <div class="bca-specialist-card__desc">Specialist audit, annual returns and accountancy services designed specifically for town, city and parish councils across England and Wales.</div>
+            <div class="bca-specialist-card__desc">Specialist annual return, book-keeping, partial VAT exemption, consultancy, payroll and audit services for town, city and parish councils across England and Wales.</div>
             <div class="bca-specialist-card__cta">Find out more<svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg></div>
         </a>
 
@@ -189,8 +189,8 @@ wp_enqueue_style('home-style');
                 <ul class="bca-audience-card__list">
                     <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Accounts, tax &amp; bookkeeping</li>
                     <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Payroll &amp; company secretarial</li>
-                    <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Virtual Finance Director services</li>
-                    <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>R&amp;D tax relief &amp; mergers</li>
+                    <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Audit Services</li>
+                    <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>R&amp;D tax relief</li>
                 </ul>
                 <a href="/services/businesses/" class="bca-btn-primary">Explore Business Services<?php echo get_arrow_icon() ?></a>
             </div>
@@ -342,7 +342,7 @@ wp_enqueue_style('home-style');
                     <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
                 </div>
                 <h4>Local Presence</h4>
-                <p>Four Hampshire offices. You're never far from a real person who knows your name, your business, and your goals.</p>
+                <p>Four offices - you're never far from a real person who knows your name, your business, and your goals.</p>
             </div>
         </div>
     </div>
@@ -378,7 +378,7 @@ wp_enqueue_style('home-style');
 <section class="bca-cta office">
     <div class="bca-cta__inner container">
         <div class="bca-cta__text reveal">
-            <div class="bca-heading__eyebrow" aria-hidden="true">Our Offices</div>
+            <div class="bca-heading__eyebrow" aria-hidden="true">Local Presence</div>
             <h2 class="bca-heading__title">Acting As An Extension Of <span>Your Team</span></h2>        
             <div class="bca-cta__body">
                 <p>
@@ -391,7 +391,7 @@ wp_enqueue_style('home-style');
                 </p>
             </div>
             <div class="bca-cta__btns">
-                <a href="/our-offices/" class="bca-btn-primary">Find Your Local Office<?php echo get_arrow_icon()?></a>
+                <a href="/offices/" class="bca-btn-primary">Find Your Local Office<?php echo get_arrow_icon()?></a>
                 <a href="/contact/" class="bca-btn-outline">Contact Us</a>
             </div>
         </div> 

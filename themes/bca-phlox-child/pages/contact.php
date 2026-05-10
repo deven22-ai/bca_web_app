@@ -56,7 +56,7 @@ wp_enqueue_style('contact-style');
                         <div class="bca-hero__card-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg></div>
                         <div>
                             <div class="bca-hero__card-label">Office hours</div>
-                            <div class="bca-hero__card-value">Mon–Fri: 9:00am – 5:30pm</div>
+                            <div class="bca-hero__card-value">Mon-Fri: 9:00am - 5:00pm</div>
                         </div>
                     </div>
                 </div>
@@ -151,7 +151,7 @@ wp_enqueue_style('contact-style');
             <!-- Portsmouth -->
             <div class="bca-office-card reveal reveal-delay-1">
                 <div class="bca-office-card__photo">
-                    <img src="/wp-content/uploads/2026/04/portsmouth.jpg" alt="Portsmouth">
+                    <img src="/wp-content/uploads/2026/05/portsmouth_city.jpg" alt="Portsmouth City">
                     <span class="bca-office-card__type">Head Office</span>
                 </div>
                 <div class="bca-office-card__body">
@@ -163,7 +163,7 @@ wp_enqueue_style('contact-style');
                         </div>
                         <div class="bca-office-card__detail">
                             <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
-                            <a href="tel:02392833300">02392 833 300</a>
+                            <a href="tel:02392833300">02392833300</a>
                         </div>
                         <div class="bca-office-card__detail">
                             <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
@@ -183,7 +183,7 @@ wp_enqueue_style('contact-style');
             <!-- Romsey -->
             <div class="bca-office-card reveal reveal-delay-2">
                 <div class="bca-office-card__photo">
-                    <img src="/wp-content/uploads/2026/03/romsey_market_square.png" alt="Romsey">
+                    <img src="/wp-content/uploads/2026/05/romsey_market_statue1.jpg" alt="Romsey">
                     <span class="bca-office-card__type">2 Practices</span>
                 </div>
                 <div class="bca-office-card__body">
@@ -198,7 +198,7 @@ wp_enqueue_style('contact-style');
                             <div class="bca-ofc-de-grp">
                                 <div class="bca-ofc-de">
                                     <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
-                                    <a href="tel:02392833300">02392 833 300</a>
+                                    <a href="tel:02392833300">02392833300</a>
                                 </div>
                                 <div class="bca-ofc-de">
                                     <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
@@ -211,7 +211,7 @@ wp_enqueue_style('contact-style');
                             <div class="bca-ofc-de-grp">
                                 <div class="bca-ofc-de">
                                     <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
-                                    <a href="tel:01794 511511">01794 511511</a>
+                                    <a href="tel:01794 511511">01794511511</a>
                                 </div>
                                 <div class="bca-ofc-de">
                                     <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
@@ -233,7 +233,7 @@ wp_enqueue_style('contact-style');
             <!-- Swindon -->
             <div class="bca-office-card reveal reveal-delay-3">
                 <div class="bca-office-card__photo">
-                    <img src="/wp-content/uploads/2026/03/lydiard_park_and_house.png" alt="Swindon">
+                    <img src="/wp-content/uploads/2026/05/swindon_lydiard_park.jpg" alt="Swindon">
                 </div>
                 <div class="bca-office-card__body">
                     <h3 class="bca-office-card__name">Swindon</h3>

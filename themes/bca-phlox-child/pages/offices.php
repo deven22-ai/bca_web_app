@@ -28,7 +28,7 @@ wp_enqueue_style('offices-style');
         <div class="bca-hero__bottom reveal reveal-delay-2">
             <div class="bca-hero__bottom-inner">
                 <div class="bca-hero__bottom-stat">
-                    <div class="bca-hero__bottom-num">3</div>
+                    <div class="bca-hero__bottom-num">4</div>
                     <div class="bca-hero__bottom-label">UK offices</div>
                 </div>
                 <div class="bca-hero__bottom-stat">
@@ -80,7 +80,7 @@ wp_enqueue_style('offices-style');
             <!--PORTSMOUTH -->
             <div class="bca-ofc bca-ofc--portsmouth reveal reveal-delay-1">
                 <div class="bca-ofc__banner">
-                    <img src="/wp-content/uploads/2026/04/portsmouth.jpg" alt="Portsmouth"/>
+                    <img src="/wp-content/uploads/2026/05/portsmouth_city.jpg" alt="Aerial photograph looking out across the Theatre of the Sea, Southsea Castle, The D-Day Story and beyond over the Portsmouth cityscape."/>
                     <div class="bca-ofc__banner-overlay"></div>
                     <div class="bca-ofc__banner-content">
                         <div class="bca-ofc__banner-left">
@@ -120,7 +120,7 @@ wp_enqueue_style('offices-style');
                                     <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
                                 </div>
                                 <div>
-                                    <div class="bca-ofc__highlight-title">35+ Years in Portsmouth</div>
+                                    <div class="bca-ofc__highlight-title">20+ Years in Portsmouth</div>
                                     <div class="bca-ofc__highlight-desc">Driving growth for local businesses and individuals.</div>
                                 </div>
                             </div>
@@ -173,7 +173,7 @@ wp_enqueue_style('offices-style');
             <!--- ROMSEY --->
             <div class="bca-ofc bca-ofc--romsey reveal reveal-delay-2">
                 <div class="bca-ofc__banner">
-                    <img src="/wp-content/uploads/2026/03/romsey_market_square.png" alt="Romsey" style="object-position: bottom;"/>
+                    <img src="/wp-content/uploads/2026/05/romsey_market_statue1.jpg" alt="Romsey Square Market"/>
                     <div class="bca-ofc__banner-overlay"></div>
                     <div class="bca-ofc__banner-content">
                         <div class="bca-ofc__banner-left">
@@ -267,7 +267,7 @@ wp_enqueue_style('offices-style');
             <!--- SWINDON --->
             <div class="bca-ofc bca-ofc--swindon reveal reveal-delay-3">
                 <div class="bca-ofc__banner">
-                    <img src="/wp-content/uploads/2026/03/lydiard_park_and_house.png" alt="Swindon"/>
+                    <img src="/wp-content/uploads/2026/05/swindon_lydiard_park.jpg" alt="Swindon Lydiard Park & House"/>
                     <div class="bca-ofc__banner-overlay"></div>
                     <div class="bca-ofc__banner-content">
                         <div class="bca-ofc__banner-left">

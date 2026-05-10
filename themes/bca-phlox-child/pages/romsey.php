@@ -99,7 +99,7 @@ wp_enqueue_style('single-office-style');
         <div class="bca-heading-section reveal">
             <div class="bca-heading-container">
                 <div class="bca-heading__eyebrow">Our Romsey Practices</div>
-                <h2 class="bca-heading__title">Two practices, <span>one standard of excellence Client</span></h2>
+                <h2 class="bca-heading__title">Two practices, <span>one standard of excellence</span></h2>
                 <div class="bca-heading__description">
                     <p>
                         In Romsey we have two offices, both established over 35 years ago. 
@@ -386,7 +386,7 @@ wp_enqueue_style('single-office-style');
                             <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
                             <div>
                                 <div class="bca-details-item__label">Office Hours</div>
-                                <div class="bca-details-item__value">Monday - Friday: 9:00am - 5:30pm</div>
+                                <div class="bca-details-item__value">Monday - Friday: 9:00am - 5:00pm</div>
                             </div>
                         </div>
                     </div>

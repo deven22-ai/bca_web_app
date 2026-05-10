@@ -302,7 +302,7 @@ $faq_questions = [
                     <div class="bca-find__contact-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg></div>
                     <div>
                         <div class="bca-find__contact-label">Office Hours</div>
-                        <div class="bca-find__contact-value">Mon-Fri: 9:00am - 5:30pm</div>
+                        <div class="bca-find__contact-value">Mon-Fri: 9:00am - 5:00pm</div>
                     </div>
                 </a>
             </div>

@@ -59,9 +59,9 @@ wp_enqueue_style('about-us-style');
         <div class="bca-who__inner">
             <div class="bca-who__text reveal reveal-delay-1">
                 <span class="bca-heading__eyebrow">Who We Are</span>
-                <h2 class="bca-heading__title">A trusted firm, built on <em>20+ years</em> of excellence</h2>
+                <h2 class="bca-heading__title">A trusted firm, built on <em>35+ years</em> of excellence</h2>
                 <p>
-                    Established in 2004 in Portsmouth, BC&amp;A Chartered Accountants has grown from a local practice 
+                    Established in Portsmouth, BC&amp;A Chartered Accountants has grown from a local practice 
                     into one of the South of England's most trusted independent accountancy firms — with three offices, 
                     a team of dedicated specialists and a reputation built entirely on results.
                 </p>
@@ -180,11 +180,11 @@ wp_enqueue_style('about-us-style');
                 <div class="bca-timeline__empty"></div>
                 <div class="bca-timeline__dot right"><div class="bca-timeline__year"></div></div>
                 <div class="bca-timeline__right">
-                    <span class="bca-tl__year">2016</span>
-                    <span class="bca-tl__tag">Expansion</span>
+                    <span class="bca-tl__year">2015</span>
+                    <span class="bca-tl__tag">Innovation</span>
                     <div class="bca-t1-card__description">
-                        <span class="bca-tl__title">Romsey office opens</span>
-                        <span class="bca-tl__text">A second Hampshire office brings dedicated local support to businesses and individuals across central Hampshire and beyond.</span>
+                        <span class="bca-tl__title">Cloud-first transformation</span>
+                        <span class="bca-tl__text">Full adoption of cloud accounting technology — enabling real-time reporting and more proactive financial management for every client.</span>
                     </div>
                     <div class="notch"></div>
                 </div>
@@ -192,21 +192,21 @@ wp_enqueue_style('about-us-style');
             <!-- 4th Card -->
             <div class="bca-timeline__item bca-timeline__item-left">
                 <div class="bca-timeline__left">
-                    <span class="bca-tl__year">2020</span>
-                    <span class="bca-tl__tag">Innovation</span>
+                    <span class="bca-tl__year">2021</span>
+                    <span class="bca-tl__tag"></span>
                     <div class="bca-t1-card__description">
-                        <span class="bca-tl__title">Cloud-first transformation</span>
-                        <span class="bca-tl__text">Full adoption of cloud accounting technology — enabling real-time reporting and more proactive financial management for every client.</span>
+                        <span class="bca-tl__title">Started R&D Tax services for SME and large businesses.</span>
+                        <span class="bca-tl__text"></span>
                     </div>
                     <div class="notch"></div>
                 </div>
                 <div class="bca-timeline__dot bca-timeline__item-left"><div class="bca-timeline__year"></div></div>
                 <div class="bca-timeline__right">
-                    <span class="bca-tl__year">2020</span>
-                    <span class="bca-tl__tag">Innovation</span>
+                    <span class="bca-tl__year">2021</span>
+                    <span class="bca-tl__tag"></span>
                     <div class="bca-t1-card__description">
-                        <span class="bca-tl__title">Cloud-first transformation</span>
-                        <span class="bca-tl__text">Full adoption of cloud accounting technology — enabling real-time reporting and more proactive financial management for every client.</span>
+                        <span class="bca-tl__title">Started R&D Tax services for SME and large businesses.</span>
+                        <span class="bca-tl__text"></span>
                     </div>
                     <div class="notch"></div>
                 </div>
@@ -217,10 +217,49 @@ wp_enqueue_style('about-us-style');
                 <div class="bca-timeline__dot right"><div class="bca-timeline__year"></div></div>
                 <div class="bca-timeline__right">
                     <span class="bca-tl__year">2024</span>
-                    <span class="bca-tl__tag">Today</span>
+                    <span class="bca-tl__tag">Expansion</span>
                     <div class="bca-t1-card__description">
-                        <span class="bca-tl__title">Swindon expansion</span>
-                        <span class="bca-tl__text">BC&A's third office opens in Wiltshire — extending our reach and bringing the same standard of excellence to businesses across the South of England.</span>
+                        <span class="bca-tl__title">Kumar Associates & Macklin & Co.</span>
+                        <span class="bca-tl__text">
+                            Opened a dedicated accountant practice in Romsey for medical clients by acquiring Kumar Associates.
+                            Expanded general practice in Romsey by acquiring Macklin & Co.
+                        </span>
+                    </div>
+                    <div class="notch"></div>
+                </div>
+            </div>
+            <!-- 6th Card -->
+            <div class="bca-timeline__item bca-timeline__item-left">
+                <div class="bca-timeline__left">
+                    <span class="bca-tl__year">2025</span>
+                    <span class="bca-tl__tag">Relocation</span>
+                    <div class="bca-t1-card__description">
+                        <span class="bca-tl__title">Romsey Office Consolidation</span>
+                        <span class="bca-tl__text">Opened new office in Romsey moved both BC&A Romsey and Kumar Associates to one office (29-31a The Hundred).</span>
+                    </div>
+                    <div class="notch"></div>
+                </div>
+                <div class="bca-timeline__dot bca-timeline__item-left"><div class="bca-timeline__year"></div></div>
+                <div class="bca-timeline__right">
+                    <span class="bca-tl__year">2025</span>
+                    <span class="bca-tl__tag">Relocation</span>
+                    <div class="bca-t1-card__description">
+                        <span class="bca-tl__title">Romsey Office Consolidation</span>
+                        <span class="bca-tl__text">Opened new office in Romsey moved both BC&A Romsey and Kumar Associates to one office (29-31a The Hundred).</span>
+                    </div>
+                    <div class="notch"></div>
+                </div>
+            </div>
+            <!-- 7th Card -->
+            <div class="bca-timeline__item">
+                <div class="bca-timeline__empty"></div>
+                <div class="bca-timeline__dot right"><div class="bca-timeline__year"></div></div>
+                <div class="bca-timeline__right">
+                    <span class="bca-tl__year">2026</span>
+                    <span class="bca-tl__tag">Expansion</span>
+                    <div class="bca-t1-card__description">
+                        <span class="bca-tl__title">New Portsmouth HQ & Audit Division</span>
+                        <span class="bca-tl__text">Relocated BC&A headquarters in Portsmouth from Elm Grove to larger premises at 24 Landport Terrace, and launched BC&A Audits Limited to expand audit services.</span>
                     </div>
                     <div class="notch"></div>
                 </div>

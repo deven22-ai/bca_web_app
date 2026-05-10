@@ -278,7 +278,7 @@ wp_enqueue_style('single-office-style');
                             <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M12 6v6l4 2"></path></svg>
                             <div>
                                 <div class="bca-details-item__label">Office Hours</div>
-                                <div class="bca-details-item__value">Monday – Friday: 9:00am – 5:30pm</div>
+                                <div class="bca-details-item__value">Monday - Friday: 9:00am - 5:00pm</div>
                             </div>
                         </div>
                     </div>
