@@ -173,7 +173,7 @@ wp_enqueue_style('offices-style');
             <!--- ROMSEY --->
             <div class="bca-ofc bca-ofc--romsey reveal reveal-delay-2">
                 <div class="bca-ofc__banner">
-                    <img src="/wp-content/uploads/2026/05/romsey_market_statue1.jpg" alt="Romsey Square Market"/>
+                    <img src="/wp-content/uploads/2026/05/romsey_market_square.png" alt="Romsey Square Market"/>
                     <div class="bca-ofc__banner-overlay"></div>
                     <div class="bca-ofc__banner-content">
                         <div class="bca-ofc__banner-left">
@@ -267,7 +267,7 @@ wp_enqueue_style('offices-style');
             <!--- SWINDON --->
             <div class="bca-ofc bca-ofc--swindon reveal reveal-delay-3">
                 <div class="bca-ofc__banner">
-                    <img src="/wp-content/uploads/2026/05/swindon_lydiard_park.jpg" alt="Swindon Lydiard Park & House"/>
+                    <img src="/wp-content/uploads/2026/05/lydiard_park_and_house.png" alt="Swindon Lydiard Park & House"/>
                     <div class="bca-ofc__banner-overlay"></div>
                     <div class="bca-ofc__banner-content">
                         <div class="bca-ofc__banner-left">

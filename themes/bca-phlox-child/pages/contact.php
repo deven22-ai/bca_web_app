@@ -183,7 +183,7 @@ wp_enqueue_style('contact-style');
             <!-- Romsey -->
             <div class="bca-office-card reveal reveal-delay-2">
                 <div class="bca-office-card__photo">
-                    <img src="/wp-content/uploads/2026/05/romsey_market_statue1.jpg" alt="Romsey">
+                    <img src="/wp-content/uploads/2026/05/romsey_market_square.png" alt="Romsey">
                     <span class="bca-office-card__type">2 Practices</span>
                 </div>
                 <div class="bca-office-card__body">
@@ -233,7 +233,7 @@ wp_enqueue_style('contact-style');
             <!-- Swindon -->
             <div class="bca-office-card reveal reveal-delay-3">
                 <div class="bca-office-card__photo">
-                    <img src="/wp-content/uploads/2026/05/swindon_lydiard_park.jpg" alt="Swindon">
+                    <img src="/wp-content/uploads/2026/05/lydiard_park_and_house.png" alt="Swindon">
                 </div>
                 <div class="bca-office-card__body">
                     <h3 class="bca-office-card__name">Swindon</h3>

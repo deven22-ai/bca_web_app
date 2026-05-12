@@ -47,7 +47,7 @@ wp_enqueue_style('home-style');
                 </a>
             </div>
             <div class="bca-core-svc reveal reveal-delay-4">
-                <a href="/services/accounting-solutions/" class="bca-hero__service-item bca-svc-box--core">
+                <a href="/services?content=1/" class="bca-hero__service-item bca-svc-box--core">
                     <div class="bca-svc-box__inner">
                         <span class="bca-svc-box__core-label">Core Service</span>
                         <span class="bca-svc-box__name">

@@ -52,7 +52,7 @@
                         <a href="/offices/portsmouth/" class="bca-footer__office-name">
                             <span class="bca-footer__office-dot bca-footer__office-dot--blue"></span>
                             Portsmouth
-                            <span class="bca-footer__office-badge">Headquarter</span>
+                            <span class="bca-footer__office-badge">Head Office</span>
                         </a>
                         <div class="bca-footer__office-addr">24 Landport Terrace, Southsea, Portsmouth, PO1 2RG</div>
                         <div class="bca-footer__office-contact">
