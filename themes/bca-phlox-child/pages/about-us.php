@@ -62,7 +62,7 @@ wp_enqueue_style('about-us-style');
                 <h2 class="bca-heading__title">A trusted firm, built on <em>35+ years</em> of excellence</h2>
                 <p>
                     Established in Portsmouth, BC&amp;A Chartered Accountants has grown from a local practice 
-                    into one of the South of England's most trusted independent accountancy firms — with three offices, 
+                    into one of the South of England's most trusted independent accountancy firms — with four offices, 
                     a team of dedicated specialists and a reputation built entirely on results.
                 </p>
                 <p>
@@ -259,8 +259,12 @@ wp_enqueue_style('about-us-style');
                     <span class="bca-tl__tag">Expansion</span>
                     <div class="bca-t1-card__description">
                         <span class="bca-tl__title">New Portsmouth HQ & Audit Division</span>
-                        <span class="bca-tl__text">Relocated BC&A head office in Portsmouth from Elm Grove to larger premises at 24 Landport Terrace, and launched BC&A Audits Limited to expand audit services.</span>
-                        <span class="bca-tl__title">Acquired DCK Accounting Solutions in Swindon to expand into Swindon and extend services to City and Parish councils.</span>
+                        <span class="bca-tl__text">
+                            Relocated BC&A head office in Portsmouth from Elm Grove to larger premises at 24 Landport Terrace, and 
+                            launched BC&A Audits Limited to expand audit services.
+                            <!-- <br></br> -->
+                            Acquired DCK Accounting Solutions in Swindon to expand into Swindon and extend services to City and Parish councils.
+                        </span>
                     </div>
                     <div class="notch"></div>
                 </div>

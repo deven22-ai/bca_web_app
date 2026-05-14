@@ -19,7 +19,7 @@ wp_enqueue_style('offices-style');
             <div class="bca-hero__head-wrapper reveal reveal-delay-1">
                 <h1 class="bca-hero__title">Find Your Nearest <br><em>BC&amp;A Office</em></h1>
                 <p class="bca-hero__text">
-                    Three offices across the South of England — each one combining the resources of a 
+                    Four offices across the South of England — each one combining the resources of a 
                     large firm with the personal touch of a local practice. 
                     Your expert adviser is always close by.
                 </p>
@@ -72,7 +72,7 @@ wp_enqueue_style('offices-style');
         <div class="bca-heading-section left-align reveal">
             <div class="bca-heading-container left-align">
                 <div class="bca-heading__eyebrow">Our Locations</div>
-                <h2 class="bca-heading__title">Three offices. One <span>standard of excellence</span></h2>
+                <h2 class="bca-heading__title">Four offices. One <span>standard of excellence</span></h2>
             </div>
         </div>
 

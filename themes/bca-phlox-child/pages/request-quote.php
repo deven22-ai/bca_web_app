@@ -103,7 +103,7 @@ wp_enqueue_style('request-quote-style');
                             <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Regulated by ICAEW &amp; CIMA</li>
                             <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>No-obligation, tailored quote</li>
                             <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Dedicated adviser — not a call centre</li>
-                            <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>4 Local offices near you</li>
+                            <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Multiple offices to support your needs</li>
                             <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"/></svg>Proactive year-round support, not just year end</li>
                         </ul>
                     </div>

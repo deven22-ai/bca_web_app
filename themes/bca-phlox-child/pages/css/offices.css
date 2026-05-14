@@ -219,7 +219,7 @@
 
 .bca-ofc:hover .bca-ofc__banner img { transform: scale(1.03); }
 .bca-ofc--portsmouth .bca-ofc__banner img { object-position: bottom; }
-.bca-ofc--romsey .bca-ofc__banner img { object-position: center; }
+.bca-ofc--romsey .bca-ofc__banner img { object-position: bottom; }
 .bca-ofc--swindon .bca-ofc__banner img { object-position: center; }
 
 .bca-ofc__banner-overlay {

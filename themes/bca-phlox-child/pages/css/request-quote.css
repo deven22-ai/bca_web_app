@@ -3,6 +3,10 @@
   min-height: 60vh;
 }
 
+.bca-hero-section--health-check { background-image: url(/wp-content/uploads/2026/05/health_check.jpg); }
+
+.bca-hero-section--health-check .bca-hero__overlay { opacity: 1.9; }
+
 .bca-cta-services.light { background: var(--white) !important; }
 
 /* ----------- MAIN ------------ */
@@ -42,9 +46,118 @@
   top: var(--header-h);
 }
 
+/* ----------- WHAT WE REVIEW ------------ */
+.bca-hc-review {
+  padding: 80px 0;
+  background: var(--white);
+}
+
+.bca-hc-review__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.bca-hc-area {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 28px 24px;
+  border: 1px solid var(--bca-dark-border);
+  border-radius: var(--border-radius);
+  background: var(--white);
+  transition: box-shadow 0.3s ease, var(--reveal-transition), border-color 0.3s ease;
+}
+
+.bca-hc-area:hover {
+  box-shadow: 0 16px 48px rgba(13, 27, 62, 0.08);
+  transform: translateY(-4px);
+  border-color: var(--bca-svg-wrap-primary);
+}
+
+.bca-hc-area__icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--border-radius);
+  background: var(--bca-svg-wrap-primary);
+  /* border: 1px solid rgba(201, 168, 76, 0.2); */
+  flex-shrink: 0;
+  transition: background 0.3s ease;
+}
+
+.bca-hc-area:hover .bca-hc-area__icon-wrap {
+  background: var(--bca-svg-wrap-primary-hover);
+}
+
+.bca-hc-area__icon-wrap svg {
+  width: 20px;
+  height: 20px;
+  stroke: var(--bca-primary);
+  fill: none;
+  stroke-width: 1.8;
+}
+
+.bca-hc-area__body h3 {
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--bca-dark-navy);
+  margin: 0 0 6px;
+}
+
+.bca-hc-area__body p {
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--muted);
+  margin: 0;
+}
+
+/* Gold top accent bar on hover */
+.bca-hc-area {
+  position: relative;
+  overflow: hidden;
+}
+
+.bca-hc-area::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--bca-primary);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s ease;
+  border-radius: 8px 8px 0 0;
+}
+
+.bca-hc-area:hover::before {
+  transform: scaleX(1);
+}
+
+/* --- HEALTH CHECK FORM --- */
+.bca-hc-form {
+  padding: 80px 0;
+  background: var(--bca-card-bg);
+}
+
+.bca-cta__right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bca-cta__body { margin-bottom: 0; }
+
+
 /* ── RESPONSIVE ─────────────────────── */
 @media (max-width: 960px) {
   .bca-contact-main { padding: 50px 0; }
+  .bca-cta__right { justify-content: flex-start; }
   .bca-rq { padding: 50px 0 }
   .bca-rq__inner { grid-template-columns: 1fr; }
 }

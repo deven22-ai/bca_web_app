@@ -29,6 +29,8 @@
                     <li><a href="/contact/">Contact Us</a></li>
                     <li><a href="/file-upload/">File Upload</a></li>
                     <li><a href="/request-quote/">Request a Quote</a></li>
+                    <li><a href="/health-check/">Free Health Check</a></li>
+                    <li><a href="https://team.bcaaccountants.com/" target="_blank">Team Login</a></li>
                 </ul>
             </div>
             <div>
@@ -40,6 +42,7 @@
                     <li><a href="/services/audit/">Audit Services</a></li>
                     <li><a href="/services/rd-tax-relief/">R&D Tax Relief</a></li>
                     <li><a href="/services/self-assessment/">Self-Assessment</a></li>
+                    <li><a href="/services/private-client-tax/">Private Client Tax</a></li>
                     <li><a href="/services/businesses/">All Business Services →</a></li>
                     <li><a href="/services/individuals/">All Individual Services →</a></li>
                 </ul>

@@ -265,7 +265,7 @@ wp_enqueue_style('contact-style');
 </section>
 
 <!-- CAREERS -->
-<section class="bca-careers">
+<section class="bca-careers" id="careers">
     <div class="container">
         <div class="bca-careers__inner">
             <div class="bca-heading-section left-align reveal">
@@ -328,3 +328,12 @@ wp_enqueue_style('contact-style');
 echo do_shortcode('[bca_cta_services]');
 get_footer();
 ?>
+
+<script>
+    let params = new URLSearchParams(document.location.search);
+    const carrers = document.getElementById(params.get('section'));
+    carrers.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+    });
+</script>

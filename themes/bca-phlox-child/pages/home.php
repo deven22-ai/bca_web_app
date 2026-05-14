@@ -17,7 +17,7 @@ wp_enqueue_style('home-style');
                <!-- <p><strong><span>Our Vision</span></strong></p> -->
             </div>
             <div class="bca-hero__head-wrapper reveal reveal-delay-1">
-                <h1 class="bca-hero__title">Big Firm Expertise.<br>Personal Service.<br><em>Real Results.</em></h1>
+                <h1 class="bca-hero__title">Big Firm Expertise<br>Personal Service<br><span>Real Results</span></h1>
                 <p class="bca-hero__text">
                     One of the South of England's largest independent chartered accountancy firms,
                     supporting businesses, individuals and charities across Hampshire for over 35 years.
@@ -27,7 +27,7 @@ wp_enqueue_style('home-style');
             <div class="bca-hero__services reveal reveal-delay-3">
                 <a href="/sectors/healthcare/" class="bca-hero__service-item">
                     <span class="bca-hero__service-dot"></span>
-                    <span class="bca-hero__service-name">Medical Specialist Accounting</span>
+                    <span class="bca-hero__service-name">Accounting for Medical Professionals</span>
                     <span class="bca-hero__service-arrow"><svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></span>
                 </a>
                 <a href="/services/accounting-for-parish-city-councils/" class="bca-hero__service-item">
@@ -330,7 +330,7 @@ wp_enqueue_style('home-style');
             <div class="bca-why-card reveal reveal-delay-4">
                 <div class="bca-why-card__num">05</div>
                 <div class="bca-why-card__icon">
-                    <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+                    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="7 12.5 10.5 16 17 9"></polyline></svg>
                 </div>
                 <h4>Clear, Practical Advice</h4>
                 <p>We cut through the jargon. You get straightforward, actionable advice you can actually use — delivered by people who care.</p>

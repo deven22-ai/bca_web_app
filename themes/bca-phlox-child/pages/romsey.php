@@ -125,7 +125,7 @@ wp_enqueue_style('single-office-style');
                     </p>
                 </div>
                 <div class="bca-practice-card__foot">
-                    <span class="bca-practice-card__foot-label">Medical accountancy specialists</span>
+                    <span class="bca-practice-card__foot-label">Specialist for Healthcare Professionals</span>
                     <a href="#kumarAssociates" class="bca-practice-card__foot-link">Learn more<svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"></path></svg></a>
                 </div>
             </div>

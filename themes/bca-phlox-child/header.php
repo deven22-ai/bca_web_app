@@ -16,7 +16,7 @@
             'link' => '/services/accounting-solutions/'
         ],
         [
-            'name' => 'Accouting for Parish & City Councils',
+            'name' => 'Accounting for Parish & City Councils',
             'is_specialist' => true,
             'link' => '/services/accounting-for-parish-city-councils/'
         ],
@@ -67,7 +67,7 @@
             </span>
         </div>
         <div class="bca-topbar__right">
-            <span class="bca-topbar__reg">ICAEW &amp; CIMA Regulated</span>
+            <a href="/health-check/" class="bca-topbar__reg">Free Health Check</a>
            <!-- <span class="bca-topbar__badge">Portsmouth Since 2004</span> -->
         </div>
     </div>
@@ -164,7 +164,17 @@
                 </a>
                 <div class="bca-dropdown">
                     <a href="/offices/" class="bca-dropdown__item">
-                        <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                        <svg viewBox="0 0 24 24">
+                            <path d="M4 21V5C4 4.45 4.45 4 5 4H14C14.55 4 15 4.45 15 5V21"></path>
+                            <path d="M15 9H19C19.55 9 20 9.45 20 10V21"></path>
+                            <path d="M9 8H10"></path>
+                            <path d="M9 12H10"></path>
+                            <path d="M9 16H10"></path>
+                            <path d="M12 8H13"></path>
+                            <path d="M12 12H13"></path>
+                            <path d="M12 16H13"></path>
+                            <path d="M2 21H22"></path>
+                        </svg>
                         All Offices
                     </a>
                     <a href="/offices/portsmouth/" class="bca-dropdown__item">
@@ -208,6 +218,10 @@
                     <a href="/about-us/become-client/" class="bca-dropdown__item">
                         <svg viewBox="0 0 24 24" fill="none"><circle cx="10" cy="8" r="3" stroke="currentColor" stroke-width="2"></circle><path d="M4 20c0-3 3-5 6-5s6 2 6 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path><path d="M19 8v4M17 10h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
                         Become a Client
+                    </a>
+                    <a href="/contact/?section=careers" class="bca-dropdown__item">
+                        <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"></path><line x1="12" y1="12" x2="12" y2="12"></line><path d="M2 12h20"></path></svg>
+                        Careers
                     </a>
                 </div>
             </div>
@@ -309,16 +323,18 @@
                     <a href="/about-us/news/" class="bca-mobile-sub__link">News &amp; Updates</a>
                     <a href="/about-us/community/" class="bca-mobile-sub__link">In the Community</a>
                     <a href="/about-us/become-client/" class="bca-mobile-sub__link">Become a client</a>
+                    <a href="/contact/?section=careers" class="bca-mobile-sub__link">Careers</a>
                 </div>
             </div>
         </li>
 
-        <li class="bca-mobile-nav__item"><a href="/contact-us/" class="bca-mobile-nav__link">Contact Us</a></li>
+        <li class="bca-mobile-nav__item"><a href="/contact/" class="bca-mobile-nav__link">Contact Us</a></li>
         <li class="bca-mobile-nav__item"><a href="/file-upload/" class="bca-mobile-nav__link">File Upload</a></li>
     </ul>
 
     <div class="bca-mobile-actions">
         <a href="/request-quote/" class="bca-btn-primary">Get a Free Quote<svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
+        <a href="/health-check/" class="bca-btn-primary gold">Book a Free Health Check<svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg></a>
         <a href="tel:02392833300" class="bca-mobile-actions__outline">
             <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
             02392 833 300

@@ -6,7 +6,7 @@
     TOP BAR
    ---------------------------------*/
 .bca-topbar {
-    background: #081027;
+    background: var(--bca-dark-navy);
     border-bottom: 1px solid rgba(255,255,255,0.05);
     height: var(--topbar-height);
     display: flex;
@@ -58,8 +58,12 @@
     font-weight: 600;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.22);
+    color: var(--bca-secondary);
+    cursor: pointer;
+    transition: color 0.2s ease;    
 }
+
+.bca-topbar__reg:hover { color: var(--bca-dark-secondary); }
 
 .bca-topbar__badge {
     display: flex;

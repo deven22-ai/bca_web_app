@@ -108,7 +108,7 @@ function service() {
                             <div class="bca-cta-svc__icon"><svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
                             <div class="bca-cta-svc__info">
                                 <span class="bca-cta-svc__badge">✦ Specialist</span>
-                                <span class="bca-cta-svc__name">Medical Specialist Accounting</span>
+                                <span class="bca-cta-svc__name">Accounting for Medical Professionals</span>
                             </div>
                         </div>
                         <svg class="bca-cta-svc__arrow" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>

@@ -30,6 +30,7 @@ Author: Deven Warang
   --bca-text-desc: #5f6983;
   --bca-font-heading: 'Outfit', sans-serif;
   --bca-font-base: 'Nunito', sans-serif;
+  --bca-dark-secondary: #db961ab5;
   --border-radius: 2px;
   --white: #FFFFFF;
   --muted: #64748b;
@@ -45,10 +46,15 @@ Author: Deven Warang
   --transition:  0.28s ease;
   --reveal-transition: transform 0.5s ease;
   --box-shadow: 0 18px 45px rgba(1, 16, 57, 0.08);
+  --bca-svg-wrap-primary: rgba(26,86,219,0.07);
+  --bca-svg-wrap-primary-hover: rgba(26,86,219,0.10);
+  --bca-svg-wrap-secondary: rgba(201, 168, 76, 0.08);
+  --bca-svg-wrap-secondary-hover: rgba(201, 168, 76, 0.15);
 }
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) - 19px);
 }
 
 .container {
@@ -60,6 +66,8 @@ h2 {
   font-size: 2.375em;
   line-height: 1.5;
 }
+
+.lc { text-transform: lowercase; }
 
 /*=========================
   BCA - BUTTONS
@@ -478,10 +486,7 @@ h2 {
   text-rendering: optimizeSpeed;
 }
 
-.bca-hero__title em {
-  font-style: italic;
-  color: var(--bca-secondary);
-}
+.bca-hero__title em, .bca-hero__title span { color: var(--bca-secondary); }
 
 .bca-hero__text {
   margin-top: 12px;

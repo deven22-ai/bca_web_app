@@ -22,9 +22,8 @@ $SelectedOffice = isset($_GET['office']) ? sanitize_text_field($_GET['office']) 
             <div class="bca-hero__head-wrapper">
                 <h1 class="bca-hero__title reveal reveal-delay-1">The People Behind <em>BC&A</em></h1>
                 <p class="bca-hero__text reveal reveal-delay-2">
-                    Our team combines professional expertise, technical knowledge and a 
-                    personal approach to deliver trusted support for businesses and individuals 
-                    across Portsmouth and beyond.
+                    Our team combines professional expertise, technical knowledge and a personal approach to deliver trusted support 
+                    for businesses and individuals across South of England and beyond.
                 </p>
             </div>
             <div class="bca-hero__btns reveal reveal-delay-3">
