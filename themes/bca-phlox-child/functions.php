@@ -223,6 +223,10 @@ function register_shortcode_assets() {
 
 
 /* ------------------------- WP ADMIN UI - Office Terms ----------------------- */
+add_action('admin_head', function() {
+    echo '<style>.column-menu_order { width: 100px;text-align:center; }</style>';
+});
+
 add_filter('manage_edit-office_columns', function($columns) {
     $new = [];
 
@@ -247,6 +251,88 @@ add_action('pre_get_terms', function($query) {
     }
 });
 
+// Add meta box Team CPT (edit each team member) for office-wise ordering in the team page
+add_action('add_meta_boxes', function() {
+    add_meta_box('office_order', 'Office Order', 'render_office_order_metabox', 'team', 'side');
+});
+
+function render_office_order_metabox($post) {
+    $offices = get_terms(['taxonomy' => 'office', 'hide_empty' => false]);
+    foreach ($offices as $office) {
+        $office_val = get_post_meta($post->ID, '_order_office_' . $office->slug, true);
+        $ourteam_val = get_post_meta($post->ID, '_order_ourteam_' . $office->slug, true);
+        
+        echo '<p><strong>' . $office->name . '</strong></p>';
+        echo '<div style="gap: 5px;display: flex;flex-flow: column;">' .
+                '<div style="display:flex;flex-direction:row;">' . 
+                    '<label style="flex:1;place-content:center;">Office Page</label>' . 
+                    '<input type="number" name="order_office_' . $office->slug . '" value="' . esc_attr($office_val) . '">' . 
+                '</div>' .
+                '<div style="display:flex;flex-direction:row;">' . 
+                    '<label style="flex:1;place-content:center;">Team Page</label>' . 
+                    '<input type="number" name="order_ourteam_' . $office->slug . '" value="' . esc_attr($ourteam_val) . '">' . 
+                '</div>' . 
+            '</div>';
+    }
+}
+
+add_action('save_post_team', function($post_id) {
+    if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
+    
+    $offices = get_terms(['taxonomy' => 'office', 'hide_empty' => false]);
+    foreach ($offices as $office) {
+        $key = 'order_office_' . $office->slug;
+        $key2 = 'order_ourteam_' . $office->slug;
+        if (isset($_POST[$key])) { 
+            update_post_meta($post_id, '_order_office_' . $office->slug, intval($_POST[$key]));
+            update_post_meta($post_id, '_order_ourteam_' . $office->slug, intval($_POST[$key2]));
+        }
+    }
+});
+
+add_action('pre_get_posts', function($query) {
+    if (!is_admin() && $query->is_main_query() && is_page('/about-us/our-team/')) {
+        $query->set('post_type', 'team');
+        $query->set('orderby', 'menu_order');
+        $query->set('order', 'ASC');
+        $query->set('posts_per_page', -1);
+    }
+});
+
+// Add the column - menu_order in Team CPT listing, and make it sortable
+add_filter('manage_team_posts_columns', function($columns) {
+    $cb = array_slice($columns, 0, 1);     
+    $rest = array_slice($columns, 1);    
+    return array_merge($cb, ['menu_order' => 'Order'], $rest);
+});
+add_action('manage_team_posts_custom_column', function($column, $post_id) { // Populate the column
+    if ($column === 'menu_order') {
+        echo get_post_field('menu_order', $post_id);
+    }
+}, 10, 2);
+add_filter('manage_edit-team_sortable_columns', function($columns) { // Make it sortable
+    $columns['menu_order'] = 'menu_order';
+    return $columns;
+});
+
+/* -- DON'T RUN THIS UNLESS YOU KNOW WHAT YOU ARE DOING --
+add_action('init', function() {
+    $teams = get_posts([
+        'post_type' => 'team',
+        'posts_per_page' => -1,
+        'orderby' => 'menu_order',
+        'order' => 'ASC'
+    ]);
+
+    $i = 10;
+    foreach ($teams as $post) {
+        wp_update_post(['ID' => $post->ID, 'menu_order' => $i]);
+        $i += 10;
+    }
+
+    error_log('DONE - menu_order set for all team members');
+});
+*/
 
 /* ---------------------------- MAIN BLOCK ------------------------------------- */
 add_filter('query_vars', 'bca_query_vars');

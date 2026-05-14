@@ -17,20 +17,29 @@ function team_grid_shortcode() {
         'post_type'      => 'team',
         'posts_per_page' => -1,
         'post_status'    => 'publish',
-        'orderby'        => 'date',
+        'orderby'        => 'menu_order',
         'order'          => 'ASC',
     ]);
     
-    return bca_render_team_grid($offTerm, $query);
+    return bca_render_team_grid($offTerm, $query->posts);
 }
 
 function portsmouthTeam() {
-    $query = new WP_Query([
+    return bca_render_team_grid(null, new WP_Query([
         'post_type'      => 'team',
-        'posts_per_page' => 4,
+        'posts_per_page' => -1,
         'post_status'    => 'publish',
-        'orderby'        => 'date',
+        'meta_key'       => '_order_office_portsmouth',
+        'orderby'        => 'meta_value_num',
         'order'          => 'ASC',
+        'meta_query'     => [
+            [
+                'key'     => '_order_office_portsmouth',
+                'value'   => '0',
+                'compare' => '>',
+                'type'    => 'NUMERIC',
+            ]
+        ],
         'tax_query'      => [
             [
                 'taxonomy' => 'office',
@@ -38,18 +47,25 @@ function portsmouthTeam() {
                 'terms'    => 'portsmouth',
             ]
         ],
-    ]);
-
-    return bca_render_team_grid(null, $query);
+    ])->posts, 'portsmouth');
 }
 
 function romseyTeam() {
-    $query = new WP_Query([
+    return bca_render_team_grid(null, new WP_Query([
         'post_type'      => 'team',
-        'posts_per_page' => 4,
+        'posts_per_page' => -1,
         'post_status'    => 'publish',
-        'orderby'        => 'date',
+        'meta_key'       => '_order_office_romsey',
+        'orderby'        => 'meta_value_num',
         'order'          => 'ASC',
+        'meta_query'     => [
+            [
+                'key'     => '_order_office_romsey',
+                'value'   => '0',
+                'compare' => '>',
+                'type'    => 'NUMERIC',
+            ]
+        ],
         'tax_query'      => [
             [
                 'taxonomy' => 'office',
@@ -57,18 +73,25 @@ function romseyTeam() {
                 'terms'    => 'romsey',
             ]
         ],
-    ]);
-
-    return bca_render_team_grid(null, $query);
+    ])->posts);
 }
 
 function kumarTeam() {
-    $query = new WP_Query([
+    return bca_render_team_grid(null, new WP_Query([
         'post_type'      => 'team',
-        'posts_per_page' => 4,
+        'posts_per_page' => -1,
         'post_status'    => 'publish',
-        'orderby'        => 'date',
+        'meta_key'       => '_order_office_kumar',
+        'orderby'        => 'meta_value_num',
         'order'          => 'ASC',
+        'meta_query'     => [
+            [
+                'key'     => '_order_office_kumar',
+                'value'   => '0',
+                'compare' => '>',
+                'type'    => 'NUMERIC',
+            ]
+        ],
         'tax_query'      => [
             [
                 'taxonomy' => 'office',
@@ -76,9 +99,7 @@ function kumarTeam() {
                 'terms'    => 'kumar',
             ]
         ],
-    ]);
-
-    return bca_render_team_grid(null, $query, 'kumar');
+    ])->posts, 'kumar');
 }
 
 function swindonTeam() {
@@ -97,10 +118,13 @@ function swindonTeam() {
         ],
     ]);
 
-    return bca_render_team_grid(null, $query, 'swindon');
+    return bca_render_team_grid(null, $query->posts, 'swindon');
 }
 
-function bca_render_team_grid($offTerm, $query, $team='') {
+/**
+ * @param WP_Term[] $offTerm - list of office terms (for pills and filtering)
+ */
+function bca_render_team_grid(?array $offTerm, array $posts, $team='') {
     /* Import style and scripts */
     wp_enqueue_style('team-style');
     wp_enqueue_script('team-script');
@@ -135,20 +159,32 @@ function bca_render_team_grid($offTerm, $query, $team='') {
 
      <!-- Grid — all members in one flat grid, filtered by JS -->
     <div class="bca-team__grid" id="teamGrid">
-    <?php while($query->have_posts()) :
-        $query->the_post(); 
-        $office_member = "";
-        $offTerm = get_the_terms(get_the_ID(), 'office');
-        
-        $ofc_slug_arr = !empty($offTerm) && !is_wp_error($offTerm) ? array_column($offTerm, 'slug') : [];
-        $ofc_name_arr = !empty($offTerm) && !is_wp_error($offTerm) ? array_column($offTerm, 'name') : [];
+    <?php 
+    global $post;
+    foreach($posts as $post) : 
+        setup_postdata($post);
 
-        /*foreach($ofc_slug_arr as $i) :
+        $offTerm = get_the_terms(get_the_ID(), 'office');        
+        $ofc_slug_arr = !empty($offTerm) && !is_wp_error($offTerm) ? array_column($offTerm, 'slug') : [];
+        
+        $data_attrs = '';
+        $offices = get_terms(['taxonomy' => 'office', 'hide_empty' => false]);
+        foreach ($offices as $office) {
+            $val = get_post_meta(get_the_ID(), '_order_ourteam_' . $office->slug, true);
+            $data_attrs .= ' data-order-' . $office->slug . '="' . intval($val) . '"';
+        }
+
+        /* 
+        $ofc_name_arr = !empty($offTerm) && !is_wp_error($offTerm) ? array_column($offTerm, 'name') : [];
+        $office_member = "";
+        foreach($ofc_slug_arr as $i) :
             $office_member = $office_member . " bca-member--" . $i;
-        endforeach; */ ?>
+        endforeach; 
+        */ 
+        ?>
 
         <div class="bca-member <?php echo !$isFullTeam && $team != '' ? 'bca-member--' . $team : '' ?> reveal reveal-delay-3" 
-                data-office="<?php echo implode(',', $ofc_slug_arr) ?>">
+                data-office="<?php echo implode(',', $ofc_slug_arr) ?>" <?php echo $data_attrs ?>>
             <div class="bca-member__photo <?php /* Adds soft-bg under images --> echo !$isFullTeam ? 'soft-bg' : '' */ ?>">
                 <?php if(has_post_thumbnail()): ?>
                 <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'full') ?>" alt="<?php the_title(); ?>"/>
@@ -178,7 +214,8 @@ function bca_render_team_grid($offTerm, $query, $team='') {
                 </div> -->
             </div>
         </div>
-    <?php endwhile;
+    <?php 
+    endforeach;
     wp_reset_postdata(); // Reseting the gobal post content back to what was before the while loop ?>
     
     </div>

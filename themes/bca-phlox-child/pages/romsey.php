@@ -164,7 +164,7 @@ wp_enqueue_style('single-office-style');
         </div>
         <div class="bca-why__inner">
             <div class="bca-why__image reveal">
-                <img src="/wp-content/uploads/2026/04/AWP_6050-Kumar-Associates-Team.jpg" alt="Kumar Associates Romsey office">
+                <img src="/wp-content/uploads/2026/04/AWP_6050-Kumar-Associates-Team.jpg" alt="Kumar Associates Romsey office team" style="height: auto;">
                 <div class="bca-why__stat">
                     <div class="bca-why__stat-num">35<span>+</span></div>
                     <div class="bca-why__stat-label">Years supporting medical professionals</div>

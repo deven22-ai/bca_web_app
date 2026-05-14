@@ -262,7 +262,7 @@ wp_enqueue_style('about-us-style');
                         <span class="bca-tl__text">
                             Relocated BC&A head office in Portsmouth from Elm Grove to larger premises at 24 Landport Terrace, and 
                             launched BC&A Audits Limited to expand audit services.
-                            <!-- <br></br> -->
+                            <br>
                             Acquired DCK Accounting Solutions in Swindon to expand into Swindon and extend services to City and Parish councils.
                         </span>
                     </div>

@@ -135,8 +135,7 @@ wp_enqueue_style('request-quote-style');
                 <div class="bca-heading__eyebrow">Fill Out the Form</div>
                 <h2 class="bca-heading__title">Book Your <span>Free Health Check</span></h2>
                 <div class="bca-heading__description">
-                    <p>
-                    </p>
+                    <p>Fill in your details and we'll confirm your appointment within 24 hours. Your information is kept strictly confidential.</p>
                 </div>
             </div>
         </div>

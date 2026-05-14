@@ -155,9 +155,22 @@
 
 
 /* ── RESPONSIVE ─────────────────────── */
+
+@media (max-width: 1024px) {
+  .bca-hc-review__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 960px) {
   .bca-contact-main { padding: 50px 0; }
   .bca-cta__right { justify-content: flex-start; }
   .bca-rq { padding: 50px 0 }
   .bca-rq__inner { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 768px) {
+  .bca-hc-review { padding: 64px 0; }
+  .bca-hc-review__grid { grid-template-columns: 1fr; gap: 16px; }
+  .bca-hc-area { flex-direction: column; gap: 12px; padding: 22px 20px; }
 }

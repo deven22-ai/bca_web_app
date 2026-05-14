@@ -2,6 +2,8 @@ document.addEventListener('DOMContentLoaded', function () {
     const pills = document.querySelectorAll('.bca-team__pill');
     const members = document.querySelectorAll('.bca-member');
     const countEl = document.getElementById('visibleCount');
+    const container = document.getElementById('teamGrid');
+    const originalOrder = [...container.querySelectorAll('.bca-member')]; // Save original order on load
     
     pills.forEach(pill => {
         pill.addEventListener('click', () => {
@@ -32,7 +34,20 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
                 });
                 if (countEl) countEl.textContent = visible;
-                
+
+                // ---- Sort cards by data-order-{office} ----
+                if (office !== 'all') {
+                    const key = 'order' + office.charAt(0).toUpperCase() + office.slice(1); // camelCase
+                    const allCards = [...container.querySelectorAll('.bca-member')];
+                    allCards.sort((a, b) => {
+                        const aVal = parseInt(a.dataset['order' + office.charAt(0).toUpperCase() + office.slice(1)] ?? 0);
+                        const bVal = parseInt(b.dataset['order' + office.charAt(0).toUpperCase() + office.slice(1)] ?? 0);
+                        return aVal - bVal;
+                    });
+                    allCards.forEach(card => container.appendChild(card));
+                } else originalOrder.forEach(card => container.appendChild(card));
+                // -------------------------------------------
+
                 // Stagger fade-in for each visible card
                 const visibleCards = document.querySelectorAll('.bca-member:not(.hidden)');
                 visibleCards.forEach((card, i) => {
