@@ -40,16 +40,18 @@ function bca_generate_email(array $uploaded_files, string $office_name) {
 
     // Build files table rows
     $count = count($uploaded_files);
+    $css = '';
+    if($count > 1) $css = "border-bottom: 1px solid #f0f0f0";
     $file_rows = '';
     foreach ($uploaded_files as $file) {
         $file_rows .= "
             <tr>
-                <td style='padding: 10px 14px; border-bottom: 1px solid #f0f0f0; font-size: 14px; color: #333;'>{$file['file_name']}</td>
-                <td style='padding: 10px 14px; border-bottom: 1px solid #f0f0f0; font-size: 14px; color: #777; text-align: center;'>" 
+                <td style='padding: 10px 14px; {$css}; font-size: 14px; color: #333;'>{$file['file_name']}</td>
+                <td style='padding: 10px 14px; {$css}; font-size: 14px; color: #777; text-align: center;'>" 
                     . round($file['size'] / 1024, 1) . ' KB' . 
                 "</td>
-                <td style='display: flex;gap: 5px;padding: 10px 14px; border-bottom: 1px solid #f0f0f0; text-align: right;'>
-                    <a href='{$file['download_url']}' style='display: inline-block; align-items: center; gap: 5px; background-color: #0078d4; color: #ffffff; 
+                <td style='display: flex;gap: 5px;padding: 10px 14px; {$css}; text-align: right;'>
+                    <a href='{$file['download_url']}' style='display: inline-block; align-items: center; margin-right: 5px; background-color: #0078d4; color: #ffffff; 
                             text-decoration: none; font-size: 12px; font-weight: bold; padding: 6px 16px; border-radius: 4px;'>
                         Download
                     </a>
@@ -167,6 +169,7 @@ function bca_file_upload() {
     $files      = $_FILES['files'] ?? null;
     $count      = count($files['name']);
     
+    /* Folder Location Sharepoint */
     $officeLocs = [
         'portsmouth' => 'BCA Portsmouth',
         'romsey'     => 'BCA Romsey',
@@ -177,13 +180,17 @@ function bca_file_upload() {
         'portsmouth' => 'info@bcaaccountants.com',
         'romsey'     => 'romsey@bcaaccountants.com',
         'swindon'    => 'swindon@bcaaccountants.com',
-        'kumar'      => 'Kumar Associates'
+        'kumar'      => 'info@kumarassociates.co.uk'
     ];
-    $allowedMimeTypes = [
+    $allowed_extensions = ['pdf', 'doc', 'docx', 'jpg', 'jpeg', 'png', 'xlsx', 'xls', 'csv'];
+    $allowed_mimes = [
         'application/pdf',
+        'application/msword',
+        'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
         'image/jpeg',
         'image/png',
-        'image/jpg'
+        'application/vnd.ms-excel',
+        'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
     ];
     
     if($office === null || !array_key_exists($office, $officeLocs)) wp_send_json_error('Office Location not found. Please select one of the offices from the dropdown');
@@ -192,11 +199,30 @@ function bca_file_upload() {
     /* Do Files validation before initiating Sharepoint process */
     if (!(is_array($files) && isset($files['name']))) wp_send_json_error('No files were received.');
     for ($i = 0; $i < $count; $i++) {
-        $tmpName  = $files['tmp_name'][$i];
+        $tmpName  = $files['tmp_name'][$i]; 
         $name     = $files['name'][$i];
         $size     = $files['size'][$i];
 
-        if ($size > $maxSize) wp_send_json_error("Selected File '" . $name . "' exceeds the maximum file size limit of 10MB");
+        // 1. Check File extension
+        $extension = strtolower(pathinfo($name, PATHINFO_EXTENSION));
+        if (!in_array($extension, $allowed_extensions)) {
+            wp_send_json_error("Selected File '" . $name . "' has an invalid type.");
+            exit;
+        }
+
+        // 2. Check REAL MIME type 
+        $real_mime = mime_content_type($tmpName);
+        error_log('real_mime: ' . $real_mime);
+        if (!in_array($real_mime, $allowed_mimes)) {
+            wp_send_json_error("Selected File '" . $name . "' has an invalid file type.");
+            exit;
+        }
+
+        // 3. Check file size
+        if ($size > $maxSize) {
+            wp_send_json_error("Selected File '" . $name . "' exceeds the maximum file size limit of 10MB");
+            exit;
+        }
 
         // MIME validation
       /*  $mime = mime_content_type($tmpName);
@@ -213,7 +239,7 @@ function bca_file_upload() {
     $message = bca_generate_email($response, $officeLocs[$office]);
 
     $headers = ['Content-Type: text/html; charset=UTF-8'];
-    $sent = wp_mail("deven@aishatech.ai", $subject, $message, $headers);
+    $sent = wp_mail($officeEmail[$office], $subject, $message, $headers);
 
     if(!$sent) error_log('Failed to the send email');        
 

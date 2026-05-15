@@ -36,6 +36,11 @@
             'link' => '/services/rd-tax-relief/'
         ],
         [
+            'name' => 'Accounting for Medical Professionals',
+            'is_specialist' => true,
+            'link' => '/sectors/healthcare/'
+        ],
+        [
             'name' => 'Making Tax Digital (MTD)',
             'is_specialist' => false,
             'link' => '/services/making-tax-digital-mtd/'
@@ -131,6 +136,7 @@
                                 </div>
                             </div>
                             <ul class="bca-mega__list">
+                                <li class="bca-mega__list-item"><a href="/services/making-tax-digital-mtd/">Making Tax Digital (MTD) <svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg></a></li>
                                 <li class="bca-mega__list-item"><a href="/services/private-client-tax/">Private Client Tax <svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg></a></li>
                                 <li class="bca-mega__list-item"><a href="/services/self-assessment/">Self-Assessment Tax Return <svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg></a></li>
                                 <li class="bca-mega__list-item"><a href="/services/personal-tax-planning/">Personal Tax Planning <svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg></a></li>
@@ -207,10 +213,6 @@
                         <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
                         Our Team
                     </a>
-                    <a href="/about-us/news/" class="bca-dropdown__item">
-                        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-                        News &amp; Updates
-                    </a>
                     <a href="/community/" class="bca-dropdown__item">
                         <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
                         In the Community
@@ -222,6 +224,10 @@
                     <a href="/contact/?section=careers" class="bca-dropdown__item">
                         <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"></path><line x1="12" y1="12" x2="12" y2="12"></line><path d="M2 12h20"></path></svg>
                         Careers
+                    </a>
+                    <a href="/about-us/news/" class="bca-dropdown__item">
+                        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                        News &amp; Updates
                     </a>
                 </div>
             </div>
@@ -287,6 +293,7 @@
                 </div>
                 <div class="bca-mobile-sub__section">
                     <span class="bca-mobile-sub__section-label">For Individuals</span>
+                    <a href="/services/making-tax-digital-mtd/" class="bca-mobile-sub__link">Making Tax Digital (MTD)</a>
                     <a href="/services/private-client-tax/" class="bca-mobile-sub__link">Private Client Tax</a>
                     <a href="/services/self-assessment/" class="bca-mobile-sub__link">Self-Assessment Tax Return</a>
                     <a href="/services/personal-tax-planning/" class="bca-mobile-sub__link">Personal Tax Planning</a>
@@ -320,10 +327,10 @@
                 <div class="bca-mobile-sub__section">
                     <a href="/about-us/" class="bca-mobile-sub__link">About BC&A</a>
                     <a href="/about-us/our-team/" class="bca-mobile-sub__link">Our Team</a>
-                    <a href="/about-us/news/" class="bca-mobile-sub__link">News &amp; Updates</a>
                     <a href="/about-us/community/" class="bca-mobile-sub__link">In the Community</a>
                     <a href="/about-us/become-client/" class="bca-mobile-sub__link">Become a client</a>
                     <a href="/contact/?section=careers" class="bca-mobile-sub__link">Careers</a>
+                    <a href="/about-us/news/" class="bca-mobile-sub__link">News &amp; Updates</a>
                 </div>
             </div>
         </li>

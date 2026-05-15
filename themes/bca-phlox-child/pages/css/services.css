@@ -5,7 +5,7 @@
 .bca-hero-section.businesses  { background-image: url(/wp-content/uploads/2026/03/job-5382501_1280.jpg); }
 .bca-hero-section.individuals { background-image: url(/wp-content/uploads/2026/04/individual_business.jpg); }
 
-.bca-hero__overlay { opacity: 0.98; }
+.bca-hero__overlay { opacity: 0.94; }
 .bca-hero__btns { margin-top: 25px; }
 .bca-hero__badge {
     background: var(--bca-primary);
