@@ -80,7 +80,7 @@ wp_enqueue_style('offices-style');
             <!--PORTSMOUTH -->
             <div class="bca-ofc bca-ofc--portsmouth reveal reveal-delay-1">
                 <div class="bca-ofc__banner">
-                    <img src="/wp-content/uploads/2026/05/portsmouth_city.jpg" alt="Aerial photograph looking out across the Theatre of the Sea, Southsea Castle, The D-Day Story and beyond over the Portsmouth cityscape."/>
+                    <img src="/wp-content/uploads/2026/05/Places_to_visit_in_Portsmouth_-_SouthSea_Castle.avif" alt="Aerial photograph looking out across the Theatre of the Sea, Southsea Castle, The D-Day Story and beyond over the Portsmouth cityscape."/>
                     <div class="bca-ofc__banner-overlay"></div>
                     <div class="bca-ofc__banner-content">
                         <div class="bca-ofc__banner-left">
@@ -266,8 +266,8 @@ wp_enqueue_style('offices-style');
             
             <!--- SWINDON --->
             <div class="bca-ofc bca-ofc--swindon reveal reveal-delay-3">
-                <div class="bca-ofc__banner">
-                    <img src="/wp-content/uploads/2026/05/lydiard_park_and_house.png" alt="Swindon Lydiard Park & House"/>
+                <div class="bca-ofc__banner--swindon">
+                    <!--<img src="/wp-content/uploads/2026/05/lydiard_park_and_house.png" alt="Swindon Lydiard Park & House"/> -->
                     <div class="bca-ofc__banner-overlay"></div>
                     <div class="bca-ofc__banner-content">
                         <div class="bca-ofc__banner-left">

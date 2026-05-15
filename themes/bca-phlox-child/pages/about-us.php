@@ -223,6 +223,8 @@ wp_enqueue_style('about-us-style');
                         <span class="bca-tl__text">
                             Opened a dedicated accountant practice in Romsey for medical clients by acquiring Kumar Associates.
                             Expanded general practice in Romsey by acquiring Macklin & Co.
+                            <br>
+                            Both firms established 35+ years ago.
                         </span>
                     </div>
                     <div class="notch"></div>
@@ -258,13 +260,11 @@ wp_enqueue_style('about-us-style');
                     <span class="bca-tl__year">2026</span>
                     <span class="bca-tl__tag">Expansion</span>
                     <div class="bca-t1-card__description">
-                        <span class="bca-tl__title">New Portsmouth HQ & Audit Division</span>
+                        <span class="bca-tl__title">New Portsmouth HQ & Audit Division & DCK</span>
                         <span class="bca-tl__text">
-                            Relocated BC&A head office in Portsmouth from Elm Grove to larger premises at 24 Landport Terrace, and 
-                            launched BC&A Audits Limited to expand audit services.
+                            Relocated BC&A head office in Portsmouth from Elm Grove to larger premises at 24 Landport Terrace, and launched BC&A Audits Limited to expand audit services.
                             <br>
-                            Acquired DCK Accounting Solutions in Swindon to expand into Swindon and extend services to City and Parish councils.
-                        </span>
+Acquired DCK Accounting Solutions in Swindon to expand into Swindon and extend services to City and Parish councils. DCK brings 30+ years expertise to the group.                        </span>
                     </div>
                     <div class="notch"></div>
                 </div>
