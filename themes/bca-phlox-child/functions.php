@@ -17,20 +17,20 @@ function bca_phlox_child_enqueue_assets() {
         'bca-header',
         get_stylesheet_directory_uri() . '/pages/css/header.css',
         [],
-        '1.0.0'
+        filemtime(get_stylesheet_directory() . '/pages/css/header.css')
     );
     wp_enqueue_script(
         'bca-header-js',
         get_stylesheet_directory_uri() . '/pages/js/header.js',
         [],
-        '1.0.0',
+        filemtime(get_stylesheet_directory() . '/pages/js/header.js'),
         true  // true means it loads in footer, which is correct for JS
     );
     wp_enqueue_style(
         'bca-footer',
         get_stylesheet_directory_uri() . '/pages/css/footer.css',
         [],
-        '1.0.0'
+        filemtime(get_stylesheet_directory() . '/shortcodes/css/news.css')
     );
     wp_enqueue_script(
         'main-js',
@@ -178,20 +178,20 @@ function register_shortcode_assets() {
         'team-style',
         get_stylesheet_directory_uri() . '/shortcodes/css/team.css',
         array('auxin-child'),
-        '1.0.0'
+        filemtime(get_stylesheet_directory() . '/shortcodes/css/team.css')
     );
     wp_register_script(
         'team-script',
         get_stylesheet_directory_uri() . '/shortcodes/js/team.js',
         array(),
-        '1.0.0',
+        filemtime(get_stylesheet_directory() . '/shortcodes/js/team.js'),
         true
     );
     wp_register_style(
         'news-style',
         get_stylesheet_directory_uri() . '/shortcodes/css/news.css',
         array('auxin-child'),
-        '1.0.0'
+        filemtime(get_stylesheet_directory() . '/shortcodes/css/news.css')
     );
 
     /* Registering JS file for AJAX calls */
@@ -211,13 +211,13 @@ function register_shortcode_assets() {
         'sector-style',
         get_stylesheet_directory_uri() . '/shortcodes/css/sector.css',
         array('auxin-child'),
-        '1.0.0'
+        filemtime(get_stylesheet_directory() . '/shortcodes/css/sector.css')
     );
     wp_register_style(
         'cta-style',
         get_stylesheet_directory_uri() . '/shortcodes/css/cta.css',
         array('auxin-child'),
-        '1.0.0'
+        filemtime(get_stylesheet_directory() . '/shortcodes/css/cta.css')
     );
 }
 
