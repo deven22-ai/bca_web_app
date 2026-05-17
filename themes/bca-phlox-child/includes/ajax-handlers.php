@@ -211,11 +211,12 @@ function bca_file_upload() {
         }
 
         // 2. Check REAL MIME type 
-        $real_mime = mime_content_type($tmpName);
-        error_log('real_mime: ' . $real_mime);
-        if (!in_array($real_mime, $allowed_mimes)) {
-            wp_send_json_error("Selected File '" . $name . "' has an invalid file type.");
-            exit;
+        if (function_exists('mime_content_type')) {
+            $real_mime = mime_content_type($tmpName); 
+            if (!in_array($real_mime, $allowed_mimes)) {
+                wp_send_json_error("Selected File '" . $name . "' has an invalid file type.");
+                exit;
+            }
         }
 
         // 3. Check file size

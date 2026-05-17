@@ -58,7 +58,7 @@ wp_enqueue_style('request-quote-style');
             <!-- Sidebar -->
             <aside class="rq-sidebar">
                 <!-- Contact -->
-                <div class="bca-sidebar-card">
+                <div class="bca-sidebar-card reveal reveal-delay-1">
                     <div class="bca-sidebar-card__head">
                         <h3>Prefer to speak to someone?</h3>
                     </div>
@@ -94,7 +94,7 @@ wp_enqueue_style('request-quote-style');
                 </div>
 
                 <!-- Why BC&A -->
-                <div class="bca-sidebar-card bca-sidebar-card--dark">
+                <div class="bca-sidebar-card bca-sidebar-card--dark reveal reveal-delay-2">
                     <div class="bca-sidebar-card__head">
                         <h3>Why choose BC&amp;A?</h3>
                     </div>

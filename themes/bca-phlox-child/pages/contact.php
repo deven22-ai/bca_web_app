@@ -151,7 +151,7 @@ wp_enqueue_style('contact-style');
             <!-- Portsmouth -->
             <div class="bca-office-card reveal reveal-delay-1">
                 <div class="bca-office-card__photo">
-                    <img src="/wp-content/uploads/2026/05/portsmouth_city.jpg" alt="Portsmouth City">
+                    <img src="/wp-content/uploads/2026/05/Places_to_visit_in_Portsmouth_-_SouthSea_Castle.avif" alt="Portsmouth City">
                     <span class="bca-office-card__type">Head Office</span>
                 </div>
                 <div class="bca-office-card__body">
@@ -284,10 +284,10 @@ wp_enqueue_style('contact-style');
                             and will be in touch if a suitable opportunity arises.
                         </p>
                         <div class="bca-careers__btns">
-                            <a href="mailto:careers@bcaaccountants.com?subject=CV Application — BC%26A Chartered Accountants" class="bca-btn-primary">
-                                Email Your CV
+                            <a href="mailto:info@bcaaccountants.com?subject=CV Application — BC%26A Chartered Accountants" class="bca-btn-primary">
+                                Email Your CV <?php echo get_arrow_icon() ?>
                             </a>
-                            <a href="#contact-form" class="bca-btn-ghost">Send a Message</a>
+                            <!--<a href="#contact-form" class="bca-btn-ghost">Send a Message</a> -->
                         </div>
                     </div>
                 </div>

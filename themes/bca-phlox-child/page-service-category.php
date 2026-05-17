@@ -64,7 +64,7 @@ if($category === 'individuals') {
                 <p class="bca-hero__text reveal reveal-delay-2"><?php echo $hero_desc ?></p>
             </div>
             <div class="bca-hero__btns reveal reveal-delay-4">
-                <a href="#services" class="bca-btn-primary">Explore Our <?php echo ucfirst($category) ?> Services</a>
+                <a href="#services" class="bca-btn-primary">Explore Our <?php echo ucfirst($category) ?> Services <?php echo get_arrow_icon(); ?></a>
                 <a href="/request-quote/" class="bca-btn-ghost">Get a Free Quote</a>
             </div>
         </div>

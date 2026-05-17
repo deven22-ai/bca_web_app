@@ -3,7 +3,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-function bca_news_renderer($news_query) {
+function bca_news_renderer(WP_Query $news_query) {
     ob_start(); // turns on the output buffering
 
     if($news_query->have_posts()) : ?>
@@ -139,6 +139,11 @@ function getMiniGrid() {
     return ob_get_clean();
 }
 
+function getRelatedNews() {
+    
+}
+
 add_shortcode('bca_news_grid', 'getNews');
 add_shortcode('bca_mini_news_grid', 'getMiniGrid');
+add_shortcode('bca_related_news', 'getRelatedNews');
 ?>

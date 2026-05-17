@@ -36,15 +36,15 @@
             'link' => '/services/rd-tax-relief/'
         ],
         [
-            'name' => 'Accounting for Medical Professionals',
-            'is_specialist' => true,
-            'link' => '/sectors/healthcare/'
-        ],
-        [
             'name' => 'Making Tax Digital (MTD)',
             'is_specialist' => false,
             'link' => '/services/making-tax-digital-mtd/'
         ],
+        [
+            'name' => 'Accounting for Medical Professionals',
+            'is_specialist' => true,
+            'link' => '/sectors/healthcare/'
+        ]
     ];
 ?>
 

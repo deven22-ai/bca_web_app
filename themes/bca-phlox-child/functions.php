@@ -223,6 +223,8 @@ function register_shortcode_assets() {
 
 
 /* ------------------------- WP ADMIN UI - Office Terms ----------------------- */
+add_filter('use_block_editor_for_post', '__return_false', 10); // Disable Gutenberg for posts
+
 add_action('admin_head', function() {
     echo '<style>.column-menu_order { width: 100px;text-align:center; }</style>';
 });

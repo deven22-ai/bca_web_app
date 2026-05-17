@@ -61,8 +61,8 @@ wp_enqueue_style('file-upload-style');
                                 <option value="" disabled="" selected="">—Please choose an option—</option>
                                 <option value="portsmouth">Portsmouth — Head Office</option>
                                 <option value="romsey">BC&A Romsey</option>
-                                <option value="swindon">Swindon</option>
                                 <option value="kumar">Kumar Associates</option>
+                                <option value="swindon"> Swindon (BC&A Accounting Solutions)</option>
                             </select>
                         </div>
                     </div>

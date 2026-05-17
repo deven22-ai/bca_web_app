@@ -37,12 +37,12 @@
                 <div class="bca-footer__col-head">Services</div>
                 <ul class="bca-footer__links">
                     <li><a href="/services/accounting-solutions/">Accounting Solutions</a></li>
+                    <li><a href="/services/accounting-for-parish-city-councils/">Accounting for Parish & City Councils</a></li>
                     <li><a href="/services/business-tax/">Business Tax</a></li>
                     <li><a href="/services/payroll/">Payroll Services</a></li>
-                    <li><a href="/services/audit/">Audit Services</a></li>
                     <li><a href="/services/rd-tax-relief/">R&D Tax Relief</a></li>
-                    <li><a href="/services/self-assessment/">Self-Assessment</a></li>
-                    <li><a href="/services/private-client-tax/">Private Client Tax</a></li>
+                    <li><a href="/services/self-assessment/">Making Tax Digital (MTD)</a></li>
+                    <li><a href="/services/private-client-tax/">Accounting for Medical Professionals</a></li>
                     <li><a href="/services/businesses/">All Business Services →</a></li>
                     <li><a href="/services/individuals/">All Individual Services →</a></li>
                 </ul>
