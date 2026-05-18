@@ -80,9 +80,9 @@
                                     Kumar Associates
                                 </div>
                                 <div>
-                                    <a href="tel:02392833300">02392833300</a>
+                                    <a href="tel:<?php echo config('KUMAR_ASSOCIATES')['phone']; ?>"><?php echo config('KUMAR_ASSOCIATES')['phone']; ?></a>
                                     ·
-                                    <a href="mail:info@kumarassociates.co.uk">info@kumarassociates.co.uk</a>
+                                    <a href="mailto:<?php echo config('KUMAR_ASSOCIATES')['email']; ?>"><?php echo config('KUMAR_ASSOCIATES')['email']; ?></a>
                                 </div>
                             </div>
                             <div class="bca-footer__office-practice">
@@ -91,9 +91,9 @@
                                     BC&A Romsey
                                 </div>
                                 <div>
-                                    <a href="tel:01794511511">01794511511</a>
+                                    <a href="tel:<?php echo config('BCA_ROMSEY')['phone']; ?>"><?php echo config('BCA_ROMSEY')['phone']; ?></a>
                                     ·
-                                    <a href="mail:romsey@bcaaccountants.com">romsey@bcaaccountants.com</a>
+                                    <a href="mailto:<?php echo config('BCA_ROMSEY')['email']; ?>"><?php echo config('BCA_ROMSEY')['email']; ?></a>
                                 </div>
                             </div>
                         </div>
@@ -107,9 +107,9 @@
                         <div class="bca-footer__office-addr">Unit 1 Uffcott Farm, Uffcott, Swindon, SN4 9NB</div>
                         <div class="bca-footer__office-contact">
                             <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-                            <a href="tel:01793739110">01793739110</a>
+                            <a href="tel:<?php echo config('SWINDON')['phone']; ?>"><?php echo config('SWINDON')['phone']; ?></a>
                             ·
-                            <a href="mailto:swindon@bcaaccountants.com">swindon@bcaaccountants.com</a>
+                            <a href="mailto:<?php echo config('SWINDON')['email']; ?>"><?php echo config('SWINDON')['email']; ?></a>
                         </div>
                     </div>
                 </div>

@@ -198,11 +198,11 @@ wp_enqueue_style('contact-style');
                             <div class="bca-ofc-de-grp">
                                 <div class="bca-ofc-de">
                                     <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
-                                    <a href="tel:02392833300">02392833300</a>
+                                    <a href="tel:<?php echo config('KUMAR_ASSOCIATES')['phone']; ?>"><?php echo config('KUMAR_ASSOCIATES')['phone']; ?></a>
                                 </div>
                                 <div class="bca-ofc-de">
                                     <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                                    <a href="mailto:info@kumarassociates.com">info@kumarassociates.com</a>
+                                    <a href="mailto:<?php echo config('KUMAR_ASSOCIATES')['email']; ?>"><?php echo config('KUMAR_ASSOCIATES')['email']; ?></a>
                                 </div>
                             </div>
                         </div>
@@ -211,11 +211,11 @@ wp_enqueue_style('contact-style');
                             <div class="bca-ofc-de-grp">
                                 <div class="bca-ofc-de">
                                     <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
-                                    <a href="tel:01794 511511">01794511511</a>
+                                    <a href="tel:<?php echo config('BCA_ROMSEY')['phone']; ?>"><?php echo config('BCA_ROMSEY')['phone']; ?></a>
                                 </div>
                                 <div class="bca-ofc-de">
                                     <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                                    <a href="mailto:romsey@bcaaccountants.com">romsey@bcaaccountants.com</a>
+                                    <a href="mailto:<?php echo config('BCA_ROMSEY')['email']; ?>"><?php echo config('BCA_ROMSEY')['email']; ?></a>
                                 </div>
                             </div>
                         </div>
@@ -244,11 +244,11 @@ wp_enqueue_style('contact-style');
                         </div>
                         <div class="bca-office-card__detail">
                             <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
-                            <a href="tel:01793739110">01793 739 110</a>
+                            <a href="tel:<?php echo config('SWINDON')['phone']; ?>"><?php echo config('SWINDON')['phone']; ?></a>
                         </div>
                         <div class="bca-office-card__detail">
                             <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                            <a href="mailto:swindon@bcaaccountants.com">swindon@bcaaccountants.com</a>
+                            <a href="mailto:<?php echo config('SWINDON')['email']; ?>"><?php echo config('SWINDON')['email']; ?></a>
                         </div>
                     </div>
                     <div class="bca-office-card__btns" style="display: flex;flex-flow: column;">

@@ -21,6 +21,16 @@
             'link' => '/services/accounting-for-parish-city-councils/'
         ],
         [
+            'name' => 'Accounting for Medical Professionals',
+            'is_specialist' => true,
+            'link' => '/sectors/healthcare/'
+        ],
+        [
+            'name' => 'Audit Services',
+            'is_specialist' => true,
+            'link' => '/services/audit-services/'
+        ],
+        [
             'name' => 'Business Tax Services',
             'is_specialist' => false,
             'link' => '/services/business-tax/'
@@ -34,16 +44,37 @@
             'name' => 'R&D Tax Relief',
             'is_specialist' => true,
             'link' => '/services/rd-tax-relief/'
+        ]
+    ];
+
+    $individual_services = [
+        [
+            'name' => 'Estate & Trust Planning',
+            'link' => '/services/estate-and-trust-planning/'
         ],
         [
             'name' => 'Making Tax Digital (MTD)',
-            'is_specialist' => false,
             'link' => '/services/making-tax-digital-mtd/'
         ],
         [
-            'name' => 'Accounting for Medical Professionals',
-            'is_specialist' => true,
-            'link' => '/sectors/healthcare/'
+            'name' => 'Personal Tax Planning',
+            'link' => '/services/personal-tax-planning/'
+        ],
+        [
+            'name' => 'Personal Wealth Management',
+            'link' => '/services/personal-wealth-management/'
+        ],
+        [
+            'name' => 'Private Client Tax',
+            'link' => '/services/private-client-tax/'
+        ],
+        [
+            'name' => 'Property Tax Planning For Landlords & Investors',
+            'link' => '/services/property-tax-planning-for-landlords-investors/'
+        ],
+        [
+            'name' => 'Self-Assessment Tax Return',
+            'link' => '/services/self-assessment-tax-return-service/'
         ]
     ];
 ?>
@@ -107,12 +138,12 @@
                                 </div>
                             </div>
                             <ul class="bca-mega__list">
-                                <?php foreach($services as $serivce) : ?>
-                                <li class="bca-mega__list-item <?php echo $serivce['is_specialist'] ? 'bca-mega__list-item--specialist"' : '' ?>">
-                                    <a href="<?php echo $serivce['link'] ?>">
-                                        <?php echo esc_html($serivce['name']); ?>    
+                                <?php foreach($services as $service) : ?>
+                                <li class="bca-mega__list-item <?php echo $service['is_specialist'] ? 'bca-mega__list-item--specialist"' : '' ?>">
+                                    <a href="<?php echo $service['link'] ?>">
+                                        <?php echo esc_html($service['name']); ?>    
                                         <svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg>
-                                        <?php echo $serivce['is_specialist'] ? '<span>BC&amp;A Specialist</span>' : '' ?>
+                                        <?php echo $service['is_specialist'] ? '<span>BC&amp;A Specialist</span>' : '' ?>
                                     </a>
                                 </li>
                                 <?php endforeach; ?>
@@ -136,13 +167,9 @@
                                 </div>
                             </div>
                             <ul class="bca-mega__list">
-                                <li class="bca-mega__list-item"><a href="/services/making-tax-digital-mtd/">Making Tax Digital (MTD) <svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg></a></li>
-                                <li class="bca-mega__list-item"><a href="/services/private-client-tax/">Private Client Tax <svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg></a></li>
-                                <li class="bca-mega__list-item"><a href="/services/self-assessment/">Self-Assessment Tax Return <svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg></a></li>
-                                <li class="bca-mega__list-item"><a href="/services/personal-tax-planning/">Personal Tax Planning <svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg></a></li>
-                                <li class="bca-mega__list-item"><a href="/services/personal-wealth-management/">Personal Wealth Management <svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg></a></li>
-                                <li class="bca-mega__list-item"><a href="/services/estate-and-trust-planning/">Estate &amp; Trust Planning <svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg></a></li>
-                                <li class="bca-mega__list-item"><a href="/services/property-tax/">Property Tax Planning For Landlords & Investors <svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg></a></li>
+                                <?php foreach($individual_services as $service) : ?>
+                                <li class="bca-mega__list-item"><a href="<?php echo $service['link']; ?>"><?php echo $service['name']; ?> <svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg></a></li>
+                                <?php endforeach; ?>
                             </ul>
                             <a href="/services/individuals/" class="bca-mega__view-all">View all individual services<svg viewBox="0 0 12 12"><path d="M2 6h8M6 2l4 4-4 4"/></svg></a>
                         </div>
@@ -286,19 +313,16 @@
             <div class="bca-mobile-sub">
                 <div class="bca-mobile-sub__section">
                     <span class="bca-mobile-sub__section-label">For Businesses</span>
-                    <?php foreach($services as $serivce) : ?>
-                    <a href="<?php echo $serivce['link'] ?>" class="bca-mobile-sub__link"><?php echo esc_html($serivce['name']); ?></a>
+                    <?php foreach($services as $service) : ?>
+                    <a href="<?php echo $service['link'] ?>" class="bca-mobile-sub__link"><?php echo esc_html($service['name']); ?></a>
                     <?php endforeach; ?>
                     <a href="/services/businesses/" class="bca-mobile-sub__link" style="color:var(--bca-secondary);">View all business services →</a>
                 </div>
                 <div class="bca-mobile-sub__section">
                     <span class="bca-mobile-sub__section-label">For Individuals</span>
-                    <a href="/services/making-tax-digital-mtd/" class="bca-mobile-sub__link">Making Tax Digital (MTD)</a>
-                    <a href="/services/private-client-tax/" class="bca-mobile-sub__link">Private Client Tax</a>
-                    <a href="/services/self-assessment/" class="bca-mobile-sub__link">Self-Assessment Tax Return</a>
-                    <a href="/services/personal-tax-planning/" class="bca-mobile-sub__link">Personal Tax Planning</a>
-                    <a href="/services/personal-wealth-management/" class="bca-mobile-sub__link">Wealth Management</a>
-                    <a href="/services/estate-and-trust-planning/" class="bca-mobile-sub__link">Estate & Trust Planning</a>
+                    <?php foreach($individual_services as $service) : ?>
+                    <a href="<?php echo $service['link'] ?>" class="bca-mobile-sub__link"><?php echo esc_html($service['name']); ?></a>
+                    <?php endforeach; ?>
                     <a href="/services/individuals/" class="bca-mobile-sub__link" style="color:var(--bca-secondary);">View all individual services →</a>
                 </div>
             </div>

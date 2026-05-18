@@ -43,19 +43,19 @@ wp_enqueue_style('single-office-style');
                         </div>
                     </a>
                     <div class="bca-hero__card-divider"></div>
-                    <a href="tel:01793739110" class="bca-hero__card-item">
+                    <a href="tel:<?php echo config('SWINDON')['phone'] ?>" class="bca-hero__card-item">
                         <div class="bca-hero__card-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg></div>
                         <div>
                             <div class="bca-hero__card-label">Call us</div>
-                            <div class="bca-hero__card-value">01793 739 110</div>
+                            <div class="bca-hero__card-value"><?php echo config('SWINDON')['phone'] ?></div>
                         </div>
                     </a>
                     <div class="bca-hero__card-divider"></div>
-                    <a href="mailto:swindon@bcaaccountants.com" class="bca-hero__card-item">
+                    <a href="mailto:<?php echo config('SWINDON')['email'] ?>" class="bca-hero__card-item">
                         <div class="bca-hero__card-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div>
                         <div>
                             <div class="bca-hero__card-label">Email Us</div>
-                            <div class="bca-hero__card-value">swindon@bcaaccountants.com</div>
+                            <div class="bca-hero__card-value"><?php echo config('SWINDON')['email'] ?></div>
                         </div>
                     </a>
                 </div>
@@ -243,7 +243,7 @@ wp_enqueue_style('single-office-style');
                             <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"></path></svg>
                             <div>
                                 <div class="bca-details-item__label">Phone</div>
-                                <div class="bca-details-item__value"><a href="tel:01793739110">01793 739 110</a></div>
+                                <div class="bca-details-item__value"><a href="tel:<?php echo config('SWINDON')['phone']; ?>"><?php echo config('SWINDON')['phone']; ?></a></div>
                             </div>
                         </div>
                         <div class="bca-details-divider"></div>
@@ -251,7 +251,7 @@ wp_enqueue_style('single-office-style');
                             <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                             <div>
                                 <div class="bca-details-item__label">Email</div>
-                                <div class="bca-details-item__value"><a href="mailto:swindon@bcaaccountants.com">swindon@bcaaccountants.com</a></div>
+                                <div class="bca-details-item__value"><a href="mailto:<?php echo config('SWINDON')['email']; ?>"><?php echo config('SWINDON')['email']; ?></a></div>
                             </div>
                         </div>
                         <div class="bca-details-divider"></div>

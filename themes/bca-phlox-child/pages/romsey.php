@@ -49,8 +49,8 @@ wp_enqueue_style('single-office-style');
                         <div class="bca-hero__card-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"></path></svg></div>
                         <div class="bca-hero_card-value--group">
                             <div class="bca-hero__card-label">Kumar Associates</div>
-                            <a class="bca-hero__card-value" href="mailto:info@kumarassociates.com">info@kumarassociates.com</a>
-                            <a class="bca-hero__card-value" href="tel:02392 833 300">02392 833 300</a>
+                            <a class="bca-hero__card-value" href="mailto:<?php echo config('KUMAR_ASSOCIATES')['email']; ?>"><?php echo config('KUMAR_ASSOCIATES')['email']; ?></a>
+                            <a class="bca-hero__card-value" href="tel:<?php echo config('KUMAR_ASSOCIATES')['phone']; ?>"><?php echo config('KUMAR_ASSOCIATES')['phone']; ?></a>
                         </div>
                     </div>
                     <div class="bca-hero__card-divider"></div>
@@ -58,8 +58,8 @@ wp_enqueue_style('single-office-style');
                         <div class="bca-hero__card-icon"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"></path></svg></div>
                         <div class="bca-hero_card-value--group">
                             <div class="bca-hero__card-label">BC&A Romsey</div>
-                            <a class="bca-hero__card-value" href="mailto:romsey@bcaaccountants.com">romsey@bcaaccountants.com</a>
-                            <a class="bca-hero__card-value" href="tel:01794 511511">01794 511511</a>
+                            <a class="bca-hero__card-value" href="mailto:<?php echo config('BCA_ROMSEY')['email']; ?>"><?php echo config('BCA_ROMSEY')['email']; ?></a>
+                            <a class="bca-hero__card-value" href="tel:<?php echo config('BCA_ROMSEY')['phone']; ?>"><?php echo config('BCA_ROMSEY')['phone']; ?></a>
                         </div>
                     </div>
                 </div>
@@ -368,8 +368,8 @@ wp_enqueue_style('single-office-style');
                             <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"></path></svg>
                             <div>
                                 <div class="bca-details-item__label">Kumar Associates</div>
-                                <div class="bca-details-item__value"><a href="mailto:info@kumarassociates.com">info@kumarassociates.com</a></div>
-                                <div class="bca-details-item__value"><a href="tel:02392833300">02392 833 300</a></div>
+                                <div class="bca-details-item__value"><a href="mailto:<?php echo config('KUMAR_ASSOCIATES')['email']; ?>"><?php echo config('KUMAR_ASSOCIATES')['email']; ?></a></div>
+                                <div class="bca-details-item__value"><a href="tel:<?php echo config('KUMAR_ASSOCIATES')['phone']; ?>"><?php echo config('KUMAR_ASSOCIATES')['phone']; ?></a></div>
                             </div>
                         </div>
                         <div class="bca-details-divider"></div>
@@ -377,8 +377,8 @@ wp_enqueue_style('single-office-style');
                             <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"></rect><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"></path></svg>
                             <div>
                                 <div class="bca-details-item__label">BC&A Romsey</div>
-                                <div class="bca-details-item__value"><a href="mailto:romsey@bcaaccountants.com">romsey@bcaaccountants.com</a></div>
-                                <div class="bca-details-item__value"><a href="tel:01794 511511">01794 511511</a></div>
+                                <div class="bca-details-item__value"><a href="mailto:<?php echo config('BCA_ROMSEY')['email']; ?>"><?php echo config('BCA_ROMSEY')['email']; ?></a></div>
+                                <div class="bca-details-item__value"><a href="tel:<?php echo config('BCA_ROMSEY')['phone']; ?>"><?php echo config('BCA_ROMSEY')['phone']; ?></a></div>
                             </div>
                         </div>
                         <div class="bca-details-divider"></div>

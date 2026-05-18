@@ -15,7 +15,7 @@ while (have_posts()) : the_post();
         $categories = get_the_terms(get_the_ID(), 'bca_news_category');
     }
     $primary_category = $categories && !empty($categories) ? $categories[0] : null;
-    error_log('Primary Category: ' . print_r($categories, true) . ($primary_category ? $primary_category->name : 'None'));
+    /*error_log('Primary Category: ' . print_r($categories, true) . ($primary_category ? $primary_category->name : 'None')); */
     /* Related Posts */
     $related_args = [
         'post_type'      => get_post_type(),
