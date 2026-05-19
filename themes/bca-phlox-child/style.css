@@ -1026,6 +1026,8 @@ a.bca-hero__card-item:hover .bca-hero__card-value { color: var(--bca-secondary);
   box-shadow: 0 0 0 3px rgba(26, 86, 219, 0.08);
 }
 
+.bca-field select option:first-child { display: none; } /* Hide the first option placeholder */
+
 .bca-field textarea {
   min-height: 100px;
   height: 100px;

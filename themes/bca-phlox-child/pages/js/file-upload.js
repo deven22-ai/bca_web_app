@@ -3,7 +3,8 @@ let selectedFiles = [];
 function updateSubmitBtn() {
     const hasFiles = selectedFiles.length > 0;
     const hasOffice = officeInput.value !== '';
-    submitBtn.disabled = !(hasFiles && hasOffice);
+    const hasName = nameInput.value.trim() !== '';
+    submitBtn.disabled = !(hasFiles && hasOffice && hasName);
 }
 
 function addFiles(files) {
@@ -80,6 +81,7 @@ async function ajaxFileUpload() {
     formData.append('action', 'bca_file_upload');
     formData.append('nonce', bcaAjax.nonce);
     formData.append('office', officeInput.value);
+    formData.append('UploaderName', nameInput.value.trim());
     for (let i = 0; i < selectedFiles.length; i++) {
         const file = selectedFiles[i];
         formData.append('files[]', file, file.name);
@@ -111,7 +113,7 @@ async function ajaxFileUpload() {
 }
 
 /* MAIN */
-let dropzone, fileInput, fileList, submitBtn, submitBtnTxt, uploadForm, uploadFormWrp, uploadSuccess, officeInput;
+let dropzone, fileInput, fileList, submitBtn, submitBtnTxt, uploadForm, uploadFormWrp, uploadSuccess, officeInput, nameInput;
 
 document.addEventListener('DOMContentLoaded', () => {
     dropzone      = document.getElementById('dropzone');
@@ -123,6 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
     uploadFormWrp = document.getElementById('uploadFormWrap');
     uploadSuccess = document.getElementById('uploadSuccess');
     officeInput   = document.getElementById('office');
+    nameInput     = document.querySelector('input[name="your-name"]');
 
     dropzone.addEventListener('dragover', e => { e.preventDefault(); dropzone.classList.add('dragover'); });
     dropzone.addEventListener('dragleave', () => dropzone.classList.remove('dragover'));
@@ -137,6 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
         fileInput.value = ''; // reset so same file can be re-added
     });
     officeInput.addEventListener('change', () => updateSubmitBtn());
+    nameInput.addEventListener('input', () => updateSubmitBtn());
 
     uploadForm.addEventListener('submit', function(e) {
         e.preventDefault();

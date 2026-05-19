@@ -165,6 +165,7 @@ function bca_file_upload() {
     
     $maxFiles   = 10;
     $maxSize    = 10 * 1024 * 1024; // 10MB
+    $name       = $_POST['UploaderName'] ?? '';
     $office     = $_POST['office'] ?? null;
     $files      = $_FILES['files'] ?? null;
     $count      = count($files['name']);
@@ -193,6 +194,7 @@ function bca_file_upload() {
         'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
     ];
     
+    if($name === '') wp_send_json_error('Uploader Name / Business name is required.');
     if($office === null || !array_key_exists($office, $officeLocs)) wp_send_json_error('Office Location not found. Please select one of the offices from the dropdown');
     if($count > $maxFiles) wp_send_json_error('Max ' . $maxFiles . ' files allowed. Please upload not more than ' . $maxFiles . ' files at the same time');
 

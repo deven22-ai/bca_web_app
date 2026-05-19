@@ -221,14 +221,14 @@
     position: relative;
     height: 280px;
     overflow: hidden;
-    background-image: url('/wp-content/uploads/2026/05/lydiard_park_and_house.png');
-    background-position: center 42%;
-    background-size: 100%;
-    background-repeat: no-repeat;
+    background-image: url('/wp-content/uploads/2026/05/lydiard_park_and_house_test.png');
+    background-position: center 32%;
+    background-size: 80%;
+    background-repeat: repeat-x;
     transition: background-size 0.5s ease;
 }
 
-.bca-ofc__banner--swindon:hover { background-size: 103%; }
+.bca-ofc__banner--swindon:hover { background-size: 85%; }
 
 .bca-ofc:hover .bca-ofc__banner img { transform: scale(1.03); }
 .bca-ofc--portsmouth .bca-ofc__banner img { object-position: center; }

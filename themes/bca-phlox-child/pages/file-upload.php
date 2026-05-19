@@ -34,7 +34,7 @@ wp_enqueue_style('file-upload-style');
             <form id="uploadForm" class="bca-form-card reveal" novalidate>
                 <div class="bca-form-card__head">
                     <h2>Upload your documents</h2>
-                    <p>Fill in your details, select your office and upload your files below.</p>
+                    <p>Fill in your details, select your office and upload your files below. All fields marked with * are required.</p>
                 </div>
 
                 <!-- Error State -->
@@ -56,7 +56,13 @@ wp_enqueue_style('file-upload-style');
                 <div id="uploadFormWrap" class="upload-form_wrap">
                     <div class="bca-form-row bca-form-row--full">
                         <div class="bca-field">
-                            <label>Upload to Office</label>
+                            <label>Full Name / Business Name *</label>
+                            <input style="min-width: 100%;" maxlength="400" placeholder="e.g. James Wilson Or Company Name" value="" type="text" name="your-name">
+                        </div>
+                    </div>
+                    <div class="bca-form-row bca-form-row--full">
+                        <div class="bca-field">
+                            <label>Upload to Office *</label>
                             <select id="office" required="">
                                 <option value="" disabled="" selected="">—Please choose an option—</option>
                                 <option value="portsmouth">Portsmouth — Head Office</option>
