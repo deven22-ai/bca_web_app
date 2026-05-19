@@ -292,9 +292,20 @@ wp_enqueue_style('single-office-style');
             </div>
         </div>
         <!-- Google Maps -->
-        <div class="bca-contact__map-full reveal reveal-delay-3"">
-            <div class="bca-map-frame">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2522.1310783962817!2d-1.095745188689895!3d50.79167931624496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48745d9ba62bff7b%3A0x32ab2de9bbab22e0!2s24%20Landport%20Terrace%2C%20Southsea%2C%20Portsmouth%20PO1%202RG!5e0!3m2!1sen!2suk!4v1775492566222!5m2!1sen!2suk" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                
+        <div class="bca-contact__map-full reveal reveal-delay-3">
+            <div class="bca-map-frame" id="googleMapContainer">
+                <div class="bca-map-placeholder">
+                    <p>To view this Google Map, please accept external cookies.</p>
+                    <button onclick="openPrefs();">Enable Google Maps</button>
+                </div>
+                <iframe 
+                    id="google-map" 
+                    style="border:0;display: none;"
+                    loading="lazy"
+                    allowfullscreen=""
+                    referrerpolicy="no-referrer-when-downgrade"
+                    data-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2522.1310783962817!2d-1.095745188689895!3d50.79167931624496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48745d9ba62bff7b%3A0x32ab2de9bbab22e0!2s24%20Landport%20Terrace%2C%20Southsea%2C%20Portsmouth%20PO1%202RG!5e0!3m2!1sen!2suk!4v1775492566222!5m2!1sen!2suk" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">                    
+                </iframe>                
             </div>
             <div class="bca-map-directions">
                 24 Landport Terrace, Southsea <span>Portsmouth, PO1 2RG</span>

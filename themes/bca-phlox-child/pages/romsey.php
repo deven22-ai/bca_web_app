@@ -401,8 +401,19 @@ wp_enqueue_style('single-office-style');
         </div>
         <!-- Google Maps -->
         <div class="bca-contact__map-full reveal reveal-delay-3"">
-            <div class="bca-map-frame">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d156.96745810017603!2d-1.497493!3d50.988814!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48738aa76c4204a7%3A0xb7185a91c36cf3af!2sBC%26A%20Chartered%20Accountants!5e0!3m2!1sen!2suk!4v1776509557955!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+             <div class="bca-map-frame" id="googleMapContainer">
+                <div class="bca-map-placeholder">
+                    <p>To view this Google Map, please accept external cookies.</p>
+                    <button onclick="openPrefs();">Enable Google Maps</button>
+                </div>
+                <iframe 
+                    id="google-map" 
+                    style="border:0;display: none;"
+                    loading="lazy"
+                    allowfullscreen=""
+                    referrerpolicy="no-referrer-when-downgrade"
+                    data-src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d156.96745810017603!2d-1.497493!3d50.988814!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48738aa76c4204a7%3A0xb7185a91c36cf3af!2sBC%26A%20Chartered%20Accountants!5e0!3m2!1sen!2suk!4v1776509557955!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">                    
+                </iframe>                
             </div>
             <div class="bca-map-directions">
                 Buckley House, 29 to 31A, The Hundred, <span>Romsey, Hampshire, SO51 8GD</span>

@@ -63,9 +63,31 @@ function onLoad() {
     });
 }
 
+function loadMap() {
+    const map = document.getElementById("google-map"); // Iframe element
+    if(map) {
+        map.src = map.dataset.src;
+        const placeholder = document.querySelector(".bca-map-placeholder");
+        map.style.display = "block";
+        placeholder.style.display = "none";
+    }
+}
+
+function googleMapsAPI() {
+    const button = document.getElementById("enable-map");
+    const consent = localStorage.getItem("cookieConsent");
+    if (consent === "all") loadMap();
+
+    button?.addEventListener("click", () => {
+        localStorage.setItem("cookieConsent", "all");
+        loadMap();
+    });
+}
+
 function onDomLoad() {
     scrollReveal();
-    
+    googleMapsAPI();
+
     /* Make header transparent */
     const hero = document.querySelector('.transparent-header');
     const header = document.querySelector('.bca-header');

@@ -425,13 +425,23 @@
 }
 
 .bca-map-frame {
+    height: 360px;
     overflow: hidden;
+    background: var(--bca-card-bg);
     border: 1px solid var(--bca-dark-border);
     box-shadow: 0 4px 24px rgba(13, 27, 62, 0.08);
 }
 
+.bca-map-placeholder {
+    position: absolute;
+    align-items: center;
+    top: 30%;
+    left: 30%;
+    display: flex;
+    flex-flow: column;
+}
+
 .bca-contact__map-full .bca-map-frame iframe {
-    height: 360px;
     width: 100%;
     display: block;
     border: none;

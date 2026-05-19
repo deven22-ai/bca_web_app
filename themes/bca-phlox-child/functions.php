@@ -5,6 +5,7 @@ require_once get_stylesheet_directory() . '/theme-config.php'; // Theme configur
 require_once get_stylesheet_directory() . '/includes/services/microsoft-sharepoint.php'; // Microsoft Sharepoint API
 require_once get_stylesheet_directory() . '/includes/ajax-handlers.php';  // AJAX handlers
 require_once get_stylesheet_directory() . '/includes/services/mail.php'; // PHPMailer
+require_once get_stylesheet_directory() . '/includes/cookies.php';
 
 // Shortcodes - Load the files, only once
 require_once get_stylesheet_directory() . '/shortcodes/shortcode-cta.php';
@@ -53,6 +54,13 @@ function bca_phlox_child_enqueue_assets() {
         'url'   => admin_url('admin-ajax.php'),
         'nonce' => wp_create_nonce('bca_file_upload_nonce')
     ]); 
+    wp_register_script(
+        'cookies-js',
+        get_stylesheet_directory_uri() . '/pages/js/cookies.js',
+        array(),
+        filemtime(get_stylesheet_directory() . '/pages/js/cookies.js'),
+        true
+    );
 
     wp_register_style(
         'home-style',
@@ -119,6 +127,13 @@ function bca_phlox_child_enqueue_assets() {
         get_stylesheet_directory_uri() . '/pages/css/become-client.css',
         array('auxin-child'), 
         filemtime(get_stylesheet_directory() . '/pages/css/become-client.css')
+    );
+
+    wp_register_style(
+        'cookies-style',
+        get_stylesheet_directory_uri() . '/pages/css/cookies.css',
+        array('auxin-child'), 
+        filemtime(get_stylesheet_directory() . '/pages/css/cookies.css')
     );
 }
 
@@ -344,6 +359,7 @@ add_filter('show_admin_bar', '__return_false'); // Disable admin bar on the fron
 add_action('init', 'bca_services_rewrite_rules');
 add_filter('template_include', 'bca_load_service_category_template');
 
+add_action('wp_footer', 'bca_cookie_banner'); // Add cookie banner to the footer
 add_action('wp_enqueue_scripts', 'register_shortcode_assets');
 add_action('wp_enqueue_scripts', 'bca_phlox_child_enqueue_assets');
 add_action( 'wp', 'bca_remove_titlebar_on_sector_archive' );
