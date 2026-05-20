@@ -266,7 +266,7 @@ wp_enqueue_style('offices-style');
             
             <!--- SWINDON --->
             <div class="bca-ofc bca-ofc--swindon reveal reveal-delay-3">
-                <div class="bca-ofc__banner--swindon">
+                <div class="bca-ofc__banner bca-ofc__banner--swindon">
                     <!--<img src="/wp-content/uploads/2026/05/lydiard_park_and_house.png" alt="Swindon Lydiard Park & House"/> -->
                     <div class="bca-ofc__banner-overlay"></div>
                     <div class="bca-ofc__banner-content">

@@ -301,3 +301,15 @@ a.bca-btn-text:hover { color: rgba(255, 255, 255, 0.72); }
 
 @keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
 @keyframes slideDown { from { transform: translateY(0); } to { transform: translateY(110%); } }
+
+@media (max-width: 768px) {
+  #bca-cookie-banner {
+    padding: 16px 20px;
+  }
+  
+  .bca-banner-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}

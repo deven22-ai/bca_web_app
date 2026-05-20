@@ -1,4 +1,10 @@
 <?php 
+
+/*
+Template Name: Privacy Policy
+Author: Deven Warang
+*/
+
 get_header();
 wp_enqueue_style('privacy-style');
 ?>

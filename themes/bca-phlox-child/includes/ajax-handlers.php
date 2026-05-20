@@ -35,7 +35,7 @@ function bca_get_news_handler() {
     wp_send_json_success($html);
 }
 
-function bca_generate_email(array $uploaded_files, string $office_name) {
+function bca_generate_email(array $uploaded_files, string $office_name, string $username) {
     $formatted_date = date('l, j F Y \a\t g:i A', current_time('timestamp'));
 
     // Build files table rows
@@ -50,15 +50,17 @@ function bca_generate_email(array $uploaded_files, string $office_name) {
                 <td style='padding: 10px 14px; {$css}; font-size: 14px; color: #777; text-align: center;'>" 
                     . round($file['size'] / 1024, 1) . ' KB' . 
                 "</td>
-                <td style='display: flex;gap: 5px;padding: 10px 14px; {$css}; text-align: right;'>
-                    <a href='{$file['download_url']}' style='display: inline-block; align-items: center; margin-right: 5px; background-color: #0078d4; color: #ffffff; 
-                            text-decoration: none; font-size: 12px; font-weight: bold; padding: 6px 16px; border-radius: 4px;'>
-                        Download
-                    </a>
-                    <a href='{$file['web_url']}' style='display: inline-block; background-color: #444; color: #ffffff; text-decoration: none; font-size: 12px; 
-                            font-weight: bold; padding: 6px 14px; border-radius: 4px;'>
-                        View
-                    </a>
+                <td style='padding: 10px 14px; {$css}; text-align: right;'>
+                    <div style='display: flex; gap: 5px; justify-content: flex-end;'>
+                        <a href='{$file['download_url']}' style='display: inline-block; align-items: center; margin-right: 5px; background-color: #0078d4; color: #ffffff; 
+                                text-decoration: none; font-size: 12px; font-weight: bold; padding: 6px 16px; border-radius: 4px;'>
+                            Download
+                        </a>
+                        <a href='{$file['web_url']}' style='display: inline-block; background-color: #444; color: #ffffff; text-decoration: none; font-size: 12px; 
+                                font-weight: bold; padding: 6px 14px; border-radius: 4px;'>
+                            View
+                        </a>
+                    </div>
                 </td>
             </tr>
         ";
@@ -93,7 +95,8 @@ function bca_generate_email(array $uploaded_files, string $office_name) {
                                     <td style='padding: 32px 36px 24px;'>
                                         <p style='margin: 0 0 8px; font-size: 16px; color: #333333;font-weight: 700;'>Hello Team,</strong></p>
                                         <p style='margin: 0; font-size: 15px; color: #555555; line-height: 1.6;'>
-                                            {$file_count_text} been uploaded to your SharePoint folder via the BC&A website. The download link will be only accessible for an hour.
+                                            {$username} has uploaded {$count} new file(s) to your SharePoint folder via the BC&A website.
+                                            The download link will be only accessible for an hour.
                                         </p>
                                     </td>
                                 </tr>
@@ -165,7 +168,7 @@ function bca_file_upload() {
     
     $maxFiles   = 10;
     $maxSize    = 10 * 1024 * 1024; // 10MB
-    $name       = $_POST['UploaderName'] ?? '';
+    $username   = $_POST['UploaderName'] ?? '';
     $office     = $_POST['office'] ?? null;
     $files      = $_FILES['files'] ?? null;
     $count      = count($files['name']);
@@ -194,7 +197,7 @@ function bca_file_upload() {
         'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
     ];
     
-    if($name === '') wp_send_json_error('Uploader Name / Business name is required.');
+    if($username === '') wp_send_json_error('Uploader Name / Business name is required.');
     if($office === null || !array_key_exists($office, $officeLocs)) wp_send_json_error('Office Location not found. Please select one of the offices from the dropdown');
     if($count > $maxFiles) wp_send_json_error('Max ' . $maxFiles . ' files allowed. Please upload not more than ' . $maxFiles . ' files at the same time');
 
@@ -239,10 +242,13 @@ function bca_file_upload() {
 
     /* Send Email to the respective office */
     $subject = "New " . (count($response) > 1 ? "Documents" : "Document") . " Uploaded";
-    $message = bca_generate_email($response, $officeLocs[$office]);
+    $message = bca_generate_email($response, $officeLocs[$office], $username);
 
     $headers = ['Content-Type: text/html; charset=UTF-8'];
     $sent = wp_mail($officeEmail[$office], $subject, $message, $headers);
+
+    /* FOR EMAIL TESTING ONLY
+    $sent = wp_mail("deven@aishatech.ai", $subject, $message, $headers); */
 
     if(!$sent) error_log('Failed to the send email');        
 
