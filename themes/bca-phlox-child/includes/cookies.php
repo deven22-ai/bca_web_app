@@ -7,10 +7,11 @@ function bca_cookie_banner() {
     ?>
  
     <!-- ── Cookie Banner ── -->
+    <div id="cookie-backdrop" class="bca-cookie-backdrop"></div>
     <div id="bca-cookie-banner" style="display:none;">
         <div class="bca-banner-inner">
             <div class="bca-banner-text">
-                <div class="bca-heading__eyebrow">Cookie Policy</div>
+                <div class="bca-heading__eyebrow bca-heading__eyebrow-cookies">Cookie Policy</div>
                 <div class="bca-banner-title">We use cookies on this website</div>
                 <p class="bca-banner-desc">
                     We use strictly necessary cookies to keep this site running, and optional cookies for embedded maps and analytics. 
@@ -29,7 +30,7 @@ function bca_cookie_banner() {
     <div id="bca-prefs-modal">
         <div class="bca-modal">
             <div class="bca-modal-header">
-                <div class="bca-heading__eyebrow">Cookie Preferences</div>
+                <div class="bca-heading__eyebrow bca-heading__eyebrow-cookies">Cookie Preferences</div>
                 <div class="bca-modal-title">Manage your cookie settings</div>
                 <p class="bca-modal-subtitle">Choose which cookies you allow. You can change these settings at any time via our cookie preferences link in the footer.</p>
                 <div class="bca-modal-close" onclick="closePrefs()" aria-label="Close">×</div>

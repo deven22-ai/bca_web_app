@@ -11,17 +11,12 @@ function bca_news_renderer(WP_Query $news_query) {
         <?php
         while($news_query->have_posts()) {
             $news_query->the_post(); 
-            $child_cat = '';
+            $child_cat = ''; $child_slug = '';
             $post_categories = get_the_category(get_the_ID());
-
             /* Get the new category */
             if(!empty($post_categories)) {
-                foreach ($post_categories as $cat) {
-                    if ($cat->parent != 0) {
-                        $child_cat = $cat->name;
-                        break;
-                    }
-                }
+                $child_cat = $post_categories[0]->name;
+                $child_slug = $post_categories[0]->slug;
             }
 
             ?>
@@ -29,7 +24,7 @@ function bca_news_renderer(WP_Query $news_query) {
                 <div class="bca-news-card__img">
                     <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'medium_large'); ?>" 
                         alt="<?php echo esc_html(get_the_title()); ?>"/>
-                    <span class="bca-news-card__cat bca-news-card__cat--<?php echo strtolower(str_replace(" ", "-", $child_cat)); ?>">
+                    <span class="bca-news-card__cat bca-news-card__cat--<?php echo strtolower(str_replace(" ", "-", $child_slug)); ?>">
                         <?php echo esc_html($child_cat); ?>
                     </span>
                 </div>
@@ -62,36 +57,32 @@ function getNews() {
 
     /* Get all the news categories */
     $news_query = [];
-    $news_subcat = [];
-    $news_parent = get_category_by_slug('news');
-    if($news_parent) {
-        // Fetch the child categories of news
-        $news_subcat = get_categories(array(
-            'taxonomy'   => 'category',
-            'hide_empty' => true,
-            'parent'     => $news_parent->term_id,
-            'orderby'    => 'date',
-            'order'      => 'DESC'
-        ));
-
-        /* Fetch all posts under News and its children */
+    $categories = get_terms([
+        'taxonomy'   => 'category',
+        'hide_empty' => false,
+        'meta_key'   => 'order',
+        'orderby'    => 'meta_value_num',
+        'order'      => 'ASC',
+    ]);
+    /* Fetch all posts under the category */
+    if($categories) {
         $news_query = new WP_Query(array(
             'post_type'     => 'post',
             'post_status'   => 'publish',
             'posts_per_page' => 9,
-            'cat'           => $news_parent->term_id
+            'cat'           => $categories->term_id
         ));
     }
 
     ob_start(); 
 
-    if(!empty($news_subcat)) {
+    if(!empty($categories)) {
         ?>
         <div class="bca-news__controls reveal reveal-delay-1">
             <div class="bca-news__pills">
                 <a href="#" class="bca-news__pill active" data-cat="all">All News</a>
                 <?php 
-                foreach($news_subcat as $category) {
+                foreach($categories as $category) {
                     ?>      
                 <a href="#" class="bca-news__pill" data-cat="<?php echo esc_attr($category->slug) ?>">
                     <?php echo esc_attr($category->name) ?>
@@ -119,14 +110,12 @@ function getMiniGrid() {
     wp_enqueue_script('news-ajax');
 
     /* Fetch only 3 news posts under News category */
-    $news_parent = get_category_by_slug('news');
     $news_query = new WP_Query(array(
         'post_type'      => 'post',
         'post_status'    => 'publish',
         'posts_per_page' => 3,
         'orderby'        => 'date',
         'order'          => 'DESC',
-        'cat'            => $news_parent->term_id
     ));
     
     ob_start(); 
@@ -136,6 +125,7 @@ function getMiniGrid() {
         <!-- <a class="bca-btn-primary" href="/about-us/news/">Our Latest News</a> -->
     </div>
     <?php 
+    
     return ob_get_clean();
 }
 

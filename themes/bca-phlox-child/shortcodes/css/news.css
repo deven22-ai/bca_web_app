@@ -307,17 +307,19 @@
   position: absolute;
   top: 12px; left: 12px; z-index: 2;
   font-family: var(--bca-font-heading);
-  font-size: 10px;
+  font-size: 9px;
   font-weight: 700;
   letter-spacing: 1.2px;
   text-transform: uppercase;
-  padding: 4px 10px;
-  border-radius: 3px;
+  padding: 3px 8px;
+  border-radius: var(--border-radius);
 }
 .bca-news-card__cat--tax-updates        { background: var(--bca-primary); color: var(--white); }
-.bca-news-card__cat--business-advisory  { background: var(--tax-relief); color: var(--white); }
+.bca-news-card__cat--business-advisory-and-reporting { background: var(--tax-relief); color: var(--white); }
 .bca-news-card__cat--our-news           { background: var(--bca-secondary); color: var(--bca-dark-navy); }
 .bca-news-card__cat--industry  { background: rgba(13,27,62,0.85); color: rgba(255,255,255,0.85); }
+
+/*.bca-news-card__cat { background: var(--bca-primary); color: var(--white); } */
 
 /* Body */
 .bca-news-card__body {

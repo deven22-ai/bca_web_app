@@ -1,4 +1,26 @@
-.bca-heading__eyebrow { color: var(--bca-secondary);margin-bottom: 6px;}
+.bca-cookie-backdrop { 
+  z-index: 10000; 
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: rgb(11 22 51 / 50%);
+  background: (0 0 0 / 35%);
+  position: fixed;
+  inset: 0;
+ /* backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px); */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  pointer-events: none;
+}
+.bca-cookie-backdrop.active {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.bca-heading__eyebrow-cookies { color: var(--bca-secondary);margin-bottom: 6px;}
 
 .bca-btn-txt {
     display: inline-flex;
@@ -28,7 +50,7 @@ a.bca-btn-text:hover { color: rgba(255, 255, 255, 0.72); }
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 9999;
+  z-index: 1001012;
   background: var(--bca-dark-navy);
   border-top: 1px solid rgba(255,255,255,0.1);
   padding: 22px 40px;

@@ -1,5 +1,6 @@
 function hideBanner(callback) {
     const banner = document.getElementById('bca-cookie-banner');
+    document.getElementById('cookie-backdrop').classList.remove('active');
     banner.classList.add('hide');
     setTimeout(() => {
         banner.style.display = 'none';
@@ -17,13 +18,13 @@ function openPrefs() {
     if (consent === "all") document.getElementById('toggle-maps').checked = true;
     else if (consent === "essential") document.getElementById('toggle-maps').checked = false;
 
-    document.getElementById('nav-backdrop').classList.add('active');
+    document.getElementById('cookie-backdrop').classList.add('active');
     document.getElementById('bca-prefs-modal').classList.add('active');
     document.body.style.overflow = 'hidden';
 }
 
 function closePrefs() {
-    document.getElementById('nav-backdrop').classList.remove('active');
+    document.getElementById('cookie-backdrop').classList.remove('active');
     document.getElementById('bca-prefs-modal').classList.remove('active');
     document.body.style.overflow = '';
 }
@@ -53,7 +54,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const consent = localStorage.getItem("cookieConsent");
     if (consent === null) {
         banner.style.display = 'block';
+        document.getElementById('cookie-backdrop').classList.add('active');
     } else {
         banner.style.display = 'none';
+        document.getElementById('cookie-backdrop').classList.remove('active');
     }
 });

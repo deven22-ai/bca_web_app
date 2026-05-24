@@ -270,6 +270,7 @@ add_action('pre_get_terms', function($query) {
     }
 });
 
+
 // Add meta box Team CPT (edit each team member) for office-wise ordering in the team page
 add_action('add_meta_boxes', function() {
     add_meta_box('office_order', 'Office Order', 'render_office_order_metabox', 'team', 'side');
