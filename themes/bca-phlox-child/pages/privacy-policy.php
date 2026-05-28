@@ -221,7 +221,7 @@ wp_enqueue_style('privacy-style');
                     <li>Information Commissioner's Office</li>
                 </ul>
                 <h3>International Transfers</h3>
-                <p>WSome providers (including tawk.to and Brevo) may process personal data outside the UK. Where this occurs, we ensure appropriate safeguards are in place, including:</p>
+                <p>Some providers (including tawk.to and Brevo) may process personal data outside the UK. Where this occurs, we ensure appropriate safeguards are in place, including:</p>
                 <ul>
                     <li>Standard Contractual Clauses</li>
                     <li>Equivalent data protection protections</li>
@@ -318,7 +318,7 @@ wp_enqueue_style('privacy-style');
                 <p>Withdrawal of consent does not affect prior lawful processing. We may continue to process data where another legal basis applies.</p>
                 <h3>Complaints</h3>
                 <p>Contact: info@bcaaccountants.com</p>
-                <p>have the right to lodge a complaint with the Information Commissioner's Office</p>
+                <p>You have the right to lodge a complaint with the Information Commissioner's Office</p>
                 <h3>Changes to This Policy</h3>
                 <p>We may update this policy from time to time and will notify users via website updates or direct communication where appropriate.</p>
                 <p>This policy is reviewed periodically to ensure ongoing compliance.</p>
