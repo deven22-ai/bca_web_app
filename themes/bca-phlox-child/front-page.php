@@ -5,7 +5,7 @@ Author: Deven Warang
 */
 
 get_header();
-wp_enqueue_style('home-style');
+wp_enqueue_style('home-style'); 
 ?>
 
 <!-- HERO SECTION -->

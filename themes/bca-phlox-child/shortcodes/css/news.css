@@ -263,6 +263,54 @@ hr {
   margin: 0;
 }
 
+.bca-navigation {
+  display: flex;
+  margin-top: 12px;
+  justify-content: center;
+}
+
+.bca-pagination__controls {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.bca-pagination__controls .bca-page-btn {
+  font-family: var(--bca-font-heading);
+  font-size: 13px;
+  font-weight: 600;
+  min-width: 36px;
+  height: 36px;
+  padding: 0 10px;
+  border: 1.5px solid var(--bca-dark-border);
+  border-radius: var(--border-radius);
+  background: var(--white);
+  color: var(--bca-dark-navy);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    border-color 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease;
+  user-select: none;
+  line-height: 1;
+  margin: 0;
+}
+
+.bca-pagination__controls .bca-page-btn.is-active {
+  background: var(--bca-dark-navy);
+  border-color: var(--bca-dark-navy);
+  color: var(--white);
+  cursor: default;
+}
+
+.bca-pagination__controls .bca-page-btn:hover:not(.is-active):not(:disabled) {
+  border-color: var(--bca-dark-navy);
+  background: var(--bca-card-bg);
+}
+
 /* ========================================================= SHORTCODE - NEWS GRID ========================================================= */
 
 /* Controls row */

@@ -168,7 +168,7 @@ function bca_services_rewrite_rules() {
 }
 
 // Register the custom query var
-function bca_query_vars($vars) {
+function bca_query_vars(array $vars) {
     $vars[] = 'bca_service_category';
     return $vars;
 }
@@ -237,6 +237,15 @@ function register_shortcode_assets() {
         filemtime(get_stylesheet_directory() . '/shortcodes/css/cta.css')
     );
 }
+
+/* ------------------------- URL Redirect ------------------------- */
+add_action('template_redirect', function() {
+    // any unknown URL under /about-us/news/ — redirect to news base
+    if (is_404() && strpos(filter_input(INPUT_SERVER, 'REQUEST_URI'), '/about-us/news/') !== false) { 
+        wp_redirect(home_url('/about-us/news/'), 301);
+        exit;
+    }
+});
 
 
 /* ------------------------- WP ADMIN UI - Office Terms ----------------------- */

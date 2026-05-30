@@ -6,10 +6,13 @@ if (!defined('ABSPATH')) {
 function bca_news_renderer(WP_Query $news_query) {
     ob_start(); // turns on the output buffering
 
+    $counter = 0;
+
     if($news_query->have_posts()) : ?>
-        <div class="bca-news__grid">
+        <div id="news-grid" class="bca-news__grid" data-max="<?php echo $news_query->found_posts ?>">
         <?php
         while($news_query->have_posts()) {
+            $counter += 1;
             $news_query->the_post(); 
             $child_cat = ''; $child_slug = '';
             $post_categories = get_the_category(get_the_ID());
@@ -22,7 +25,7 @@ function bca_news_renderer(WP_Query $news_query) {
             ?>
             <a href="<?php echo esc_url(get_permalink()); ?>" class="bca-news-card reveal reveal-delay-2">
                 <div class="bca-news-card__img">
-                    <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'medium_large'); ?>" 
+                    <img src="<?php echo esc_url(get_the_post_thumbnail_url(get_the_ID(), 'medium_large')); ?>" 
                         alt="<?php echo esc_html(get_the_title()); ?>"/>
                     <span class="bca-news-card__cat bca-news-card__cat--<?php echo strtolower(str_replace(" ", "-", $child_slug)); ?>">
                         <?php echo esc_html($child_cat); ?>
@@ -51,61 +54,108 @@ function bca_news_renderer(WP_Query $news_query) {
     return ob_get_clean();
 }
 
-function getNews() {
-    wp_enqueue_style('news-style');
-    wp_enqueue_script('news-ajax');
-
-    /* Get all the news categories */
-    $news_query = [];
-    $categories = get_terms([
-        'taxonomy'   => 'category',
-        'hide_empty' => false,
-        'meta_key'   => 'order',
-        'orderby'    => 'meta_value_num',
-        'order'      => 'ASC',
-    ]);
+function get_all_News(string $category = 'all', int $page = 1, bool $category_menu = false) {
     /* Fetch all posts under the category */
-    if($categories) {
-        $news_query = new WP_Query(array(
-            'post_type'     => 'post',
-            'post_status'   => 'publish',
-            'posts_per_page' => 9,
-            'cat'           => $categories->term_id
-        ));
+    $args = [
+        'post_type'      => 'post',
+        'post_status'    => 'publish',
+        'posts_per_page' => 9,
+        'paged'          => $page
+    ];
+    if($category != 'all') {
+        $child = get_category_by_slug($category);
+        if($child) $args['cat'] = (int) $child->term_id;
     }
+    $news_query = new WP_Query($args); // run the query
+    $total_post = $news_query->found_posts;
 
-    ob_start(); 
+    ob_start();
+    if($category_menu) {
+        /* Get all the news categories */
+        $categories = get_terms([
+            'taxonomy'   => 'category',
+            'hide_empty' => false,
+            'meta_key'   => 'order',
+            'orderby'    => 'meta_value_num',
+            'order'      => 'ASC',
+        ]);
 
-    if(!empty($categories)) {
-        ?>
+        if(!empty($categories)) : ?>
         <div class="bca-news__controls reveal reveal-delay-1">
             <div class="bca-news__pills">
-                <a href="#" class="bca-news__pill active" data-cat="all">All News</a>
-                <?php 
-                foreach($categories as $category) {
-                    ?>      
-                <a href="#" class="bca-news__pill" data-cat="<?php echo esc_attr($category->slug) ?>">
-                    <?php echo esc_attr($category->name) ?>
+                <a href="#" class="bca-news__pill <?php echo $category === 'all' ? 'active' : '' ?>" data-cat="all">All News</a>
+                <?php foreach($categories as $cat) : ?>      
+                <a href="#" class="bca-news__pill <?php echo $category === $cat->slug ? 'active' : '' ?>" data-cat="<?php echo esc_attr($cat->slug) ?>">
+                    <?php echo esc_attr($cat->name) ?>
                 </a>
-                <?php
-                }
-            ?>
+                <?php endforeach; ?>
             </div>
-            <div class="bca-news__count">Showing <strong id="news-count">3</strong> articles</div>
+            <div id="news-count" class="bca-news__count"></div>
         </div>
         <?php 
+        endif;
     }
     ?>
 
     <div id="bca-news-results">
-        <?php echo bca_news_renderer($news_query); ?>
+        <?php 
+        echo bca_news_renderer($news_query);
+
+        /* News Pagination */
+        if ($news_query->max_num_pages > 1) :
+            $params = [];
+            if ($category !== 'all') $params['category'] = $category;
+            /* $base_url = home_url('/about-us/news/') . ($params ? '?' . http_build_query($params) . '&' : '?');*/ ?>
+
+            <div id="bca-nav"class="bca-navigation reveal reveal-delay-1">
+                <nav aria-label="Pagination">
+                    <div id="bca-nav__ctrl" class="bca-pagination__controls">
+                        <?php 
+                        $links = paginate_links([
+                            'base'      => home_url('/about-us/news/') . '%_%',
+                            /* 'format'    => '?' . http_build_query($params) . ($params ? '&' : '') . 'paged=%#%',  */
+                            'format'    => $category === 'all' ? 'page/%#%/' : '?' . http_build_query($params) . '&paged=%#%',
+                            'total'     => $news_query->max_num_pages,
+                            'current'   => $page,
+                            'type'      => 'array',
+                            'prev_text' => '&larr;',
+                            'next_text' => '&rarr;',
+                        ]); 
+                        foreach ($links as $link) {
+                            $link = str_replace('page-numbers current', 'bca-page-btn is-active', $link);
+                            $link = str_replace('page-numbers',         'bca-page-btn',           $link);
+                            $link = str_replace('prev ',                'bca-page-btn bca-page-btn--arrow ', $link);
+                            $link = str_replace('next ',                'bca-page-btn bca-page-btn--arrow ', $link);
+                            echo $link;
+                        }
+                        ?>
+                    </div>
+                </nav>
+            </div>
+        <?php 
+        endif; ?>
     </div>
     <?php
-
+   /* return ([
+        'html'       => ob_get_clean(),
+        'total_post' => $news_query->found_posts
+    ]);*/
     return ob_get_clean();
 }
 
-function getMiniGrid() {
+function get_all_news_shortcode(array $atts) {
+    wp_enqueue_style('news-style');
+    wp_enqueue_script('news-ajax');
+
+    $atts = shortcode_atts([
+        'category' => 'all',
+        'paged'    => 1,
+    ], $atts);
+
+    return get_all_News($atts['category'], $atts['paged'], true);
+}
+
+function get_mini_grid_shortcode() {
     wp_enqueue_style('news-style');
     wp_enqueue_script('news-ajax');
 
@@ -129,11 +179,11 @@ function getMiniGrid() {
     return ob_get_clean();
 }
 
-function getRelatedNews() {
+function get_related_news_shortcode() {
     
 }
 
-add_shortcode('bca_news_grid', 'getNews');
-add_shortcode('bca_mini_news_grid', 'getMiniGrid');
-add_shortcode('bca_related_news', 'getRelatedNews');
+add_shortcode('bca_news_grid', 'get_all_news_shortcode');
+add_shortcode('bca_mini_news_grid', 'get_mini_grid_shortcode');
+add_shortcode('bca_related_news', 'get_related_news_shortcode');
 ?>

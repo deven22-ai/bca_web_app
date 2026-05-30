@@ -10,23 +10,10 @@ function bca_get_news_handler() {
 
     // $_POST is a built-in PHP array (superglobal)  $_POST['cat'];
     // or INPUT_POST -> Read from HTTP POST request data.
-    $category = filter_input(INPUT_POST, 'cat') ?: 'all'; 
-    $args = [
-        'post_type'     => 'post',
-        'post_status'   => 'publish',
-        'posts_per_page' => 9,
-    ];
-
-    if($category != 'all') {
-        $child = get_category_by_slug($category);
-        if($child) $args['cat'] = (int) $child->term_id;
-    }
-
-    // run the wp query
-    $news_query = new WP_Query($args);
-    $html       = bca_news_renderer($news_query);
-
-    wp_send_json_success($html);
+    $paged = filter_input(INPUT_POST, 'paged') ? : 1;
+    $category = filter_input(INPUT_POST, 'category') ?: 'all'; 
+   
+    wp_send_json_success(get_all_News($category, $paged));
 }
 
 function bca_generate_email(array $uploaded_files, string $office_name, string $username) {

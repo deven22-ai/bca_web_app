@@ -1,11 +1,8 @@
 <?php
-/*
-Template Name: News
-Author: Deven Warang
-*/
-
-get_header();
+$category = $args['category'] ?? 'all';
+$paged    = $args['paged']    ?? 1;
 ?>
+
 <style>
     .bca-hero-section { background-image: url('/wp-content/uploads/2026/03/news.jpg'); }
     .bca-cta-services.light { border-bottom: none; }
@@ -32,7 +29,7 @@ get_header();
 </section>
 
 <!-- NEWS GRID -->
-<section style="padding: 70px 0;">
+<section id="bca-news-grid" style="padding: 70px 0;">
     <div class="container">
         <div class="bca-heading-section">
             <div class="bca-heading-container reveal">
@@ -43,7 +40,7 @@ get_header();
                 </div>
             </div>
         </div>
-        <?php echo do_shortcode('[bca_news_grid]') ?>
+        <?php echo do_shortcode('[bca_news_grid category="' . $category . '" paged="' . $paged . '"]') ?>
     </div>
 </section>
 
@@ -51,10 +48,4 @@ get_header();
 <?php 
 echo do_shortcode('[bca_cta_services]');  /* CTA SERVICES    */
 echo do_shortcode('[bca_cta_contact]'); /* CTA (CONTACT US) */
-
-get_footer();
 ?>
-
-
-
-
