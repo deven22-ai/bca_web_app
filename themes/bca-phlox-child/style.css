@@ -991,6 +991,18 @@ a.bca-hero__card-item:hover .bca-hero__card-value {
   padding: 32px;
 }
 
+.bca-form-card .wpcf7-mfield,
+.bca-contact-sidebar .wpcf7-mfield {
+  position: absolute;
+  left: -9999px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .bca-form-section {
   margin-bottom: 28px;
 }

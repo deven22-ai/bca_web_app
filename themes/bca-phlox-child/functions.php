@@ -363,6 +363,34 @@ add_action('init', function() {
 });
 */
 
+/* ------------------------ CONTACT FORM 7 SPAM DETECTION ---------------------------- */
+
+/* Inject honeypot field into Contact Form 7 to prevent spam bots */
+function inject_cf7_honeypot(string $output, string $tag, array $attr) {
+    if ($tag !== 'contact-form-7') return $output;
+
+    $honeypot = '<div class="wpcf7-mfield" aria-hidden="true"><input type="text" name="your-website" value="" autocomplete="off" tabindex="-1"></div>';
+    return str_replace('<div class="bca-form-submit">', $honeypot . '<div class="bca-form-submit">', $output);
+}
+
+function cf7_spam_check(bool $is_spam) {
+    if ($is_spam) return $is_spam; // If already marked as spam by CF7, no need to check further    
+
+    $submission = WPCF7_Submission::get_instance();
+    if($submission) {
+        $data = $submission->get_posted_data();
+        $honeypot = isset( $data['your-website'] ) ? trim( $data['your-website'] ) : '';
+        
+        if (!empty( $honeypot)) return true; // If honeypot field is filled, it's a spam bot
+    }
+
+    return false;
+}
+
+add_filter('do_shortcode_tag', 'inject_cf7_honeypot', 10, 3);
+add_filter('wpcf7_spam', 'cf7_spam_check'); // Add event listener for spam check
+
+
 /* ---------------------------- MAIN BLOCK ------------------------------------- */
 add_filter('query_vars', 'bca_query_vars');
 add_filter('show_admin_bar', '__return_false'); // Disable admin bar on the front-end

@@ -192,7 +192,7 @@ wp_enqueue_style('single-office-style');
                     <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"></polyline></svg>Maximise income and protect wealth proactively</li>
                 </ul>
                 <div class="bca-why__btns">
-                    <a href="/contact" class="bca-btn-primary gold">Speak to Kumar Associates<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
+                    <a href="#contact" class="bca-btn-primary gold">Speak to Kumar Associates<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
                 </div>
             </div>
         </div>
@@ -253,7 +253,7 @@ wp_enqueue_style('single-office-style');
                     <li><svg viewBox="0 0 16 16"><polyline points="2,8 6,12 14,4"></polyline></svg>Personal and corporate tax planning</li>
                 </ul>
                 <div class="bca-why__btns">
-                    <a href="/contact" class="bca-btn-primary">Speak to BC&A Romsey<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
+                    <a href="#contact" class="bca-btn-primary">Speak to BC&A Romsey<svg viewBox="0 0 16 16"><path d="M3 8H10M8.5 5.5L11 8L8.5 10.5"></path></svg></a>
                     <a href="/request-quote/" class="bca-btn-outline">Get Free Quote</a>
                 </div>
             </div>

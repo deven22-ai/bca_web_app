@@ -332,8 +332,10 @@ get_footer();
 <script>
     let params = new URLSearchParams(document.location.search);
     const carrers = document.getElementById(params.get('section'));
-    carrers.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
-    });
+    if(carrers) {
+        carrers.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
+    }
 </script>
