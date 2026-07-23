@@ -16,24 +16,12 @@ require_once get_stylesheet_directory() . '/shortcodes/shortcode-team.php';
 
 /* Loads parent theme CSS first, and then loading the child theme CSS after it */
 function bca_phlox_child_enqueue_assets() {
-    wp_enqueue_style(
-        'bca-header',
-        get_stylesheet_directory_uri() . '/pages/css/header.css',
-        [],
-        filemtime(get_stylesheet_directory() . '/pages/css/header.css')
-    );
     wp_enqueue_script(
         'bca-header-js',
         get_stylesheet_directory_uri() . '/pages/js/header.js',
         [],
         filemtime(get_stylesheet_directory() . '/pages/js/header.js'),
         true  // true means it loads in footer, which is correct for JS
-    );
-    wp_enqueue_style(
-        'bca-footer',
-        get_stylesheet_directory_uri() . '/pages/css/footer.css',
-        [],
-        filemtime(get_stylesheet_directory() . '/shortcodes/css/news.css')
     );
     wp_enqueue_script(
         'main-js',
@@ -49,8 +37,7 @@ function bca_phlox_child_enqueue_assets() {
         filemtime(get_stylesheet_directory() . '/pages/js/file-upload.js'),
         true
     );
-    /* Adding Ajax call script */
-    wp_localize_script('file-upload-js', 'bcaAjax', [
+    wp_localize_script('file-upload-js', 'bcaAjax', [   /* Adding Ajax call script */
         'url'   => admin_url('admin-ajax.php'),
         'nonce' => wp_create_nonce('bca_file_upload_nonce')
     ]); 
@@ -61,7 +48,22 @@ function bca_phlox_child_enqueue_assets() {
         filemtime(get_stylesheet_directory() . '/pages/js/cookies.js'),
         true
     );
+    wp_enqueue_script('cloudflare-turnstile', 'https://challenges.cloudflare.com/turnstile/v0/api.js', array(), null, true);
 
+
+    /* Registering CSS files for specific pages */
+    wp_enqueue_style(
+        'bca-header',
+        get_stylesheet_directory_uri() . '/pages/css/header.css',
+        [],
+        filemtime(get_stylesheet_directory() . '/pages/css/header.css')
+    );
+    wp_enqueue_style(
+        'bca-footer',
+        get_stylesheet_directory_uri() . '/pages/css/footer.css',
+        [],
+        filemtime(get_stylesheet_directory() . '/pages/css/footer.css')
+    );
     wp_register_style(
         'home-style',
         get_stylesheet_directory_uri() . '/pages/css/home.css',
@@ -366,17 +368,25 @@ add_action('init', function() {
 /* ------------------------ CONTACT FORM 7 SPAM DETECTION ---------------------------- */
 
 /* Inject honeypot field into Contact Form 7 to prevent spam bots */
-function inject_cf7_honeypot(string $output, string $tag, array $attr) {
+function inject_cf7_extras(string $output, string $tag, array $attr) {
     if ($tag !== 'contact-form-7') return $output;
 
     $honeypot = '<div class="wpcf7-mfield" aria-hidden="true"><input type="text" name="your-website" value="" autocomplete="off" tabindex="-1"></div>';
-    return str_replace('<div class="bca-form-submit">', $honeypot . '<div class="bca-form-submit">', $output);
+    $cloudflare = '<div class="cf-turnstile" data-sitekey="' . CF_TURNSTILE_SITE_KEY . '" data-theme="light"></div>';
+
+    if ( str_contains( $output, '<div class="bca-form-submit">' ) ) {
+        return str_replace('<div class="bca-form-submit">', $honeypot . $cloudflare . '<div class="bca-form-submit">', $output);
+    }
+
+    return $output;
 }
 
 function cf7_spam_check(bool $is_spam) {
     if ($is_spam) return $is_spam; // If already marked as spam by CF7, no need to check further    
 
-    $submission = WPCF7_Submission::get_instance();
+    $submission = WPCF7_Submission::get_instance(); // Get contact form submission
+
+    // First try using Honeypot field - if filled, it's a spam bot
     if($submission) {
         $data = $submission->get_posted_data();
         $honeypot = isset( $data['your-website'] ) ? trim( $data['your-website'] ) : '';
@@ -384,10 +394,25 @@ function cf7_spam_check(bool $is_spam) {
         if (!empty( $honeypot)) return true; // If honeypot field is filled, it's a spam bot
     }
 
-    return false;
+    // Check Cloudflare Turnstile response
+    $token = isset( $_POST['cf-turnstile-response'] ) ? sanitize_text_field( $_POST['cf-turnstile-response'] ) : '';
+    error_log('CF Turnstile Token: ' . $token);
+    if (empty( $token )) return true;
+
+    $response = wp_remote_post('https://challenges.cloudflare.com/turnstile/v0/siteverify', [
+        'body' => [
+            'secret' => CF_TURNSTILE_SECRET_KEY,
+            'response' => $token,
+            'remoteip' => $_SERVER['REMOTE_ADDR'] ?? '',
+        ]
+    ]);
+    if (is_wp_error($response)) return true;
+    $body = json_decode( wp_remote_retrieve_body($response), true);
+
+    return !($body['success'] ?? false);
 }
 
-add_filter('do_shortcode_tag', 'inject_cf7_honeypot', 10, 3);
+add_filter('do_shortcode_tag', 'inject_cf7_extras', 10, 3);
 add_filter('wpcf7_spam', 'cf7_spam_check'); // Add event listener for spam check
 
 

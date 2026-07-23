@@ -7,7 +7,7 @@ function bca_cookie_banner() {
     ?>
  
     <!-- ── Cookie Banner ── -->
-    <div id="cookie-backdrop" class="bca-cookie-backdrop"></div>
+    <div id="cookie-pref-backdrop" class="bca-cookie-backdrop"></div>
     <div id="bca-cookie-banner" style="display:none;">
         <div class="bca-banner-inner">
             <div class="bca-banner-text">
@@ -73,22 +73,21 @@ function bca_cookie_banner() {
                     </div>
                 </div>
 
-                <!-- Marketing
+                <!-- Analytics -->
                 <div class="bca-category">
                     <div class="bca-category-info">
-                        <div class="bca-category-name">Marketing &amp; Remarketing</div>
+                        <div class="bca-category-name">Analytics</div>
                         <p class="bca-category-desc">
-                            Allows us to show relevant advertising to visitors who have previously visited our site. 
-                            We do not currently run remarketing campaigns but this consent covers any future activity.
+                            Allows us to track and analyze user behavior on our site. This helps us improve your experience and the performance of our website.
                         </p>
                     </div>
                     <div class="bca-toggle-wrap">
-                        <label class="bca-toggle" for="toggle-marketing">
-                            <input type="checkbox" id="toggle-marketing">
+                        <label class="bca-toggle" for="toggle-analytics">
+                            <input type="checkbox" id="toggle-analytics">
                             <span class="bca-toggle-slider"></span>
                         </label>
                     </div>
-                </div>  -->
+                </div>  
             </div>
 
             <div class="bca-modal-footer">

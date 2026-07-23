@@ -4,7 +4,7 @@
 $GLOBALS['theme_config'] = [
     'COMPANY_NAME' => 'BC&A Chartered Accountants',
     'KUMAR_ASSOCIATES' => [
-        'email' => 'info@kumarassociates.com',
+        'email' => 'info@kumarassociates.co.uk',
         'phone' => '01794 516225',
     ],
     'BCA_ROMSEY' => [
