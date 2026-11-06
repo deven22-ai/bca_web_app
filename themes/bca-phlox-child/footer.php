@@ -72,7 +72,7 @@
                             Romsey
                             <span class="bca-footer__office-badge">2 practices</span>
                         </a>
-                        <div class="bca-footer__office-addr">Buckley House, 29-31A The Hundred, Romsey, SO51 8GD</div>
+                        <div class="bca-footer__office-addr">1st Floor, 29-31A, Buckley House, The Hundred, Romsey SO51 8GD</div>
                         <div class="bca-footer__office-practices">
                             <div class="bca-footer__office-practice">
                                 <div class="practice_office">
@@ -126,7 +126,7 @@
         </div>
 
         <!-- BOTTOM BAR -->
-        <div class="bca-footer__bottom reveal reveal-delay-1">
+        <div class="bca-footer__bottom">
             <div class="bca-footer__legal">
                 &copy; 2026 BC&A Chartered Accountants is the trading name of Business Consulting &amp; 
                 Accounting Limited. All rights reserved. Registered in England &amp; Wales, Reg. no: 05656456. 

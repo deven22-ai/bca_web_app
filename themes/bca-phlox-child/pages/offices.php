@@ -173,7 +173,7 @@ wp_enqueue_style('offices-style');
             <!--- ROMSEY --->
             <div class="bca-ofc bca-ofc--romsey reveal reveal-delay-2">
                 <div class="bca-ofc__banner">
-                    <img src="/wp-content/uploads/2026/05/romsey_market_square.png" alt="Romsey Square Market"/>
+                    <img src="/wp-content/uploads/2026/10/romsey_market_square.webp" alt="Romsey Square Market"/>
                     <div class="bca-ofc__banner-overlay"></div>
                     <div class="bca-ofc__banner-content">
                         <div class="bca-ofc__banner-left">

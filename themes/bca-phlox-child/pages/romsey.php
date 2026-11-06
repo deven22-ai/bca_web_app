@@ -37,11 +37,11 @@ wp_enqueue_style('single-office-style');
                     <h4>Romsey - Two Practices</h4>
                 </div>
                 <div class="bca-hero__card-body">
-                    <div class="bca-hero__card-item">
+                    <div class="bca-hero__card-item"> 
                         <div class="bca-hero__card-icon"><svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
                         <div class="bca-hero_card-value--group">
                             <div class="bca-hero__card-label">Visit Us</div>
-                            <a class="bca-hero__card-value" href="https://maps.app.goo.gl/WwHUzfqyej8jKnVL8" target="_blank" rel="noopener noreferrer">Buckley House, 29–31A The Hundred, Romsey, Hampshire, SO51 8GD</a>
+                            <a class="bca-hero__card-value" href="https://maps.app.goo.gl/3ttNsueVEZ14g7fH6" target="_blank" rel="noopener noreferrer">1st Floor, 29-31A, Buckley House, The Hundred, Romsey SO51 8GD</a>
                         </div>
                     </div>
                     <div class="bca-hero__card-divider"></div>

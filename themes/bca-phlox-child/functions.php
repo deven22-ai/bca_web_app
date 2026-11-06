@@ -196,6 +196,16 @@ function get_arrow_icon() {
     </svg>';
 }
 
+function bca_preloader() {
+    /* It matters because your hero is a CSS background. Without the preload, 
+    the browser has to download the HTML, then download home.css, then read it, 
+    and only then does it discover the image exists. With the preload, the image 
+    starts downloading as soon as the HTML arrives. */
+    if(is_front_page()) {
+        echo '<link rel="preload" as="image" fetchpriority="high" href="/wp-content/uploads/2026/10/Spinnaker_Tower_Portsmouth.webp">' . "\n";
+    }
+}
+
 
 /* ------------------------- SHORTCODE FILES LOAD ----------------------- */
 
@@ -434,4 +444,5 @@ add_action('wp_enqueue_scripts', 'register_shortcode_assets');
 add_action('wp_enqueue_scripts', 'bca_phlox_child_enqueue_assets');
 add_action( 'wp', 'bca_remove_titlebar_on_sector_archive' );
 add_action( 'wp', 'bca_remove_phlox_sliders_on_service_category_routes' );
+add_action('wp_head', 'bca_preloader', 1); // Preload images
 ?>
