@@ -138,138 +138,178 @@ wp_enqueue_style('about-us-style');
             </div>
         </div>
 
-        <div class="bca-timeline" id="bcaTimeline">
-            <!-- 1st Card -->
-            <div class="bca-timeline__item">
-                <div class="bca-timeline__empty"></div>
-                <div class="bca-timeline__dot right"><div class="bca-timeline__year"></div></div>
-                <div class="bca-timeline__right">
-                    <span class="bca-tl__year">2004</span>
-                    <span class="bca-tl__tag">Founded</span>
-                    <div class="bca-t1-card__description">
-                        <span class="bca-tl__title">Established in Portsmouth</span>
-                        <span class="bca-tl__text">BC&amp;A opens its doors in Southsea with a clear mission — big-firm expertise delivered with a genuinely personal approach to every client.</span>
+        <?php
+        /*
+         * Journey milestones.
+         * To add one: drop a new entry under its year (or add a new year).
+         * Years and entries render in the order listed here. 'month' is optional.
+         */
+        $bca_journey = [
+            '2004' => [
+                [
+                    'tag'   => 'Founded',
+                    'title' => 'Established in Portsmouth',
+                    'text'  => 'BC&amp;A opens its doors in Southsea with a clear mission — big-firm expertise delivered with a genuinely personal approach to every client.',
+                ],
+            ],
+            '2010' => [
+                [
+                    'tag'   => 'Growth',
+                    'title' => 'Expanding our expertise',
+                    'text'  => 'Growing reputation across Hampshire leads to significant team expansion and the introduction of specialist sector advisory services.',
+                ],
+            ],
+            '2015' => [
+                [
+                    'tag'   => 'Innovation',
+                    'title' => 'Cloud-first transformation',
+                    'text'  => 'Full adoption of cloud accounting technology — enabling real-time reporting and more proactive financial management for every client.',
+                ],
+            ],
+            '2021' => [
+                [
+                    'tag'   => 'New service',
+                    'title' => 'R&amp;D Tax services',
+                    'text'  => 'Started R&amp;D Tax services for SME and large businesses.',
+                ],
+            ],
+            '2024' => [
+                [
+                    'tag'   => 'Expansion',
+                    'title' => 'Kumar Associates &amp; Macklin &amp; Co.',
+                    'text'  => 'Opened a dedicated accountant practice in Romsey for medical clients by acquiring Kumar Associates. Expanded general practice in Romsey by acquiring Macklin &amp; Co. Both firms established 35+ years ago.',
+                ],
+            ],
+            '2025' => [
+                [
+                    'tag'   => 'Relocation',
+                    'title' => 'Romsey office consolidation',
+                    'text'  => 'Opened a new office in Romsey and moved both BC&amp;A Romsey and Kumar Associates to one office (29-31a The Hundred).',
+                ],
+            ],
+            '2026' => [
+                [
+                    'month' => 'January',
+                    'tag'   => 'Relocation',
+                    'title' => 'A new home in Southsea',
+                    'text'  => 'After more than 25 years at the heart of Southsea, we moved from Elm Grove to our new headquarters at 24 Landport Terrace. The larger premises give our growing team room to develop and enhance the support we provide to clients, while keeping us firmly rooted in the community where BC&amp;A began.',
+                ],
+                [
+                    'month' => 'January',
+                    'tag'   => 'Acquisition',
+                    'title' => 'DCK Accounting Solutions joins BC&amp;A',
+                    'text'  => 'Led by Derek, Swindon-based DCK Accounting Solutions joined BC&amp;A, expanding our presence into Wiltshire. Bringing more than 30 years of experience and specialist expertise in town and parish council accounting, Derek and the team strengthened our services while giving DCK&rsquo;s clients access to the wider support and resources of BC&amp;A Group.',
+                ],
+                [
+                    'month' => 'February',
+                    'tag'   => 'New division',
+                    'title' => 'The launch of BC&amp;A Audits',
+                    'text'  => 'We launched BC&amp;A Audits, expanding our specialist services for businesses, charities and UK subsidiaries of overseas groups. With a partner-led approach, fixed fees and clear communication, the new division strengthened our ability to support clients as they grow and their audit requirements evolve.',
+                ],
+                [
+                    'month' => 'September',
+                    'tag'   => 'Acquisition',
+                    'title' => 'David Bailey joins BC&amp;A',
+                    'text'  => 'We completed the acquisition of David Bailey Chartered Accountants, a Portsmouth practice established in 1976. Welcoming Wendy Hodgson, Martin Pierce and their experienced team strengthened our local presence and brought 50 years of accountancy heritage into BC&amp;A. The acquisition builds on a shared commitment to personal service and lasting client relationships, giving David Bailey&rsquo;s clients access to the wider expertise and resources of BC&amp;A Group.',
+                ],
+            ],
+        ];
+        $bca_journey_last = array_key_last($bca_journey);
+        ?>
+
+        <div class="bca-journey" id="bcaJourney">
+            <div class="bca-journey__progress" aria-hidden="true"></div>
+            <ol class="bca-journey__list">
+                <?php foreach ($bca_journey as $bca_year => $bca_entries) : ?>
+                <li class="bca-journey__group<?php echo $bca_year === $bca_journey_last ? ' is-latest' : ''; ?>">
+                    <div class="bca-journey__year">
+                        <span class="bca-journey__year-num"><?php echo esc_html($bca_year); ?></span>
+                        <?php if (count($bca_entries) > 1) : ?>
+                        <!-- <span class="bca-journey__year-count"><?php echo count($bca_entries); ?> milestones</span> -->
+                        <?php endif; ?>
                     </div>
-                    <div class="notch"></div>
-                </div>
-            </div>
-            <!-- 2nd Card -->
-            <div class="bca-timeline__item bca-timeline__item-left">
-                <div class="bca-timeline__left">
-                    <span class="bca-tl__year">2010</span>
-                    <span class="bca-tl__tag">Growth</span>
-                    <div class="bca-t1-card__description">
-                        <span class="bca-tl__title">Expanding our expertise</span>
-                        <span class="bca-tl__text">Growing reputation across Hampshire leads to significant team expansion and the introduction of specialist sector advisory services.</span>
+                    <span class="bca-journey__dot" aria-hidden="true"></span>
+                    <div class="bca-journey__panel">
+                        <?php foreach ($bca_entries as $bca_entry) : ?>
+                        <article class="bca-journey__entry">
+                            <div class="bca-journey__meta">
+                                <?php if (!empty($bca_entry['month'])) : ?>
+                                <span class="bca-journey__month"><?php echo esc_html($bca_entry['month']); ?></span>
+                                <?php endif; ?>
+                                <?php if (!empty($bca_entry['tag'])) : ?>
+                                <span class="bca-journey__tag"><?php echo esc_html($bca_entry['tag']); ?></span>
+                                <?php endif; ?>
+                            </div>
+                            <div class="bca-journey__body">
+                                <h3 class="bca-journey__title"><?php echo $bca_entry['title']; ?></h3>
+                                <p class="bca-journey__text"><?php echo $bca_entry['text']; ?></p>
+                            </div>
+                        </article>
+                        <?php endforeach; ?>
                     </div>
-                    <div class="notch"></div>
-                </div>
-                <div class="bca-timeline__dot bca-timeline__item-left"><div class="bca-timeline__year"></div></div>
-                <div class="bca-timeline__right">
-                    <span class="bca-tl__year">2010</span>
-                    <span class="bca-tl__tag">Growth</span>
-                    <div class="bca-t1-card__description">
-                        <span class="bca-tl__title">Expanding our expertise</span>
-                        <span class="bca-tl__text">Growing reputation across Hampshire leads to significant team expansion and the introduction of specialist sector advisory services.</span>
-                    </div>
-                    <div class="notch"></div>
-                </div>
-            </div>
-            <!-- 3rd Card -->
-            <div class="bca-timeline__item">
-                <div class="bca-timeline__empty"></div>
-                <div class="bca-timeline__dot right"><div class="bca-timeline__year"></div></div>
-                <div class="bca-timeline__right">
-                    <span class="bca-tl__year">2015</span>
-                    <span class="bca-tl__tag">Innovation</span>
-                    <div class="bca-t1-card__description">
-                        <span class="bca-tl__title">Cloud-first transformation</span>
-                        <span class="bca-tl__text">Full adoption of cloud accounting technology — enabling real-time reporting and more proactive financial management for every client.</span>
-                    </div>
-                    <div class="notch"></div>
-                </div>
-            </div>
-            <!-- 4th Card -->
-            <div class="bca-timeline__item bca-timeline__item-left">
-                <div class="bca-timeline__left">
-                    <span class="bca-tl__year">2021</span>
-                    <span class="bca-tl__tag"></span>
-                    <div class="bca-t1-card__description">
-                        <span class="bca-tl__title">Started R&D Tax services for SME and large businesses.</span>
-                        <span class="bca-tl__text"></span>
-                    </div>
-                    <div class="notch"></div>
-                </div>
-                <div class="bca-timeline__dot bca-timeline__item-left"><div class="bca-timeline__year"></div></div>
-                <div class="bca-timeline__right">
-                    <span class="bca-tl__year">2021</span>
-                    <span class="bca-tl__tag"></span>
-                    <div class="bca-t1-card__description">
-                        <span class="bca-tl__title">Started R&D Tax services for SME and large businesses.</span>
-                        <span class="bca-tl__text"></span>
-                    </div>
-                    <div class="notch"></div>
-                </div>
-            </div>
-            <!-- 5th Card -->
-            <div class="bca-timeline__item">
-                <div class="bca-timeline__empty"></div>
-                <div class="bca-timeline__dot right"><div class="bca-timeline__year"></div></div>
-                <div class="bca-timeline__right">
-                    <span class="bca-tl__year">2024</span>
-                    <span class="bca-tl__tag">Expansion</span>
-                    <div class="bca-t1-card__description">
-                        <span class="bca-tl__title">Kumar Associates & Macklin & Co.</span>
-                        <span class="bca-tl__text">
-                            Opened a dedicated accountant practice in Romsey for medical clients by acquiring Kumar Associates.
-                            Expanded general practice in Romsey by acquiring Macklin & Co.
-                            <br>
-                            Both firms established 35+ years ago.
-                        </span>
-                    </div>
-                    <div class="notch"></div>
-                </div>
-            </div>
-            <!-- 6th Card -->
-            <div class="bca-timeline__item bca-timeline__item-left">
-                <div class="bca-timeline__left">
-                    <span class="bca-tl__year">2025</span>
-                    <span class="bca-tl__tag">Relocation</span>
-                    <div class="bca-t1-card__description">
-                        <span class="bca-tl__title">Romsey Office Consolidation</span>
-                        <span class="bca-tl__text">Opened new office in Romsey moved both BC&A Romsey and Kumar Associates to one office (29-31a The Hundred).</span>
-                    </div>
-                    <div class="notch"></div>
-                </div>
-                <div class="bca-timeline__dot bca-timeline__item-left"><div class="bca-timeline__year"></div></div>
-                <div class="bca-timeline__right">
-                    <span class="bca-tl__year">2025</span>
-                    <span class="bca-tl__tag">Relocation</span>
-                    <div class="bca-t1-card__description">
-                        <span class="bca-tl__title">Romsey Office Consolidation</span>
-                        <span class="bca-tl__text">Opened new office in Romsey moved both BC&A Romsey and Kumar Associates to one office (29-31a The Hundred).</span>
-                    </div>
-                    <div class="notch"></div>
-                </div>
-            </div>
-            <!-- 7th Card -->
-            <div class="bca-timeline__item">
-                <div class="bca-timeline__empty"></div>
-                <div class="bca-timeline__dot right"><div class="bca-timeline__year"></div></div>
-                <div class="bca-timeline__right">
-                    <span class="bca-tl__year">2026</span>
-                    <span class="bca-tl__tag">Expansion</span>
-                    <div class="bca-t1-card__description">
-                        <span class="bca-tl__title">New Portsmouth HQ & Audit Division & DCK</span>
-                        <span class="bca-tl__text">
-                            Relocated BC&A head office in Portsmouth from Elm Grove to larger premises at 24 Landport Terrace, and launched BC&A Audits Limited to expand audit services.
-                            <br>
-Acquired DCK Accounting Solutions in Swindon to expand into Swindon and extend services to City and Parish councils. DCK brings 30+ years expertise to the group.                        </span>
-                    </div>
-                    <div class="notch"></div>
-                </div>
-            </div>
+                </li>
+                <?php endforeach; ?>
+            </ol>
         </div>
+
+        <script>
+            (function () {
+                var root = document.getElementById('bcaJourney');
+                if (!root) return;
+
+                // Reveal each year as it scrolls into view
+                if ('IntersectionObserver' in window) {
+                    root.classList.add('is-ready');
+                    var io = new IntersectionObserver(function (entries) {
+                        entries.forEach(function (entry) {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add('in-view');
+                                io.unobserve(entry.target);
+                            }
+                        });
+                    }, { rootMargin: '0px 0px -12% 0px' });
+                    root.querySelectorAll('.bca-journey__group').forEach(function (group) {
+                        io.observe(group);
+                    });
+                }
+
+                // Fill the rail as the reader scrolls through the timeline
+                                // Fill the rail and mark the year being read
+                var groups = Array.prototype.slice.call(root.querySelectorAll('.bca-journey__group'));
+                var currentIndex = -1;
+                var ticking = false;
+                function update() {
+                    ticking = false;
+                    var line = window.innerHeight * 0.55;
+                    var rect = root.getBoundingClientRect();
+                    var fill = Math.min(Math.max(line - rect.top, 0), rect.height);
+                    root.style.setProperty('--fill', fill + 'px');
+
+                    // Current year = the last group whose top has crossed the fill line
+                    var index = 0;
+                    groups.forEach(function (group, i) {
+                        if (group.getBoundingClientRect().top <= line) index = i;
+                    });
+                    if (index === currentIndex) return;
+                    currentIndex = index;
+                    groups.forEach(function (group, i) {
+                        group.classList.toggle('is-past', i < index);
+                        group.classList.toggle('is-current', i === index);
+                        group.classList.toggle('is-upcoming', i > index);
+                    });
+                }
+
+                function requestUpdate() {
+                    if (!ticking) {
+                        ticking = true;
+                        window.requestAnimationFrame(update);
+                    }
+                }
+                window.addEventListener('scroll', requestUpdate, { passive: true });
+                window.addEventListener('resize', requestUpdate);
+                update();
+            })();
+        </script>
     </div>
 </section>
 
@@ -334,26 +374,3 @@ Acquired DCK Accounting Solutions in Swindon to expand into Swindon and extend s
 echo do_shortcode('[bca_cta_contact]'); /* CONTACT SHORTCODE */
 get_footer();
 ?>
-
-
-<script>
-    (function() {
-        var items = document.querySelectorAll('#bcaTimeline .bca-timeline__item');
-
-        function isInView(el) {
-            var rect = el.getBoundingClientRect();
-            var wh = window.innerHeight || document.documentElement.clientHeight;
-            return rect.top >= 0 && rect.bottom <= wh + 100;
-        }
-
-        function check() {
-            items.forEach(function(item) {
-                if (isInView(item)) item.classList.add('in-view');
-            });
-        }
-
-        window.addEventListener('load', check);
-        window.addEventListener('scroll', check);
-        window.addEventListener('resize', check);
-    })();
-</script>

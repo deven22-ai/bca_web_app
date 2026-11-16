@@ -77,14 +77,31 @@ wp_enqueue_style('file-upload-style');
                         <div class="bca-field">
                             <label>Upload Documents</label>
                             <div class="bca-dropzone" id="dropzone">
-                                <input type="file" id="fileInput" multiple="" accept=".pdf,.doc,.docx,.xls,.xlsx,.csv,.jpg,.jpeg,.png,.gif,.zip,.txt,.msg" aria-label="File upload">
+                                <input type="file" id="fileInput" multiple accept=".pdf,.doc,.docx,.xls,.xlsx,.csv,.jpg,.jpeg,.png" aria-label="File upload">
+                                <input type="file" id="folderInput" webkitdirectory multiple aria-label="Folder upload">
+
                                 <div class="bca-dropzone__icon"><svg viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"></path><polyline points="17 8 12 3 7 8"></polyline><line x1="12" y1="3" x2="12" y2="15"></line></svg></div>
-                                <div class="bca-dropzone__title">Drop files here or click to browse</div>
-                                <div class="bca-dropzone__sub">Upload multiple files at once — all common document formats accepted</div>
-                                <div class="bca-dropzone__btn">
-                                    <svg viewBox="0 0 16 16" width="13" height="13"><path d="M8 1v10M4 7l4-4 4 4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"></path><path d="M2 13h12" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"></path></svg>
-                                    Choose Files
+                                <div class="bca-dropzone__title" id="dropzoneTitle">Drop files or folders here</div>
+                                <div class="bca-dropzone__sub">Or browse from your device — sub-folders are kept exactly as they are</div>
+
+                                <div class="bca-dropzone__picker">
+                                    <button type="button" class="bca-dropzone__btn" id="browseBtn" aria-haspopup="true" aria-expanded="false">
+                                        <svg viewBox="0 0 16 16" width="13" height="13"><path d="M8 1v10M4 7l4-4 4 4" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"></path><path d="M2 13h12" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"></path></svg>
+                                        <span id="browseBtnLabel">Choose Files or Folder</span>
+                                    </button>
+
+                                    <div class="bca-dropzone__menu" id="browseMenu" role="menu" hidden>
+                                        <button type="button" class="bca-dropzone__menu-item" role="menuitem" data-pick="files">
+                                            <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                                            <span><strong>Files</strong><small>Pick one or more documents</small></span>
+                                        </button>
+                                        <button type="button" class="bca-dropzone__menu-item" role="menuitem" data-pick="folder">
+                                            <svg viewBox="0 0 24 24"><path d="M22 19a2 2 0 01-2 2H4a2 2 0 01-2-2V5a2 2 0 012-2h5l2 3h9a2 2 0 012 2z"/></svg>
+                                            <span><strong>Folder</strong><small>Upload everything inside a folder</small></span>
+                                        </button>
+                                    </div>
                                 </div>
+
                                 <div class="bca-dropzone__types">PDF · DOC · DOCX · XLS · XLSX · CSV · JPG · PNG · Max 10MB per file</div>
                             </div>
                         </div>
@@ -92,6 +109,8 @@ wp_enqueue_style('file-upload-style');
 
                     <!-- File list -->
                     <div class="bca-file-list" id="fileList"></div>
+                    <div class="bca-file-note" id="fileNote" hidden></div>
+
 
                     <!-- Submit -->
                     <div class="bca-form-submit">

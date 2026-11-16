@@ -183,7 +183,7 @@ wp_enqueue_style('contact-style');
             <!-- Romsey -->
             <div class="bca-office-card reveal reveal-delay-2">
                 <div class="bca-office-card__photo">
-                    <img src="/wp-content/uploads/2026/10/romsey_market_square.webp" alt="Romsey">
+                    <img src="/wp-content/ uploads/2026/10/romsey_market_square.webp" alt="Romsey">
                     <span class="bca-office-card__type">2 Practices</span>
                 </div>
                 <div class="bca-office-card__body">

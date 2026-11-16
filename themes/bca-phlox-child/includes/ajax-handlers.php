@@ -1,9 +1,15 @@
 <?php
+/* Hooks */
 add_action('wp_ajax_bca_get_news', 'bca_get_news_handler');
 add_action('wp_ajax_nopriv_bca_get_news', 'bca_get_news_handler'); // for logged-out users
 
 add_action('wp_ajax_bca_file_upload', 'bca_file_upload');
 add_action('wp_ajax_nopriv_bca_file_upload', 'bca_file_upload'); // for logged-out users
+
+/*  
+add_action('wp_ajax_bca_file_upload_complete', 'bca_file_upload_complete');
+add_action('wp_ajax_nopriv_bca_file_upload_complete', 'bca_file_upload_complete');
+ */
 
 function bca_get_news_handler() {
     check_ajax_referer('bca_news_nonce', 'nonce'); // Check if the request is valid or not : Nonce key names must match:
@@ -144,15 +150,29 @@ function bca_generate_email(array $uploaded_files, string $office_name, string $
         </html>";
 }
 
+function bca_clean_relative_dir(string $path): string {
+    $segments = explode('/', str_replace('\\', '/', $path));
+    array_pop($segments); // remove the file name
+    $clean = [];
+    foreach ($segments as $seg) {
+        $seg = sanitize_file_name($seg);
+        if ($seg === '' || $seg === '.' || $seg === '..') continue;
+        $clean[] = $seg;
+    }
+    return implode('/', $clean);
+}
+
 function bca_file_upload() {
     check_ajax_referer('bca_file_upload_nonce', 'nonce');
     
-    $maxFiles   = 10;
+    $maxFiles   = 100; // Max 100 files
     $maxSize    = 10 * 1024 * 1024; // 10MB
     $username   = $_POST['UploaderName'] ?? '';
     $office     = $_POST['office'] ?? null;
     $files      = $_FILES['files'] ?? null;
     $count      = count($files['name']);
+
+    $paths = (isset($_POST['paths']) && is_array($_POST['paths'])) ? wp_unslash($_POST['paths']) : [];
     
     /* Folder Location Sharepoint */
     $officeLocs = [
@@ -175,7 +195,16 @@ function bca_file_upload() {
         'image/jpeg',
         'image/png',
         'application/vnd.ms-excel',
-        'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+        'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
+        // what fileinfo commonly reports for Office files
+        'application/zip',               // docx / xlsx
+        'application/octet-stream',      // docx / xlsx on some builds
+        'application/CDFV2',             // legacy doc / xls
+        'application/vnd.ms-office',     // legacy doc / xls
+        'application/x-ole-storage',     // legacy doc / xls
+        // CSV
+        'text/plain',
+        'text/csv',
     ];
     
     if($username === '') wp_send_json_error('Uploader Name / Business name is required.');
@@ -188,6 +217,8 @@ function bca_file_upload() {
         $tmpName  = $files['tmp_name'][$i]; 
         $name     = $files['name'][$i];
         $size     = $files['size'][$i];
+        
+        $files['dir'][$i] = bca_clean_relative_dir((string) ($paths[$i] ?? ''));
 
         // 1. Check File extension
         $extension = strtolower(pathinfo($name, PATHINFO_EXTENSION));
@@ -200,7 +231,7 @@ function bca_file_upload() {
         if (function_exists('mime_content_type')) {
             $real_mime = mime_content_type($tmpName); 
             if (!in_array($real_mime, $allowed_mimes)) {
-                wp_send_json_error("Selected File '" . $name . "' has an invalid file type.");
+                wp_send_json_error("Selected File '" . $name . "' has an invalid file type (detected: " . $real_mime . " IT).");
                 exit;
             }
         }

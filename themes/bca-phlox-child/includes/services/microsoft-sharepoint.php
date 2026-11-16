@@ -12,7 +12,8 @@ function initiate_sharepoint(string $folderName, array $files) {
         for ($i = 0; $i < count($files['name']); $i++) {
             $file = [ 
                 'name' => sanitize_file_name($files['name'][$i]), 
-                'tmp_name' => $files['tmp_name'][$i] 
+                'tmp_name' => $files['tmp_name'][$i], 
+                'dir' => $files['dir'][$i] ?? ''
             ];
             // error_log('Filename: ' . $files['name'][$i] . ' ' . $files['tmp_name'][$i]);
 
@@ -39,8 +40,9 @@ function initiate_sharepoint(string $folderName, array $files) {
 function upload_file_to_sharepoint (string $accessToken, string $driveId, string $folderName, array $file) {
     $fileName = $file['name'];
     $filePath = $file['tmp_name'];
+    $subDir = !empty($file['dir']) ? $file['dir'] . '/' : '';
 
-    return wp_remote_request(BCA_MS_DRIVE_URL . $driveId . BCA_DRIVE_PATH . $folderName . '/' . $fileName . ':/content', [
+    return wp_remote_request(BCA_MS_DRIVE_URL . $driveId . BCA_DRIVE_PATH . $folderName . '/' .  $subDir . $fileName . ':/content', [
         'method' => 'PUT',
         'headers' => [
             'Authorization' => 'Bearer ' . $accessToken
